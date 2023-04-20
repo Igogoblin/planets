@@ -1,0 +1,77 @@
+[
+  {
+    "id": 0,
+    "name": "",
+    "categories": "",
+    "price": 150,
+    "size": "small",
+    "like": "false",
+    "img": [],
+    "description": ""
+  },
+  {
+    "id": 1,
+    "name": "Bird's Nest Fern",
+    "categories": "house plants",
+    "price": 100,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "https://img.freepik.com/free-photo/birds-nest-plant-in-a-beige-pot_53876-134284.jpg",
+      "https://img.freepik.com/free-photo/birds-nest-fern-plant-in-a-black-pot_53876-110269.jpg",
+      "https://img.freepik.com/free-photo/plant-in-a-terracotta-pot-birds-nest-fern-plant_53876-146303.jpg",
+      "https://img.freepik.com/free-photo/birds-nest-fern-plant-in-a-terracotta-pot-home-decor-object_53876-133133.jpg"
+    ],
+    "description": "Bird's Nest Fern is a beautiful and unique indoor plant that is perfect for both homes and offices. With its vibrant green fronds that grow in a circular pattern, it resembles the shape of a bird's nest, hence its name. This fern can be grown in a pot or hung in a basket to create a visually striking display. Its low maintenance nature and ability to purify indoor air make it an ideal plant for those looking to add a touch of nature to their living or workspace. With its tropical vibe, Bird's Nest Fern is sure to add a touch of relaxation and tranquility to any room."
+  },
+  {
+    "id": 2,
+    "name": "Aloe Vera",
+    "categories": "succulents",
+    "price": 80,
+    "size": "small",
+    "like": "false",
+    "img": [
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-153378.jpg",
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-133153.jpg",
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-134355.jpg",
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-110379.jpg"
+    ],
+    "description": "Aloe Vera is a popular indoor plant that is perfect for both homes and offices. With its fleshy, green leaves that grow in a rosette pattern, it adds a touch of natural elegance to any space. Not only is Aloe Vera visually appealing, but it also has numerous health benefits. The clear gel that can be extracted from its leaves can be used to soothe burns and wounds, making it a natural first aid remedy. Additionally, Aloe Vera is known for its air-purifying properties, making it an ideal plant for those looking to improve indoor air quality. With its low maintenance requirements and health benefits, Aloe Vera is a versatile and beneficial addition to any home or office environment."
+  },
+  {
+    "id": 3,
+    "name": "Monstera Deliciosa",
+    "categories": "house plants",
+    "price": 130,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133117.jpg",
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133143.jpg",
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133118.jpg",
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133116.jpg"
+    ],
+    "description": "Monstera Deliciosa, also known as the Swiss Cheese plant, is a stunning indoor plant that is perfect for both homes and offices. With its large, vibrant green leaves that feature naturally occurring holes, it is both striking and unique. Its tropical appearance adds a touch of exotic elegance to any space, while its air-purifying properties make it a beneficial addition to any indoor environment. This plant is easy to care for and can grow to an impressive size, making it a perfect statement piece for larger rooms or empty corners. With its bold and beautiful appearance, Monstera Deliciosa is sure to bring a touch of natural charm to any home or office."
+  },
+  {
+    "id": 4,
+    "name": "",
+    "categories": "",
+    "price": 150,
+    "size": "small",
+    "like": "false",
+    "img": [],
+    "description": ""
+  },
+  {
+    "id": 5,
+    "name": "",
+    "categories": "",
+    "price": 150,
+    "size": "small",
+    "like": "false",
+    "img": [],
+    "description": ""
+  }
+]
