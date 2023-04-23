@@ -1,0 +1,262 @@
+[
+  {
+    "id": 0,
+    "name": "Snake Plant",
+    "categories": "small plants",
+    "price": 90,
+    "size": "small",
+    "like": "false",
+    "img": [
+      "./css/img/planets-midjorn/1-1image.png",
+      "./css/img/planets-midjorn/1-2image.png",
+      "./css/img/planets-midjorn/1-3image.png",
+      "./css/img/planets-midjorn/1-4image.png"
+    ],
+    "description": "Snake Plant, also known as Sansevieria or Mother-in-Law's Tongue, is a popular houseplant due to its attractive foliage and easy care requirements. It is native to West Africa and features long, upright, sword-shaped leaves that emerge from a central rosette. In a home setting, Snake Plant can be placed in a well-lit room near a window, where it can receive indirect sunlight. It can also be placed on a desk or bookshelf to add a touch of greenery to your workspace. In an office setting, Snake Plant can be used to purify the air, as it is known to filter out toxins from the air. It is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its unique look and air-purifying qualities, Snake Plant is an excellent choice for anyone looking to add some greenery to their home or office."
+  },
+  {
+    "id": 1,
+    "name": "Bird's Nest Fern",
+    "categories": "house plants",
+    "price": 100,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "https://img.freepik.com/free-photo/birds-nest-plant-in-a-beige-pot_53876-134284.jpg",
+      "https://img.freepik.com/free-photo/birds-nest-fern-plant-in-a-black-pot_53876-110269.jpg",
+      "https://img.freepik.com/free-photo/plant-in-a-terracotta-pot-birds-nest-fern-plant_53876-146303.jpg",
+      "https://img.freepik.com/free-photo/birds-nest-fern-plant-in-a-terracotta-pot-home-decor-object_53876-133133.jpg"
+    ],
+    "description": "Bird's Nest Fern is a beautiful and unique indoor plant that is perfect for both homes and offices. With its vibrant green fronds that grow in a circular pattern, it resembles the shape of a bird's nest, hence its name. This fern can be grown in a pot or hung in a basket to create a visually striking display. Its low maintenance nature and ability to purify indoor air make it an ideal plant for those looking to add a touch of nature to their living or workspace. With its tropical vibe, Bird's Nest Fern is sure to add a touch of relaxation and tranquility to any room."
+  },
+  {
+    "id": 2,
+    "name": "Aloe Vera",
+    "categories": "succulents",
+    "price": 80,
+    "size": "small",
+    "like": "false",
+    "img": [
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-153378.jpg",
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-133153.jpg",
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-134355.jpg",
+      "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-110379.jpg"
+    ],
+    "description": "Aloe Vera is a popular indoor plant that is perfect for both homes and offices. With its fleshy, green leaves that grow in a rosette pattern, it adds a touch of natural elegance to any space. Not only is Aloe Vera visually appealing, but it also has numerous health benefits. The clear gel that can be extracted from its leaves can be used to soothe burns and wounds, making it a natural first aid remedy. Additionally, Aloe Vera is known for its air-purifying properties, making it an ideal plant for those looking to improve indoor air quality. With its low maintenance requirements and health benefits, Aloe Vera is a versatile and beneficial addition to any home or office environment."
+  },
+  {
+    "id": 3,
+    "name": "Monstera Deliciosa",
+    "categories": "house plants",
+    "price": 130,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133117.jpg",
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133143.jpg",
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133118.jpg",
+      "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133116.jpg"
+    ],
+    "description": "Monstera Deliciosa, also known as the Swiss Cheese plant, is a stunning indoor plant that is perfect for both homes and offices. With its large, vibrant green leaves that feature naturally occurring holes, it is both striking and unique. Its tropical appearance adds a touch of exotic elegance to any space, while its air-purifying properties make it a beneficial addition to any indoor environment. This plant is easy to care for and can grow to an impressive size, making it a perfect statement piece for larger rooms or empty corners. With its bold and beautiful appearance, Monstera Deliciosa is sure to bring a touch of natural charm to any home or office."
+  },
+  {
+    "id": 4,
+    "name": "Spider Plant",
+    "categories": "small plants",
+    "price": 70,
+    "size": "small",
+    "like": "false",
+    "img": [
+      "./css/img/planets-midjorn/2-1image.png",
+      "./css/img/planets-midjorn/2-2image.png",
+      "./css/img/planets-midjorn/2-3image.png",
+      "./css/img/planets-midjorn/2-4image.png"
+    ],
+    "description": "Spider Plant, also known as Chlorophytum comosum, is a popular houseplant that is easy to grow and maintain. The plant features long, arching leaves that resemble spider legs, hence the name. In a home setting, Spider Plant can be placed in a well-lit room near a window, where it can receive indirect sunlight. Alternatively, it can be hung from the ceiling or displayed on a tabletop to add a touch of greenery to the room. In an office setting, Spider Plant can help to purify the air and has been known to remove harmful toxins from the environment. It is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its unique shape and air-purifying qualities, Spider Plant is a great choice for anyone looking to add some greenery to their home, office or any other indoor space."
+  },
+  {
+    "id": 5,
+    "name": "Pothos",
+    "categories": "house plants",
+    "price": 110,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "./css/img/planets-midjorn/3-1image.png",
+      "./css/img/planets-midjorn/3-2image.png",
+      "./css/img/planets-midjorn/3-3image.png",
+      "./css/img/planets-midjorn/3-4image.png"
+    ],
+    "description": "Pothos, also known as Devil's Ivy, is a popular houseplant that features long, trailing vines with heart-shaped leaves. In a home setting, Pothos can be grown in a hanging basket or placed on a shelf where the vines can cascade down. The plant can tolerate varying levels of light and can grow well in low-light environments. It is also an excellent air purifier and can improve the air quality in your home. In an office setting, Pothos can be placed on a desk or tabletop to add a touch of greenery and purify the air. Pothos is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its beautiful trailing vines and air-purifying benefits, Pothos is a great choice for anyone looking to add some greenery to their home or office."
+  },
+  {
+    "id": 6,
+    "name": "Peace Lily",
+    "categories": "house plants",
+    "price": 100,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "./css/img/planets-midjorn/4-1image.png",
+      "./css/img/planets-midjorn/4-2image.png",
+      "./css/img/planets-midjorn/4-3image.png",
+      "./css/img/planets-midjorn/4-4image.png"
+    ],
+    "description": "Peace Lily, also known as Spathiphyllum, is a popular indoor plant that features large, glossy, oval-shaped leaves and white, sail-like flowers. In a home setting, Peace Lily can be placed in a well-lit room with low to moderate levels of sunlight, such as a north-facing window. It is also an excellent air purifier and can improve the air quality by removing toxins such as benzene, formaldehyde, and ammonia. In an office setting, Peace Lily can be placed in a communal area like a reception desk, conference room, or shared workspace to enhance the atmosphere and provide visual appeal. Peace Lily is a low-maintenance plant that requires moderate watering and can thrive in a range of temperatures. With its lush foliage and elegant flowers, Peace Lily is a fantastic choice for anyone looking to add some greenery to their indoor space."
+  },
+  {
+    "id": 7,
+    "name": "Rubber Plant",
+    "categories": "house plants",
+    "price": 150,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "./css/img/planets-midjorn/5-1image.png",
+      "./css/img/planets-midjorn/5-2image.png",
+      "./css/img/planets-midjorn/5-3image.png",
+      "./css/img/planets-midjorn/5-4image.png"
+    ],
+    "description": "Rubber Plant, also known as Ficus elastica, is a beautiful and versatile indoor plant that is popular for its large, leathery leaves and easy care requirements. In a home setting, Rubber Plant can be placed in a well-lit room with indirect sunlight, such as a north-facing window or corner. It can reach up to 8 feet tall indoors and can be pruned to maintain its desired height and shape. Rubber Plant is also an air purifier and can help remove toxins from the air, making it beneficial for your indoor environment. In an office setting, Rubber Plant can be used to enhance the aesthetic and create a welcoming atmosphere in common areas like reception desks, conference rooms, or shared workspaces. Rubber Plant requires moderate watering and can tolerate a range of temperatures, making it perfect for indoor environments. With its striking appearance and air-purifying benefits, Rubber Plant is a fantastic choice for anyone looking to add some greenery to their indoor space."
+  },
+  {
+    "id": 8,
+    "name": "Fiddle Leaf Fig",
+    "categories": "house plants",
+    "price": 140,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "./css/img/planets-midjorn/6-1image.png",
+      "./css/img/planets-midjorn/6-2image.png",
+      "./css/img/planets-midjorn/6-3image.png",
+      "./css/img/planets-midjorn/6-4image.png"
+    ],
+    "description": "Fiddle Leaf Fig, also known as Ficus lyrata, is a stunning indoor plant that features large, fiddle-shaped leaves that grow up to 15 inches long. In a home setting, Fiddle Leaf Fig can be placed in a well-lit room with bright, indirect sunlight, such as a west-facing window. It is an excellent air purifier and can remove toxins from the air, making it ideal for those with allergies or respiratory issues. Fiddle Leaf Fig can grow up to 6 feet tall indoors and requires moderate watering, so it's essential to allow the soil to dry out slightly between waterings. In an office setting, Fiddle Leaf Fig can be used as a statement piece to add visual interest and create a warmer, welcoming atmosphere. Its large, striking leaves can make an impact in reception areas, conference rooms, or shared workspaces."
+  },
+  {
+    "id": 9,
+    "name": "Boston Fern",
+    "categories": "house plants",
+    "price": 120,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "./css/img/planets-midjorn/7-1image.png",
+      "./css/img/planets-midjorn/7-2image.png",
+      "./css/img/planets-midjorn/7-3image.png",
+      "./css/img/planets-midjorn/7-4image.png"
+    ],
+    "description": "Boston Fern is a popular houseplant that features long, delicate fronds that arch gracefully over the sides of a pot. In a home setting, Boston Fern can be grown in a hanging basket, placed on a pedestal, or displayed on a shelf. It requires bright, indirect light and high humidity levels, which can be achieved by misting the plant regularly or grouping it with other plants. Boston Fern is an air purifier, removing toxins like formaldehyde and xylene from the air, making it perfect for those with allergies or respiratory issues. In an office setting, Boston Fern can be used to create a calming, natural aesthetic in shared workspaces, reception areas, or conference rooms. Boston Fern is a low-maintenance plant that requires consistent watering to maintain its lush, vibrant appearance. With its elegant fronds and air-purifying benefits, Boston Fern is a fantastic choice for anyone looking to add some greenery to their indoor space."
+  },
+  {
+    "id": 10,
+    "name": "banana plant",
+    "categories": "big plants",
+    "price": 140,
+    "size": "large",
+    "like": "false",
+    "img": [
+      "https://media.istockphoto.com/id/1380361370/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=OBhoaIvgZ3zLyrg4HND4neerw648SBwE0HMKQjxrqdM=",
+      "https://media.istockphoto.com/id/1380361377/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=46i-NLqe74ius8HShErdTHp-9eKQVQ3FGs00TUrTkOc=",
+      "https://media.istockphoto.com/id/1380361372/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=njRhmZlpAqj3tpgCS5b-R10ShQn9Pfc8eZocdLY7VkI=",
+      "https://media.istockphoto.com/id/1380361370/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=OBhoaIvgZ3zLyrg4HND4neerw648SBwE0HMKQjxrqdM="
+    ],
+    "description": "The Banana Plant, or Musa, is a magnificent plant that stands out for its large, green leaves and unique dense flowers that resemble inflorescences. At home, Musa can be grown in large pots, ideal for its rapid growth. It requires bright but blurred light and moderate watering to maintain its vitality and health. In the office, Musa can create a cozy and beautiful atmosphere in the reception, meeting rooms or shared workspaces. With its exotic leaves and special appearance, Musa will be a spectacular interior decoration for any room."
+  },
+  {
+    "id": 11,
+    "name": "banana",
+    "categories": "big plants",
+    "price": 130,
+    "size": "large",
+    "like": "false",
+    "img": [
+      "https://media.istockphoto.com/id/1144381259/photo/decorative-banana-plant-in-stone-marble-vase-isolated-on-white-background-3d-rendering.jpg?s=1024x1024&w=is&k=20&c=Db7XcU8ufMnC3qdNkuM_v4LnJ-_2AWcgI6rZ4vjpA-M=",
+      "https://media.istockphoto.com/id/515070873/photo/ornamental-plants-over-white-background.jpg?s=1024x1024&w=is&k=20&c=kapEDHu1WMGUEG7C3P3ozCpl-VwwziP118K2jqG-X9Q=",
+      "https://media.istockphoto.com/id/1027542674/photo/green-freshness-young-banana-plant-growing-in-black-port.jpg?s=1024x1024&w=is&k=20&c=UwD8srcpvT2pLujmdJ-XYDFRY_qcm0NDxVhC44tcINM=",
+      "https://media.istockphoto.com/id/1027542702/photo/green-freshness-young-banana-plant-growing-in-black-port.jpg?s=1024x1024&w=is&k=20&c=RwQ-LtgJHIQ3_8uapFNCkDYbkypqUbP8dSLdSpoEC_s="
+    ],
+    "description": "The Banana Plant, or Musa, is a spectacular plant that features large, green leaves and unique dense flowers that resemble clusters. In home conditions, the Musa can be grown in large pots that are perfect for its rapid growth. It requires bright but diffused light and moderate watering to maintain its vigor and health. In an office setting, the Musa can create a cozy and beautiful atmosphere in reception areas, conference rooms or shared workspaces. With its exotic leaves and distinctive appearance, the Musa will become a striking interior decoration for any room."
+  },
+  {
+    "id": 12,
+    "name": "banana",
+    "categories": "big plants",
+    "price": 150,
+    "size": "large",
+    "like": "false",
+    "img": [
+      "https://media.istockphoto.com/id/453235617/photo/fresh-banana.jpg?s=1024x1024&w=is&k=20&c=G2rptkf2ro948_ZgY1Ozy5dDUTB82kQqHFmSfP3nOjg=",
+      "https://media.istockphoto.com/id/1298302996/photo/dieffenbachia-plant-in-black-flowerpot-with-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=i9ITCKZJJrH274QGjyuhhcFzi-9_HAOoOm5yxXoXSUo=",
+      "https://media.istockphoto.com/id/1299532700/photo/dieffenbachia-plant-in-black-flowerpot-with-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=OZ1e_AiwIZQh_LVNuOorrHVlbSXSdq15z80XCQNYnW8=",
+      "https://media.istockphoto.com/id/1306291671/photo/dieffenbachia-plant-in-black-flowerpot-with-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=yqgP4LPDpbrnwN23o2x87dN822DoBeDuJgB-liP3W-8="
+    ],
+    "description": "The Banana Plant, scientifically known as Musa, is a tropical plant that is prized for its large, lush foliage and fruit. It is a fast-growing plant that requires bright, filtered light and well-draining soil for optimal growth. The Musa is a stunning addition to any indoor space, adding a touch of exotic beauty with its broad leaves and cheerful fruit. It is also known for its air-purifying qualities, making it an excellent choice for improving the air quality in a home or office environment. With its unique appearance and low maintenance requirements, the Banana Plant is the perfect choice for anyone looking to add a touch of tropical charm to their indoor space."
+  },
+  {
+    "id": 13,
+    "name": "succulent",
+    "categories": "succulents",
+    "price": 70,
+    "size": "medium",
+    "like": "false",
+    "img": [
+      "https://media.istockphoto.com/id/172279916/photo/potted-cactus.jpg?s=1024x1024&w=is&k=20&c=1lAxQu9wsROL-QD0Hw3R5LOUbNUy1-AVTY2iw-GP_zQ=",
+      "https://media.istockphoto.com/id/1185678680/photo/zebra-haworthia-fasciata-isolated-on-white-background-top-view.jpg?s=1024x1024&w=is&k=20&c=PMMOqAq4A_QUnvN6sSds3L3zTIydweWiVL_orTPEJh4=",
+      "https://media.istockphoto.com/id/1312950978/photo/top-view-on-on-the-small-house-cactus-haworthiopsis-fasciata-on-white-background-macro.jpg?s=1024x1024&w=is&k=20&c=ZEX7mhRXGiWwA-LkEzyX234jTvXvfFE-0mfl0KilekQ=",
+      "https://media.istockphoto.com/id/1268526412/photo/cactus-green-plant-in-clay-pot-top-view-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=6CSONzsMvwUHGdM_mLVZlnigtgYoH8xJQqpQZJwFeAI="
+    ],
+    "description": "Description for Succulent: Succulents are low-maintenance plants known for their thick, fleshy leaves and striking appearance. They come in a variety of shapes and sizes, from tiny rosettes to trailing vines. Succulents can thrive in a range of indoor environments, including homes and offices, and require minimal watering and care. They are often planted in containers that allow for good drainage, using a special mix of soil designed for succulents. In a home setting, succulents can add a touch of natural beauty to windowsills or coffee tables. In an office setting, succulents can provide a pop of color and texture to desks, shelves or common areas. With their unique appearance and ease of care, succulents are an excellent choice for plant enthusiasts of all levels."
+  },
+  {
+    "id": 13,
+    "name": "spruce",
+    "categories": "garderning",
+    "price": 150,
+    "size": "large",
+    "like": "false",
+    "img": [
+      "https://media.istockphoto.com/id/1284922901/photo/big-green-fir-tree-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=7wHDr0da3u5j_U3jvUnZMGc9KK5WV2xgKxkPGUZ7Jjs=",
+      "https://media.istockphoto.com/id/1358209352/photo/christmas-tree-in-snow.jpg?s=1024x1024&w=is&k=20&c=7pdVsQBqk_uYuJ_-GnR70UWRyAU8bOQtBrSQHXLI_jc=",
+      "https://media.istockphoto.com/id/95915964/photo/pine-tree.jpg?s=1024x1024&w=is&k=20&c=OF1V2z2M0fHhSC93VtAv-OCa1wDfrHPKhWQb0W-xc08=",
+      "https://media.istockphoto.com/id/519971429/vector/green-fir-tree.jpg?s=1024x1024&w=is&k=20&c=mhwsWF_oiDcsZSVBsMZogwK2VuqYnZJrTjOcRdZzH3E="
+    ],
+    "description": "Spruce is a type of evergreen tree known for its cone-shaped and sharply pointed leaves. It is an ideal choice for gardeners looking to add some year-round greenery to their landscape. Its needles provide a dense texture that makes it an excellent choice for adding privacy or windbreaks to outdoor spaces. Spruce trees are also known for their symmetrical shape, making them a popular choice for ornamental use in gardens or as focal points in landscaping. Whether you are looking to create a natural boundary around your garden or simply add some visual interest, a spruce tree can be an excellent choice for any outdoor environment."
+  },
+  {
+    "id": 14,
+    "name": "shovel",
+    "categories": "accessories",
+    "price": 150,
+    "size": "small",
+    "like": "false",
+    "img": [
+      "https://media.istockphoto.com/id/864742360/photo/small-shovel-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=S7YKYAcoirga9VRN0cvDe2P0quuNOXQbIMEeUUn_tMQ=",
+      "https://media.istockphoto.com/id/1327795760/photo/shovel.jpg?s=1024x1024&w=is&k=20&c=Bp3LdKe6NhQbGpvASkSG9u0tY6ixgItPyFCkiD3NJJ4=",
+      "https://media.istockphoto.com/id/1363824410/vector/print.jpg?s=1024x1024&w=is&k=20&c=M2qJnHyR-87uX7rZqYITRZ6U2uNzWnE5m8jQEh26UpY=",
+      "https://media.istockphoto.com/id/1355682290/vector/tool-shovel.jpg?s=1024x1024&w=is&k=20&c=C_GivUmQFvUCvi70dqGK4BEVxS_GGApm6pUyYNaLJfw="
+    ],
+    "description": "A shovel in a garden setting is often used for digging and moving soil, compost, and other loose materials. The broad, flat blade of a shovel is perfect for creating planting holes, transferring soil, and removing weeds. A gardener might use a shovel to mix compost or other organic matter into the soil to improve its quality. Additionally, a shovel can be used to remove grass or other unwanted vegetation from an area that's going to be used for planting or other gardening purposes. There are various types of shovels available, each with their own unique characteristics and uses, but overall, they are an essential tool for any gardener looking to maintain and beautify their outdoor space."
+  },
+  {
+    "id": 15,
+    "name": "",
+    "categories": "",
+    "price": 150,
+    "size": "",
+    "like": "false",
+    "img": [],
+    "description": ""
+  },
+  {
+    "id": 16,
+    "name": "",
+    "categories": "",
+    "price": 150,
+    "size": "",
+    "like": "false",
+    "img": [],
+    "description": ""
+  }
+]
