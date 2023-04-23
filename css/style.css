@@ -216,6 +216,7 @@ header .acc .log img {
   width: 100%;
   height: 1490px;
   display: flex;
+  justify-content: space-between;
 }
 .container .panel {
   width: 310px;
@@ -226,6 +227,30 @@ header .acc .log img {
   height: 774px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  background-color: #fbfbfb;
+}
+.container .panel .panel-choice span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: #3d3d3d;
+  margin-left: 18px;
+}
+.container .panel .panel-choice ul {
+  width: 100%;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.container .panel .panel-choice button {
+  max-width: 90px;
+  width: 100%;
+  height: 35px;
+  background-color: #46a358;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-left: 30px;
 }
 .container .panel .banner {
   width: 310px;
@@ -236,9 +261,120 @@ header .acc .log img {
   height: 100%;
 }
 .container .content {
-  max-width: 1190px;
+  max-width: 838px;
   width: 100%;
   height: 1370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+.container .content .content-head {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.container .content .content-head .fast-choice {
+  display: flex;
+}
+.container .content .area {
+  width: 100%;
+  height: 1190px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .content .area .card {
+  max-width: 258px;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fbfbfb;
+  border: 1px solid black;
+}
+.container .content .area .card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+.container .content .area .card span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #3d3d3d;
+}
+.container .content .area .card .card-price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: #46a358;
+}
+.container .content .pagination {
+  max-width: 250px;
+  width: 100%;
+  height: 35px;
+}
+.container .content .pagination ul {
+  display: flex;
+  justify-content: space-between;
+}
+.container .content .pagination ul li {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 16px;
+  color: #3d3d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content .pagination ul .left {
+  transform: rotate(180deg);
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+}
+footer .footer {
+  width: 100%;
+  background: #fbfbfb;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer .social {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer .social .social-list {
+  max-width: 190px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .social .social-list div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(70, 163, 88, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer .accept {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer .end {
+  display: flex;
+  justify-content: center;
 }
 
 @font-face {
