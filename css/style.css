@@ -126,7 +126,18 @@ header .acc .log img {
   margin-right: 6px;
 }
 
-.slide {
+section {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+section .slider {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-top: 12px;
+}
+section .slider .slide {
   width: 100%;
   height: 450px;
   background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
@@ -134,9 +145,8 @@ header .acc .log img {
   display: flex;
   justify-content: space-between;
   padding: 0 0 17px 40px;
-  margin-top: 12px;
 }
-.slide .slide-title {
+section .slider .slide .slide-title {
   max-width: 560px;
   width: 100%;
   height: 297px;
@@ -146,20 +156,20 @@ header .acc .log img {
   justify-content: space-between;
   margin-top: 68px;
 }
-.slide .slide-title span {
+section .slider .slide .slide-title span {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.slide .slide-title h1 {
+section .slider .slide .slide-title h1 {
   font-weight: 900;
   font-size: 70px;
   line-height: 70px;
   text-transform: uppercase;
 }
-.slide .slide-title h1 span {
+section .slider .slide .slide-title h1 span {
   color: #46a358;
   font-weight: 900;
   font-size: 70px;
@@ -167,12 +177,13 @@ header .acc .log img {
   text-transform: uppercase;
   letter-spacing: 0.01em;
 }
-.slide .slide-title p {
+section .slider .slide .slide-title p {
   font-size: 14px;
   line-height: 24px;
   color: #727272;
+  margin-bottom: 10px;
 }
-.slide .slide-title button {
+section .slider .slide .slide-title button {
   width: 140px;
   height: 40px;
   background-color: #46a358;
@@ -183,15 +194,15 @@ header .acc .log img {
   text-transform: uppercase;
   border-radius: 6px;
 }
-.slide .slide-img {
+section .slider .slide .slide-img {
   height: 100%;
   padding-bottom: 15px;
 }
-.slide .slide-img img {
+section .slider .slide .slide-img img {
   width: 450px;
   height: 450px;
 }
-.slide .slide-indicator {
+section .slider .slide-indicator {
   max-width: 40px;
   width: 100%;
   height: 8px;
@@ -202,14 +213,17 @@ header .acc .log img {
   left: 50%;
   margin-bottom: 17px;
 }
-.slide .slide-indicator .indicator {
+section .slider .slide-indicator .indicator {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: rgba(70, 163, 88, 0.3);
 }
-.slide .slide-indicator .indicator:nth-child(2) {
+section .slider .slide-indicator .indicator:nth-child(2) {
   background-color: #46a358;
+}
+section .slider .non {
+  display: none;
 }
 
 .container {
@@ -230,6 +244,18 @@ header .acc .log img {
   justify-content: space-between;
   background-color: #fbfbfb;
 }
+.container .panel .panel-choice .panel-choice_categories {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.container .panel .panel-choice .panel-choice_categories ul {
+  height: 100%;
+}
+.container .panel .panel-choice .panel-choice_size {
+  height: 180px;
+}
 .container .panel .panel-choice span {
   font-weight: 700;
   font-size: 18px;
@@ -240,8 +266,16 @@ header .acc .log img {
 .container .panel .panel-choice ul {
   width: 100%;
   margin-left: 30px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 40px;
+}
+.container .panel .panel-choice ul li:hover {
+  cursor: pointer;
 }
 .container .panel .panel-choice button {
   max-width: 90px;
@@ -340,23 +374,35 @@ header .acc .log img {
 footer {
   width: 100%;
   height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 footer .footer {
   width: 100%;
+  height: 100%;
   background: #fbfbfb;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 30px;
 }
 footer .footer .social {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
+footer .footer .social span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: #3d3d3d;
+}
 footer .footer .social .social-list {
   max-width: 190px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 footer .footer .social .social-list div {
   width: 30px;
@@ -368,19 +414,66 @@ footer .footer .social .social-list div {
   align-items: center;
 }
 footer .footer .accept {
+  max-width: 400px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+footer .footer .accept span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: #3d3d3d;
+}
+footer .footer .accept .accept-list img {
+  height: 26px;
+  margin: 20px 20px 0 0;
 }
 footer .end {
+  width: 100%;
+  height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+footer .end span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #3d3d3d;
+}
+
+.non {
+  display: none;
 }
 
 @font-face {
   font-family: "Cera Pro";
   src: url("./fonts/Cera_Pro_Medium.ttf");
   font-style: normal;
+}
+.button25 {
+  position: relative;
+  display: inline-block;
+  width: 10em;
+  height: 2.5em;
+  line-height: 2.5em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #777;
+  color: #fff;
+  outline: none;
+  border: 2px solid #f64c2b;
+  border-radius: 5px;
+  box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 0.1em 0.1em 0.2em #800;
+  background: linear-gradient(#fb9575, #f45a38 48%, #ea1502 52%, #f02f17);
+}
+
+.button25:active {
+  top: 0.1em;
+  left: 0.1em;
+  box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.05) inset;
 }
 
 /*# sourceMappingURL=style.css.map */
