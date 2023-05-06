@@ -13,6 +13,8 @@ body {
   font-family: "Cera Pro", sans-serif;
   background: #ffffff;
   color: #3d3d3d;
+  position: relative;
+  z-index: 0;
 }
 h1,
 h2,
@@ -46,7 +48,7 @@ textarea {
   color: inherit;
   border: none;
 }
-
+@import "./blogs.css";
 $primary-color: #e5e5e5;
 $second-color: #46a358;
 $back-color: #fbfbfb;
@@ -54,6 +56,85 @@ $back-color: #fbfbfb;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+.modul-register {
+  z-index: 1;
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-color: #ffffff;
+  text-align: end;
+  .register-close {
+    width: 20px;
+    height: 20px;
+    margin: 11px;
+  }
+  .register-container {
+    max-width: 300px;
+    width: 100%;
+    height: 482px;
+    margin: 0 auto;
+    color: #3d3d3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .register-title {
+      width: 160px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 16px;
+      margin: 0 auto;
+    }
+    p {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: start;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      border: 1px solid gray;
+      padding-left: 14px;
+      border-radius: 5px;
+      border: 1px solid #eaeaea;
+    }
+    span {
+      width: 100%;
+      // text-align: end;
+    }
+    button {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+    }
+    .highlight {
+      color: #46a358;
+    }
+
+    .register-container_button {
+      background-color: #46a358;
+      color: #ffffff;
+    }
+    .modul-button_soc {
+      background-color: #ffffff;
+      border: 1px solid #eaeaea;
+
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
 }
 
 header {
