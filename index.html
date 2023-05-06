@@ -13,7 +13,9 @@
 <body>
   <div class="for-modal"></div>
   <div class="modul-register ">
-    <div class="register-close"></div>
+    <div class="register-close">
+      <img src="./css/svg/X.svg" alt="close">
+    </div>
     <div class="register-container">
       <div class="register-title">
         <span class="register-title_log highlight">Login</span> | <span class="register-title_reg">Register</span>
@@ -27,13 +29,16 @@
       <input type="password" name="confirm-password" id="confirm-password" class="non">
 
       <span class="highlight">Forgot Password?</span>
-      <button>Login</button>
-      <div>
-        <hr>Or login with
-        <hr>
-      </div>
-      <button value="Login with Google"><img src="./css/svg/google-modul.svg" alt="google"></button>
-      <button value="Login with Facebook"><img src="./css/svg/facebook-modul.svg" alt="facebook"></button>
+      <button class="register-container_button">Login</button>
+      <!-- <div> -->
+      <p class="hr">Or login with</p>
+
+      <!-- </div> -->
+      <button value="Login with Google" class="modul-button_soc"><img src="./css/svg/google-modul.svg"
+          alt="google">Login with Google</button>
+      <button value="Login with Facebook" class="modul-button_soc"><img src="./css/svg/facebook-modul.svg"
+          alt="facebook">Login with
+        Facebook</button>
     </div>
   </div>
   <div class="wrapper">
