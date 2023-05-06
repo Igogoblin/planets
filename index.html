@@ -5,11 +5,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./css/svg/favicon (2).ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <title>Planet</title>
 </head>
 
 <body>
+  <div class="for-modal"></div>
+  <div class="modul-register ">
+    <div class="register-close"></div>
+    <div class="register-container">
+      <div class="register-title">
+        <span class="register-title_log highlight">Login</span> | <span class="register-title_reg">Register</span>
+      </div>
+      <p>Enter your username and password to login.</p>
+      <input type="text" name="username" id="register-username" class="non">
+
+      <input type="email" placeholder="almamun_uxui@outlook.com" class="login-email">
+      <input type="password" name="password" id="register-password">
+
+      <input type="password" name="confirm-password" id="confirm-password" class="non">
+
+      <span class="highlight">Forgot Password?</span>
+      <button>Login</button>
+      <div>
+        <hr>Or login with
+        <hr>
+      </div>
+      <button value="Login with Google"><img src="./css/svg/google-modul.svg" alt="google"></button>
+      <button value="Login with Facebook"><img src="./css/svg/facebook-modul.svg" alt="facebook"></button>
+    </div>
+  </div>
   <div class="wrapper">
     <header>
       <div class="logo">
@@ -21,7 +47,7 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Shop</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="./pages/blogs.html">Blogs</a></li>
           </ul>
         </nav>
       </div>
@@ -34,20 +60,53 @@
       </div>
     </header>
     <main>
-      <section class="slide">
-        <div class="slide-title">
-          <div class="span">Welcome to GreenShop</div>
-          <h1>Let’s Make a Better <span>Planet</span></h1>
-          <p>We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an
-            unique Urban Jungle. Order your favorite plants!</p>
-          <button>shop now</button>
+      <section>
+        <div class="slider">
+          <div class="slide">
+            <div class="slide-title">
+              <div class="span">Welcome to GreenShop</div>
+              <h1>Let’s Make a Better <span>Planet</span></h1>
+              <p>We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create
+                an
+                unique Urban Jungle. Order your favorite plants!</p>
+              <button>shop now</button>
+            </div>
+
+            <div class="slide-img"><img src="./css/img/slide-one.png" alt="slide image"></div>
+
+          </div>
+          <div class="slide non">
+            <div class="slide-title">
+              <div class="span">Welcome to GreenShop</div>
+              <h1>Let’s Make a Better <span>Planet</span></h1>
+              <p>We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create
+                an
+                unique Urban Jungle. Order your favorite plants!</p>
+              <button>shop now</button>
+            </div>
+            <div class="slide-img"><img src="./css/img/slide-one.png" alt="slide image"></div>
+
+          </div>
+          <div class="slide non">
+            <div class="slide-title">
+              <div class="span">Welcome to GreenShop</div>
+              <h1>Let’s Make a Better <span>Planet</span></h1>
+              <p>We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create
+                an
+                unique Urban Jungle. Order your favorite plants!</p>
+              <button>shop now</button>
+            </div>
+
+            <div class="slide-img"><img src="./css/img/slide-one.png" alt="slide image"></div>
+
+          </div>
+          <div class="slide-indicator">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+          </div>
         </div>
-        <div class="slide-indicator">
-          <div class="indicator"></div>
-          <div class="indicator"></div>
-          <div class="indicator"></div>
-        </div>
-        <div class="slide-img"><img src="./css/img/slide-one.png" alt="slide image"></div>
+
       </section>
 
       <div class="container">
@@ -125,8 +184,11 @@
           </div>
         </div>
         <div class="accept"><span>We accept</span>
-          <img src="" alt="paypal"><img src="" alt="mastercard"><img src="" alt="visa"><img src=""
-            alt="american express"><img src="" alt="">
+          <div class="accept-list">
+            <img src="./css/svg/paypal-784404.svg" alt="paypal"><img src="./css/svg/mastercard_- logo-500x389.svg"
+              alt="mastercard"><img src="./css/svg/visa-100x34.svg" alt="visa"><img
+              src="./css/svg/bank_of america - logo-100x42.svg" alt="american bank"><img src="" alt="">
+          </div>
         </div>
       </div>
       <div class="end"><span>© 2023 GreenShop. Ihar Skavysh.</span></div>
