@@ -1,4 +1,5 @@
 /* normalize.css */
+@import "./blogs.css";
 html {
   box-sizing: border-box;
 }
@@ -15,6 +16,8 @@ body {
   font-family: "Cera Pro", sans-serif;
   background: #ffffff;
   color: #3d3d3d;
+  position: relative;
+  z-index: 0;
 }
 
 h1,
@@ -58,6 +61,82 @@ textarea {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+
+.modul-register {
+  z-index: 1;
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-color: #ffffff;
+  text-align: end;
+}
+.modul-register .register-close {
+  width: 20px;
+  height: 20px;
+  margin: 11px;
+}
+.modul-register .register-container {
+  max-width: 300px;
+  width: 100%;
+  height: 482px;
+  margin: 0 auto;
+  color: #3d3d3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modul-register .register-container .register-title {
+  width: 160px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+  margin: 0 auto;
+}
+.modul-register .register-container p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: start;
+}
+.modul-register .register-container input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid gray;
+  padding-left: 14px;
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+}
+.modul-register .register-container span {
+  width: 100%;
+}
+.modul-register .register-container button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+.modul-register .register-container .highlight {
+  color: #46a358;
+}
+.modul-register .register-container .register-container_button {
+  background-color: #46a358;
+  color: #ffffff;
+}
+.modul-register .register-container .modul-button_soc {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+.modul-register .register-container .modul-button_soc img {
+  margin-right: 5px;
 }
 
 header {
