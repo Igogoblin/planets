@@ -210,7 +210,7 @@
     "description": "Description for Succulent: Succulents are low-maintenance plants known for their thick, fleshy leaves and striking appearance. They come in a variety of shapes and sizes, from tiny rosettes to trailing vines. Succulents can thrive in a range of indoor environments, including homes and offices, and require minimal watering and care. They are often planted in containers that allow for good drainage, using a special mix of soil designed for succulents. In a home setting, succulents can add a touch of natural beauty to windowsills or coffee tables. In an office setting, succulents can provide a pop of color and texture to desks, shelves or common areas. With their unique appearance and ease of care, succulents are an excellent choice for plant enthusiasts of all levels."
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "spruce",
     "categories": "garderning",
     "price": 150,
@@ -225,7 +225,7 @@
     "description": "Spruce is a type of evergreen tree known for its cone-shaped and sharply pointed leaves. It is an ideal choice for gardeners looking to add some year-round greenery to their landscape. Its needles provide a dense texture that makes it an excellent choice for adding privacy or windbreaks to outdoor spaces. Spruce trees are also known for their symmetrical shape, making them a popular choice for ornamental use in gardens or as focal points in landscaping. Whether you are looking to create a natural boundary around your garden or simply add some visual interest, a spruce tree can be an excellent choice for any outdoor environment."
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "shovel",
     "categories": "accessories",
     "price": 150,
@@ -240,7 +240,7 @@
     "description": "A shovel in a garden setting is often used for digging and moving soil, compost, and other loose materials. The broad, flat blade of a shovel is perfect for creating planting holes, transferring soil, and removing weeds. A gardener might use a shovel to mix compost or other organic matter into the soil to improve its quality. Additionally, a shovel can be used to remove grass or other unwanted vegetation from an area that's going to be used for planting or other gardening purposes. There are various types of shovels available, each with their own unique characteristics and uses, but overall, they are an essential tool for any gardener looking to maintain and beautify their outdoor space."
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "",
     "categories": "",
     "price": 150,
@@ -250,7 +250,7 @@
     "description": ""
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "",
     "categories": "",
     "price": 150,
