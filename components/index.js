@@ -34,6 +34,7 @@ console.log(planets);
 arr = randomArr(planets.length - 2);
 console.log(arr);
 const area = document.querySelector(".area");
+const pagination = document.querySelectorAll(".pagination > ul > li");
 
 function buildArea() {
   area.innerHTML = "";
@@ -50,3 +51,12 @@ function buildArea() {
   area.insertAdjacentHTML("afterbegin", text);
 }
 buildArea();
+
+function buildPagination(a) {
+  for (let i = 0; i < pagination.length; i++) {
+    if (a == i) {
+      pagination[i].classList.add("check");
+    }
+  }
+}
+buildPagination(1);

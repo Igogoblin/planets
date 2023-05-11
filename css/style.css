@@ -451,6 +451,9 @@ section .slider .non {
 .container .content .pagination ul .left {
   transform: rotate(180deg);
 }
+.container .content .pagination ul .check {
+  background: #46a358;
+}
 
 footer {
   width: 100%;
