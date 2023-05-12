@@ -406,6 +406,7 @@ section .slider .non {
   flex-direction: column;
   justify-content: space-between;
   background: #fbfbfb;
+  cursor: pointer;
 }
 .container .content .area .card img {
   width: 100%;
@@ -447,9 +448,13 @@ section .slider .non {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .container .content .pagination ul .left {
   transform: rotate(180deg);
+}
+.container .content .pagination ul .checkHalf {
+  background: #b7d1bd;
 }
 .container .content .pagination ul .check {
   background: #46a358;
