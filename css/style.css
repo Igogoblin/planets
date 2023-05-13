@@ -448,16 +448,17 @@ section .slider .non {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 .container .content .pagination ul .left {
   transform: rotate(180deg);
 }
 .container .content .pagination ul .checkHalf {
   background: #b7d1bd;
+  cursor: pointer;
 }
 .container .content .pagination ul .check {
   background: #46a358;
+  cursor: pointer;
 }
 
 footer {

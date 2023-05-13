@@ -454,7 +454,6 @@ section {
           display: flex;
           justify-content: center;
           align-items: center;
-          cursor: pointer;
         }
         .left {
           transform: rotate(180deg);
@@ -462,9 +461,11 @@ section {
 
         .checkHalf {
           background: #b7d1bd;
+          cursor: pointer;
         }
         .check {
           background: #46a358;
+          cursor: pointer;
         }
       }
     }

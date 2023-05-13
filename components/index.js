@@ -62,35 +62,47 @@ buildArea();
  * @param {number}
  * @returns {any}
  */
+let goal = 1;
 function buildPagination(a) {
+  let goal = a;
+  let checkPage = Math.ceil(arr.length / 9);
   for (let i = 0; i < pagination.length; i++) {
+    if (i > checkPage && checkPage > 1) {
+      continue;
+    }
+
     if (a == i) {
       pagination[i].classList.add("check");
     }
   }
-  checkPagination(a);
+  // accessPagination(a);
 }
+pagination[i].addEventListener("click", function () {
+  goal = i;
+  pagination[i].classList.add("check");
+  buildPagination(a);
+});
+
+// при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 
-function checkPagination(a) {
-  let checkPage = Math.ceil(arr.length / 9);
-  console.log("checkPage", checkPage);
-  console.log(pagination[1]);
-  console.log(pagination[2]);
-  console.log(pagination[3]);
-  for (let i = 0; i < pagination.length; i++) {
-    if (a == 1) {
-      pagination[0].classList.remove("check");
-      pagination[0].classList.remove("checkHalf");
-    }
-    if (checkPage < i) {
-      pagination[i].classList.remove("checkHalf");
-    }
-    if (checkPage + 1 > i) {
-      pagination[i].classList.add("checkHalf");
-      console.log(pagination[pagination.length - 1]);
-      console.log(pagination.length - 1);
-      pagination[pagination.length - 1].classList.add("checkHalf");
-    }
-  }
-}
+// function accessPagination(a, checkPage) {
+//   console.log("checkPage", checkPage);
+//   for (let i = 0; i < pagination.length; i++) {
+//     if (a == 1) {
+//       pagination[0].classList.remove("check");
+//       pagination[0].classList.remove("checkHalf");
+//     }
+
+//     if (checkPage + 1 > i) {
+//       pagination[i].classList.add("checkHalf");
+//     }
+//     if (checkPage < i) {
+//       pagination[i].classList.remove("checkHalf");
+//       pagination[i].classList.remove("check");
+//     }
+//   }
+//   if (a < checkPage) {
+//     pagination[pagination.length - 1].classList.add("checkHalf");
+//   }
+// }
