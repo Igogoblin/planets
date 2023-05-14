@@ -1,6 +1,6 @@
 import planets from "../planets.json" assert { type: "json" };
 let arr = [];
-
+let goal = 1;
 /**
  * Description create random number
  * @param {number} max
@@ -62,47 +62,65 @@ buildArea();
  * @param {number}
  * @returns {any}
  */
-let goal = 1;
 function buildPagination(a) {
-  let goal = a;
-  let checkPage = Math.ceil(arr.length / 9);
+  // let goal = a;  ===========================
+  let checkPage = Math.ceil(arr.length / 9); // сколько вообще у нас страниц
   for (let i = 0; i < pagination.length; i++) {
-    if (i > checkPage && checkPage > 1) {
-      continue;
+    if (i !== a) {
+      pagination[i].classList.remove("check");
+      if (i < a) {
+        pagination[i].classList.add("checkHalf");
+      }
     }
-
-    if (a == i) {
-      pagination[i].classList.add("check");
+    if (i <= checkPage && a < checkPage && a !== i) {
+      pagination[i].classList.add("checkHalf");
+      pagination[pagination.length - 1].classList.add("checkHalf");
+    }
+    // if (a !== i && i < a) {
+    //   pagination[i].classList.add("checkHalf");
+    // }
+    if (a === 1) {
+      pagination[0].classList.remove("checkHalf");
+    }
+    if (a === checkPage) {
+      pagination[pagination.length - 1].classList.remove("checkHalf");
     }
   }
-  // accessPagination(a);
 }
-pagination[i].addEventListener("click", function () {
-  goal = i;
-  pagination[i].classList.add("check");
-  buildPagination(a);
+/**
+ * Description show page pagination first page by contentLoaded
+ * I'll change it when I enter it localStorage
+ *
+ */
+document.addEventListener("DOMContentLoaded", function () {
+  pagination[1].classList.add("check");
 });
+for (let i = 0; i < pagination.length; i++) {
+  let checkPage = Math.ceil(arr.length / 9);
+
+  if (pagination[i].classList.contains("check")) {
+    goal = i;
+  }
+
+  pagination[i].addEventListener("click", function () {
+    if (pagination[i].classList.contains("checkHalf")) {
+      console.log(pagination.length - 1 === i);
+      if (i === 0 && pagination[0].classList.contains("checkHalf")) {
+        goal--;
+        pagination[goal].classList.add("check");
+        buildPagination(goal);
+      } else if (i === pagination.length - 1) {
+        goal++;
+        pagination[goal].classList.add("check");
+        buildPagination(goal);
+      } else {
+        pagination[i].classList.add("check");
+        goal = i;
+        buildPagination(i);
+      }
+    }
+  });
+}
 
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
-
-// function accessPagination(a, checkPage) {
-//   console.log("checkPage", checkPage);
-//   for (let i = 0; i < pagination.length; i++) {
-//     if (a == 1) {
-//       pagination[0].classList.remove("check");
-//       pagination[0].classList.remove("checkHalf");
-//     }
-
-//     if (checkPage + 1 > i) {
-//       pagination[i].classList.add("checkHalf");
-//     }
-//     if (checkPage < i) {
-//       pagination[i].classList.remove("checkHalf");
-//       pagination[i].classList.remove("check");
-//     }
-//   }
-//   if (a < checkPage) {
-//     pagination[pagination.length - 1].classList.add("checkHalf");
-//   }
-// }

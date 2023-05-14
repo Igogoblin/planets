@@ -460,6 +460,10 @@ section .slider .non {
   background: #46a358;
   cursor: pointer;
 }
+.container .content .pagination ul .checkHalf:hover {
+  background: #46a358;
+  transform: scale(1.1);
+}
 
 footer {
   width: 100%;
