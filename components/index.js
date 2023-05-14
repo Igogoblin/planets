@@ -1,4 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
+import { getCard } from "./card.js";
 let arr = [];
 let goal = 1;
 /**
@@ -76,9 +77,7 @@ function buildPagination(a) {
       pagination[i].classList.add("checkHalf");
       pagination[pagination.length - 1].classList.add("checkHalf");
     }
-    // if (a !== i && i < a) {
-    //   pagination[i].classList.add("checkHalf");
-    // }
+
     if (a === 1) {
       pagination[0].classList.remove("checkHalf");
     }
@@ -124,3 +123,5 @@ for (let i = 0; i < pagination.length; i++) {
 
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
+
+getCard();
