@@ -67,15 +67,23 @@ function buildPagination(a) {
   let checkPage = Math.ceil(arr.length / 9); // сколько вообще у нас страниц
   for (let i = 0; i < pagination.length; i++) {
     if (i !== a) {
-      // удаляем выбранный цвет с других кнопок
       pagination[i].classList.remove("check");
+      if (i < a) {
+        pagination[i].classList.add("checkHalf");
+      }
     }
     if (i <= checkPage && a < checkPage && a !== i) {
       pagination[i].classList.add("checkHalf");
       pagination[pagination.length - 1].classList.add("checkHalf");
     }
+    // if (a !== i && i < a) {
+    //   pagination[i].classList.add("checkHalf");
+    // }
     if (a === 1) {
       pagination[0].classList.remove("checkHalf");
+    }
+    if (a === checkPage) {
+      pagination[pagination.length - 1].classList.remove("checkHalf");
     }
   }
 }
@@ -89,14 +97,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 for (let i = 0; i < pagination.length; i++) {
   let checkPage = Math.ceil(arr.length / 9);
-  // добавить проверку на
-  if (checkPage < i) {
-    continue;
-  }
-  pagination[i].addEventListener("click", function () {
+
+  if (pagination[i].classList.contains("check")) {
     goal = i;
-    pagination[i].classList.add("check");
-    buildPagination(goal);
+  }
+
+  pagination[i].addEventListener("click", function () {
+    if (pagination[i].classList.contains("checkHalf")) {
+      console.log(pagination.length - 1 === i);
+      if (i === 0 && pagination[0].classList.contains("checkHalf")) {
+        goal--;
+        pagination[goal].classList.add("check");
+        buildPagination(goal);
+      } else if (i === pagination.length - 1) {
+        goal++;
+        pagination[goal].classList.add("check");
+        buildPagination(goal);
+      } else {
+        pagination[i].classList.add("check");
+        goal = i;
+        buildPagination(i);
+      }
+    }
   });
 }
 
