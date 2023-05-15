@@ -1,5 +1,6 @@
 /* normalize.css */
 @import "./blogs.css";
+@import "./shop.css";
 html {
   box-sizing: border-box;
 }
@@ -408,10 +409,20 @@ section .slider .non {
   background: #fbfbfb;
   cursor: pointer;
 }
-.container .content .area .card img {
+.container .content .area .card .card-img {
+  position: relative;
+  max-width: 258px;
+  width: 100%;
+  height: 300px;
+}
+.container .content .area .card .card-img img {
+  max-width: 258px;
   width: 100%;
   height: 300px;
   object-fit: contain;
+}
+.container .content .area .card .card-block {
+  opacity: 0;
 }
 .container .content .area .card .card-name {
   font-weight: 400;
@@ -426,6 +437,37 @@ section .slider .non {
   line-height: 16px;
   color: #46a358;
   margin: 10px;
+}
+.container .content .area .card:hover .card-block {
+  opacity: 1;
+  transition: 0.5s;
+  display: block;
+  max-width: 125px;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+}
+.container .content .area .card:hover .card-block div {
+  width: 35px;
+  height: 35px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.container .content .area .card:hover .card-block div img {
+  width: 20px;
+  height: 20px;
+}
+.container .content .area .card:hover .card-block .bask:hover img,
+.container .content .area .card:hover .card-block .like:hover img,
+.container .content .area .card:hover .card-block card_show:hover img {
+  filter: hue-rotate(10deg);
 }
 .container .content .pagination {
   max-width: 250px;
