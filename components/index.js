@@ -56,7 +56,7 @@ function buildArea() {
   area.insertAdjacentHTML("afterbegin", text);
 }
 
-buildArea();
+// buildArea();
 
 /**
  * Description show page pagination
