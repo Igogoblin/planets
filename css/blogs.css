@@ -103,6 +103,7 @@ h1 {
   width: 100%;
   height: auto;
 }
+
 .notes__title,
 .styling-trends__title {
   max-width: 292px;
@@ -112,7 +113,7 @@ h1 {
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px;
 }
 .notes__title > h3,
 .styling-trends__title > h3 {
@@ -122,6 +123,10 @@ h1 {
   text-transform: uppercase;
   color: #3d3d3d;
 }
+/* .notes__title > h3 {
+  width: 100%;
+  text-align: left;
+} */
 .notes__title > p,
 .styling-trends__title > p {
   font-weight: 400;
@@ -137,6 +142,7 @@ h1 {
   color: #ffffff;
   background: #46a358;
   border-radius: 6px;
+  margin-right: 20px;
 }
 .notes__title-button img {
   fill: #ffffff;

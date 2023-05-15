@@ -49,6 +49,7 @@ textarea {
   border: none;
 }
 @import "./blogs.css";
+@import "./shop.css";
 $primary-color: #e5e5e5;
 $second-color: #46a358;
 $back-color: #fbfbfb;
@@ -413,12 +414,45 @@ section {
         justify-content: space-between;
         background: #fbfbfb;
         cursor: pointer;
-
-        img {
+        .card-img {
+          position: relative;
+          max-width: 258px;
           width: 100%;
           height: 300px;
-          object-fit: contain;
+          img {
+            max-width: 258px;
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+          }
         }
+        .card-block {
+          opacity: 0;
+        }
+        // .card-block:hover {
+        //   display: block;
+        //   max-width: 125px;
+        //   width: 100%;
+        //   height: 35px;
+        //   display: flex;
+        //   justify-content: space-between;
+        //   position: absolute;
+        //   bottom: 10%;
+        //   border-radius: 4px;
+        //   left: 25%;
+        //   div {
+        //     width: 35px;
+        //     height: 35px;
+        //     background: #ffffff;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     img {
+        //       width: 20px;
+        //       height: 20px;
+        //     }
+        //   }
+        // }
         .card-name {
           font-weight: 400;
           font-size: 16px;
@@ -432,6 +466,45 @@ section {
           line-height: 16px;
           color: #46a358;
           margin: 10px;
+        }
+      }
+      .card:hover {
+        .card-block {
+          opacity: 1;
+          transition: 0.5s;
+          display: block;
+          max-width: 125px;
+          width: 100%;
+          height: 35px;
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          bottom: 10%;
+
+          left: 25%;
+          div {
+            width: 35px;
+            height: 35px;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          .bask:hover,
+          .like:hover,
+          card_show:hover {
+            img {
+              filter: hue-rotate(10deg);
+              // color: #46a358;
+              // color: #46a358;
+              // chenge for background by div -------------------
+            }
+          }
         }
       }
     }
