@@ -1,5 +1,5 @@
-// import { arr } from "./index.js";/
 import planets from "../planets.json" assert { type: "json" };
+// import { arr } from "./index.js";/
 console.log("this is card js");
 let ourCard;
 const imgBlock = document.querySelector(".img-block");
@@ -11,12 +11,21 @@ export function getCard() {
       console.log(typeof this.dataset.item); //string
       ourCard = this.dataset.item;
     });
+
+const productsBlock = document.querySelector(".products-block");
+function buildReleted() {
+  productsBlock.innerHTML = "";
+  let text = "";
+  for (let i = 0; i < 5; i++) {
+    text += `
+<div class="card" data-item="${planets[arr[i]].id}">
+              <img src="${planets[arr[i]].img[0]}" alt="card image">
+              <span class="card-name">${planets[arr[i]].name}</span>
+              <div class="card-price">$ ${planets[arr[i]].price}</div>
+            </div>
+`;
   }
+  productsBlock.insertAdjacentHTML("afterbegin", text);
 }
 
-// console.log(planets.id == ourCard);
-// if (planets.id == ourCard) {
-//   // console.log(this.planets.name);
-// }
-// console.log(planets);
-// function buildShopPage() {}
+buildReleted();
