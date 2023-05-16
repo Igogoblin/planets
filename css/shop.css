@@ -15,7 +15,10 @@
 .img-block {
   width: 100px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
+
 .img-prev {
   max-width: 444px;
   width: 100%;
@@ -162,6 +165,11 @@ p {
 .card-share {
   display: flex;
   gap: 20px;
+}
+/* description ------------------------------------------------------ */
+.shop-description {
+  width: 100%;
+  height: auto;
 }
 .description-title {
   margin: 20px 0 80px 0;
