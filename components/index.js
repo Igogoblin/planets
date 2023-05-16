@@ -1,5 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
-import { getCard } from "./card.js";
+// import { getCard } from "./card.js";
 let arr = [];
 let goal = 1;
 /**
@@ -56,7 +56,7 @@ function buildArea() {
   area.insertAdjacentHTML("afterbegin", text);
 }
 
-// buildArea();
+buildArea();
 
 /**
  * Description show page pagination
