@@ -1,15 +1,17 @@
 import planets from "../planets.json" assert { type: "json" };
+// import { arr } from "./index.js";/
 console.log("this is card js");
+let ourCard;
+const imgBlock = document.querySelector(".img-block");
+export function getCard() {
+  let cards = document.querySelectorAll(".card");
+  for (let i = 0; i < 9; i++) {
+    cards[i].addEventListener("click", function (event) {
+      console.log(this.dataset);
+      console.log(typeof this.dataset.item); //string
+      ourCard = this.dataset.item;
+    });
 
-// export function getCard() {
-//   let cards = document.querySelectorAll(".card");
-//   for (let i = 0; i < 9; i++) {
-//     cards[i].addEventListener("click", function (event) {
-//       console.log(this.dataset);
-//       console.log(typeof this.dataset.item); //string
-//     });
-//   }
-// }
 const productsBlock = document.querySelector(".products-block");
 function buildReleted() {
   productsBlock.innerHTML = "";
@@ -25,4 +27,5 @@ function buildReleted() {
   }
   productsBlock.insertAdjacentHTML("afterbegin", text);
 }
+
 buildReleted();
