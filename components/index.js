@@ -1,6 +1,7 @@
 import planets from "../planets.json" assert { type: "json" };
-// import { getCard } from "./card.js";
+import { getCard, buildReleted, showCard } from "./card.js";
 let arr = [];
+export let banner = [];
 let goal = 1;
 /**
  * Description create random number
@@ -16,7 +17,8 @@ function random(max) {
  * @param {number} a - length array
  * @returns {array}
  */
-function randomArr(a) {
+
+export function randomArr(a, arr) {
   for (let i = 0; i < a; i++) {
     let count = random(a);
     !arr.includes(count) ? arr.push(count) : i--;
@@ -32,16 +34,46 @@ console.log(planets);
  * @param {number} planets.length-2
  * @returns {array}
  */
-arr = randomArr(planets.length - 2);
+arr = randomArr(planets.length - 2, arr);
+banner = randomArr(planets.length - 2, banner);
+buildReleted();
 console.log(arr);
+console.log(banner);
+
 const area = document.querySelector(".area");
 const pagination = document.querySelectorAll(".pagination > ul > li");
+const navigation = document.querySelectorAll(".navigation > nav > ul > li");
+const blogs = document.querySelector(".blogs");
+const shop = document.querySelector(".shop");
+const main = document.querySelector(".main");
+
+for (let i = 0; i < 3; i++) {
+  navigation[i].addEventListener("click", () => {
+    if (i === 0) {
+      shop.classList.add("non");
+      blogs.classList.add("non");
+      main.classList.remove("non");
+      showCard();
+    } else if (i === 1) {
+      blogs.classList.add("non");
+      main.classList.add("non");
+      shop.classList.remove("non");
+      showCard();
+    } else if (i === 2) {
+      main.classList.add("non");
+      shop.classList.add("non");
+      blogs.classList.remove("non");
+      showCard();
+    }
+  });
+}
 
 /**
  * Description
  * @returns {any}
  */
 function buildArea() {
+  if (area == null) return;
   area.innerHTML = "";
   let text = "";
   for (let i = 0; i < 9; i++) {
