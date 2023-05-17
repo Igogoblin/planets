@@ -10,20 +10,22 @@
   height: 444px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
 }
 .img-block {
   width: 100px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .img-prev {
   max-width: 444px;
   width: 100%;
   height: 444px;
-  border: 1px solid black;
+}
+.img-prev_img {
+  width: 100%;
+  height: 100%;
 }
 .shop-card_data {
   width: 48%;
@@ -180,8 +182,32 @@ p {
 .products h2 {
   margin-bottom: 40px;
 }
+/* releted --------------------------------------------------------- */
 .products-block {
   width: 100%;
   height: 304px;
-  border: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+}
+.card_rel {
+  width: 220px;
+}
+.card_rel img {
+  width: 220px;
+  height: 220px;
+}
+
+.card-name_rel {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  color: #3d3d3d;
+  padding: 20px 0 10px 10px;
+}
+.card-price_rel {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: #46a358;
+  padding: 10px 0 10px 10px;
 }
