@@ -59,8 +59,20 @@ export function showCard() {
   cardName.textContent = planets[ourCard].name;
   cardPrice.textContent = `$ ${planets[ourCard].price}`;
   cardDescription.textContent = planets[ourCard].description;
-  // size
-  // count
+  if (planets[ourCard].size === "small") {
+    cardSize[0].classList.add("size-style");
+    cardSize[1].classList.remove("size-style");
+    cardSize[2].classList.remove("size-style");
+  } else if (planets[ourCard].size === "medium") {
+    cardSize[0].classList.remove("size-style");
+    cardSize[1].classList.add("size-style");
+    cardSize[2].classList.remove("size-style");
+  } else if (planets[ourCard].size === "large") {
+    cardSize[0].classList.remove("size-style");
+    cardSize[1].classList.remove("size-style");
+    cardSize[2].classList.add("size-style");
+  }
+  // count -------------------------------------------------------
   cardCategor.textContent = planets[ourCard].categories;
   descriptionTitle.textContent = planets[ourCard].description;
 }

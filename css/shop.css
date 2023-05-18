@@ -75,6 +75,10 @@ p {
 .card-size_list {
   display: flex;
 }
+.size-style {
+  background-color: #46a358;
+  color: #ffffff;
+}
 .card-size_list > div {
   width: 28px;
   height: 28px;
