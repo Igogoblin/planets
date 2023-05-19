@@ -1,5 +1,7 @@
 import planets from "../planets.json" assert { type: "json" };
 import { getCard, buildReleted, showCard } from "./card.js";
+import * as slider from "./slider.js";
+import * as categories from "./categories.js";
 let arr = [];
 export let banner = [];
 let goal = 1;
@@ -46,26 +48,30 @@ const navigation = document.querySelectorAll(".navigation > nav > ul > li");
 const blogs = document.querySelector(".blogs");
 const shop = document.querySelector(".shop");
 const main = document.querySelector(".main");
+const toBlogs = document.querySelectorAll(".toBlog");
 
 for (let i = 0; i < 3; i++) {
-  navigation[i].addEventListener("click", () => {
-    if (i === 0) {
-      shop.classList.add("non");
-      blogs.classList.add("non");
-      main.classList.remove("non");
-      showCard();
-    } else if (i === 1) {
-      blogs.classList.add("non");
-      main.classList.add("non");
-      shop.classList.remove("non");
-      showCard();
-    } else if (i === 2) {
-      main.classList.add("non");
-      shop.classList.add("non");
-      blogs.classList.remove("non");
-      showCard();
-    }
-  });
+  navigation[i].addEventListener("click", () => goPage(i));
+  toBlogs[i].addEventListener("click", () => goPage(2));
+}
+
+function goPage(i) {
+  if (i === 0) {
+    shop.classList.add("non");
+    blogs.classList.add("non");
+    main.classList.remove("non");
+    showCard();
+  } else if (i === 1) {
+    blogs.classList.add("non");
+    main.classList.add("non");
+    shop.classList.remove("non");
+    showCard();
+  } else if (i === 2) {
+    main.classList.add("non");
+    shop.classList.add("non");
+    blogs.classList.remove("non");
+    showCard();
+  }
 }
 
 /**
