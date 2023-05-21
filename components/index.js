@@ -1,8 +1,11 @@
 import planets from "../planets.json" assert { type: "json" };
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
-import * as categories from "./categories.js";
+// import * as categories from "./categories.js";
 let arr = [];
+let ourArray = [];
+ourArray = [...planets];
+console.log(planets);
 export let banner = [];
 let goal = 1;
 /**
@@ -27,8 +30,50 @@ export function randomArr(a, arr) {
   }
   return arr;
 }
+// Categories start ----------------------------------------------------------------
+let ourCategori;
+let ourSize;
+const categoriesLi = document.querySelectorAll(".categories > li");
+const sizes = document.querySelectorAll(".size > li");
 
-console.log(planets);
+function checkCategor() {
+  for (let i = 0; i < categoriesLi.length; i++) {
+    categoriesLi[i].addEventListener("click", function () {
+      console.log(this.textContent);
+
+      ourCategori = this.textContent;
+      makeOurArray();
+    });
+    if (i > 2) continue;
+    sizes[i].addEventListener("click", function () {
+      console.log(this.textContent);
+      ourSize = this.textContent;
+    });
+  }
+}
+checkCategor();
+
+function makeOurArray() {
+  ourArray.length = 0;
+
+  planets.forEach((element) => {
+    if (element.categories == ourCategori) {
+      ourArray.push(element);
+    }
+  });
+  // planets.forEach((element) => {
+  //   if (element.size == ourSize) {
+  //     ourArray.push(element);
+  //   }
+  // });
+  console.log(ourArray);
+  arr.length = 0;
+  arr = randomArr(ourArray.length, arr);
+  console.log(arr);
+  buildArea();
+}
+// Categories finish ----------------------------------------------------------------
+
 // cоздаю рандомный массив для построения поля в рандомном порядке
 /**
  * Description
@@ -75,21 +120,25 @@ function goPage(i) {
 }
 
 /**
- * Description
+ * Description Construction of the Card Field
  * @returns {any}
  */
 function buildArea() {
   if (area == null) return;
   area.innerHTML = "";
   let text = "";
+
   for (let i = 0; i < 9; i++) {
+    if (ourArray.length <= i) {
+      break;
+    }
     text += `
-<div class="card" data-item="${planets[arr[i]].id}">
-              <img src="${planets[arr[i]].img[0]}" alt="card image">
-              <span class="card-name">${planets[arr[i]].name}</span>
-              <div class="card-price">$ ${planets[arr[i]].price}</div>
+            <div class="card" data-item="${ourArray[arr[i]].id}">
+              <img src="${ourArray[arr[i]].img[0]}" alt="card image">
+              <span class="card-name">${ourArray[arr[i]].name}</span>
+              <div class="card-price">$ ${ourArray[arr[i]].price}</div>
             </div>
-`;
+    `;
   }
   area.insertAdjacentHTML("afterbegin", text);
 }
