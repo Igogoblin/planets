@@ -1,9 +1,9 @@
 import planets from "../planets.json" assert { type: "json" };
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
-// import * as categories from "./categories.js";
+import { availability } from "./categories.js";
 let arr = [];
-let ourArray = [];
+export let ourArray = [];
 ourArray = [...planets];
 console.log(planets);
 export let banner = [];
@@ -33,8 +33,8 @@ export function randomArr(a, arr) {
 // Categories start ----------------------------------------------------------------
 let ourCategori;
 let ourSize;
-const categoriesLi = document.querySelectorAll(".categories > li");
-const sizes = document.querySelectorAll(".size > li");
+export const categoriesLi = document.querySelectorAll(".categories > li");
+export const sizes = document.querySelectorAll(".size > li");
 
 function checkCategor() {
   for (let i = 0; i < categoriesLi.length; i++) {
@@ -50,6 +50,7 @@ function checkCategor() {
       ourSize = this.textContent;
     });
   }
+  availability();
 }
 checkCategor();
 
