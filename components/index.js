@@ -33,21 +33,21 @@ export function randomArr(a, arr) {
 // Categories start ----------------------------------------------------------------
 let ourCategori;
 let ourSize;
-export const categoriesLi = document.querySelectorAll(".categories > li");
-export const sizes = document.querySelectorAll(".size > li");
+export const categoriesLi = document.querySelectorAll(`[data-categor]`);
+export const sizes = document.querySelectorAll(`[data-size]`);
 
 function checkCategor() {
   for (let i = 0; i < categoriesLi.length; i++) {
     categoriesLi[i].addEventListener("click", function () {
-      console.log(this.textContent);
+      console.log(categoriesLi[i].dataset.categor);
 
-      ourCategori = this.textContent;
+      ourCategori = categoriesLi[i].dataset.categor;
       makeOurArray();
     });
     if (i > 2) continue;
     sizes[i].addEventListener("click", function () {
-      console.log(this.textContent);
-      ourSize = this.textContent;
+      console.log(sizes[i].dataset.size);
+      ourSize = sizes[i].dataset.size;
     });
   }
   availability();
