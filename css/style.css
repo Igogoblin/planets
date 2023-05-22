@@ -485,6 +485,7 @@ section .slider .non {
   max-width: 250px;
   width: 100%;
   height: 35px;
+  border: 1px solid gray;
 }
 .container .content .pagination ul {
   display: flex;

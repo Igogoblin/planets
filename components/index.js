@@ -48,9 +48,9 @@ function checkCategor() {
     sizes[i].addEventListener("click", function () {
       console.log(sizes[i].dataset.size);
       ourSize = sizes[i].dataset.size;
+      makeOurArray();
     });
   }
-  availability();
 }
 checkCategor();
 
@@ -62,16 +62,19 @@ function makeOurArray() {
       ourArray.push(element);
     }
   });
-  // planets.forEach((element) => {
-  //   if (element.size == ourSize) {
-  //     ourArray.push(element);
-  //   }
-  // });
+  planets.forEach((element) => {
+    if (element.size == ourSize) {
+      ourArray.push(element);
+    }
+  });
   console.log(ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
   console.log(arr);
+  availability();
   buildArea();
+  buildPagination(1);
+  getCard();
 }
 // Categories finish ----------------------------------------------------------------
 
@@ -153,7 +156,7 @@ buildArea();
  */
 function buildPagination(a) {
   // let goal = a;  ===========================
-  let checkPage = Math.ceil(arr.length / 9); // сколько вообще у нас страниц
+  let checkPage = Math.ceil(ourArray.length / 9); // сколько вообще у нас страниц
   for (let i = 0; i < pagination.length; i++) {
     if (i !== a) {
       pagination[i].classList.remove("check");
@@ -182,6 +185,7 @@ function buildPagination(a) {
 document.addEventListener("DOMContentLoaded", function () {
   pagination[1].classList.add("check");
 });
+
 for (let i = 0; i < pagination.length; i++) {
   let checkPage = Math.ceil(arr.length / 9);
 
@@ -209,6 +213,7 @@ for (let i = 0; i < pagination.length; i++) {
   });
 }
 
+// paginationShow();
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 

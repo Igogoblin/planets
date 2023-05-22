@@ -13,8 +13,11 @@ export function availability() {
         countCategories++;
       }
     }
-
-    categorLi[i].textContent = countCategories;
+    if (countCategories === 0) {
+      categorLi[i].textContent = "";
+    } else {
+      categorLi[i].textContent = countCategories;
+    }
   }
   console.log(sizes[1].dataset.size);
   for (let i = 0; i < sizes.length; i++) {
@@ -24,6 +27,14 @@ export function availability() {
         countSize++;
       }
     }
-    sizeLi[i].textContent = countSize;
+    if (countSize === 0) {
+      sizeLi[i].textContent = "";
+    } else {
+      sizeLi[i].textContent = countSize;
+    }
   }
 }
+
+// работает только при одиночном выборе категории
+// надо добавлять класс выбора и дополнительной проверки
+//  пагинация теперь не работает :(
