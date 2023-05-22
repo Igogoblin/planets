@@ -7,11 +7,15 @@ let ourCard;
 
 export function getCard() {
   let cards = document.querySelectorAll(".card");
+  let interSearch = document.querySelectorAll(".inter-search");
+  let interBasket = document.querySelectorAll(".inter-basket");
+  let interLike = document.querySelectorAll(".inter-like");
+
   for (let i = 0; i < 9; i++) {
-    cards[i].addEventListener("click", function (event) {
-      console.log(this.dataset);
-      console.log(typeof this.dataset.item); //string
-      ourCard = +this.dataset.item;
+    interSearch[i].addEventListener("click", function (event) {
+      console.log(cards[i].dataset);
+      // console.log(typeof this.dataset.item); //string
+      ourCard = +cards[i].dataset.item;
       console.log(ourCard);
     });
   }

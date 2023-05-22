@@ -422,6 +422,7 @@ section {
         max-width: 258px;
         width: 100%;
         height: 350px;
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -435,8 +436,8 @@ section {
           img {
             max-width: 258px;
             width: 100%;
-            height: 300px;
-            object-fit: contain;
+            height: 258px;
+            object-fit: cover;
           }
         }
         .card-block {
@@ -480,12 +481,41 @@ section {
           color: #46a358;
           margin: 10px;
         }
+        .card-interaction {
+          max-width: 125px;
+          width: 100%;
+          height: 35px;
+          position: absolute;
+          display: none;
+          justify-content: space-between;
+          align-items: center;
+          bottom: 1%;
+          left: 30%;
+          .inter-basket {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/basket.svg");
+            background-size: cover;
+          }
+          .inter-like {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/heartBlack.svg");
+            background-size: cover;
+          }
+          .inter-search {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/searchBlack.svg");
+            background-size: cover;
+          }
+        }
       }
       .card:hover {
         .card-block {
           opacity: 1;
           transition: 0.5s;
-          display: block;
+          display: flex;
           max-width: 125px;
           width: 100%;
           height: 35px;
@@ -510,13 +540,34 @@ section {
           }
           .bask:hover,
           .like:hover,
-          card_show:hover {
+          .card_show:hover {
             img {
               filter: hue-rotate(10deg);
               // color: #46a358;
               // color: #46a358;
               // chenge for background by div -------------------
             }
+          }
+        }
+        .card-interaction {
+          display: flex;
+          .inter-basket:hover {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/shoppingGreen.svg");
+            background-size: cover;
+          }
+          .inter-like:hover {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/heartGreen.svg");
+            background-size: cover;
+          }
+          .inter-search:hover {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/searchGreen.svg");
+            background-size: cover;
           }
         }
       }

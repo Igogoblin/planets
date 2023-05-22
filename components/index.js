@@ -96,6 +96,7 @@ const pagination = document.querySelectorAll(".pagination > ul > li");
 const navigation = document.querySelectorAll(".navigation > nav > ul > li");
 const blogs = document.querySelector(".blogs");
 const shop = document.querySelector(".shop");
+const interSearch = document.querySelector(".inter-search");
 const main = document.querySelector(".main");
 const toBlogs = document.querySelectorAll(".toBlog");
 
@@ -141,6 +142,11 @@ function buildArea() {
               <img src="${ourArray[arr[i]].img[0]}" alt="card image">
               <span class="card-name">${ourArray[arr[i]].name}</span>
               <div class="card-price">$ ${ourArray[arr[i]].price}</div>
+              <div class="card-interaction">
+                <div class="inter-basket"></div>
+                <div class="inter-like"></div>
+                <div class="inter-search"></div>
+              </div>
             </div>
     `;
   }
