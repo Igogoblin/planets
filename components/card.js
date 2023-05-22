@@ -1,5 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
-import { banner } from "./index.js";
+import { banner, goPage } from "./index.js";
 
 console.log("this is card js");
 
@@ -17,6 +17,7 @@ export function getCard() {
       // console.log(typeof this.dataset.item); //string
       ourCard = +cards[i].dataset.item;
       console.log(ourCard);
+      goPage(1);
     });
   }
 }
@@ -53,10 +54,20 @@ const cardCategor = document.querySelector(".card-categor > span");
 const descriptionTitle = document.querySelector(".description-title");
 
 export function showCard() {
+  if (!ourCard) ourCard = 0;
+
   let imageblock = "";
-  planets[ourCard].img.forEach(
-    (element) => (imageblock += `<img src="${element}" alt="image plant">`)
-  );
+  // planets[ourCard].img.forEach(
+  //   (element) => (imageblock += `<img src="${element}" alt="image plant">`)
+  // );
+
+  for (let i = 0; i < 4; i++) {
+    if (i === 0) {
+      imageblock += `<img src="${planets[ourCard].img[0]}" alt="image plant" class="increase">`;
+    } else {
+      imageblock += `<img src="${planets[ourCard].img[i]}" alt="image plant">`;
+    }
+  }
   imgBlock.innerHTML = "";
   imgBlock.insertAdjacentHTML("afterbegin", imageblock);
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
@@ -79,4 +90,30 @@ export function showCard() {
   // count -------------------------------------------------------
   cardCategor.textContent = planets[ourCard].categories;
   descriptionTitle.textContent = planets[ourCard].description;
+  checkImgShow();
+}
+
+function checkImgShow() {
+  let imgBlockItems = document.querySelectorAll(".img-block > img");
+  console.log(imgBlockItems);
+  for (let i = 0; i < 4; i++) {
+    // imgBlockItems[i].classList.remove("increase");
+    console.log("i", i);
+    imgBlockItems[i].addEventListener("click", function () {
+      imgBlockItems[i].classList.add("increase");
+      imgPrev.setAttribute("src", `${planets[ourCard].img[i]}`);
+
+      // for (let j = 0; j < 4; j++) {
+      //   if (j != i) {
+      //     imgBlockItems[i].classList.remove("increase");
+      //     console.log("i-=j", i + " j " + j);
+      //     // console.log("j", j);
+      //   } else {
+      //                        пока что не работает показать выбранную картинку
+      //   }
+      // }
+      // imgBlockItems[i].classList.add("increase");
+      // console.log(imgBlockItems);
+    });
+  }
 }

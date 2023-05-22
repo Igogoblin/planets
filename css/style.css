@@ -205,6 +205,12 @@ header .acc .log {
 header .acc .log img {
   margin-right: 6px;
 }
+header .acc:hover .basket {
+  cursor: no-drop;
+}
+header .acc:hover .log {
+  cursor: no-drop;
+}
 
 section {
   width: 100%;
@@ -404,6 +410,9 @@ section .slider .non {
 .container .content .content-head .fast-choice {
   display: flex;
 }
+.container .content .content-head:hover {
+  cursor: no-drop;
+}
 .container .content .area {
   width: 100%;
   height: 1190px;
@@ -519,12 +528,14 @@ section .slider .non {
   height: 20px;
   background-image: url("./svg/shoppingGreen.svg");
   background-size: cover;
+  cursor: no-drop;
 }
 .container .content .area .card:hover .card-interaction .inter-like:hover {
   width: 20px;
   height: 20px;
   background-image: url("./svg/heartGreen.svg");
   background-size: cover;
+  cursor: no-drop;
 }
 .container .content .area .card:hover .card-interaction .inter-search:hover {
   width: 20px;
@@ -569,6 +580,9 @@ section .slider .non {
 .container .content .pagination ul .checkHalf:hover {
   background: #46a358;
   transform: scale(1.1);
+}
+.container .content .pagination:hover {
+  cursor: no-drop;
 }
 
 footer {
