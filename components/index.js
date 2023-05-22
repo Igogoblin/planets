@@ -105,7 +105,7 @@ for (let i = 0; i < 3; i++) {
   toBlogs[i].addEventListener("click", () => goPage(2));
 }
 
-function goPage(i) {
+export function goPage(i) {
   if (i === 0) {
     shop.classList.add("non");
     blogs.classList.add("non");
