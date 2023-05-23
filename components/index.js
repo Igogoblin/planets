@@ -1,4 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
+import * as modal from "./modal.js";
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability } from "./categories.js";
