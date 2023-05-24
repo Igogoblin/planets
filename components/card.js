@@ -13,10 +13,10 @@ export function getCard() {
 
   for (let i = 0; i < 9; i++) {
     interSearch[i].addEventListener("click", function (event) {
-      console.log(cards[i].dataset);
+      // console.log(cards[i].dataset);
       // console.log(typeof this.dataset.item); //string
       ourCard = +cards[i].dataset.item;
-      console.log(ourCard);
+      // console.log(ourCard);
       goPage(1);
     });
   }
@@ -55,12 +55,7 @@ const descriptionTitle = document.querySelector(".description-title");
 
 export function showCard() {
   if (!ourCard) ourCard = 0;
-
   let imageblock = "";
-  // planets[ourCard].img.forEach(
-  //   (element) => (imageblock += `<img src="${element}" alt="image plant">`)
-  // );
-
   for (let i = 0; i < 4; i++) {
     if (i === 0) {
       imageblock += `<img src="${planets[ourCard].img[0]}" alt="image plant" class="increase">`;
@@ -87,7 +82,6 @@ export function showCard() {
     cardSize[1].classList.remove("size-style");
     cardSize[2].classList.add("size-style");
   }
-  // count -------------------------------------------------------
   cardCategor.textContent = planets[ourCard].categories;
   descriptionTitle.textContent = planets[ourCard].description;
   checkImgShow();
