@@ -1,4 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
+import * as modal from "./modal.js";
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability } from "./categories.js";
@@ -96,6 +97,7 @@ const pagination = document.querySelectorAll(".pagination > ul > li");
 const navigation = document.querySelectorAll(".navigation > nav > ul > li");
 const blogs = document.querySelector(".blogs");
 const shop = document.querySelector(".shop");
+const interSearch = document.querySelector(".inter-search");
 const main = document.querySelector(".main");
 const toBlogs = document.querySelectorAll(".toBlog");
 
@@ -104,7 +106,7 @@ for (let i = 0; i < 3; i++) {
   toBlogs[i].addEventListener("click", () => goPage(2));
 }
 
-function goPage(i) {
+export function goPage(i) {
   if (i === 0) {
     shop.classList.add("non");
     blogs.classList.add("non");
@@ -141,6 +143,11 @@ function buildArea() {
               <img src="${ourArray[arr[i]].img[0]}" alt="card image">
               <span class="card-name">${ourArray[arr[i]].name}</span>
               <div class="card-price">$ ${ourArray[arr[i]].price}</div>
+              <div class="card-interaction">
+                <div class="inter-basket"></div>
+                <div class="inter-like"></div>
+                <div class="inter-search"></div>
+              </div>
             </div>
     `;
   }

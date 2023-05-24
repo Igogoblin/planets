@@ -58,8 +58,16 @@ $back-color: #fbfbfb;
   width: 100%;
   margin: 0 auto;
 }
-.modul-register {
+.for-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #727272;
+  opacity: 0.6;
   z-index: 1;
+}
+.modul-register {
+  z-index: 2;
   width: 500px;
   height: 600px;
   position: absolute;
@@ -109,6 +117,7 @@ $back-color: #fbfbfb;
       padding-left: 14px;
       border-radius: 5px;
       border: 1px solid #eaeaea;
+      cursor: auto;
     }
     span {
       width: 100%;
@@ -118,11 +127,20 @@ $back-color: #fbfbfb;
       width: 100%;
       height: 40px;
       border-radius: 5px;
+      cursor: pointer;
+    }
+    .style-border-red {
+      border: 1px solid #800;
+    }
+    .style-border-green {
+      border: 1px solid #46a358;
     }
     .highlight {
       color: #46a358;
     }
-
+    .forgot {
+      cursor: pointer;
+    }
     .register-container_button {
       background-color: #46a358;
       color: #ffffff;
@@ -203,6 +221,14 @@ header {
       img {
         margin-right: 6px;
       }
+    }
+  }
+  .acc:hover {
+    .basket {
+      cursor: no-drop;
+    }
+    .log {
+      cursor: pointer;
     }
   }
 }
@@ -411,6 +437,9 @@ section {
         display: flex;
       }
     }
+    .content-head:hover {
+      cursor: no-drop;
+    }
     .area {
       width: 100%;
       height: 1190px;
@@ -422,6 +451,7 @@ section {
         max-width: 258px;
         width: 100%;
         height: 350px;
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -435,8 +465,8 @@ section {
           img {
             max-width: 258px;
             width: 100%;
-            height: 300px;
-            object-fit: contain;
+            height: 258px;
+            object-fit: cover;
           }
         }
         .card-block {
@@ -480,12 +510,41 @@ section {
           color: #46a358;
           margin: 10px;
         }
+        .card-interaction {
+          max-width: 125px;
+          width: 100%;
+          height: 35px;
+          position: absolute;
+          display: none;
+          justify-content: space-between;
+          align-items: center;
+          bottom: 1%;
+          left: 30%;
+          .inter-basket {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/basket.svg");
+            background-size: cover;
+          }
+          .inter-like {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/heartBlack.svg");
+            background-size: cover;
+          }
+          .inter-search {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/searchBlack.svg");
+            background-size: cover;
+          }
+        }
       }
       .card:hover {
         .card-block {
           opacity: 1;
           transition: 0.5s;
-          display: block;
+          display: flex;
           max-width: 125px;
           width: 100%;
           height: 35px;
@@ -510,13 +569,36 @@ section {
           }
           .bask:hover,
           .like:hover,
-          card_show:hover {
+          .card_show:hover {
             img {
               filter: hue-rotate(10deg);
               // color: #46a358;
               // color: #46a358;
               // chenge for background by div -------------------
             }
+          }
+        }
+        .card-interaction {
+          display: flex;
+          .inter-basket:hover {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/shoppingGreen.svg");
+            background-size: cover;
+            cursor: no-drop;
+          }
+          .inter-like:hover {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/heartGreen.svg");
+            background-size: cover;
+            cursor: no-drop;
+          }
+          .inter-search:hover {
+            width: 20px;
+            height: 20px;
+            background-image: url("./svg/searchGreen.svg");
+            background-size: cover;
           }
         }
       }
@@ -559,6 +641,9 @@ section {
           transform: scale(1.1);
         }
       }
+    }
+    .pagination:hover {
+      cursor: no-drop;
     }
   }
 }

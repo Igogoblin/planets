@@ -1,5 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
-import { banner } from "./index.js";
+import { banner, goPage } from "./index.js";
 
 console.log("this is card js");
 
@@ -7,12 +7,17 @@ let ourCard;
 
 export function getCard() {
   let cards = document.querySelectorAll(".card");
+  let interSearch = document.querySelectorAll(".inter-search");
+  let interBasket = document.querySelectorAll(".inter-basket");
+  let interLike = document.querySelectorAll(".inter-like");
+
   for (let i = 0; i < 9; i++) {
-    cards[i].addEventListener("click", function (event) {
-      console.log(this.dataset);
-      console.log(typeof this.dataset.item); //string
-      ourCard = +this.dataset.item;
+    interSearch[i].addEventListener("click", function (event) {
+      console.log(cards[i].dataset);
+      // console.log(typeof this.dataset.item); //string
+      ourCard = +cards[i].dataset.item;
       console.log(ourCard);
+      goPage(1);
     });
   }
 }
@@ -49,10 +54,20 @@ const cardCategor = document.querySelector(".card-categor > span");
 const descriptionTitle = document.querySelector(".description-title");
 
 export function showCard() {
+  if (!ourCard) ourCard = 0;
+
   let imageblock = "";
-  planets[ourCard].img.forEach(
-    (element) => (imageblock += `<img src="${element}" alt="image plant">`)
-  );
+  // planets[ourCard].img.forEach(
+  //   (element) => (imageblock += `<img src="${element}" alt="image plant">`)
+  // );
+
+  for (let i = 0; i < 4; i++) {
+    if (i === 0) {
+      imageblock += `<img src="${planets[ourCard].img[0]}" alt="image plant" class="increase">`;
+    } else {
+      imageblock += `<img src="${planets[ourCard].img[i]}" alt="image plant">`;
+    }
+  }
   imgBlock.innerHTML = "";
   imgBlock.insertAdjacentHTML("afterbegin", imageblock);
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
@@ -75,4 +90,22 @@ export function showCard() {
   // count -------------------------------------------------------
   cardCategor.textContent = planets[ourCard].categories;
   descriptionTitle.textContent = planets[ourCard].description;
+  checkImgShow();
+}
+
+function checkImgShow() {
+  let imgBlockItems = document.querySelectorAll(".img-block > img");
+  let count = 0;
+  for (let i = 0; i < 4; i++) {
+    imgBlockItems[i].addEventListener("click", function () {
+      imgBlockItems[i].classList.add("increase");
+      imgPrev.setAttribute("src", `${planets[ourCard].img[i]}`);
+      count = i;
+      imgBlockItems.forEach((element, item) => {
+        if (item != count) {
+          imgBlockItems[item].classList.remove("increase");
+        }
+      });
+    });
+  }
 }

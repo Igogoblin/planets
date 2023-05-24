@@ -64,8 +64,17 @@ textarea {
   margin: 0 auto;
 }
 
-.modul-register {
+.for-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #727272;
+  opacity: 0.6;
   z-index: 1;
+}
+
+.modul-register {
+  z-index: 2;
   width: 500px;
   height: 600px;
   position: absolute;
@@ -116,6 +125,7 @@ textarea {
   padding-left: 14px;
   border-radius: 5px;
   border: 1px solid #eaeaea;
+  cursor: auto;
 }
 .modul-register .register-container span {
   width: 100%;
@@ -124,9 +134,19 @@ textarea {
   width: 100%;
   height: 40px;
   border-radius: 5px;
+  cursor: pointer;
+}
+.modul-register .register-container .style-border-red {
+  border: 1px solid #800;
+}
+.modul-register .register-container .style-border-green {
+  border: 1px solid #46a358;
 }
 .modul-register .register-container .highlight {
   color: #46a358;
+}
+.modul-register .register-container .forgot {
+  cursor: pointer;
 }
 .modul-register .register-container .register-container_button {
   background-color: #46a358;
@@ -204,6 +224,12 @@ header .acc .log {
 }
 header .acc .log img {
   margin-right: 6px;
+}
+header .acc:hover .basket {
+  cursor: no-drop;
+}
+header .acc:hover .log {
+  cursor: pointer;
 }
 
 section {
@@ -404,6 +430,9 @@ section .slider .non {
 .container .content .content-head .fast-choice {
   display: flex;
 }
+.container .content .content-head:hover {
+  cursor: no-drop;
+}
 .container .content .area {
   width: 100%;
   height: 1190px;
@@ -415,6 +444,7 @@ section .slider .non {
   max-width: 258px;
   width: 100%;
   height: 350px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -430,8 +460,8 @@ section .slider .non {
 .container .content .area .card .card-img img {
   max-width: 258px;
   width: 100%;
-  height: 300px;
-  object-fit: contain;
+  height: 258px;
+  object-fit: cover;
 }
 .container .content .area .card .card-block {
   opacity: 0;
@@ -450,10 +480,39 @@ section .slider .non {
   color: #46a358;
   margin: 10px;
 }
+.container .content .area .card .card-interaction {
+  max-width: 125px;
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 1%;
+  left: 30%;
+}
+.container .content .area .card .card-interaction .inter-basket {
+  width: 20px;
+  height: 20px;
+  background-image: url("./svg/basket.svg");
+  background-size: cover;
+}
+.container .content .area .card .card-interaction .inter-like {
+  width: 20px;
+  height: 20px;
+  background-image: url("./svg/heartBlack.svg");
+  background-size: cover;
+}
+.container .content .area .card .card-interaction .inter-search {
+  width: 20px;
+  height: 20px;
+  background-image: url("./svg/searchBlack.svg");
+  background-size: cover;
+}
 .container .content .area .card:hover .card-block {
   opacity: 1;
   transition: 0.5s;
-  display: block;
+  display: flex;
   max-width: 125px;
   width: 100%;
   height: 35px;
@@ -478,8 +537,31 @@ section .slider .non {
 }
 .container .content .area .card:hover .card-block .bask:hover img,
 .container .content .area .card:hover .card-block .like:hover img,
-.container .content .area .card:hover .card-block card_show:hover img {
+.container .content .area .card:hover .card-block .card_show:hover img {
   filter: hue-rotate(10deg);
+}
+.container .content .area .card:hover .card-interaction {
+  display: flex;
+}
+.container .content .area .card:hover .card-interaction .inter-basket:hover {
+  width: 20px;
+  height: 20px;
+  background-image: url("./svg/shoppingGreen.svg");
+  background-size: cover;
+  cursor: no-drop;
+}
+.container .content .area .card:hover .card-interaction .inter-like:hover {
+  width: 20px;
+  height: 20px;
+  background-image: url("./svg/heartGreen.svg");
+  background-size: cover;
+  cursor: no-drop;
+}
+.container .content .area .card:hover .card-interaction .inter-search:hover {
+  width: 20px;
+  height: 20px;
+  background-image: url("./svg/searchGreen.svg");
+  background-size: cover;
 }
 .container .content .pagination {
   max-width: 250px;
@@ -518,6 +600,9 @@ section .slider .non {
 .container .content .pagination ul .checkHalf:hover {
   background: #46a358;
   transform: scale(1.1);
+}
+.container .content .pagination:hover {
+  cursor: no-drop;
 }
 
 footer {
