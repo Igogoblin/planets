@@ -95,25 +95,17 @@ export function showCard() {
 
 function checkImgShow() {
   let imgBlockItems = document.querySelectorAll(".img-block > img");
-  console.log(imgBlockItems);
+  let count = 0;
   for (let i = 0; i < 4; i++) {
-    // imgBlockItems[i].classList.remove("increase");
-    console.log("i", i);
     imgBlockItems[i].addEventListener("click", function () {
       imgBlockItems[i].classList.add("increase");
       imgPrev.setAttribute("src", `${planets[ourCard].img[i]}`);
-
-      // for (let j = 0; j < 4; j++) {
-      //   if (j != i) {
-      //     imgBlockItems[i].classList.remove("increase");
-      //     console.log("i-=j", i + " j " + j);
-      //     // console.log("j", j);
-      //   } else {
-      //                        пока что не работает показать выбранную картинку
-      //   }
-      // }
-      // imgBlockItems[i].classList.add("increase");
-      // console.log(imgBlockItems);
+      count = i;
+      imgBlockItems.forEach((element, item) => {
+        if (item != count) {
+          imgBlockItems[item].classList.remove("increase");
+        }
+      });
     });
   }
 }
