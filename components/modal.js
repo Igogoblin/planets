@@ -125,3 +125,5 @@ confirmPassword.addEventListener("blur", () => {
     confirmPassword.classList.add("style-border-red");
   }
 });
+
+// надо изменить инпуты пароля ---------------------------------------
