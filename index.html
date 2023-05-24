@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="for-modal"></div>
+  <div class="for-modal non"></div>
   <div class="modul-register non">
     <div class="register-close">
       <img src="./css/svg/X.svg" alt="close">
@@ -21,16 +21,17 @@
         <div class="register-title">
           <span class="register-title_log highlight">Login</span> | <span class="register-title_reg">Register</span>
         </div>
-        <p>Enter your username and password to login.</p>
-        <input type="text" name="username" id="register-username" class="non">
+        <p>Enter your username and password to <span class="register-title_count">login</span>.</p>
+        <input type="text" name="username" id="register-username" class="non" placeholder="username">
 
-        <input type="email" placeholder="almamun_uxui@outlook.com" class="login-email" autocomplete="username email">
-        <input type="password" name="password" id="register-password" autocomplete="new-password">
+        <input type="email" placeholder="enter your email address" class="login-email" autocomplete="username email">
+        <input type="password" name="password" id="register-password" autocomplete="new-password"
+          placeholder="password">
 
-        <input type="password" name="confirm-password" id="confirm-password" autocomplete="current-password"
-          class="non">
+        <input type="password" name="confirm-password" id="confirm-password" autocomplete="current-password" class="non"
+          placeholder="confirm password">
 
-        <span class="highlight">Forgot Password?</span>
+        <span class="forgot highlight">Forgot Password?</span>
         <button class="register-container_button">Login</button>
         <!-- <div> -->
         <p class="hr">Or login with</p>
@@ -65,7 +66,9 @@
           <img src="./css/svg/basket.svg" alt="image basket">
           <div class="basket-item">6</div>
         </div>
-        <button class="log"><img src="./css/svg/logIn.svg" alt="image login">Login</button>
+        <button class="log">
+          <div class="login-person"></div><img src="./css/svg/logIn.svg" alt="image login">Login
+        </button>
       </div>
     </header>
     <main>

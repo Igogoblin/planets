@@ -64,8 +64,17 @@ textarea {
   margin: 0 auto;
 }
 
-.modul-register {
+.for-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #727272;
+  opacity: 0.6;
   z-index: 1;
+}
+
+.modul-register {
+  z-index: 2;
   width: 500px;
   height: 600px;
   position: absolute;
@@ -116,6 +125,7 @@ textarea {
   padding-left: 14px;
   border-radius: 5px;
   border: 1px solid #eaeaea;
+  cursor: auto;
 }
 .modul-register .register-container span {
   width: 100%;
@@ -124,9 +134,19 @@ textarea {
   width: 100%;
   height: 40px;
   border-radius: 5px;
+  cursor: pointer;
+}
+.modul-register .register-container .style-border-red {
+  border: 1px solid #800;
+}
+.modul-register .register-container .style-border-green {
+  border: 1px solid #46a358;
 }
 .modul-register .register-container .highlight {
   color: #46a358;
+}
+.modul-register .register-container .forgot {
+  cursor: pointer;
 }
 .modul-register .register-container .register-container_button {
   background-color: #46a358;
@@ -209,7 +229,7 @@ header .acc:hover .basket {
   cursor: no-drop;
 }
 header .acc:hover .log {
-  cursor: no-drop;
+  cursor: pointer;
 }
 
 section {
