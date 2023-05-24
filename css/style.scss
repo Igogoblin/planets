@@ -63,7 +63,7 @@ $back-color: #fbfbfb;
   height: 100%;
   position: absolute;
   background-color: #727272;
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 1;
 }
 .modul-register {
@@ -137,9 +137,10 @@ $back-color: #fbfbfb;
     }
     .highlight {
       color: #46a358;
+    }
+    .forgot {
       cursor: pointer;
     }
-
     .register-container_button {
       background-color: #46a358;
       color: #ffffff;
