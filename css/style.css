@@ -69,7 +69,7 @@ textarea {
   height: 100%;
   position: absolute;
   background-color: #727272;
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 1;
 }
 
@@ -144,6 +144,8 @@ textarea {
 }
 .modul-register .register-container .highlight {
   color: #46a358;
+}
+.modul-register .register-container .forgot {
   cursor: pointer;
 }
 .modul-register .register-container .register-container_button {
