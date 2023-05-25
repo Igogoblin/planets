@@ -4,7 +4,11 @@ import { banner, goPage } from "./index.js";
 console.log("this is card js");
 
 let ourCard;
-
+/**
+ * Description Get the data-attribute of the selected card
+ * @param {}
+ * @returns {} When activated, go to the product page
+ */
 export function getCard() {
   let cards = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
@@ -12,15 +16,20 @@ export function getCard() {
   let interLike = document.querySelectorAll(".inter-like");
 
   for (let i = 0; i < 9; i++) {
-    interSearch[i].addEventListener("click", function (event) {
+    interSearch[i].addEventListener("click", function () {
       // console.log(cards[i].dataset);
       // console.log(typeof this.dataset.item); //string
       ourCard = +cards[i].dataset.item;
-      // console.log(ourCard);
+      console.log(ourCard);
       goPage(1);
     });
   }
 }
+/**
+ * Description We build banner cards on the product page
+ * @param {}
+ * @returns {}
+ */
 const productsBlock = document.querySelector(".products-block");
 export function buildReleted() {
   productsBlock.innerHTML = "";
