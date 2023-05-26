@@ -104,6 +104,7 @@ p {
   width: 100%;
   display: flex;
   margin: 26px 0;
+  border: 1px solid gray;
 }
 .decision_count {
   max-width: 120px;
@@ -189,7 +190,10 @@ p {
   height: auto;
 }
 .description-title {
-  margin: 20px 0 80px 0;
+  margin: 20px 0 10px 0;
+}
+.shop-card_description {
+  margin-bottom: 80px;
 }
 .products {
   height: 400px;
