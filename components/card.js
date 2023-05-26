@@ -61,6 +61,7 @@ const cardLike = document.querySelector(".card-like");
 const cardCategor = document.querySelector(".card-categor > span");
 // const cardTags = document.querySelector(".card-tags");
 const descriptionTitle = document.querySelector(".description-title");
+const descriptonText = document.querySelector(".descripton-text");
 
 export function showCard() {
   if (!ourCard) ourCard = 0;
@@ -77,7 +78,7 @@ export function showCard() {
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
   cardName.textContent = planets[ourCard].name;
   cardPrice.textContent = `$ ${planets[ourCard].price}`;
-  cardDescription.textContent = planets[ourCard].description;
+  cardDescription.textContent = planets[ourCard].briefly;
   if (planets[ourCard].size === "small") {
     cardSize[0].classList.add("size-style");
     cardSize[1].classList.remove("size-style");
@@ -93,6 +94,7 @@ export function showCard() {
   }
   cardCategor.textContent = planets[ourCard].categories;
   descriptionTitle.textContent = planets[ourCard].description;
+  descriptonText.textContent = planets[ourCard].descriptionP;
   checkImgShow();
 }
 
