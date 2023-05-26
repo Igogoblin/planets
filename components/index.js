@@ -140,7 +140,9 @@ function buildArea() {
     }
     text += `
             <div class="card" data-item="${ourArray[arr[i]].id}">
-              <img src="${ourArray[arr[i]].img[0]}" alt="card image">
+              <div class="card-img">
+                <img src="${ourArray[arr[i]].img[0]}" alt="card image">
+              </div>
               <span class="card-name">${ourArray[arr[i]].name}</span>
               <div class="card-price">$ ${ourArray[arr[i]].price}</div>
               <div class="card-interaction">

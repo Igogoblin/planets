@@ -4,7 +4,11 @@ import { banner, goPage } from "./index.js";
 console.log("this is card js");
 
 let ourCard;
-
+/**
+ * Description Get the data-attribute of the selected card
+ * @param {}
+ * @returns {} When activated, go to the product page
+ */
 export function getCard() {
   let cards = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
@@ -12,8 +16,8 @@ export function getCard() {
   let interLike = document.querySelectorAll(".inter-like");
 
   for (let i = 0; i < 9; i++) {
-    interSearch[i].addEventListener("click", function (event) {
-      console.log(cards[i].dataset);
+    interSearch[i].addEventListener("click", function () {
+      // console.log(cards[i].dataset);
       // console.log(typeof this.dataset.item); //string
       ourCard = +cards[i].dataset.item;
       console.log(ourCard);
@@ -21,6 +25,11 @@ export function getCard() {
     });
   }
 }
+/**
+ * Description We build banner cards on the product page
+ * @param {}
+ * @returns {}
+ */
 const productsBlock = document.querySelector(".products-block");
 export function buildReleted() {
   productsBlock.innerHTML = "";
@@ -52,15 +61,11 @@ const cardLike = document.querySelector(".card-like");
 const cardCategor = document.querySelector(".card-categor > span");
 // const cardTags = document.querySelector(".card-tags");
 const descriptionTitle = document.querySelector(".description-title");
+const descriptonText = document.querySelector(".descripton-text");
 
 export function showCard() {
   if (!ourCard) ourCard = 0;
-
   let imageblock = "";
-  // planets[ourCard].img.forEach(
-  //   (element) => (imageblock += `<img src="${element}" alt="image plant">`)
-  // );
-
   for (let i = 0; i < 4; i++) {
     if (i === 0) {
       imageblock += `<img src="${planets[ourCard].img[0]}" alt="image plant" class="increase">`;
@@ -73,7 +78,7 @@ export function showCard() {
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
   cardName.textContent = planets[ourCard].name;
   cardPrice.textContent = `$ ${planets[ourCard].price}`;
-  cardDescription.textContent = planets[ourCard].description;
+  cardDescription.textContent = planets[ourCard].briefly;
   if (planets[ourCard].size === "small") {
     cardSize[0].classList.add("size-style");
     cardSize[1].classList.remove("size-style");
@@ -87,9 +92,9 @@ export function showCard() {
     cardSize[1].classList.remove("size-style");
     cardSize[2].classList.add("size-style");
   }
-  // count -------------------------------------------------------
   cardCategor.textContent = planets[ourCard].categories;
   descriptionTitle.textContent = planets[ourCard].description;
+  descriptonText.textContent = planets[ourCard].descriptionP;
   checkImgShow();
 }
 
