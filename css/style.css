@@ -368,8 +368,15 @@ section .slider .non {
 .container .panel .panel-choice .panel-choice_categories ul {
   height: 100%;
 }
+.container .panel .panel-choice .panel-choice_price {
+  border: 1px solid gray;
+}
 .container .panel .panel-choice .panel-choice_size {
   height: 180px;
+}
+.container .panel .panel-choice .choice-item {
+  color: #46a358;
+  transform: scale(1.1);
 }
 .container .panel .panel-choice span {
   font-weight: 700;
@@ -505,6 +512,11 @@ section .slider .non {
   height: 20px;
   background-image: url("./svg/searchBlack.svg");
   background-size: cover;
+}
+.container .content .area .card .card-interaction .inter-basket:hover,
+.container .content .area .card .card-interaction .inter-like:hover,
+.container .content .area .card .card-interaction .inter-search:hover {
+  transform: scale(1.5);
 }
 .container .content .area .card:hover .card-block {
   opacity: 1;

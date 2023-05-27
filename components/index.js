@@ -41,12 +41,13 @@ function checkCategor() {
   for (let i = 0; i < categoriesLi.length; i++) {
     categoriesLi[i].addEventListener("click", function () {
       console.log(categoriesLi[i].dataset.categor);
-
+      categoriesLi[i].classList.toggle("choice-item");
       ourCategori = categoriesLi[i].dataset.categor;
       makeOurArray();
     });
     if (i > 2) continue;
     sizes[i].addEventListener("click", function () {
+      sizes[i].classList.toggle("choice-item");
       console.log(sizes[i].dataset.size);
       ourSize = sizes[i].dataset.size;
       makeOurArray();
@@ -54,20 +55,71 @@ function checkCategor() {
   }
 }
 checkCategor();
-
+/**
+ * Description Check our array for a category
+ * @param {}
+ * @returns {array}
+ */
 function makeOurArray() {
   ourArray.length = 0;
-
-  planets.forEach((element) => {
-    if (element.categories == ourCategori) {
-      ourArray.push(element);
+  let choiceItem = document.querySelectorAll(".choice-item");
+  // здесь будте срабатывать только на одну категорию ту что нажали
+  // planets.forEach((element) => {
+  //   if (element.categories == ourCategori) {
+  //     ourArray.push(element);
+  //   }
+  // });
+  // planets.forEach((element) => {
+  //   if (element.size == ourSize) {
+  //     ourArray.push(element);
+  //   }
+  // });
+  console.log(choiceItem);
+  // for (let i = 0; i < planets.length; i++) {
+  //   for (let j = 0; j < choiceItem.length; j++) {
+  //     // проверим сетКатегорию ********************************
+  //     // console.log(choiceItem[j].getAttribute("data-categor"));
+  //     if (
+  //       (planets[i].categories == choiceItem[j].getAttribute("data-categor") ||
+  //         planets[i].size == choiceItem[j].getAttribute("data-size")) &&
+  //       /!ourArray.includes(planets[i])
+  //     ) {
+  //       ourArray.push(planets[i]);
+  //     }
+  //     // if (j < 3) {
+  //     //   if (
+  //     //     planets[i].size == choiceItem[j].getAttribute("data-categor") &&
+  //     //   /!ourArray.includes(planets[i])
+  //     //   ) {
+  //     //     ourArray.push(planets[i]);
+  //     //   }
+  //     // }
+  //   }
+  // }
+  for (let i = 0; i < planets.length; i++) {
+    for (let j = 0; j < choiceItem.length; j++) {
+      if (planets[i].categories == choiceItem[j].getAttribute("data-categor")) {
+        ourArray.push(planets[i]);
+      }
     }
-  });
-  planets.forEach((element) => {
-    if (element.size == ourSize) {
-      ourArray.push(element);
+  }
+  if (ourArray.length === 0) {
+    // если не выбирали категории ------------------------
+    for (let i = 0; i < planets.length; i++) {
+      for (let j = 0; j < choiceItem.length; j++) {
+        if (planets[i].size == choiceItem[j].getAttribute("data-size")) {
+          ourArray.push(planets[i]);
+        }
+      }
     }
-  });
+  } else {
+    let arraySize = [];
+    for (let i = 0; ourArray.length; i++) {
+      for (let j = 0; j < choiceItem.length; j++) {
+        // if(ourArray[i].size==)
+      }
+    }
+  }
   console.log(ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
@@ -225,5 +277,5 @@ for (let i = 0; i < pagination.length; i++) {
 // paginationShow();
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
-
+// это надо перекинуть в функцию ***********************************
 getCard();
