@@ -373,8 +373,15 @@ section {
           height: 100%;
         }
       }
+      .panel-choice_price {
+        border: 1px solid gray;
+      }
       .panel-choice_size {
         height: 180px;
+      }
+      .choice-item {
+        color: #46a358;
+        transform: scale(1.1);
       }
       span {
         font-weight: 700;
@@ -535,6 +542,11 @@ section {
             background-image: url("./svg/searchBlack.svg");
             background-size: cover;
           }
+          .inter-basket:hover,
+          .inter-like:hover,
+          .inter-search:hover {
+            transform: scale(1.5);
+          }
         }
       }
       .card:hover {
@@ -683,6 +695,7 @@ footer {
           display: flex;
           justify-content: center;
           align-items: center;
+          // cursor: pointer;
         }
       }
     }

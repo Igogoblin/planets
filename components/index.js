@@ -4,9 +4,10 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability } from "./categories.js";
 let arr = [];
-export let ourArray = [];
-ourArray = [...planets];
 console.log(planets);
+export let ourArray = [...planets];
+// ourArray = [...planets];
+console.log(ourArray);
 export let banner = [];
 let goal = 1;
 /**
@@ -38,36 +39,111 @@ export const categoriesLi = document.querySelectorAll(`[data-categor]`);
 export const sizes = document.querySelectorAll(`[data-size]`);
 
 function checkCategor() {
+  console.log(ourArray);
   for (let i = 0; i < categoriesLi.length; i++) {
     categoriesLi[i].addEventListener("click", function () {
       console.log(categoriesLi[i].dataset.categor);
-
+      categoriesLi[i].classList.toggle("choice-item");
       ourCategori = categoriesLi[i].dataset.categor;
+      console.log(ourArray);
       makeOurArray();
     });
     if (i > 2) continue;
     sizes[i].addEventListener("click", function () {
+      sizes[i].classList.toggle("choice-item");
       console.log(sizes[i].dataset.size);
       ourSize = sizes[i].dataset.size;
-      makeOurArray();
+      makeOurArraySize();
     });
   }
 }
 checkCategor();
 
+/**
+ * Description Check our array for a category
+ * @param {}
+ * @returns {array}
+ */
 function makeOurArray() {
-  ourArray.length = 0;
+  // надо изменять на проверку каждой катекории иначе надо больше условий
 
-  planets.forEach((element) => {
-    if (element.categories == ourCategori) {
-      ourArray.push(element);
+  let choiceItem = document.querySelectorAll(".choice-item");
+  console.log(choiceItem[0]);
+  console.log(ourArray[0].categor);
+  console.log(ourArray);
+  if (choiceItem.length == 0) {
+    ourArray.length = 0;
+    for (let i = 0; i < planets.length; i++) {
+      for (let j = 0; j < choiceItem.length; j++) {
+        if (
+          planets[i].categories == choiceItem[j].getAttribute("data-categor")
+        ) {
+          ourArray.push(planets[i]);
+        }
+      }
     }
-  });
-  planets.forEach((element) => {
-    if (element.size == ourSize) {
-      ourArray.push(element);
+  } else {
+    let arrayCategories = [];
+    for (let i = 0; i < ourArray.length; i++) {
+      for (let j = 0; j < choiceItem.length; j++) {
+        console.log(choiceItem[j].dataset.categor == ourArray[i].categor);
+        if (choiceItem[j].dataset.categor == ourArray[i].categor) {
+          arrayCategories.push(ourArray[i]);
+        }
+      }
     }
-  });
+    ourArray.length = 0;
+    console.log(arrayCategories);
+    ourArray = [...arrayCategories];
+  }
+  // здесь будте срабатывать только на одну категорию ту что нажали
+  // planets.forEach((element) => {
+  //   if (element.categories == ourCategori) {
+  //     ourArray.push(element);
+  //   }
+  // });
+  // planets.forEach((element) => {
+  //   if (element.size == ourSize) {
+  //     ourArray.push(element);
+  //   }
+  // });
+  console.log(choiceItem);
+  console.log(choiceItem[0].dataset.categor);
+  console.log(ourArray);
+  arr.length = 0;
+  arr = randomArr(ourArray.length, arr);
+  console.log(arr);
+  availability();
+  buildArea();
+  buildPagination(1);
+  getCard();
+}
+function makeOurArraySize() {
+  console.log(ourArray[0].size);
+  let choiceItem = document.querySelectorAll(".choice-item");
+  console.log(choiceItem);
+  if (choiceItem.length == 0) {
+    // ourArray.length = 0;
+    // если не выбирали категории ------------------------
+    // for (let i = 0; i < planets.length; i++) {
+    //   for (let j = 0; j < choiceItem.length; j++) {
+    //     if (planets[i].size == choiceItem[j].getAttribute("data-size")) {
+    //       ourArray.push(planets[i]);
+    //     }
+    //   }
+    // }
+  } else {
+    let arraySize = [];
+    for (let i = 0; ourArray.length; i++) {
+      for (let j = 0; j < choiceItem.length; j++) {
+        console.log(choiceItem[j]);
+        if (ourArray[i].size == choiceItem[j].getAttribute("data-size")) {
+          arraySize.push(ourArray[i]);
+        }
+      }
+    }
+    // ourArray = [...arraySize];
+  }
   console.log(ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
@@ -225,5 +301,5 @@ for (let i = 0; i < pagination.length; i++) {
 // paginationShow();
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
-
+// это надо перекинуть в функцию ***********************************
 getCard();
