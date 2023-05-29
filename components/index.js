@@ -4,7 +4,6 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability } from "./categories.js";
 let arr = [];
-console.log(planets);
 export let ourArray = [...planets];
 // ourArray = [...planets];
 console.log(ourArray);
@@ -39,23 +38,27 @@ export const categoriesLi = document.querySelectorAll(`[data-categor]`);
 export const sizes = document.querySelectorAll(`[data-size]`);
 
 function checkCategor() {
-  console.log(ourArray);
   for (let i = 0; i < categoriesLi.length; i++) {
     categoriesLi[i].addEventListener("click", function () {
       console.log(categoriesLi[i].dataset.categor);
       categoriesLi[i].classList.toggle("choice-item");
       ourCategori = categoriesLi[i].dataset.categor;
-      console.log(ourArray);
       makeOurArray();
     });
     if (i > 2) continue;
-    sizes[i].addEventListener("click", function () {
-      sizes[i].classList.toggle("choice-item");
-      console.log(sizes[i].dataset.size);
-      ourSize = sizes[i].dataset.size;
-      makeOurArraySize();
-    });
+    else {
+      sizes[i].addEventListener("click", function () {
+        sizes[i].classList.toggle("choice-item");
+        console.log(sizes[i].dataset.size);
+        ourSize = sizes[i].dataset.size;
+        makeOurArraySize();
+      });
+    }
   }
+
+  // for (let i = 0; i < sizes.length; i++) {
+
+  // }
 }
 checkCategor();
 
@@ -69,26 +72,20 @@ function makeOurArray() {
 
   let choiceItem = document.querySelectorAll(".choice-item");
   console.log(choiceItem[0]);
-  console.log(ourArray[0].categor);
   console.log(ourArray);
   if (choiceItem.length == 0) {
     ourArray.length = 0;
-    for (let i = 0; i < planets.length; i++) {
-      for (let j = 0; j < choiceItem.length; j++) {
-        if (
-          planets[i].categories == choiceItem[j].getAttribute("data-categor")
-        ) {
-          ourArray.push(planets[i]);
-        }
-      }
-    }
+    ourArray = [...planets];
   } else {
     let arrayCategories = [];
-    for (let i = 0; i < ourArray.length; i++) {
+    for (let i = 0; i < planets.length - 2; i++) {
       for (let j = 0; j < choiceItem.length; j++) {
-        console.log(choiceItem[j].dataset.categor == ourArray[i].categor);
-        if (choiceItem[j].dataset.categor == ourArray[i].categor) {
-          arrayCategories.push(ourArray[i]);
+        console.log(choiceItem[j].dataset.categor == planets[i].categories);
+        if (choiceItem[j].dataset.categor == planets[i].categories) {
+          arrayCategories.push(planets[i]);
+        }
+        if (choiceItem[j].dataset.size == planets[i].size) {
+          // проверить есть ли такой в ourArray
         }
       }
     }
@@ -108,51 +105,50 @@ function makeOurArray() {
   //   }
   // });
   console.log(choiceItem);
-  console.log(choiceItem[0].dataset.categor);
   console.log(ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
-  console.log(arr);
+  // console.log(arr);
   availability();
   buildArea();
   buildPagination(1);
   getCard();
 }
+
 function makeOurArraySize() {
-  console.log(ourArray[0].size);
+  // console.log(ourArray[0].size);
   let choiceItem = document.querySelectorAll(".choice-item");
   console.log(choiceItem);
   if (choiceItem.length == 0) {
-    // ourArray.length = 0;
-    // если не выбирали категории ------------------------
-    // for (let i = 0; i < planets.length; i++) {
-    //   for (let j = 0; j < choiceItem.length; j++) {
-    //     if (planets[i].size == choiceItem[j].getAttribute("data-size")) {
-    //       ourArray.push(planets[i]);
-    //     }
-    //   }
-    // }
+    ourArray.length = 0;
+    ourArray = [...planets];
   } else {
     let arraySize = [];
-    for (let i = 0; ourArray.length; i++) {
+    console.log(planets);
+    for (let i = 0; i < planets.length - 2; i++) {
       for (let j = 0; j < choiceItem.length; j++) {
-        console.log(choiceItem[j]);
-        if (ourArray[i].size == choiceItem[j].getAttribute("data-size")) {
-          arraySize.push(ourArray[i]);
+        console.log(choiceItem[j].dataset.size);
+        console.log(i);
+        console.log(planets[i]);
+        console.log(planets[i].size == choiceItem[j].dataset.size);
+
+        if (planets[i].size == choiceItem[j].dataset.size) {
+          arraySize.push(planets[i]);
         }
       }
     }
-    // ourArray = [...arraySize];
+    ourArray.length = 0;
+    ourArray = [...arraySize];
   }
-  console.log(ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
-  console.log(arr);
+  // console.log(arr);
   availability();
   buildArea();
   buildPagination(1);
   getCard();
 }
+
 // Categories finish ----------------------------------------------------------------
 
 // cоздаю рандомный массив для построения поля в рандомном порядке

@@ -14,15 +14,17 @@ export function getCard() {
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
-
-  for (let i = 0; i < 9; i++) {
-    interSearch[i].addEventListener("click", function () {
-      // console.log(cards[i].dataset);
-      // console.log(typeof this.dataset.item); //string
-      ourCard = +cards[i].dataset.item;
-      console.log(ourCard);
-      goPage(1);
-    });
+  // проверка ниже только для того чтобы избежать ошибку, если карточек нет
+  if (interSearch.length != 0) {
+    for (let i = 0; i < 9; i++) {
+      interSearch[i].addEventListener("click", function () {
+        // console.log(cards[i].dataset);
+        // console.log(typeof this.dataset.item); //string
+        ourCard = +cards[i].dataset.item;
+        console.log(ourCard);
+        goPage(1);
+      });
+    }
   }
 }
 /**
