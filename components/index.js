@@ -2,7 +2,7 @@ import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
-import { availability } from "./categories.js";
+import { availability, buildSortArray } from "./categories.js";
 let arr = [];
 export let ourArray = [...planets];
 // ourArray = [...planets];
@@ -71,8 +71,8 @@ function makeOurArray() {
   // надо изменять на проверку каждой катекории иначе надо больше условий
 
   let choiceItem = document.querySelectorAll(".choice-item");
-  console.log(choiceItem[0]);
-  console.log(ourArray);
+  // console.log(choiceItem[0]);
+  // console.log(ourArray);
   if (choiceItem.length == 0) {
     ourArray.length = 0;
     ourArray = [...planets];
@@ -80,10 +80,12 @@ function makeOurArray() {
     let arrayCategories = [];
     for (let i = 0; i < planets.length - 2; i++) {
       for (let j = 0; j < choiceItem.length; j++) {
-        console.log(choiceItem[j].dataset.categor == planets[i].categories);
+        //console.log(choiceItem[j].dataset.categor == planets[i].categories);
         if (choiceItem[j].dataset.categor == planets[i].categories) {
           arrayCategories.push(planets[i]);
         }
+        // console.log("arrayCategories", arrayCategories);
+        // console.log("ourArray", ourArray);
         if (choiceItem[j].dataset.size == planets[i].size) {
           // проверить есть ли такой в ourArray
         }
@@ -105,11 +107,12 @@ function makeOurArray() {
   //   }
   // });
   console.log(choiceItem);
-  console.log(ourArray);
+  console.log("ourArray category ", ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
   // console.log(arr);
   availability();
+  // buildSortArray();
   buildArea();
   buildPagination(1);
   getCard();
@@ -124,13 +127,13 @@ function makeOurArraySize() {
     ourArray = [...planets];
   } else {
     let arraySize = [];
-    console.log(planets);
+    // console.log(planets);
     for (let i = 0; i < planets.length - 2; i++) {
       for (let j = 0; j < choiceItem.length; j++) {
-        console.log(choiceItem[j].dataset.size);
-        console.log(i);
-        console.log(planets[i]);
-        console.log(planets[i].size == choiceItem[j].dataset.size);
+        // console.log(choiceItem[j].dataset.size);
+        // console.log(i);
+        // console.log(planets[i]);
+        // console.log(planets[i].size == choiceItem[j].dataset.size);
 
         if (planets[i].size == choiceItem[j].dataset.size) {
           arraySize.push(planets[i]);
@@ -140,10 +143,12 @@ function makeOurArraySize() {
     ourArray.length = 0;
     ourArray = [...arraySize];
   }
+  console.log("ourArray in finish size : ", ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
   // console.log(arr);
   availability();
+  // buildSortArray();
   buildArea();
   buildPagination(1);
   getCard();
