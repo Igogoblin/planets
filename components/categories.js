@@ -13,8 +13,6 @@ export function availability() {
   console.log(categoriesLi[1].dataset.categor);
   let choiceItem = document.querySelectorAll(".choice-item");
   for (let j = 0; j < categoriesLi.length; j++) {
-    console.log(categoriesLi[j]);
-    console.log(categoriesLi[j].classList.contains("choice-item"));
     if (categoriesLi[j].classList.contains("choice-item")) {
       let count = 0;
       for (let i = 0; i < ourArray.length; i++) {
@@ -27,11 +25,13 @@ export function availability() {
       categorLi[j].textContent = "";
     }
   }
-  for (let i = 0; i < sizeLi.length; i++) {
-    if (sizeLi[i].classList.contains("choice-item")) {
+  for (let i = 0; i < sizes.length; i++) {
+    console.log(sizes[i]);
+    console.log(sizes[i].classList.contains("choice-item"));
+    if (sizes[i].classList.contains("choice-item")) {
       let count = 0;
       for (let j = 0; j < ourArray.length; j++) {
-        if (ourArray[j].size == sizeLi[i].dataset.size) {
+        if (ourArray[j].size == sizes[i].dataset.size) {
           count++;
         }
       }
@@ -40,35 +40,6 @@ export function availability() {
       sizeLi[i].textContent = "";
     }
   }
-  // for (let i = 0; i < choiceItem.length; i++) {}
-
-  // for (let i = 0; i < categorLi.length; i++) {
-  //   let countCategories = 0;
-  //   for (let j = 0; j < ourArray.length; j++) {
-  //     if (categoriesLi[i].dataset.categor == ourArray[j].categories) {
-  //       countCategories++;
-  //     }
-  //   }
-  //   if (countCategories === 0) {
-  //     categorLi[i].textContent = "";
-  //   } else {
-  //     categorLi[i].textContent = countCategories;
-  //   }
-  // }
-  // console.log(sizes[1].dataset.size);
-  // for (let i = 0; i < sizes.length; i++) {
-  //   let countSize = 0;
-  //   for (let j = 0; j < ourArray.length; j++) {
-  //     if (sizes[i].dataset.size == ourArray[j].size) {
-  //       countSize++;
-  //     }
-  //   }
-  //   if (countSize === 0) {
-  //     sizeLi[i].textContent = "";
-  //   } else {
-  //     sizeLi[i].textContent = countSize;
-  //   }
-  // }
 }
 export function buildSortArray() {
   let choiceItem = document.querySelectorAll(".choice-item");
