@@ -167,41 +167,43 @@ header {
   height: 78px;
   padding-top: 25px;
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+}
+header .wrapper {
   display: flex;
   justify-content: space-between;
 }
-header .logo {
+header .wrapper .logo {
   width: 150px;
   height: 34px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .logo span {
+header .wrapper .logo span {
   color: #46a358;
   font-weight: 800;
   letter-spacing: 0.06em;
 }
-header ul {
+header .wrapper ul {
   display: flex;
 }
-header ul li {
+header .wrapper ul li {
   margin-right: 50px;
 }
-header ul li a {
+header .wrapper ul li a {
   color: #3d3d3d;
 }
-header .acc {
+header .wrapper .acc {
   display: flex;
 }
-header .acc .basket {
+header .wrapper .acc .basket {
   width: 29px;
   height: 24px;
   margin-right: 30px;
   position: relative;
   margin-top: 4px;
 }
-header .acc .basket .basket-item {
+header .wrapper .acc .basket .basket-item {
   width: 12px;
   height: 12px;
   background-color: #46a358;
@@ -214,7 +216,7 @@ header .acc .basket .basket-item {
   display: flex;
   justify-content: center;
 }
-header .acc .log {
+header .wrapper .acc .log {
   width: 100px;
   height: 35px;
   background-color: #46a358;
@@ -224,16 +226,98 @@ header .acc .log {
   align-items: center;
   border-radius: 6px;
 }
-header .acc .log img {
+header .wrapper .acc .log img {
   margin-right: 6px;
 }
-header .acc:hover .basket {
+header .wrapper .acc:hover .basket {
   cursor: no-drop;
 }
-header .acc:hover .log {
+header .wrapper .acc:hover .log {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  header {
+    width: 100%;
+    height: 78px;
+    padding-top: 25px;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+  }
+  header .wrapper .logo {
+    width: 100px;
+    height: 34px;
+  }
+  header .wrapper .logo span {
+    color: #46a358;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+  }
+  header .wrapper ul li {
+    margin-right: 10px;
+  }
+  header .wrapper .acc .basket {
+    width: 29px;
+    height: 24px;
+    margin-right: 30px;
+    position: relative;
+    margin-top: 4px;
+  }
+  header .wrapper .acc .basket .basket-item {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+    font-size: 9px;
+  }
+  header .wrapper .acc .log {
+    width: 80px;
+    height: 35px;
+  }
+  header .wrapper .acc .log img {
+    margin-right: 6px;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+    height: 78px;
+    padding-top: 25px;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+  }
+  header .wrapper .logo {
+    width: 100px;
+    height: 34px;
+  }
+  header .wrapper .logo span {
+    display: none;
+  }
+  header .wrapper ul li {
+    margin-right: 10px;
+  }
+  header .wrapper .acc .basket {
+    width: 15px;
+    height: 24px;
+    margin-right: 30px;
+    position: relative;
+    margin-top: 4px;
+  }
+  header .wrapper .acc .basket .basket-item {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+    font-size: 9px;
+  }
+  header .wrapper .acc .log {
+    width: 80px;
+    height: 35px;
+  }
+  header .wrapper .acc .log img {
+    margin-right: 6px;
+  }
+}
 section {
   width: 100%;
   height: 600px;
