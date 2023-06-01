@@ -86,6 +86,7 @@ textarea {
   align-items: end;
   background-color: #ffffff;
   text-align: end;
+  overflow-y: scroll;
 }
 .modul-register .register-close {
   width: 20px;
@@ -364,23 +365,32 @@ section .slider .non {
     font-weight: 600;
     font-size: 30px;
     line-height: 30px;
+    text-transform: uppercase;
   }
   section .slider .slide .slide-title h1 span {
+    color: #46a358;
     font-weight: 900;
     font-size: 70px;
     line-height: 70px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
   }
   section .slider .slide .slide-title p {
     font-size: 14px;
     line-height: 24px;
+    color: #727272;
     margin-bottom: 10px;
   }
   section .slider .slide .slide-title button {
     width: 140px;
     height: 40px;
+    background-color: #46a358;
+    color: #ffffff;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
   }
   section .slider .slide .slide-img {
     height: 100%;
@@ -803,6 +813,7 @@ section .slider .non {
   .container .content .area {
     width: 100%;
     height: 1190px;
+    justify-content: space-around;
   }
   .container .content .area .card {
     max-width: 200px;
@@ -827,14 +838,12 @@ section .slider .non {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    color: #3d3d3d;
     padding-left: 10px;
   }
   .container .content .area .card .card-price {
     font-weight: 700;
     font-size: 18px;
     line-height: 16px;
-    color: #46a358;
     margin: 10px;
   }
   .container .content .area .card .card-interaction {
@@ -986,10 +995,6 @@ section .slider .non {
     max-width: 838px;
     width: 100%;
     height: 1250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
   }
   .container .content .content-head {
     width: 100%;
@@ -997,9 +1002,6 @@ section .slider .non {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
-  }
-  .container .content .content-head .fast-choice {
-    display: flex;
   }
   .container .content .content-head:hover {
     cursor: no-drop;

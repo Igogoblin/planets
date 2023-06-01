@@ -79,7 +79,7 @@ $back-color: #fbfbfb;
   align-items: end;
   background-color: #ffffff;
   text-align: end;
-
+  overflow-y: scroll;
   .register-close {
     width: 20px;
     height: 20px;
@@ -206,6 +206,8 @@ header {
         display: flex;
         justify-content: center;
       }
+      // display: flex;
+      // align-items: end;
     }
     .log {
       width: 100px;
@@ -366,23 +368,32 @@ section {
             font-weight: 600;
             font-size: 30px;
             line-height: 30px;
+            text-transform: uppercase;
             span {
+              color: $second-color;
               font-weight: 900;
               font-size: 70px;
               line-height: 70px;
+              text-transform: uppercase;
+              letter-spacing: 0.01em;
             }
           }
           p {
             font-size: 14px;
             line-height: 24px;
+            color: #727272;
             margin-bottom: 10px;
           }
           button {
             width: 140px;
             height: 40px;
+            background-color: $second-color;
+            color: #ffffff;
             font-weight: 700;
             font-size: 16px;
             line-height: 20px;
+            text-transform: uppercase;
+            border-radius: 6px;
           }
         }
         .slide-img {
@@ -858,22 +869,14 @@ section {
       .area {
         width: 100%;
         height: 1190px;
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
+        justify-content: space-around;
 
         .card {
           max-width: 200px;
           width: 100%;
           height: 300px;
-          // position: relative;
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: space-between;
-          // background: #fbfbfb;
           cursor: pointer;
           .card-img {
-            // position: relative;
             max-width: 200px;
             width: 100%;
             height: 300px;
@@ -891,14 +894,12 @@ section {
             font-weight: 400;
             font-size: 16px;
             line-height: 16px;
-            color: #3d3d3d;
             padding-left: 10px;
           }
           .card-price {
             font-weight: 700;
             font-size: 18px;
             line-height: 16px;
-            color: #46a358;
             margin: 10px;
           }
           .card-interaction {
@@ -1046,71 +1047,11 @@ section {
 }
 @media (max-width: 850px) {
   .container {
-    // width: 100%;
-    // height: 1450px;
-    // display: flex;
-    // justify-content: space-between;
-    // margin-top: 450px;
     .panel {
       width: 200px;
-      // height: 1244px;
 
       .panel-choice {
         width: 200px;
-        // height: 774px;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
-        // background-color: #fbfbfb;
-        // .panel-choice_categories {
-        //   height: 50%;
-        //   display: flex;
-        //   flex-direction: column;
-        //   justify-content: start;
-        //   ul {
-        //     height: 100%;
-        //   }
-        // }
-        // .panel-choice_price {
-        //   border: 1px solid gray;
-        // }
-        // .panel-choice_size {
-        //   height: 180px;
-        // }
-        // .choice-item {
-        //   color: #46a358;
-        //   transform: scale(1.1);
-        // }
-        // span {
-        //   font-weight: 700;
-        //   font-size: 18px;
-        //   line-height: 16px;
-        //   color: #3d3d3d;
-        //   margin-left: 18px;
-        // }
-        // ul {
-        //   width: 100%;
-        //   margin-left: 30px;
-        //   margin-top: 15px;
-        //   display: flex;
-        //   flex-direction: column;
-        //   justify-content: space-between;
-        //   font-weight: 700;
-        //   font-size: 15px;
-        //   line-height: 40px;
-        //   li:hover {
-        //     cursor: pointer;
-        //   }
-        // }
-        // button {
-        //   max-width: 90px;
-        //   width: 100%;
-        //   height: 35px;
-        //   background-color: $second-color;
-        //   color: #ffffff;
-        //   border-radius: 6px;
-        //   margin-left: 30px;
-        // }
       }
 
       .banner {
@@ -1126,19 +1067,12 @@ section {
       max-width: 838px;
       width: 100%;
       height: 1250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: end;
       .content-head {
         width: 100%;
         border: 1px solid black;
         font-weight: 400;
         font-size: 12px;
         line-height: 14px;
-        .fast-choice {
-          display: flex;
-        }
       }
       .content-head:hover {
         cursor: no-drop;
@@ -1146,22 +1080,13 @@ section {
       .area {
         width: 100%;
         height: 1190px;
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
-
         .card {
           max-width: 150px;
           width: 100%;
           height: 220px;
-          // position: relative;
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: space-between;
-          // background: #fbfbfb;
+
           cursor: pointer;
           .card-img {
-            // position: relative;
             max-width: 150px;
             width: 100%;
             height: 200px;
@@ -1169,7 +1094,6 @@ section {
               max-width: 150px;
               width: 100%;
               height: 150px;
-              // object-fit: cover;
             }
           }
           .card-block {
@@ -1349,22 +1273,14 @@ section {
       .area {
         width: 100%;
         height: 1190px;
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
 
         .card {
           max-width: 100px;
           width: 100%;
           height: 150px;
-          // position: relative;
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: space-between;
-          // background: #fbfbfb;
+
           cursor: pointer;
           .card-img {
-            // position: relative;
             max-width: 100px;
             width: 100%;
             height: 150px;
@@ -1372,7 +1288,6 @@ section {
               max-width: 100px;
               width: 100%;
               height: 100px;
-              // object-fit: cover;
             }
           }
           .card-block {
@@ -1452,7 +1367,6 @@ section {
             }
           }
           .card-interaction {
-            // display: flex;
             .inter-basket:hover {
               width: 10px;
               height: 10px;
@@ -1502,7 +1416,6 @@ footer {
     height: 100%;
     background: #fbfbfb;
     display: flex;
-    // flex-direction: column;
     justify-content: space-between;
     padding-top: 30px;
     .social {
@@ -1530,7 +1443,6 @@ footer {
           display: flex;
           justify-content: center;
           align-items: center;
-          // cursor: pointer;
         }
       }
     }
@@ -1538,9 +1450,7 @@ footer {
       max-width: 400px;
       width: 100%;
       display: flex;
-      //justify-content: center;
       flex-direction: column;
-      // align-items: end;
       span {
         font-weight: 700;
         font-size: 18px;
