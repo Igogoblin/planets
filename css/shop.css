@@ -228,11 +228,9 @@ p {
   }
 }
 @media (max-width: 850px) {
-  .shop-card_img {
-    /* width: 280px;
-    height: 280px; */
-    /* width: 100%; */
-  }
+  /* .shop-card_img {
+
+  } */
   .img-block {
     width: 280px;
     /* width: 100%; */
