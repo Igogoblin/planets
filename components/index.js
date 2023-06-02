@@ -4,11 +4,15 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray } from "./categories.js";
 let arr = [];
-export let ourArray = [...planets];
+export let ourArray;
 // ourArray = [...planets];
 console.log(ourArray);
 export let banner = [];
 let goal = 1;
+console.log(!localStorage.getItem("ourArray"));
+!localStorage.getItem("ourArray")
+  ? (ourArray = [...planets])
+  : (ourArray = localStorage.getItem("ourArray"));
 /**
  * Description create random number
  * @param {number} max
@@ -94,6 +98,7 @@ function makeOurArray() {
     ourArray.length = 0;
     console.log(arrayCategories);
     ourArray = [...arrayCategories];
+    localStorage.setItem("ourArray", ourArray);
   }
   // здесь будте срабатывать только на одну категорию ту что нажали
   // planets.forEach((element) => {
@@ -142,6 +147,7 @@ function makeOurArraySize() {
     }
     ourArray.length = 0;
     ourArray = [...arraySize];
+    localStorage.setItem("ourArray", ourArray);
   }
   console.log("ourArray in finish size : ", ourArray);
   arr.length = 0;
