@@ -10,22 +10,37 @@ let ourCard;
  * @returns {} When activated, go to the product page
  */
 export function getCard() {
+  // need add here asinc await !!!!!!!!*************************
   let cards = document.querySelectorAll(".card");
-  let interSearch = document.querySelectorAll(".inter-search");
+  // let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
   // проверка ниже только для того чтобы избежать ошибку, если карточек нет
-  if (interSearch.length != 0) {
-    for (let i = 0; i < 9; i++) {
-      interSearch[i].addEventListener("click", function () {
-        // console.log(cards[i].dataset);
-        // console.log(typeof this.dataset.item); //string
-        ourCard = +cards[i].dataset.item;
-        console.log(ourCard);
-        goPage(1);
-      });
+  document.addEventListener("DOMContentLoaded", () => {
+    let interSearch = document.querySelectorAll(".inter-search");
+    if (interSearch.length != 0) {
+      for (let i = 0; i < 9; i++) {
+        interSearch[i]?.addEventListener("click", function () {
+          // console.log(cards[i].dataset);
+          // console.log(typeof this.dataset.item); //string
+          ourCard = +cards[i].dataset.item;
+          console.log(ourCard);
+          goPage(1);
+        });
+      }
     }
-  }
+  });
+  // if (interSearch.length != 0) {
+  //   for (let i = 0; i < 9; i++) {
+  //     interSearch[i]?.addEventListener("click", function () {
+  //       // console.log(cards[i].dataset);
+  //       // console.log(typeof this.dataset.item); //string
+  //       ourCard = +cards[i].dataset.item;
+  //       console.log(ourCard);
+  //       goPage(1);
+  //     });
+  //   }
+  // }
 }
 /**
  * Description We build banner cards on the product page

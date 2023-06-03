@@ -319,3 +319,7 @@ for (let i = 0; i < pagination.length; i++) {
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
 //getCard();
+
+//  monstera-6304439
+//  plant-7268178
+//  bonsai-316573
