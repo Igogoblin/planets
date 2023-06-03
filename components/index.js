@@ -4,15 +4,31 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray } from "./categories.js";
 let arr = [];
-export let ourArray;
+export let ourArray = [...planets];
 // ourArray = [...planets];
-console.log(ourArray);
+
 export let banner = [];
 let goal = 1;
-console.log(!localStorage.getItem("ourArray"));
-!localStorage.getItem("ourArray")
-  ? (ourArray = [...planets])
-  : (ourArray = localStorage.getItem("ourArray"));
+
+// localStorage.clear();
+let ob = [{ 4: "goal" }, { 3: "main" }];
+localStorage.setItem("test", JSON.stringify(ob));
+console.log(JSON.parse(localStorage.getItem("test")));
+console.log(JSON.parse(localStorage.getItem("ourArray")));
+
+if (!localStorage.getItem("ourArray")) {
+  ourArray = [...planets];
+  arr = randomArr(ourArray.length, arr);
+} else {
+  ourArray = JSON.parse(localStorage.getItem("ourArray"));
+  //arr = localStorage.getItem("arr");
+  arr = randomArr(ourArray.length, arr);
+  console.log("crabotalo eto");
+  // console.log(localStorage.getItem("arr"));
+}
+
+console.log(ourArray);
+console.log("arr", arr);
 /**
  * Description create random number
  * @param {number} max
@@ -98,24 +114,15 @@ function makeOurArray() {
     ourArray.length = 0;
     console.log(arrayCategories);
     ourArray = [...arrayCategories];
-    localStorage.setItem("ourArray", ourArray);
+    localStorage.setItem("ourArray", JSON.stringify(ourArray));
   }
-  // здесь будте срабатывать только на одну категорию ту что нажали
-  // planets.forEach((element) => {
-  //   if (element.categories == ourCategori) {
-  //     ourArray.push(element);
-  //   }
-  // });
-  // planets.forEach((element) => {
-  //   if (element.size == ourSize) {
-  //     ourArray.push(element);
-  //   }
-  // });
+
   console.log(choiceItem);
   console.log("ourArray category ", ourArray);
-  arr.length = 0;
+  // arr.length = 0;
   arr = randomArr(ourArray.length, arr);
-  // console.log(arr);
+  localStorage.setItem("arr", arr);
+  console.log("arr for localstorage : ", arr);
   availability();
   // buildSortArray();
   buildArea();
@@ -147,7 +154,7 @@ function makeOurArraySize() {
     }
     ourArray.length = 0;
     ourArray = [...arraySize];
-    localStorage.setItem("ourArray", ourArray);
+    localStorage.setItem("ourArray", JSON.stringify(ourArray));
   }
   console.log("ourArray in finish size : ", ourArray);
   arr.length = 0;
@@ -169,7 +176,7 @@ function makeOurArraySize() {
  * @param {number} planets.length-2
  * @returns {array}
  */
-arr = randomArr(planets.length - 2, arr);
+
 banner = randomArr(planets.length - 2, banner);
 buildReleted();
 console.log(arr);
@@ -213,6 +220,8 @@ export function goPage(i) {
  * @returns {any}
  */
 function buildArea() {
+  console.log(ourArray);
+  console.log("arr", arr);
   if (area == null) return;
   area.innerHTML = "";
   let text = "";
