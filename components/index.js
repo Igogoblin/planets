@@ -220,12 +220,12 @@ export function goPage(i) {
  * Description Construction of the Card Field
  * @returns {any}
  */
-function buildArea() {
+export function buildArea() {
   console.log(ourArray);
   console.log("arr", arr);
   // arr = randomArr(ourArray.length, arr);
   console.log("arr", arr);
-  if (arr.length < ourArray.length) {
+  if (arr.length !== ourArray.length) {
     arr.length = 0;
     arr = randomArr(ourArray.length, arr);
   }
@@ -334,3 +334,6 @@ buildPagination(1);
 
 // -- 1183558
 // -- 7518669
+// -- 6319467
+// -- 1183558
+// -- 2341486
