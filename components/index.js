@@ -119,9 +119,10 @@ function makeOurArray() {
 
   console.log(choiceItem);
   console.log("ourArray category ", ourArray);
+  // =======================  до этого момента работает ==========
   // arr.length = 0;
-  arr = randomArr(ourArray.length, arr);
-  localStorage.setItem("arr", arr);
+  // arr = randomArr(ourArray.length, arr);
+  // localStorage.setItem("arr", arr);
   console.log("arr for localstorage : ", arr);
   availability();
   // buildSortArray();
@@ -159,7 +160,7 @@ function makeOurArraySize() {
   console.log("ourArray in finish size : ", ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
-  // console.log(arr);
+  console.log("163 arr ", arr);
   availability();
   // buildSortArray();
   buildArea();
@@ -222,6 +223,12 @@ export function goPage(i) {
 function buildArea() {
   console.log(ourArray);
   console.log("arr", arr);
+  // arr = randomArr(ourArray.length, arr);
+  console.log("arr", arr);
+  if (arr.length < ourArray.length) {
+    arr.length = 0;
+    arr = randomArr(ourArray.length, arr);
+  }
   if (area == null) return;
   area.innerHTML = "";
   let text = "";
@@ -318,4 +325,12 @@ for (let i = 0; i < pagination.length; i++) {
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
-getCard();
+//getCard();
+
+//  monstera-6304439
+//  --plant-7268178
+// -- bonsai-316573
+// -- 2026512
+
+// -- 1183558
+// -- 7518669
