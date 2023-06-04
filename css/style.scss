@@ -160,7 +160,7 @@ header {
   width: 100%;
   height: 78px;
   padding-top: 25px;
-  border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   .wrapper {
     display: flex;
@@ -454,9 +454,12 @@ section {
     .slider {
       .slide {
         .slide-title {
-          max-width: 560px;
-          margin-top: 39px;
+          // max-width: 560px;
+          width: 80%;
+          // margin-top: 39px;
           padding-left: 20px;
+          display: flex;
+          align-items: center;
           span {
             font-weight: 400;
             font-size: 12px;
@@ -471,8 +474,8 @@ section {
             span {
               color: $second-color;
               font-weight: 900;
-              font-size: 70px;
-              line-height: 70px;
+              font-size: 64px;
+              line-height: 64px;
               text-transform: uppercase;
               letter-spacing: 0.01em;
             }
@@ -824,7 +827,7 @@ section {
           .inter-basket:hover,
           .inter-like:hover,
           .inter-search:hover {
-            transform: scale(1.5);
+            transform: scale(1.1);
           }
         }
       }

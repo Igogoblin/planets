@@ -16,31 +16,31 @@ export function getCard() {
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
   // проверка ниже только для того чтобы избежать ошибку, если карточек нет
-  document.addEventListener("DOMContentLoaded", () => {
-    let interSearch = document.querySelectorAll(".inter-search");
-    if (interSearch.length != 0) {
-      for (let i = 0; i < 9; i++) {
-        interSearch[i]?.addEventListener("click", function () {
-          // console.log(cards[i].dataset);
-          // console.log(typeof this.dataset.item); //string
-          ourCard = +cards[i].dataset.item;
-          console.log(ourCard);
-          goPage(1);
-        });
-      }
-    }
-  });
-  // if (interSearch.length != 0) {
-  //   for (let i = 0; i < 9; i++) {
-  //     interSearch[i]?.addEventListener("click", function () {
-  //       // console.log(cards[i].dataset);
-  //       // console.log(typeof this.dataset.item); //string
-  //       ourCard = +cards[i].dataset.item;
-  //       console.log(ourCard);
-  //       goPage(1);
-  //     });
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   let interSearch = document.querySelectorAll(".inter-search");
+  //   if (interSearch.length != 0) {
+  //     for (let i = 0; i < 9; i++) {
+  //       interSearch[i]?.addEventListener("click", function () {
+  //         // console.log(cards[i].dataset);
+  //         // console.log(typeof this.dataset.item); //string
+  //         ourCard = +cards[i].dataset.item;
+  //         console.log(ourCard);
+  //         goPage(1);
+  //       });
+  //     }
   //   }
-  // }
+  // });
+  if (interSearch.length != 0) {
+    for (let i = 0; i < 9; i++) {
+      interSearch[i]?.addEventListener("click", function () {
+        // console.log(cards[i].dataset);
+        // console.log(typeof this.dataset.item); //string
+        ourCard = +cards[i].dataset.item;
+        console.log(ourCard);
+        goPage(1);
+      });
+    }
+  }
 }
 /**
  * Description We build banner cards on the product page
