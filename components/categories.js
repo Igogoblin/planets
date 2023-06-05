@@ -72,7 +72,9 @@ fastChoiceAll.addEventListener("click", function () {
   console.log(ourArray);
   buildArea();
   availability();
-  //  нужно добавить обновление боковых категорий ******************
+  categorLi.forEach((element) => (element.textContent = ""));
+  categoriesLi.forEach((element) => element.classList.remove("choice-item"));
+  sizes.forEach((element) => element.classList.remove("choice-item"));
 });
 
 fastChoiceSale.addEventListener("click", function () {
@@ -87,4 +89,9 @@ fastChoiceSale.addEventListener("click", function () {
   console.log(ourArray);
   buildArea();
   availability();
+
+  categorLi.forEach((element) => (element.textContent = ""));
+  categoriesLi.forEach((element) => element.classList.remove("choice-item"));
+  sizes.forEach((element) => element.classList.remove("choice-item"));
+  //  нужно добавить обновление боковых категорий ******************
 });
