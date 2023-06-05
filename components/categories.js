@@ -70,11 +70,7 @@ fastChoiceAll.addEventListener("click", function () {
   ourArray.length = 0;
   Array.prototype.push.apply(ourArray, planets);
   console.log(ourArray);
-  buildArea();
-  availability();
-  categorLi.forEach((element) => (element.textContent = ""));
-  categoriesLi.forEach((element) => element.classList.remove("choice-item"));
-  sizes.forEach((element) => element.classList.remove("choice-item"));
+  totoalHead();
 });
 
 fastChoiceSale.addEventListener("click", function () {
@@ -87,11 +83,20 @@ fastChoiceSale.addEventListener("click", function () {
   ourArray.length = 0;
   Array.prototype.push.apply(ourArray, arraySale);
   console.log(ourArray);
+  totoalHead();
+});
+
+function totoalHead() {
   buildArea();
   availability();
-
   categorLi.forEach((element) => (element.textContent = ""));
   categoriesLi.forEach((element) => element.classList.remove("choice-item"));
   sizes.forEach((element) => element.classList.remove("choice-item"));
-  //  нужно добавить обновление боковых категорий ******************
+}
+
+const ascend = document.querySelector(".ascend");
+
+ascend.addEventListener("click", function () {
+  console.log(ascend.value);
+  // sorting by value ****************************************
 });
