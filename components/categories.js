@@ -1,4 +1,5 @@
-import { ourArray, categoriesLi, sizes } from "./index.js";
+import planets from "../planets.json" assert { type: "json" };
+import { ourArray, categoriesLi, sizes, buildArea } from "./index.js";
 console.log("this is categories file");
 
 let categorLi = document.querySelectorAll(`[data-categor] > span`);
@@ -60,3 +61,42 @@ export function buildSortArray() {
 // работает только при одиночном выборе категории
 // надо добавлять класс выбора и дополнительной проверки
 //  пагинация теперь не работает :(
+
+// работа с панелью -----------------------------------------
+const fastChoiceAll = document.querySelector(".fast-choice_all");
+const fastChoiceSale = document.querySelector(".fast-choice_sale");
+
+fastChoiceAll.addEventListener("click", function () {
+  ourArray.length = 0;
+  Array.prototype.push.apply(ourArray, planets);
+  console.log(ourArray);
+  totoalHead();
+});
+
+fastChoiceSale.addEventListener("click", function () {
+  let arraySale = [];
+  planets.forEach((element) => {
+    if (element.sale > 0) {
+      arraySale.push(element);
+    }
+  });
+  ourArray.length = 0;
+  Array.prototype.push.apply(ourArray, arraySale);
+  console.log(ourArray);
+  totoalHead();
+});
+
+function totoalHead() {
+  buildArea();
+  availability();
+  categorLi.forEach((element) => (element.textContent = ""));
+  categoriesLi.forEach((element) => element.classList.remove("choice-item"));
+  sizes.forEach((element) => element.classList.remove("choice-item"));
+}
+
+const ascend = document.querySelector(".ascend");
+
+ascend.addEventListener("click", function () {
+  console.log(ascend.value);
+  // sorting by value ****************************************
+});

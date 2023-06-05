@@ -686,9 +686,6 @@ section .slider .non {
 .container .content .content-head .fast-choice .fast-choice_all {
   margin-right: 50px;
 }
-.container .content .content-head:hover {
-  cursor: no-drop;
-}
 .container .content .area {
   width: 100%;
   height: 1190px;
@@ -893,7 +890,7 @@ section .slider .non {
     justify-content: space-between;
   }
   .container .content .content-head:hover {
-    cursor: no-drop;
+    cursor: pointer;
   }
   .container .content .area {
     width: 100%;
@@ -1088,9 +1085,6 @@ section .slider .non {
     font-size: 12px;
     line-height: 14px;
   }
-  .container .content .content-head:hover {
-    cursor: no-drop;
-  }
   .container .content .area {
     width: 100%;
     height: 1190px;
@@ -1272,9 +1266,6 @@ section .slider .non {
   }
   .container .content .content-head .fast-choice .fast-choice_all {
     margin-right: 20px;
-  }
-  .container .content .content-head:hover {
-    cursor: no-drop;
   }
   .container .content .area {
     width: 100%;
