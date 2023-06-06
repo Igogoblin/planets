@@ -2,9 +2,9 @@ import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
-import { availability, buildSortArray } from "./categories.js";
+import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
-export let forSort = 0;
+
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
