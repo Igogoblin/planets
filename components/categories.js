@@ -6,7 +6,7 @@ console.log("this is categories file");
 let categorLi = document.querySelectorAll(`[data-categor] > span`);
 let sizeLi = document.querySelectorAll(`[data-size] > span`);
 const panelChoiceFilter = document.querySelector(".panel-choice_filter");
-
+const ascend = document.querySelector(".ascend");
 panelChoiceFilter.addEventListener("click", () => {
   console.log("we push button");
   // buildSortArray();
@@ -42,11 +42,11 @@ export function availability() {
       sizeLi[i].textContent = "";
     }
   }
+  ascend.value = "a";
 }
 export function buildSortArray() {
   let choiceItem = document.querySelectorAll(".choice-item");
   let countArray = [];
-  console.log(ourArray);
   for (let i = 0; i < choiceItem.length; i++) {
     console.log(choiceItem[i].dataset.categor);
     for (let j = 0; j < ourArray.length; j++) {
@@ -57,7 +57,7 @@ export function buildSortArray() {
       }
     }
   }
-  console.log(countArray);
+  ascend.value = "a";
 }
 // работает только при одиночном выборе категории
 // надо добавлять класс выбора и дополнительной проверки
@@ -94,8 +94,6 @@ function totoalHead() {
   categoriesLi.forEach((element) => element.classList.remove("choice-item"));
   sizes.forEach((element) => element.classList.remove("choice-item"));
 }
-
-const ascend = document.querySelector(".ascend");
 
 ascend.addEventListener("click", function () {
   switch (ascend.value) {
