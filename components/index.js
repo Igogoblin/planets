@@ -4,6 +4,7 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray } from "./categories.js";
 let arr = [];
+export let forSort = 0;
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
@@ -228,11 +229,17 @@ export function buildArea() {
   if (arr.length !== ourArray.length) {
     arr.length = 0;
     arr = randomArr(ourArray.length, arr);
+    console.log("zachodit? ");
   }
   if (area == null) return;
   area.innerHTML = "";
   let text = "";
-
+  if (forSort > 0) {
+    arr.length = 0;
+    for (let i = 0; i < ourArray.length; i++) {
+      arr.push(i);
+    }
+  }
   for (let i = 0; i < 9; i++) {
     if (ourArray.length <= i) {
       break;
@@ -337,3 +344,14 @@ buildPagination(1);
 // -- 6319467
 // -- 1183558
 // -- 2341486
+
+// плэйбой под прикрытием  чкомед
+//  кутис 2014
+//  няня
+//  субрубикон  6,2 (50ые)
+//  скауты против зомби
+//  армагеддец  7,8
+
+// виновный
+// поездка на выходные - дедектив
+// в тени луны

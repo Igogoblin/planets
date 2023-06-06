@@ -181,7 +181,7 @@
   },
   {
     "id": 10,
-    "name": "banana plant",
+    "name": "Banana plant",
     "categories": "big plants",
     "price": 140,
     "size": "large",
@@ -199,7 +199,7 @@
   },
   {
     "id": 11,
-    "name": "banana",
+    "name": "Banana",
     "categories": "big plants",
     "price": 130,
     "size": "large",
@@ -217,7 +217,7 @@
   },
   {
     "id": 12,
-    "name": "banana",
+    "name": "Banana",
     "categories": "big plants",
     "price": 150,
     "size": "large",
@@ -235,7 +235,7 @@
   },
   {
     "id": 13,
-    "name": "succulent",
+    "name": "Succulent",
     "categories": "succulents",
     "price": 70,
     "size": "medium",
@@ -253,7 +253,7 @@
   },
   {
     "id": 14,
-    "name": "spruce",
+    "name": "Spruce",
     "categories": "garderning",
     "price": 150,
     "size": "large",
@@ -271,7 +271,7 @@
   },
   {
     "id": 15,
-    "name": "shovel",
+    "name": "Shovel",
     "categories": "accessories",
     "price": 150,
     "size": "small",
@@ -289,7 +289,7 @@
   },
   {
     "id": 16,
-    "name": "echinopsis",
+    "name": "Echinopsis",
     "categories": "small plants",
     "price": 100,
     "size": "small",
@@ -361,7 +361,7 @@
   },
   {
     "id": 20,
-    "name": "peperomia",
+    "name": "Peperomia",
     "categories": "house plants",
     "price": 150,
     "size": "small",
@@ -415,7 +415,7 @@
   },
   {
     "id": 23,
-    "name": "flamingo flower",
+    "name": "Flamingo flower",
     "categories": "house plants",
     "price": 130,
     "size": "medium",
