@@ -1,11 +1,12 @@
 import planets from "../planets.json" assert { type: "json" };
-import { ourArray, categoriesLi, sizes, buildArea, forSort } from "./index.js";
+import { ourArray, categoriesLi, sizes, buildArea } from "./index.js";
+export let forSort = 0;
 console.log("this is categories file");
 
 let categorLi = document.querySelectorAll(`[data-categor] > span`);
 let sizeLi = document.querySelectorAll(`[data-size] > span`);
 const panelChoiceFilter = document.querySelector(".panel-choice_filter");
-
+const ascend = document.querySelector(".ascend");
 panelChoiceFilter.addEventListener("click", () => {
   console.log("we push button");
   // buildSortArray();
@@ -41,11 +42,11 @@ export function availability() {
       sizeLi[i].textContent = "";
     }
   }
+  ascend.value = "a";
 }
 export function buildSortArray() {
   let choiceItem = document.querySelectorAll(".choice-item");
   let countArray = [];
-  console.log(ourArray);
   for (let i = 0; i < choiceItem.length; i++) {
     console.log(choiceItem[i].dataset.categor);
     for (let j = 0; j < ourArray.length; j++) {
@@ -56,7 +57,7 @@ export function buildSortArray() {
       }
     }
   }
-  console.log(countArray);
+  ascend.value = "a";
 }
 // работает только при одиночном выборе категории
 // надо добавлять класс выбора и дополнительной проверки
@@ -94,29 +95,13 @@ function totoalHead() {
   sizes.forEach((element) => element.classList.remove("choice-item"));
 }
 
-const ascend = document.querySelector(".ascend");
-
 ascend.addEventListener("click", function () {
-  console.log(ascend.value);
-  console.log("check ourArray", ourArray);
-  // sorting by value ****************************************
-  // вызов функции с дефолтным значением, но при
-  // по имени (Ann, John, Pete)
-  //users.sort((a, b) => a.name > b.name ? 1 : -1);
-
-  // по возрасту (Pete, Ann, John)
-  //users.sort((a, b) => a.age > b.age ? 1 : -1);
-  // let countArray = [];
-  console.log(ourArray);
   switch (ascend.value) {
     case "a":
-      console.log("default value");
       forSort = 0;
       break;
     case "a1":
-      console.log("srabotal");
       ourArray.sort((a, b) => (a.name > b.name ? 1 : -1));
-      // ourArray.sort((a, b) => a.name - b.name);
       forSort = 1;
       break;
     case "a2":
@@ -132,9 +117,5 @@ ascend.addEventListener("click", function () {
       forSort = 1;
       break;
   }
-  // ourArray.length = 0;
-  // ourArray = [...countArray];
-  console.log(ourArray);
-  // console.log(countArray);
   buildArea();
 });
