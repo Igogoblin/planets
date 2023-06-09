@@ -1,10 +1,12 @@
-import { ourArray, categoriesLi, sizes } from "./index.js";
+import planets from "../planets.json" assert { type: "json" };
+import { ourArray, categoriesLi, sizes, buildArea } from "./index.js";
+export let forSort = 0;
 console.log("this is categories file");
 
 let categorLi = document.querySelectorAll(`[data-categor] > span`);
 let sizeLi = document.querySelectorAll(`[data-size] > span`);
 const panelChoiceFilter = document.querySelector(".panel-choice_filter");
-
+const ascend = document.querySelector(".ascend");
 panelChoiceFilter.addEventListener("click", () => {
   console.log("we push button");
   // buildSortArray();
@@ -40,11 +42,11 @@ export function availability() {
       sizeLi[i].textContent = "";
     }
   }
+  ascend.value = "a";
 }
 export function buildSortArray() {
   let choiceItem = document.querySelectorAll(".choice-item");
   let countArray = [];
-  console.log(ourArray);
   for (let i = 0; i < choiceItem.length; i++) {
     console.log(choiceItem[i].dataset.categor);
     for (let j = 0; j < ourArray.length; j++) {
@@ -55,8 +57,65 @@ export function buildSortArray() {
       }
     }
   }
-  console.log(countArray);
+  ascend.value = "a";
 }
 // работает только при одиночном выборе категории
 // надо добавлять класс выбора и дополнительной проверки
 //  пагинация теперь не работает :(
+
+// работа с панелью -----------------------------------------
+const fastChoiceAll = document.querySelector(".fast-choice_all");
+const fastChoiceSale = document.querySelector(".fast-choice_sale");
+
+fastChoiceAll.addEventListener("click", function () {
+  ourArray.length = 0;
+  Array.prototype.push.apply(ourArray, planets);
+  console.log(ourArray);
+  totoalHead();
+});
+
+fastChoiceSale.addEventListener("click", function () {
+  let arraySale = [];
+  planets.forEach((element) => {
+    if (element.sale > 0) {
+      arraySale.push(element);
+    }
+  });
+  ourArray.length = 0;
+  Array.prototype.push.apply(ourArray, arraySale);
+  console.log(ourArray);
+  totoalHead();
+});
+
+function totoalHead() {
+  buildArea();
+  availability();
+  categorLi.forEach((element) => (element.textContent = ""));
+  categoriesLi.forEach((element) => element.classList.remove("choice-item"));
+  sizes.forEach((element) => element.classList.remove("choice-item"));
+}
+
+ascend.addEventListener("click", function () {
+  switch (ascend.value) {
+    case "a":
+      forSort = 0;
+      break;
+    case "a1":
+      ourArray.sort((a, b) => (a.name > b.name ? 1 : -1));
+      forSort = 1;
+      break;
+    case "a2":
+      ourArray.sort((a, b) => (a.name < b.name ? 1 : -1));
+      forSort = 1;
+      break;
+    case "a3":
+      ourArray.sort((a, b) => (a.price > b.price ? 1 : -1));
+      forSort = 1;
+      break;
+    case "a4":
+      ourArray.sort((a, b) => (a.price < b.price ? 1 : -1));
+      forSort = 1;
+      break;
+  }
+  buildArea();
+});

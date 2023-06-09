@@ -6,6 +6,7 @@
     "price": 90,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/1-1image.png",
       "./css/img/planets-midjorn/1-2image.png",
@@ -23,6 +24,7 @@
     "price": 100,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://img.freepik.com/free-photo/birds-nest-plant-in-a-beige-pot_53876-134284.jpg",
       "https://img.freepik.com/free-photo/birds-nest-fern-plant-in-a-black-pot_53876-110269.jpg",
@@ -40,6 +42,7 @@
     "price": 80,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-153378.jpg",
       "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-133153.jpg",
@@ -57,6 +60,7 @@
     "price": 130,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133117.jpg",
       "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133143.jpg",
@@ -74,6 +78,7 @@
     "price": 70,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/2-1image.png",
       "./css/img/planets-midjorn/2-2image.png",
@@ -91,6 +96,7 @@
     "price": 110,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/3-1image.png",
       "./css/img/planets-midjorn/3-2image.png",
@@ -108,6 +114,7 @@
     "price": 100,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/4-1image.png",
       "./css/img/planets-midjorn/4-2image.png",
@@ -125,6 +132,7 @@
     "price": 150,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/5-1image.png",
       "./css/img/planets-midjorn/5-2image.png",
@@ -142,6 +150,7 @@
     "price": 140,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/6-1image.png",
       "./css/img/planets-midjorn/6-2image.png",
@@ -159,6 +168,7 @@
     "price": 120,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/7-1image.png",
       "./css/img/planets-midjorn/7-2image.png",
@@ -171,11 +181,12 @@
   },
   {
     "id": 10,
-    "name": "banana plant",
+    "name": "Banana plant",
     "categories": "big plants",
     "price": 140,
     "size": "large",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/1380361370/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=OBhoaIvgZ3zLyrg4HND4neerw648SBwE0HMKQjxrqdM=",
       "https://media.istockphoto.com/id/1380361377/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=46i-NLqe74ius8HShErdTHp-9eKQVQ3FGs00TUrTkOc=",
@@ -188,11 +199,12 @@
   },
   {
     "id": 11,
-    "name": "banana",
+    "name": "Banana",
     "categories": "big plants",
     "price": 130,
     "size": "large",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/1144381259/photo/decorative-banana-plant-in-stone-marble-vase-isolated-on-white-background-3d-rendering.jpg?s=1024x1024&w=is&k=20&c=Db7XcU8ufMnC3qdNkuM_v4LnJ-_2AWcgI6rZ4vjpA-M=",
       "https://media.istockphoto.com/id/515070873/photo/ornamental-plants-over-white-background.jpg?s=1024x1024&w=is&k=20&c=kapEDHu1WMGUEG7C3P3ozCpl-VwwziP118K2jqG-X9Q=",
@@ -205,11 +217,12 @@
   },
   {
     "id": 12,
-    "name": "banana",
+    "name": "Banana",
     "categories": "big plants",
     "price": 150,
     "size": "large",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/453235617/photo/fresh-banana.jpg?s=1024x1024&w=is&k=20&c=G2rptkf2ro948_ZgY1Ozy5dDUTB82kQqHFmSfP3nOjg=",
       "https://media.istockphoto.com/id/1298302996/photo/dieffenbachia-plant-in-black-flowerpot-with-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=i9ITCKZJJrH274QGjyuhhcFzi-9_HAOoOm5yxXoXSUo=",
@@ -222,11 +235,12 @@
   },
   {
     "id": 13,
-    "name": "succulent",
+    "name": "Succulent",
     "categories": "succulents",
     "price": 70,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/172279916/photo/potted-cactus.jpg?s=1024x1024&w=is&k=20&c=1lAxQu9wsROL-QD0Hw3R5LOUbNUy1-AVTY2iw-GP_zQ=",
       "https://media.istockphoto.com/id/1185678680/photo/zebra-haworthia-fasciata-isolated-on-white-background-top-view.jpg?s=1024x1024&w=is&k=20&c=PMMOqAq4A_QUnvN6sSds3L3zTIydweWiVL_orTPEJh4=",
@@ -239,11 +253,12 @@
   },
   {
     "id": 14,
-    "name": "spruce",
+    "name": "Spruce",
     "categories": "garderning",
     "price": 150,
     "size": "large",
     "like": "false",
+    "sale": 20,
     "img": [
       "https://media.istockphoto.com/id/1284922901/photo/big-green-fir-tree-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=7wHDr0da3u5j_U3jvUnZMGc9KK5WV2xgKxkPGUZ7Jjs=",
       "https://media.istockphoto.com/id/1358209352/photo/christmas-tree-in-snow.jpg?s=1024x1024&w=is&k=20&c=7pdVsQBqk_uYuJ_-GnR70UWRyAU8bOQtBrSQHXLI_jc=",
@@ -256,11 +271,12 @@
   },
   {
     "id": 15,
-    "name": "shovel",
+    "name": "Shovel",
     "categories": "accessories",
     "price": 150,
     "size": "small",
     "like": "false",
+    "sale": 10,
     "img": [
       "https://media.istockphoto.com/id/1363824410/vector/print.jpg?s=1024x1024&w=is&k=20&c=M2qJnHyR-87uX7rZqYITRZ6U2uNzWnE5m8jQEh26UpY=",
       "https://media.istockphoto.com/id/864742360/photo/small-shovel-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=S7YKYAcoirga9VRN0cvDe2P0quuNOXQbIMEeUUn_tMQ=",
@@ -273,11 +289,12 @@
   },
   {
     "id": 16,
-    "name": "echinopsis",
+    "name": "Echinopsis",
     "categories": "small plants",
     "price": 100,
     "size": "small",
     "like": "false",
+    "sale": 10,
     "img": [
       "https://cdn.pixabay.com/photo/2016/11/20/08/03/cactus-1842095_1280.jpg",
       "https://cdn.pixabay.com/photo/2020/11/10/02/27/cactus-5728314_1280.jpg",
@@ -295,6 +312,7 @@
     "price": 160,
     "size": "large",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://cdn.pixabay.com/photo/2023/01/23/04/33/monstera-7737811_1280.jpg",
       "https://cdn.pixabay.com/photo/2021/03/19/08/00/monstera-plant-6106850_1280.jpg",
@@ -312,10 +330,11 @@
     "price": 180,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
-      "https://cdn.pixabay.com/photo/2014/04/05/11/39/bonsai-316573_1280.jpg",
-      "https://cdn.pixabay.com/photo/2016/02/06/19/59/bonsai-1183558_1280.jpg",
       "https://cdn.pixabay.com/photo/2020/05/17/13/06/bonsai-5181549_1280.jpg",
+      "https://cdn.pixabay.com/photo/2016/02/06/19/59/bonsai-1183558_1280.jpg",
+      "https://cdn.pixabay.com/photo/2014/04/05/11/39/bonsai-316573_1280.jpg",
       "https://cdn.pixabay.com/photo/2022/08/03/09/45/bonsai-7362259_1280.jpg"
     ],
     "briefly": "Bonsai specimens are usually grown in shallow containers, and their growth is restricted so that they remain small, resembling a full-grown tree in nature.",
@@ -329,6 +348,7 @@
     "price": 170,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://cdn.pixabay.com/photo/2022/09/30/15/10/bonsai-7489638_1280.jpg",
       "https://cdn.pixabay.com/photo/2022/03/30/12/44/azalea-7101128_1280.jpg",
@@ -341,11 +361,12 @@
   },
   {
     "id": 20,
-    "name": "peperomia",
+    "name": "Peperomia",
     "categories": "house plants",
     "price": 150,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://cdn.pixabay.com/photo/2017/01/31/19/07/peperomia-caperata-rosso-2026512_1280.jpg",
       "https://cdn.pixabay.com/photo/2017/05/24/20/21/peperomia-flower-2341486_1280.jpg",
@@ -363,11 +384,12 @@
     "price": 100,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
-      "https://cdn.pixabay.com/photo/2022/10/14/02/35/monstera-7520305_1280.jpg",
-      "https://cdn.pixabay.com/photo/2021/06/02/13/13/monstera-6304439_1280.jpg",
       "https://cdn.pixabay.com/photo/2022/10/13/09/17/monstera-7518669_1280.jpg",
-      "https://cdn.pixabay.com/photo/2021/06/08/02/32/monstera-6319467_1280.jpg"
+      "https://cdn.pixabay.com/photo/2021/06/08/02/32/monstera-6319467_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/06/02/13/13/monstera-6304439_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/10/14/02/35/monstera-7520305_1280.jpg"
     ],
     "briefly": "Swiss Cheese Plant is a popular houseplant known for its unique foliage, which features large, glossy leaves with distinctive splits and holes, similar to the appearance of Swiss cheese.",
     "description": "The Swiss Cheese Plant, also known as Monstera deliciosa, is a species of flowering plant native to tropical forests of southern Mexico, south to Panama. It is an easy-care indoor plant complete with unusual, although stunning, leaves. The Swiss Cheese Plant is famous for its large, dark green, and glossy leaves with natural leaf-holes called fenestrations. The fenestrations are theorized to maximize sun fleck capture on the forest floor by increasing the spread of the leaf while decreasing the mass of leaf cells to support. Depending on the season and maturity of the plant, the Swiss Cheese Plant could arrive with no holes just yet and be sized to grow alongside you. The Swiss Cheese Plant is part of Araceae, the Aroid Family, and is one of the few aroids that are grown for their foliage rather than their flowers. Two different species of Monstera are cultivated as houseplants - Monstera deliciosa and Monstera adansonii. Monstera adansonii is distinguished from M. deliciosa by having longer, tapering leaves, as well as having completely enclosed leaf holes. Monstera deliciosa leaf holes eventually grow towards the edge and open up as they mature.",
@@ -380,9 +402,10 @@
     "price": 110,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
-      "https://cdn.pixabay.com/photo/2022/06/17/15/14/plant-7268178_1280.jpg",
       "https://cdn.pixabay.com/photo/2021/09/08/03/27/aglaonema-6605361_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/06/17/15/14/plant-7268178_1280.jpg",
       "https://cdn.pixabay.com/photo/2022/01/14/17/32/leaves-6937875_1280.jpg",
       "https://cdn.pixabay.com/photo/2021/11/04/00/34/chinese-croton-6767124_1280.jpg"
     ],
@@ -392,11 +415,12 @@
   },
   {
     "id": 23,
-    "name": "flamingo flower",
+    "name": "Flamingo flower",
     "categories": "house plants",
     "price": 130,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://cdn.pixabay.com/photo/2017/07/07/22/13/flamingo-flower-2482956_1280.jpg",
       "https://cdn.pixabay.com/photo/2017/07/07/22/10/flamingo-flower-2482948_1280.jpg",
@@ -414,6 +438,7 @@
     "price": 150,
     "size": "",
     "like": "false",
+    "sale": 0,
     "img": ["", "", "", ""],
     "briefly": "",
     "description": "",
@@ -426,6 +451,7 @@
     "price": 150,
     "size": "",
     "like": "false",
+    "sale": 0,
     "img": ["", "", "", ""],
     "briefly": "",
     "description": "",

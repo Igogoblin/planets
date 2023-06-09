@@ -51,7 +51,7 @@ function showSlider() {
   forTimer++;
 }
 
-//setInterval(showSlider, 6000);
+// setInterval(showSlider, 6000);
 
 /**
  * Description shows which page of the slider is active

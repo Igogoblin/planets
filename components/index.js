@@ -2,8 +2,9 @@ import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
-import { availability, buildSortArray } from "./categories.js";
+import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
+
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
@@ -119,9 +120,10 @@ function makeOurArray() {
 
   console.log(choiceItem);
   console.log("ourArray category ", ourArray);
+  // =======================  до этого момента работает ==========
   // arr.length = 0;
-  arr = randomArr(ourArray.length, arr);
-  localStorage.setItem("arr", arr);
+  // arr = randomArr(ourArray.length, arr);
+  // localStorage.setItem("arr", arr);
   console.log("arr for localstorage : ", arr);
   availability();
   // buildSortArray();
@@ -159,7 +161,7 @@ function makeOurArraySize() {
   console.log("ourArray in finish size : ", ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
-  // console.log(arr);
+  console.log("163 arr ", arr);
   availability();
   // buildSortArray();
   buildArea();
@@ -219,13 +221,25 @@ export function goPage(i) {
  * Description Construction of the Card Field
  * @returns {any}
  */
-function buildArea() {
+export function buildArea() {
   console.log(ourArray);
   console.log("arr", arr);
+  // arr = randomArr(ourArray.length, arr);
+  console.log("arr", arr);
+  if (arr.length !== ourArray.length) {
+    arr.length = 0;
+    arr = randomArr(ourArray.length, arr);
+    console.log("zachodit? ");
+  }
   if (area == null) return;
   area.innerHTML = "";
   let text = "";
-
+  if (forSort > 0) {
+    arr.length = 0;
+    for (let i = 0; i < ourArray.length; i++) {
+      arr.push(i);
+    }
+  }
   for (let i = 0; i < 9; i++) {
     if (ourArray.length <= i) {
       break;
@@ -318,4 +332,26 @@ for (let i = 0; i < pagination.length; i++) {
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
-getCard();
+//getCard();
+
+//  monstera-6304439
+//  --plant-7268178
+// -- bonsai-316573
+// -- 2026512
+
+// -- 1183558
+// -- 7518669
+// -- 6319467
+// -- 1183558
+// -- 2341486
+
+// плэйбой под прикрытием  чкомед
+//  кутис 2014
+//  няня
+//  субрубикон  6,2 (50ые)
+//  скауты против зомби
+//  армагеддец  7,8
+
+// виновный
+// поездка на выходные - дедектив
+// в тени луны
