@@ -1,5 +1,6 @@
 import planets from "../planets.json" assert { type: "json" };
 import { ourArray, categoriesLi, sizes, buildArea } from "./index.js";
+import { getCard } from "./card.js";
 export let forSort = 0;
 console.log("this is categories file");
 
@@ -72,6 +73,7 @@ fastChoiceAll.addEventListener("click", function () {
   Array.prototype.push.apply(ourArray, planets);
   console.log(ourArray);
   totoalHead();
+  getCard();
 });
 
 fastChoiceSale.addEventListener("click", function () {
@@ -85,6 +87,7 @@ fastChoiceSale.addEventListener("click", function () {
   Array.prototype.push.apply(ourArray, arraySale);
   console.log(ourArray);
   totoalHead();
+  getCard();
 });
 
 function totoalHead() {
