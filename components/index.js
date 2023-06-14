@@ -2,13 +2,34 @@ import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
 import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
-import { availability, buildSortArray } from "./categories.js";
+import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
+
 export let ourArray = [...planets];
 // ourArray = [...planets];
-console.log(ourArray);
+
 export let banner = [];
 let goal = 1;
+
+// localStorage.clear();
+let ob = [{ 4: "goal" }, { 3: "main" }];
+localStorage.setItem("test", JSON.stringify(ob));
+console.log(JSON.parse(localStorage.getItem("test")));
+console.log(JSON.parse(localStorage.getItem("ourArray")));
+
+if (!localStorage.getItem("ourArray")) {
+  ourArray = [...planets];
+  arr = randomArr(ourArray.length, arr);
+} else {
+  ourArray = JSON.parse(localStorage.getItem("ourArray"));
+  //arr = localStorage.getItem("arr");
+  arr = randomArr(ourArray.length, arr);
+  console.log("crabotalo eto");
+  // console.log(localStorage.getItem("arr"));
+}
+
+console.log(ourArray);
+console.log("arr", arr);
 /**
  * Description create random number
  * @param {number} max
@@ -94,23 +115,16 @@ function makeOurArray() {
     ourArray.length = 0;
     console.log(arrayCategories);
     ourArray = [...arrayCategories];
+    localStorage.setItem("ourArray", JSON.stringify(ourArray));
   }
-  // здесь будте срабатывать только на одну категорию ту что нажали
-  // planets.forEach((element) => {
-  //   if (element.categories == ourCategori) {
-  //     ourArray.push(element);
-  //   }
-  // });
-  // planets.forEach((element) => {
-  //   if (element.size == ourSize) {
-  //     ourArray.push(element);
-  //   }
-  // });
+
   console.log(choiceItem);
   console.log("ourArray category ", ourArray);
-  arr.length = 0;
-  arr = randomArr(ourArray.length, arr);
-  // console.log(arr);
+  // =======================  до этого момента работает ==========
+  // arr.length = 0;
+  // arr = randomArr(ourArray.length, arr);
+  // localStorage.setItem("arr", arr);
+  console.log("arr for localstorage : ", arr);
   availability();
   // buildSortArray();
   buildArea();
@@ -142,11 +156,12 @@ function makeOurArraySize() {
     }
     ourArray.length = 0;
     ourArray = [...arraySize];
+    localStorage.setItem("ourArray", JSON.stringify(ourArray));
   }
   console.log("ourArray in finish size : ", ourArray);
   arr.length = 0;
   arr = randomArr(ourArray.length, arr);
-  // console.log(arr);
+  console.log("163 arr ", arr);
   availability();
   // buildSortArray();
   buildArea();
@@ -163,7 +178,7 @@ function makeOurArraySize() {
  * @param {number} planets.length-2
  * @returns {array}
  */
-arr = randomArr(planets.length - 2, arr);
+
 banner = randomArr(planets.length - 2, banner);
 buildReleted();
 console.log(arr);
@@ -206,11 +221,25 @@ export function goPage(i) {
  * Description Construction of the Card Field
  * @returns {any}
  */
-function buildArea() {
+export function buildArea() {
+  console.log(ourArray);
+  console.log("arr", arr);
+  // arr = randomArr(ourArray.length, arr);
+  console.log("arr", arr);
+  if (arr.length !== ourArray.length) {
+    arr.length = 0;
+    arr = randomArr(ourArray.length, arr);
+    console.log("zachodit? ");
+  }
   if (area == null) return;
   area.innerHTML = "";
   let text = "";
-
+  if (forSort > 0) {
+    arr.length = 0;
+    for (let i = 0; i < ourArray.length; i++) {
+      arr.push(i);
+    }
+  }
   for (let i = 0; i < 9; i++) {
     if (ourArray.length <= i) {
       break;
@@ -303,4 +332,26 @@ for (let i = 0; i < pagination.length; i++) {
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
-getCard();
+//getCard();
+
+//  monstera-6304439
+//  --plant-7268178
+// -- bonsai-316573
+// -- 2026512
+
+// -- 1183558
+// -- 7518669
+// -- 6319467
+// -- 1183558
+// -- 2341486
+
+// плэйбой под прикрытием  чкомед
+//  кутис 2014
+//  няня
+//  субрубикон  6,2 (50ые)
+//  скауты против зомби
+//  армагеддец  7,8
+
+// виновный
+// поездка на выходные - дедектив
+// в тени луны
