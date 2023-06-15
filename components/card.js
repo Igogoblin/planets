@@ -10,7 +10,6 @@ let ourCard;
  * @returns {} When activated, go to the product page
  */
 export function getCard() {
-  // need add here asinc await !!!!!!!!*************************
   let cardsNew = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
@@ -33,7 +32,7 @@ export function getCard() {
   // });
   // if (interSearch.length != 0) {
   for (let i = 0; i < 14; i++) {
-    console.log(i);
+console.log(i);
     interSearch[i].addEventListener("click", function () {
       console.log(i, i);
       // console.log(cardsNew[i - 5]);
@@ -49,6 +48,9 @@ export function getCard() {
         ourCard = cardsRelated[i].getAttribute("data-item");
         showCard();
       }
+    });
+    interLike[i]?.addEventListener("click", function () {
+      console.log("for like");
     });
   }
   // }
