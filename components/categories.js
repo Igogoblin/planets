@@ -121,4 +121,5 @@ ascend.addEventListener("click", function () {
       break;
   }
   buildArea();
+  getCard();
 });

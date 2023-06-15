@@ -24,7 +24,7 @@ if (!localStorage.getItem("ourArray")) {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
   //arr = localStorage.getItem("arr");
   arr = randomArr(ourArray.length, arr);
-  console.log("crabotalo eto");
+  console.log("do first visit");
   // console.log(localStorage.getItem("arr"));
 }
 
@@ -76,10 +76,6 @@ function checkCategor() {
       });
     }
   }
-
-  // for (let i = 0; i < sizes.length; i++) {
-
-  // }
 }
 checkCategor();
 
@@ -332,7 +328,7 @@ for (let i = 0; i < pagination.length; i++) {
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
-//getCard();
+getCard();
 
 //  monstera-6304439
 //  --plant-7268178
