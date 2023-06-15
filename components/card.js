@@ -1,5 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
-import { banner, goPage } from "./index.js";
+import { banner, goPage, ourArray } from "./index.js";
 
 console.log("this is card js");
 
@@ -11,10 +11,11 @@ let ourCard;
  */
 export function getCard() {
   // need add here asinc await !!!!!!!!*************************
-  let cards = document.querySelectorAll(".card");
+  let cardsNew = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
+  let cardsRelated = document.querySelectorAll(".card_rel");
   // проверка ниже только для того чтобы избежать ошибку, если карточек нет
   // document.addEventListener("DOMContentLoaded", () => {
   //   let interSearch = document.querySelectorAll(".inter-search");
@@ -31,13 +32,23 @@ export function getCard() {
   //   }
   // });
   // if (interSearch.length != 0) {
-  for (let i = 0; i < 9; i++) {
-    interSearch[i]?.addEventListener("click", function () {
-      // console.log(cards[i].dataset);
-      // console.log(typeof this.dataset.item); //string
-      ourCard = +cards[i].dataset.item;
-      console.log(ourCard);
-      goPage(1);
+  for (let i = 0; i < 14; i++) {
+    console.log(i);
+    interSearch[i].addEventListener("click", function () {
+      console.log(i, i);
+      // console.log(cardsNew[i - 5]);
+      // console.log(cardsNew[i - 5].getAttribute("data-item"));
+      // console.log(ourArray[cardsNew[i - 5].getAttribute("data-item")].id);
+      // console.log(ourArray[cardsNew[i - 5]]);
+      if (i > 4) {
+        ourCard = cardsNew[i - 5].getAttribute("data-item");
+        goPage(1);
+      }
+
+      if (i < 5) {
+        ourCard = cardsRelated[i].getAttribute("data-item");
+        showCard();
+      }
     });
   }
   // }
@@ -53,10 +64,15 @@ export function buildReleted() {
   let text = "";
   for (let i = 0; i < 5; i++) {
     text += `
-<div class="card_rel" data-item="${planets[banner[i]].id}">
+            <div class="card_rel" data-item="${planets[banner[i]].id}">
               <img src="${planets[banner[i]].img[0]}" alt="card image">
               <span class="card-name_rel">${planets[banner[i]].name}</span>
               <div class="card-price_rel">$ ${planets[banner[i]].price}</div>
+              <div class="card-interaction">
+                <div class="inter-basket"></div>
+                <div class="inter-like"></div>
+                <div class="inter-search"></div>
+              </div>
             </div>
 `;
   }
