@@ -7,6 +7,7 @@ const registerClose = document.querySelector(".register-close");
 const loginPerson = document.querySelector(".login-person");
 const modulButtonSoc = document.querySelectorAll(".modul-button_soc");
 const registerTitleCount = document.querySelector(".register-title_count");
+const body = document.querySelector("body");
 let passwordUser;
 
 log.addEventListener("click", function () {
@@ -18,14 +19,17 @@ log.addEventListener("click", function () {
   registerUsername.classList.add("non");
   confirmPassword.classList.add("non");
   registerTitleCount.textContent = "login";
+  body.classList.add("noScroll");
 });
 forModal.addEventListener("click", () => {
   forModal.classList.add("non");
   modulRegister.classList.add("non");
+  body.classList.remove("noScroll");
 });
 registerClose.addEventListener("click", () => {
   forModal.classList.add("non");
   modulRegister.classList.add("non");
+  body.classList.remove("noScroll");
 });
 
 for (let i = 0; i < modulButtonSoc.length; i++) {
@@ -33,6 +37,7 @@ for (let i = 0; i < modulButtonSoc.length; i++) {
     i === 0 ? (loginPerson.textContent = "G") : (loginPerson.textContent = "F");
     forModal.classList.add("non");
     modulRegister.classList.add("non");
+    body.classList.remove("noScroll");
   });
 }
 // inputs ---------------------------------------------------------------------------
@@ -125,3 +130,5 @@ confirmPassword.addEventListener("blur", () => {
     confirmPassword.classList.add("style-border-red");
   }
 });
+
+// надо изменить инпуты пароля ---------------------------------------
