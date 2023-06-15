@@ -14,6 +14,7 @@ export function getCard() {
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
+  let cardsRelated = document.querySelectorAll(".card_rel");
   // проверка ниже только для того чтобы избежать ошибку, если карточек нет
   // document.addEventListener("DOMContentLoaded", () => {
   //   let interSearch = document.querySelectorAll(".inter-search");
@@ -31,9 +32,22 @@ export function getCard() {
   // });
   // if (interSearch.length != 0) {
   for (let i = 0; i < 14; i++) {
-    interSearch[i]?.addEventListener("click", function () {
-      ourCard = cardsNew[i - 5].getAttribute("data-item");
-      goPage(1);
+console.log(i);
+    interSearch[i].addEventListener("click", function () {
+      console.log(i, i);
+      // console.log(cardsNew[i - 5]);
+      // console.log(cardsNew[i - 5].getAttribute("data-item"));
+      // console.log(ourArray[cardsNew[i - 5].getAttribute("data-item")].id);
+      // console.log(ourArray[cardsNew[i - 5]]);
+      if (i > 4) {
+        ourCard = cardsNew[i - 5].getAttribute("data-item");
+        goPage(1);
+      }
+
+      if (i < 5) {
+        ourCard = cardsRelated[i].getAttribute("data-item");
+        showCard();
+      }
     });
     interLike[i]?.addEventListener("click", function () {
       console.log("for like");
