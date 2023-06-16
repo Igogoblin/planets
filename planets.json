@@ -6,13 +6,16 @@
     "price": 90,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/1-1image.png",
       "./css/img/planets-midjorn/1-2image.png",
       "./css/img/planets-midjorn/1-3image.png",
       "./css/img/planets-midjorn/1-4image.png"
     ],
-    "description": "Snake Plant, also known as Sansevieria or Mother-in-Law's Tongue, is a popular houseplant due to its attractive foliage and easy care requirements. It is native to West Africa and features long, upright, sword-shaped leaves that emerge from a central rosette. In a home setting, Snake Plant can be placed in a well-lit room near a window, where it can receive indirect sunlight. It can also be placed on a desk or bookshelf to add a touch of greenery to your workspace. In an office setting, Snake Plant can be used to purify the air, as it is known to filter out toxins from the air. It is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its unique look and air-purifying qualities, Snake Plant is an excellent choice for anyone looking to add some greenery to their home or office."
+    "briefly": "It is a popular houseplant due to its striking appearance and ease of care. Snake plants have long, upright leaves that are typically green with yellow or white stripes. They can grow to be up to several feet tall and do well in a range of indoor and outdoor environments.",
+    "description": "Snake Plant, also known as Sansevieria or Mother-in-Law's Tongue, is a popular houseplant due to its attractive foliage and easy care requirements. It is native to West Africa and features long, upright, sword-shaped leaves that emerge from a central rosette. In a home setting, Snake Plant can be placed in a well-lit room near a window, where it can receive indirect sunlight. It can also be placed on a desk or bookshelf to add a touch of greenery to your workspace. In an office setting, Snake Plant can be used to purify the air, as it is known to filter out toxins from the air. It is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its unique look and air-purifying qualities, Snake Plant is an excellent choice for anyone looking to add some greenery to their home or office.",
+    "descriptionP": "Benefits of snake plants include their ability to filter indoor air, remove toxic pollutants, and potentially boost mental health. In terms of care, snake plants require moderate to bright indirect light and only need to be watered sparingly."
   },
   {
     "id": 1,
@@ -21,13 +24,16 @@
     "price": 100,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://img.freepik.com/free-photo/birds-nest-plant-in-a-beige-pot_53876-134284.jpg",
       "https://img.freepik.com/free-photo/birds-nest-fern-plant-in-a-black-pot_53876-110269.jpg",
       "https://img.freepik.com/free-photo/plant-in-a-terracotta-pot-birds-nest-fern-plant_53876-146303.jpg",
       "https://img.freepik.com/free-photo/birds-nest-fern-plant-in-a-terracotta-pot-home-decor-object_53876-133133.jpg"
     ],
-    "description": "Bird's Nest Fern is a beautiful and unique indoor plant that is perfect for both homes and offices. With its vibrant green fronds that grow in a circular pattern, it resembles the shape of a bird's nest, hence its name. This fern can be grown in a pot or hung in a basket to create a visually striking display. Its low maintenance nature and ability to purify indoor air make it an ideal plant for those looking to add a touch of nature to their living or workspace. With its tropical vibe, Bird's Nest Fern is sure to add a touch of relaxation and tranquility to any room."
+    "briefly": "It gets its name from the way its long, arching fronds grow upward from a central rosette, resembling a bird's nest. Bird's Nest Ferns are relatively easy to care for and can thrive in a range of indoor conditions, though they prefer indirect or filtered light and a humid environment.",
+    "description": "Bird's Nest Fern is a beautiful and unique indoor plant that is perfect for both homes and offices. With its vibrant green fronds that grow in a circular pattern, it resembles the shape of a bird's nest, hence its name. This fern can be grown in a pot or hung in a basket to create a visually striking display. Its low maintenance nature and ability to purify indoor air make it an ideal plant for those looking to add a touch of nature to their living or workspace. With its tropical vibe, Bird's Nest Fern is sure to add a touch of relaxation and tranquility to any room.",
+    "descriptionP": "They are often grown in hanging baskets or mounted on walls, making for an attractive addition to any indoor plant collection. In addition to their aesthetic appeal, Bird's Nest Ferns are known for their air-purifying properties and contribute to cleaner, fresher air in your home or office."
   },
   {
     "id": 2,
@@ -36,13 +42,16 @@
     "price": 80,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-153378.jpg",
       "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-133153.jpg",
       "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-134355.jpg",
       "https://img.freepik.com/free-photo/small-aloe-vera-plant-in-a-cute-pot_53876-110379.jpg"
     ],
-    "description": "Aloe Vera is a popular indoor plant that is perfect for both homes and offices. With its fleshy, green leaves that grow in a rosette pattern, it adds a touch of natural elegance to any space. Not only is Aloe Vera visually appealing, but it also has numerous health benefits. The clear gel that can be extracted from its leaves can be used to soothe burns and wounds, making it a natural first aid remedy. Additionally, Aloe Vera is known for its air-purifying properties, making it an ideal plant for those looking to improve indoor air quality. With its low maintenance requirements and health benefits, Aloe Vera is a versatile and beneficial addition to any home or office environment."
+    "briefly": "Aloe Vera is a succulent plant species of the genus Aloe that is widely distributed around the world and is considered an invasive species in many regions",
+    "description": "Aloe Vera is a popular indoor plant that is perfect for both homes and offices. With its fleshy, green leaves that grow in a rosette pattern, it adds a touch of natural elegance to any space. Not only is Aloe Vera visually appealing, but it also has numerous health benefits. The clear gel that can be extracted from its leaves can be used to soothe burns and wounds, making it a natural first aid remedy. Additionally, Aloe Vera is known for its air-purifying properties, making it an ideal plant for those looking to improve indoor air quality. With its low maintenance requirements and health benefits, Aloe Vera is a versatile and beneficial addition to any home or office environment.",
+    "descriptionP": "Aloe vera is mainly recognized for its medicinal and cosmetic benefits. The plant contains a gel substance that can be used for a wide range of medical and skin care purposes and is widely used in products such as lotions, cosmetics, ointments and gels for minor burns and skin abrasions. While it is mostly safe to use Aloe vera topically, the ingestion of Aloe vera extracts can be dangerous, causing adverse reactions that are not well understood yet. For this reason, caution should be taken before ingesting Aloe vera products, particularly among pregnant women or people with known allergies."
   },
   {
     "id": 3,
@@ -51,13 +60,16 @@
     "price": 130,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133117.jpg",
       "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133143.jpg",
       "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133118.jpg",
       "https://img.freepik.com/free-photo/monstera-deliciosa-plant-in-a-pot_53876-133116.jpg"
     ],
-    "description": "Monstera Deliciosa, also known as the Swiss Cheese plant, is a stunning indoor plant that is perfect for both homes and offices. With its large, vibrant green leaves that feature naturally occurring holes, it is both striking and unique. Its tropical appearance adds a touch of exotic elegance to any space, while its air-purifying properties make it a beneficial addition to any indoor environment. This plant is easy to care for and can grow to an impressive size, making it a perfect statement piece for larger rooms or empty corners. With its bold and beautiful appearance, Monstera Deliciosa is sure to bring a touch of natural charm to any home or office."
+    "briefly": "Monstera Deliciosa can grow to be quite large, up to several feet tall, and prefers bright, indirect light and moist soil. It is also known for being a relatively low-maintenance plant.",
+    "description": "Monstera Deliciosa, also known as the Swiss Cheese plant, is a stunning indoor plant that is perfect for both homes and offices. With its large, vibrant green leaves that feature naturally occurring holes, it is both striking and unique. Its tropical appearance adds a touch of exotic elegance to any space, while its air-purifying properties make it a beneficial addition to any indoor environment. This plant is easy to care for and can grow to an impressive size, making it a perfect statement piece for larger rooms or empty corners. With its bold and beautiful appearance, Monstera Deliciosa is sure to bring a touch of natural charm to any home or office.",
+    "descriptionP": "It is a popular houseplant due to its striking appearance, which features large, perforated leaves that resemble Swiss cheese. Monstera Deliciosa has also gained popularity as a trendy design element in home decor, appearing on everything from wallpaper to throw pillows. Additionally, certain parts of the plant are edible, including the fruit, which tastes like a combination of pineapple and banana."
   },
   {
     "id": 4,
@@ -66,13 +78,16 @@
     "price": 70,
     "size": "small",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/2-1image.png",
       "./css/img/planets-midjorn/2-2image.png",
       "./css/img/planets-midjorn/2-3image.png",
       "./css/img/planets-midjorn/2-4image.png"
     ],
-    "description": "Spider Plant, also known as Chlorophytum comosum, is a popular houseplant that is easy to grow and maintain. The plant features long, arching leaves that resemble spider legs, hence the name. In a home setting, Spider Plant can be placed in a well-lit room near a window, where it can receive indirect sunlight. Alternatively, it can be hung from the ceiling or displayed on a tabletop to add a touch of greenery to the room. In an office setting, Spider Plant can help to purify the air and has been known to remove harmful toxins from the environment. It is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its unique shape and air-purifying qualities, Spider Plant is a great choice for anyone looking to add some greenery to their home, office or any other indoor space."
+    "briefly": "They can grow up to two feet tall and are often grown in hanging baskets due to their arching leaves and trailing stems.",
+    "description": "Spider Plant, also known as Chlorophytum comosum, is a popular houseplant that is easy to grow and maintain. The plant features long, arching leaves that resemble spider legs, hence the name. In a home setting, Spider Plant can be placed in a well-lit room near a window, where it can receive indirect sunlight. Alternatively, it can be hung from the ceiling or displayed on a tabletop to add a touch of greenery to the room. In an office setting, Spider Plant can help to purify the air and has been known to remove harmful toxins from the environment. It is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its unique shape and air-purifying qualities, Spider Plant is a great choice for anyone looking to add some greenery to their home, office or any other indoor space.",
+    "descriptionP": "Spider plants prefer bright, indirect sunlight and should be allowed to dry out briefly between waterings . They are also known for producing small white flowers, which eventually give rise to baby spider plants that can be propagated by placing the spiderettes in water or soil."
   },
   {
     "id": 5,
@@ -81,13 +96,16 @@
     "price": 110,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/3-1image.png",
       "./css/img/planets-midjorn/3-2image.png",
       "./css/img/planets-midjorn/3-3image.png",
       "./css/img/planets-midjorn/3-4image.png"
     ],
-    "description": "Pothos, also known as Devil's Ivy, is a popular houseplant that features long, trailing vines with heart-shaped leaves. In a home setting, Pothos can be grown in a hanging basket or placed on a shelf where the vines can cascade down. The plant can tolerate varying levels of light and can grow well in low-light environments. It is also an excellent air purifier and can improve the air quality in your home. In an office setting, Pothos can be placed on a desk or tabletop to add a touch of greenery and purify the air. Pothos is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its beautiful trailing vines and air-purifying benefits, Pothos is a great choice for anyone looking to add some greenery to their home or office."
+    "briefly": "Pothos plants have heart-shaped leaves that can be green or variegated with white or yellow stripes.",
+    "description": "Pothos, also known as Devil's Ivy, is a popular houseplant that features long, trailing vines with heart-shaped leaves. In a home setting, Pothos can be grown in a hanging basket or placed on a shelf where the vines can cascade down. The plant can tolerate varying levels of light and can grow well in low-light environments. It is also an excellent air purifier and can improve the air quality in your home. In an office setting, Pothos can be placed on a desk or tabletop to add a touch of greenery and purify the air. Pothos is a low-maintenance plant that requires infrequent watering and can tolerate a range of temperatures. With its beautiful trailing vines and air-purifying benefits, Pothos is a great choice for anyone looking to add some greenery to their home or office.",
+    "descriptionP": "They are often grown in hanging baskets or trained to grow up a trellis or wall. Pothos plants prefer bright, indirect sunlight and should be allowed to dry out slightly between waterings. They are also known for their air-purifying properties, making them a popular choice for homes and offices. Additionally, pothos plants can be toxic to pets and should be kept out of reach."
   },
   {
     "id": 6,
@@ -96,13 +114,16 @@
     "price": 100,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/4-1image.png",
       "./css/img/planets-midjorn/4-2image.png",
       "./css/img/planets-midjorn/4-3image.png",
       "./css/img/planets-midjorn/4-4image.png"
     ],
-    "description": "Peace Lily, also known as Spathiphyllum, is a popular indoor plant that features large, glossy, oval-shaped leaves and white, sail-like flowers. In a home setting, Peace Lily can be placed in a well-lit room with low to moderate levels of sunlight, such as a north-facing window. It is also an excellent air purifier and can improve the air quality by removing toxins such as benzene, formaldehyde, and ammonia. In an office setting, Peace Lily can be placed in a communal area like a reception desk, conference room, or shared workspace to enhance the atmosphere and provide visual appeal. Peace Lily is a low-maintenance plant that requires moderate watering and can thrive in a range of temperatures. With its lush foliage and elegant flowers, Peace Lily is a fantastic choice for anyone looking to add some greenery to their indoor space."
+    "briefly": "Peace Lilies are evergreen herbaceous perennials that can grow up to several feet tall. ",
+    "description": "Peace Lily, also known as Spathiphyllum, is a popular indoor plant that features large, glossy, oval-shaped leaves and white, sail-like flowers. In a home setting, Peace Lily can be placed in a well-lit room with low to moderate levels of sunlight, such as a north-facing window. It is also an excellent air purifier and can improve the air quality by removing toxins such as benzene, formaldehyde, and ammonia. In an office setting, Peace Lily can be placed in a communal area like a reception desk, conference room, or shared workspace to enhance the atmosphere and provide visual appeal. Peace Lily is a low-maintenance plant that requires moderate watering and can thrive in a range of temperatures. With its lush foliage and elegant flowers, Peace Lily is a fantastic choice for anyone looking to add some greenery to their indoor space.",
+    "descriptionP": "They are relatively easy to care for and are able to withstand low-light conditions and infrequent waterings. Peace Lilies are also known for their air-purifying properties, making them a popular choice for homes and offices. However, it should be noted that Peace Lilies can be toxic to pets and should be kept out of reach."
   },
   {
     "id": 7,
@@ -111,13 +132,16 @@
     "price": 150,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/5-1image.png",
       "./css/img/planets-midjorn/5-2image.png",
       "./css/img/planets-midjorn/5-3image.png",
       "./css/img/planets-midjorn/5-4image.png"
     ],
-    "description": "Rubber Plant, also known as Ficus elastica, is a beautiful and versatile indoor plant that is popular for its large, leathery leaves and easy care requirements. In a home setting, Rubber Plant can be placed in a well-lit room with indirect sunlight, such as a north-facing window or corner. It can reach up to 8 feet tall indoors and can be pruned to maintain its desired height and shape. Rubber Plant is also an air purifier and can help remove toxins from the air, making it beneficial for your indoor environment. In an office setting, Rubber Plant can be used to enhance the aesthetic and create a welcoming atmosphere in common areas like reception desks, conference rooms, or shared workspaces. Rubber Plant requires moderate watering and can tolerate a range of temperatures, making it perfect for indoor environments. With its striking appearance and air-purifying benefits, Rubber Plant is a fantastic choice for anyone looking to add some greenery to their indoor space."
+    "briefly": "It is a popular choice for indoor plants as it requires relatively low maintenance and can tolerate low-light conditions. ",
+    "description": "Rubber Plant, also known as Ficus elastica, is a beautiful and versatile indoor plant that is popular for its large, leathery leaves and easy care requirements. In a home setting, Rubber Plant can be placed in a well-lit room with indirect sunlight, such as a north-facing window or corner. It can reach up to 8 feet tall indoors and can be pruned to maintain its desired height and shape. Rubber Plant is also an air purifier and can help remove toxins from the air, making it beneficial for your indoor environment. In an office setting, Rubber Plant can be used to enhance the aesthetic and create a welcoming atmosphere in common areas like reception desks, conference rooms, or shared workspaces. Rubber Plant requires moderate watering and can tolerate a range of temperatures, making it perfect for indoor environments. With its striking appearance and air-purifying benefits, Rubber Plant is a fantastic choice for anyone looking to add some greenery to their indoor space.",
+    "descriptionP": "Rubber Plants are also valued for their air-purifying properties, making them a desirable addition to home and office environments. The milky sap from the Rubber Plant is used to make natural rubber, which is harvested through a process called latex tapping, though this is typically performed on the related species Hevea brasiliensis."
   },
   {
     "id": 8,
@@ -126,13 +150,16 @@
     "price": 140,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/6-1image.png",
       "./css/img/planets-midjorn/6-2image.png",
       "./css/img/planets-midjorn/6-3image.png",
       "./css/img/planets-midjorn/6-4image.png"
     ],
-    "description": "Fiddle Leaf Fig, also known as Ficus lyrata, is a stunning indoor plant that features large, fiddle-shaped leaves that grow up to 15 inches long. In a home setting, Fiddle Leaf Fig can be placed in a well-lit room with bright, indirect sunlight, such as a west-facing window. It is an excellent air purifier and can remove toxins from the air, making it ideal for those with allergies or respiratory issues. Fiddle Leaf Fig can grow up to 6 feet tall indoors and requires moderate watering, so it's essential to allow the soil to dry out slightly between waterings. In an office setting, Fiddle Leaf Fig can be used as a statement piece to add visual interest and create a warmer, welcoming atmosphere. Its large, striking leaves can make an impact in reception areas, conference rooms, or shared workspaces."
+    "briefly": "Known for its large, leathery green leaves shaped like a lyre or fiddle, it has become a favorite among houseplant enthusiasts.",
+    "description": "Fiddle Leaf Fig, also known as Ficus lyrata, is a stunning indoor plant that features large, fiddle-shaped leaves that grow up to 15 inches long. In a home setting, Fiddle Leaf Fig can be placed in a well-lit room with bright, indirect sunlight, such as a west-facing window. It is an excellent air purifier and can remove toxins from the air, making it ideal for those with allergies or respiratory issues. Fiddle Leaf Fig can grow up to 6 feet tall indoors and requires moderate watering, so it's essential to allow the soil to dry out slightly between waterings. In an office setting, Fiddle Leaf Fig can be used as a statement piece to add visual interest and create a warmer, welcoming atmosphere. Its large, striking leaves can make an impact in reception areas, conference rooms, or shared workspaces.",
+    "descriptionP": "Fiddle Leaf Figs can grow up to several feet tall but can also be grown as smaller, potted plants in temperate areas. Despite their popularity, Fiddle Leaf Figs can be tricky to care for and are sensitive to being moved from their ideal growing conditions. They also have specific light and humidity requirements and are grown in well-draining potting soil. The plant is also a popular ornamental tree in subtropical and tropical gardens."
   },
   {
     "id": 9,
@@ -141,122 +168,293 @@
     "price": 120,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "./css/img/planets-midjorn/7-1image.png",
       "./css/img/planets-midjorn/7-2image.png",
       "./css/img/planets-midjorn/7-3image.png",
       "./css/img/planets-midjorn/7-4image.png"
     ],
-    "description": "Boston Fern is a popular houseplant that features long, delicate fronds that arch gracefully over the sides of a pot. In a home setting, Boston Fern can be grown in a hanging basket, placed on a pedestal, or displayed on a shelf. It requires bright, indirect light and high humidity levels, which can be achieved by misting the plant regularly or grouping it with other plants. Boston Fern is an air purifier, removing toxins like formaldehyde and xylene from the air, making it perfect for those with allergies or respiratory issues. In an office setting, Boston Fern can be used to create a calming, natural aesthetic in shared workspaces, reception areas, or conference rooms. Boston Fern is a low-maintenance plant that requires consistent watering to maintain its lush, vibrant appearance. With its elegant fronds and air-purifying benefits, Boston Fern is a fantastic choice for anyone looking to add some greenery to their indoor space."
+    "briefly": "It is a selection of tropical sword fern and is readily adaptable to growing in containers ",
+    "description": "Boston Fern is a popular houseplant that features long, delicate fronds that arch gracefully over the sides of a pot. In a home setting, Boston Fern can be grown in a hanging basket, placed on a pedestal, or displayed on a shelf. It requires bright, indirect light and high humidity levels, which can be achieved by misting the plant regularly or grouping it with other plants. Boston Fern is an air purifier, removing toxins like formaldehyde and xylene from the air, making it perfect for those with allergies or respiratory issues. In an office setting, Boston Fern can be used to create a calming, natural aesthetic in shared workspaces, reception areas, or conference rooms. Boston Fern is a low-maintenance plant that requires consistent watering to maintain its lush, vibrant appearance. With its elegant fronds and air-purifying benefits, Boston Fern is a fantastic choice for anyone looking to add some greenery to their indoor space.",
+    "descriptionP": "Boston Ferns can grow up to several feet tall but can also be grown as smaller, potted plants in temperate areas. They prefer high humidity and bright to medium light. Boston Ferns are also known for their air-purifying properties, making them a desirable addition to home and office environments."
   },
   {
     "id": 10,
-    "name": "banana plant",
+    "name": "Banana plant",
     "categories": "big plants",
     "price": 140,
     "size": "large",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/1380361370/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=OBhoaIvgZ3zLyrg4HND4neerw648SBwE0HMKQjxrqdM=",
       "https://media.istockphoto.com/id/1380361377/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=46i-NLqe74ius8HShErdTHp-9eKQVQ3FGs00TUrTkOc=",
       "https://media.istockphoto.com/id/1380361372/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=njRhmZlpAqj3tpgCS5b-R10ShQn9Pfc8eZocdLY7VkI=",
       "https://media.istockphoto.com/id/1380361370/photo/decorative-banana-plant-in-concrete-vase-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=OBhoaIvgZ3zLyrg4HND4neerw648SBwE0HMKQjxrqdM="
     ],
-    "description": "The Banana Plant, or Musa, is a magnificent plant that stands out for its large, green leaves and unique dense flowers that resemble inflorescences. At home, Musa can be grown in large pots, ideal for its rapid growth. It requires bright but blurred light and moderate watering to maintain its vitality and health. In the office, Musa can create a cozy and beautiful atmosphere in the reception, meeting rooms or shared workspaces. With its exotic leaves and special appearance, Musa will be a spectacular interior decoration for any room."
+    "briefly": "Banana plants, members of the genus Musa, are a type of large herbaceous flowering plant that produce elongated, edible fruits.",
+    "description": "The Banana Plant, or Musa, is a magnificent plant that stands out for its large, green leaves and unique dense flowers that resemble inflorescences. At home, Musa can be grown in large pots, ideal for its rapid growth. It requires bright but blurred light and moderate watering to maintain its vitality and health. In the office, Musa can create a cozy and beautiful atmosphere in the reception, meeting rooms or shared workspaces. With its exotic leaves and special appearance, Musa will be a spectacular interior decoration for any room.",
+    "descriptionP": "They are native to tropical regions of Indomalaya and Australia and are widely cultivated across the world. The plants grow from underground rhizomes to produce tall, false trunks that can reach up to 36 meters tall. Banana fruits vary in size, color, and firmness and have soft, starchy flesh covered by a rind that can be green, yellow, red, purple, or brown when ripe. In addition to being consumed fresh, bananas are used to make fiber, banana wine, banana beer, and other products. The most common edible seedless varieties come from two wild species, Musa acuminata and Musa balbisiana, and are typically divided into dessert bananas and cooking bananas, also known as plantains."
   },
   {
     "id": 11,
-    "name": "banana",
+    "name": "Banana",
     "categories": "big plants",
     "price": 130,
     "size": "large",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/1144381259/photo/decorative-banana-plant-in-stone-marble-vase-isolated-on-white-background-3d-rendering.jpg?s=1024x1024&w=is&k=20&c=Db7XcU8ufMnC3qdNkuM_v4LnJ-_2AWcgI6rZ4vjpA-M=",
       "https://media.istockphoto.com/id/515070873/photo/ornamental-plants-over-white-background.jpg?s=1024x1024&w=is&k=20&c=kapEDHu1WMGUEG7C3P3ozCpl-VwwziP118K2jqG-X9Q=",
       "https://media.istockphoto.com/id/1027542674/photo/green-freshness-young-banana-plant-growing-in-black-port.jpg?s=1024x1024&w=is&k=20&c=UwD8srcpvT2pLujmdJ-XYDFRY_qcm0NDxVhC44tcINM=",
       "https://media.istockphoto.com/id/1027542702/photo/green-freshness-young-banana-plant-growing-in-black-port.jpg?s=1024x1024&w=is&k=20&c=RwQ-LtgJHIQ3_8uapFNCkDYbkypqUbP8dSLdSpoEC_s="
     ],
-    "description": "The Banana Plant, or Musa, is a spectacular plant that features large, green leaves and unique dense flowers that resemble clusters. In home conditions, the Musa can be grown in large pots that are perfect for its rapid growth. It requires bright but diffused light and moderate watering to maintain its vigor and health. In an office setting, the Musa can create a cozy and beautiful atmosphere in reception areas, conference rooms or shared workspaces. With its exotic leaves and distinctive appearance, the Musa will become a striking interior decoration for any room."
+    "briefly": "Banana plants are large herbaceous flowering plants that produce elongated, edible fruits.",
+    "description": "The Banana Plant, or Musa, is a spectacular plant that features large, green leaves and unique dense flowers that resemble clusters. In home conditions, the Musa can be grown in large pots that are perfect for its rapid growth. It requires bright but diffused light and moderate watering to maintain its vigor and health. In an office setting, the Musa can create a cozy and beautiful atmosphere in reception areas, conference rooms or shared workspaces. With its exotic leaves and distinctive appearance, the Musa will become a striking interior decoration for any room.",
+    "descriptionP": "They are native to tropical regions of Indomalaya and Australia and are widely cultivated across the world. The plants grow from underground rhizomes to produce tall, false trunks that can reach up to 36 meters tall. Banana fruits vary in size, color, and firmness and have soft, starchy flesh covered by a rind that can be green, yellow, red, purple, or brown when ripe. In addition to being consumed fresh, bananas are used to make fiber, banana wine, banana beer, and other products. The most common edible seedless varieties come from two wild species, Musa acuminata and Musa balbisiana, and are typically divided into dessert bananas and cooking bananas, also known as plantains."
   },
   {
     "id": 12,
-    "name": "banana",
+    "name": "Banana",
     "categories": "big plants",
     "price": 150,
     "size": "large",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/453235617/photo/fresh-banana.jpg?s=1024x1024&w=is&k=20&c=G2rptkf2ro948_ZgY1Ozy5dDUTB82kQqHFmSfP3nOjg=",
       "https://media.istockphoto.com/id/1298302996/photo/dieffenbachia-plant-in-black-flowerpot-with-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=i9ITCKZJJrH274QGjyuhhcFzi-9_HAOoOm5yxXoXSUo=",
       "https://media.istockphoto.com/id/1299532700/photo/dieffenbachia-plant-in-black-flowerpot-with-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=OZ1e_AiwIZQh_LVNuOorrHVlbSXSdq15z80XCQNYnW8=",
       "https://media.istockphoto.com/id/1306291671/photo/dieffenbachia-plant-in-black-flowerpot-with-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=yqgP4LPDpbrnwN23o2x87dN822DoBeDuJgB-liP3W-8="
     ],
-    "description": "The Banana Plant, scientifically known as Musa, is a tropical plant that is prized for its large, lush foliage and fruit. It is a fast-growing plant that requires bright, filtered light and well-draining soil for optimal growth. The Musa is a stunning addition to any indoor space, adding a touch of exotic beauty with its broad leaves and cheerful fruit. It is also known for its air-purifying qualities, making it an excellent choice for improving the air quality in a home or office environment. With its unique appearance and low maintenance requirements, the Banana Plant is the perfect choice for anyone looking to add a touch of tropical charm to their indoor space."
+    "briefly": "Bananas are elongated, creamy yellow fruits that are native to tropical regions of Indomalaya and Australia.",
+    "description": "The Banana Plant, scientifically known as Musa, is a tropical plant that is prized for its large, lush foliage and fruit. It is a fast-growing plant that requires bright, filtered light and well-draining soil for optimal growth. The Musa is a stunning addition to any indoor space, adding a touch of exotic beauty with its broad leaves and cheerful fruit. It is also known for its air-purifying qualities, making it an excellent choice for improving the air quality in a home or office environment. With its unique appearance and low maintenance requirements, the Banana Plant is the perfect choice for anyone looking to add a touch of tropical charm to their indoor space.",
+    "descriptionP": "They are cultivated widely across the world and come in a variety of sizes, colors, and firmness. They are known for their soft, starchy flesh and sweet taste, and are commonly eaten fresh or used in cooking and baking. Bananas are also a good source of dietary fiber, vitamin C, and potassium. They are typically divided into two categories: dessert bananas and cooking bananas, also known as plantains. The most common edible seedless varieties come from the wild species Musa acuminata and Musa balbisiana, and they are cultivated and consumed around the world for their flavor and nutritional value."
   },
   {
     "id": 13,
-    "name": "succulent",
+    "name": "Succulent",
     "categories": "succulents",
     "price": 70,
     "size": "medium",
     "like": "false",
+    "sale": 0,
     "img": [
       "https://media.istockphoto.com/id/172279916/photo/potted-cactus.jpg?s=1024x1024&w=is&k=20&c=1lAxQu9wsROL-QD0Hw3R5LOUbNUy1-AVTY2iw-GP_zQ=",
       "https://media.istockphoto.com/id/1185678680/photo/zebra-haworthia-fasciata-isolated-on-white-background-top-view.jpg?s=1024x1024&w=is&k=20&c=PMMOqAq4A_QUnvN6sSds3L3zTIydweWiVL_orTPEJh4=",
       "https://media.istockphoto.com/id/1312950978/photo/top-view-on-on-the-small-house-cactus-haworthiopsis-fasciata-on-white-background-macro.jpg?s=1024x1024&w=is&k=20&c=ZEX7mhRXGiWwA-LkEzyX234jTvXvfFE-0mfl0KilekQ=",
       "https://media.istockphoto.com/id/1268526412/photo/cactus-green-plant-in-clay-pot-top-view-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=6CSONzsMvwUHGdM_mLVZlnigtgYoH8xJQqpQZJwFeAI="
     ],
-    "description": "Description for Succulent: Succulents are low-maintenance plants known for their thick, fleshy leaves and striking appearance. They come in a variety of shapes and sizes, from tiny rosettes to trailing vines. Succulents can thrive in a range of indoor environments, including homes and offices, and require minimal watering and care. They are often planted in containers that allow for good drainage, using a special mix of soil designed for succulents. In a home setting, succulents can add a touch of natural beauty to windowsills or coffee tables. In an office setting, succulents can provide a pop of color and texture to desks, shelves or common areas. With their unique appearance and ease of care, succulents are an excellent choice for plant enthusiasts of all levels."
+    "briefly": "Succulents are a type of plant that store water in their leaves, stems, and roots to survive in arid climates.",
+    "description": "Description for Succulent: Succulents are low-maintenance plants known for their thick, fleshy leaves and striking appearance. They come in a variety of shapes and sizes, from tiny rosettes to trailing vines. Succulents can thrive in a range of indoor environments, including homes and offices, and require minimal watering and care. They are often planted in containers that allow for good drainage, using a special mix of soil designed for succulents. In a home setting, succulents can add a touch of natural beauty to windowsills or coffee tables. In an office setting, succulents can provide a pop of color and texture to desks, shelves or common areas. With their unique appearance and ease of care, succulents are an excellent choice for plant enthusiasts of all levels.",
+    "descriptionP": "They come in a variety of shapes, sizes, and colors and have become popular as indoor and outdoor plants, in gardens, and as decorations. Succulents are known for their fleshy, thick leaves and stems, and can include cacti and non-cacti species. Some common types of succulents include aloe vera, jade plant, echeveria, and agave. Succulents require well-draining soil, plenty of light, and infrequent watering to thrive. They are also known for their air-purifying properties, making them a desirable addition to home and office environments."
   },
   {
     "id": 14,
-    "name": "spruce",
+    "name": "Spruce",
     "categories": "garderning",
     "price": 150,
     "size": "large",
     "like": "false",
+    "sale": 20,
     "img": [
       "https://media.istockphoto.com/id/1284922901/photo/big-green-fir-tree-isolated-on-white-background.jpg?s=1024x1024&w=is&k=20&c=7wHDr0da3u5j_U3jvUnZMGc9KK5WV2xgKxkPGUZ7Jjs=",
       "https://media.istockphoto.com/id/1358209352/photo/christmas-tree-in-snow.jpg?s=1024x1024&w=is&k=20&c=7pdVsQBqk_uYuJ_-GnR70UWRyAU8bOQtBrSQHXLI_jc=",
       "https://media.istockphoto.com/id/95915964/photo/pine-tree.jpg?s=1024x1024&w=is&k=20&c=OF1V2z2M0fHhSC93VtAv-OCa1wDfrHPKhWQb0W-xc08=",
       "https://media.istockphoto.com/id/519971429/vector/green-fir-tree.jpg?s=1024x1024&w=is&k=20&c=mhwsWF_oiDcsZSVBsMZogwK2VuqYnZJrTjOcRdZzH3E="
     ],
-    "description": "Spruce is a type of evergreen tree known for its cone-shaped and sharply pointed leaves. It is an ideal choice for gardeners looking to add some year-round greenery to their landscape. Its needles provide a dense texture that makes it an excellent choice for adding privacy or windbreaks to outdoor spaces. Spruce trees are also known for their symmetrical shape, making them a popular choice for ornamental use in gardens or as focal points in landscaping. Whether you are looking to create a natural boundary around your garden or simply add some visual interest, a spruce tree can be an excellent choice for any outdoor environment."
+    "briefly": "It is a popular lumber tree and is used for a variety of purposes, such as making paper, musical instruments, and construction materials.",
+    "description": "Spruce is a type of evergreen tree known for its cone-shaped and sharply pointed leaves. It is an ideal choice for gardeners looking to add some year-round greenery to their landscape. Its needles provide a dense texture that makes it an excellent choice for adding privacy or windbreaks to outdoor spaces. Spruce trees are also known for their symmetrical shape, making them a popular choice for ornamental use in gardens or as focal points in landscaping. Whether you are looking to create a natural boundary around your garden or simply add some visual interest, a spruce tree can be an excellent choice for any outdoor environment.",
+    "descriptionP": "Spruce trees can grow up to 60 meters tall and have needles that are attached individually to the branches. There are several species of spruce, including Norway spruce, white spruce, black spruce, and blue spruce. They are often used as ornamental trees in landscaping and are known for their conical shape and needle-like foliage."
   },
   {
     "id": 15,
-    "name": "shovel",
+    "name": "Shovel",
     "categories": "accessories",
     "price": 150,
     "size": "small",
     "like": "false",
+    "sale": 10,
     "img": [
+      "https://media.istockphoto.com/id/1363824410/vector/print.jpg?s=1024x1024&w=is&k=20&c=M2qJnHyR-87uX7rZqYITRZ6U2uNzWnE5m8jQEh26UpY=",
       "https://media.istockphoto.com/id/864742360/photo/small-shovel-isolated-on-white.jpg?s=1024x1024&w=is&k=20&c=S7YKYAcoirga9VRN0cvDe2P0quuNOXQbIMEeUUn_tMQ=",
       "https://media.istockphoto.com/id/1327795760/photo/shovel.jpg?s=1024x1024&w=is&k=20&c=Bp3LdKe6NhQbGpvASkSG9u0tY6ixgItPyFCkiD3NJJ4=",
-      "https://media.istockphoto.com/id/1363824410/vector/print.jpg?s=1024x1024&w=is&k=20&c=M2qJnHyR-87uX7rZqYITRZ6U2uNzWnE5m8jQEh26UpY=",
       "https://media.istockphoto.com/id/1355682290/vector/tool-shovel.jpg?s=1024x1024&w=is&k=20&c=C_GivUmQFvUCvi70dqGK4BEVxS_GGApm6pUyYNaLJfw="
     ],
-    "description": "A shovel in a garden setting is often used for digging and moving soil, compost, and other loose materials. The broad, flat blade of a shovel is perfect for creating planting holes, transferring soil, and removing weeds. A gardener might use a shovel to mix compost or other organic matter into the soil to improve its quality. Additionally, a shovel can be used to remove grass or other unwanted vegetation from an area that's going to be used for planting or other gardening purposes. There are various types of shovels available, each with their own unique characteristics and uses, but overall, they are an essential tool for any gardener looking to maintain and beautify their outdoor space."
+    "briefly": "There is no direct relationship between plants and shovels, as shovels are tools used for digging and moving materials such as soil, while plants are living organisms.",
+    "description": "A shovel in a garden setting is often used for digging and moving soil, compost, and other loose materials. The broad, flat blade of a shovel is perfect for creating planting holes, transferring soil, and removing weeds. A gardener might use a shovel to mix compost or other organic matter into the soil to improve its quality. Additionally, a shovel can be used to remove grass or other unwanted vegetation from an area that's going to be used for planting or other gardening purposes. There are various types of shovels available, each with their own unique characteristics and uses, but overall, they are an essential tool for any gardener looking to maintain and beautify their outdoor space.",
+    "descriptionP": "However, shovels are commonly used in gardening and landscaping to dig holes, remove weeds, and move soil and other materials around plants. Shovels can also be used for planting bulbs and seedlings, as well as for transplanting mature plants. As such, shovels play an important role in the care and maintenance of plants, especially in outdoor gardening and landscaping."
   },
   {
     "id": 16,
-    "name": "",
-    "categories": "",
-    "price": 150,
-    "size": "",
+    "name": "Echinopsis",
+    "categories": "small plants",
+    "price": 100,
+    "size": "small",
     "like": "false",
-    "img": [],
-    "description": ""
+    "sale": 10,
+    "img": [
+      "https://cdn.pixabay.com/photo/2016/11/20/08/03/cactus-1842095_1280.jpg",
+      "https://cdn.pixabay.com/photo/2020/11/10/02/27/cactus-5728314_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/09/29/07/25/cactus-6666711_1280.jpg",
+      "https://cdn.pixabay.com/photo/2014/07/11/23/01/cactus-390750_1280.jpg"
+    ],
+    "briefly": "echinopsis are known for their cylindrical, ribbed stems and showy, trumpet-like flowers that bloom in a range of colors from white, pink, yellow, and orange to red and purple. Echinopsis pachanoi, also known as San Pedro cactus ",
+    "description": "Echinopsis is the most well-known species of this genus and has a long history of traditional use in Andean medicine and religion. Echinopsis plants are also prized for their ornamental value and are often grown as houseplants or in outdoor gardens. They are relatively easy to grow and propagate, and are popular among cactus enthusiasts. The plants also contain a number of alkaloids, including mescaline, which has psychoactive properties and has been used for shamanic and spiritual purposes. The cultivation and consumption of mescaline-containing cacti is subject to legal restrictions in some countries.",
+    "descriptionP": "Echinopsis is a large genus of cacti native to South America, sometimes known as hedgehog cactus, sea-urchin cactus or Easter lily cactus. The genus includes around 160 species, ranging from large and treelike types to small globose cacti. One small species, E. chamaecereus, is known as the peanut cactus. Echinopsis is known for being very prickly and is characterized by low clumps of cylindrical or conical stems, sometimes containing colorful flowers. The growing and resting seasons for Echinopsis are the same as for Echinocactus. There are over 100 species of Echinopsis, and they are widespread in central South America."
   },
   {
     "id": 17,
+    "name": "Monstera",
+    "categories": "big plants",
+    "price": 160,
+    "size": "large",
+    "like": "false",
+    "sale": 0,
+    "img": [
+      "https://cdn.pixabay.com/photo/2023/01/23/04/33/monstera-7737811_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/03/19/08/00/monstera-plant-6106850_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/07/15/23/15/plant-7324144_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/03/30/07/45/monstera-6136183_1280.jpg"
+    ],
+    "briefly": "Monsteras are known for their large, glossy leaves with distinctive splits and holes, giving them a unique appearance",
+    "description": "Monstera is a genus of 59 species of flowering plants in the arum family, Araceae, native to tropical regions of the Americas. The most well-known species is Monstera deliciosa, commonly known as the Swiss cheese plant due to the holes that develop in its leaves. Monstera are species of evergreen tropical vines and shrubs that are famous for their natural leaf-holes, which has led to the rise of their nickname, Swiss Cheese Plant. The Monstera's leaf-holes are called fenestrations and are theorized to maximize sun fleck capture on the forest floor by increasing the spread of the leaf while decreasing the mass of leaf cells to support. Monstera deliciosa is also cultivated for its edible fruit which tastes like a combination of banana and pineapple. Monstera is commonly grown indoors as a houseplant and is easy to care for.",
+    "descriptionP": "Monstera deliciosa, also known as the swiss cheese plant, is the most well-known species of this genus and is often grown as a houseplant. Monstera plants are relatively easy to care for and can adapt to a range of light conditions, making them popular among indoor plant enthusiasts. They also have air-purifying properties and can improve the quality of indoor air. The plants are toxic to pets and should be kept out of reach of cats and dogs."
+  },
+  {
+    "id": 18,
+    "name": "Bonsai",
+    "categories": "garderning",
+    "price": 180,
+    "size": "small",
+    "like": "false",
+    "sale": 0,
+    "img": [
+      "https://cdn.pixabay.com/photo/2020/05/17/13/06/bonsai-5181549_1280.jpg",
+      "https://cdn.pixabay.com/photo/2016/02/06/19/59/bonsai-1183558_1280.jpg",
+      "https://cdn.pixabay.com/photo/2014/04/05/11/39/bonsai-316573_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/08/03/09/45/bonsai-7362259_1280.jpg"
+    ],
+    "briefly": "Bonsai specimens are usually grown in shallow containers, and their growth is restricted so that they remain small, resembling a full-grown tree in nature.",
+    "description": "Bonsai is the Japanese and East Asian art of growing and training miniature trees in containers, developed from the traditional Chinese art form of penjing. Bonsai specifically refers to the Japanese art of growing miniature trees in containers. The word 'bonsai' means 'planted in a container' and is derived from an ancient Chinese horticultural practice. Bonsai is created beginning with a specimen of source material, which may be a cutting, seedling, a tree from the wild (known as Yamadori) or small tree of a species suitable for bonsai development. Bonsai can be created from nearly any perennial woody-stemmed tree or shrub species that produces true branches. Bonsai is an ancient living art form that utilizes growing and training techniques to produce miniature trees that mimic the appearance of their full-sized counterparts. These techniques include heavy crown pruning, root pruning, and root confinement in shallow containers. There are many species of plants suitable for growing in the bonsai fashion, including citrus trees, jade plants, many fig trees, some pine trees, juniper trees, and even culinary herbs such as rosemary and basil.",
+    "descriptionP": "Bonsai is the art of growing and training miniature trees in containers. Originating in Japan and East Asia, bonsai trees are also found in other cultures. The art form has a high level of aesthetic refinement, and different techniques are used to shape the tree and give it a distinct appearance. Bonsai trees are often grown for ornamental purposes and are kept indoors or in outdoor gardens."
+  },
+  {
+    "id": 19,
+    "name": "Bonsai plant",
+    "categories": "small plants",
+    "price": 170,
+    "size": "small",
+    "like": "false",
+    "sale": 0,
+    "img": [
+      "https://cdn.pixabay.com/photo/2022/09/30/15/10/bonsai-7489638_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/03/30/12/44/azalea-7101128_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/03/30/12/44/blood-plum-7101127_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/04/07/06/14/flower-7116887_1280.jpg"
+    ],
+    "briefly": "Bonsai is a type of miniature tree that is grown and trained in a container, according to the precise tenets of bonsai pruning and training, resulting in an artful miniature replica of a full-grown tree in nature.",
+    "description": "Bonsai is a living tree or shrub that has been grown in a way that gives the impression of being a full-sized, mature tree. It is an artistic representation of a full-sized tree in nature. Bonsai trees are generally grown in shallow ceramic pots. The word 'bonsai' means 'planted in a container' and is derived from an ancient Chinese horticultural practice. Bonsai is the art of growing certain trees and shrubs, of many varieties, in small, shallow containers. Bonsai is a traditional Japanese art and a very artistic hobby. Cultivating bonsai requires controlling the kind of shape the trees grow in. Bonsai trees are generally grown from seeds, cuttings, or small trees of a species suitable for bonsai development. Bonsai can be created from nearly any perennial woody-stemmed tree or shrub species that produces true branches. Some popular species for bonsai include citrus trees, jade plants, many fig trees, some pine trees, juniper trees, and even culinary herbs such as rosemary and basil. Bonsai trees are grown in many styles, including formal upright, informal upright, slanting, cascade, semi-cascade, and literati. The process of raising bonsai requires controlling the kind of shape the trees grow in. Bonsai trees require careful and precise training and pruning techniques to produce miniature trees that mimic the appearance of their full-sized counterparts.",
+    "descriptionP": "The art of bonsai originated in Japan and East Asia, although similar versions of the art exist in other cultures. Bonsai trees are grown for ornamental purposes and require careful maintenance and nurturing to keep them healthy and attractive. A range of tree species can be used for bonsai, and various techniques are used to shape the tree and give it a distinct appearance. Bonsai trees can be grown both indoors and outdoors, and can add a distinctive and beautiful touch to any living space."
+  },
+  {
+    "id": 20,
+    "name": "Peperomia",
+    "categories": "house plants",
+    "price": 150,
+    "size": "small",
+    "like": "false",
+    "sale": 0,
+    "img": [
+      "https://cdn.pixabay.com/photo/2017/01/31/19/07/peperomia-caperata-rosso-2026512_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/05/24/20/21/peperomia-flower-2341486_1280.jpg",
+      "https://cdn.pixabay.com/photo/2019/11/10/12/29/peperomia-4615668_1280.jpg",
+      "https://media.istockphoto.com/id/1487492122/photo/such-a-beautiful-calathea-peacock.jpg?s=612x612&w=is&k=20&c=nXOfwsXy4SKMkwZZeXU8adzK7O_ZrJjDE8qCEzqWOho="
+    ],
+    "briefly": "Peperomias are known for their small, compact size and attractive foliage, which can range from solid green to variegated patterns and colors.",
+    "description": "Peperomia is a genus of the pepper family (Piperaceae), comprising more than 1,000 species of tropical and subtropical fleshy herbs, annuals, and perennials. Peperomia plants are popular houseplants because of their attractive foliage. The leaves of Peperomia species are usually oval-shaped, thick, fleshy, and smooth-edged. The thick stalk of the leaf is attached to the center of the underside of the leaf of some species. The flowers are minute and densely packed on a slender spike, which is likely to be curved. Some species are epiphytic (growing on the branches of trees). Peperomia plants do not have a widely accepted common name, and some argue that it is better to use the genus name. Peperomia plants are grown for their beautiful foliage, not their blooms. They are semi-succulent, adaptable, visually appealing, and pet-friendly, all characteristics that make them suitable houseplants. Peperomia plants have the ability to be propagated from any part of the plant, except for the roots. Stem or even leaf cuttings can root if given proper conditions, which makes it quite valuable in the horticultural industry.",
+    "descriptionP": "Peperomia plants are easy to care for and adaptable to a range of light conditions, making them popular houseplants. They are also used in outdoor gardens as a ground cover or edging plant. Peperomia plants have air-purifying properties and can improve the quality of indoor air. The plants are non-toxic to pets, making them a good choice for pet owners."
+  },
+  {
+    "id": 21,
+    "name": "Swiss Cheese Plant",
+    "categories": "house plants",
+    "price": 100,
+    "size": "medium",
+    "like": "false",
+    "sale": 0,
+    "img": [
+      "https://cdn.pixabay.com/photo/2022/10/13/09/17/monstera-7518669_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/06/08/02/32/monstera-6319467_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/06/02/13/13/monstera-6304439_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/10/14/02/35/monstera-7520305_1280.jpg"
+    ],
+    "briefly": "Swiss Cheese Plant is a popular houseplant known for its unique foliage, which features large, glossy leaves with distinctive splits and holes, similar to the appearance of Swiss cheese.",
+    "description": "The Swiss Cheese Plant, also known as Monstera deliciosa, is a species of flowering plant native to tropical forests of southern Mexico, south to Panama. It is an easy-care indoor plant complete with unusual, although stunning, leaves. The Swiss Cheese Plant is famous for its large, dark green, and glossy leaves with natural leaf-holes called fenestrations. The fenestrations are theorized to maximize sun fleck capture on the forest floor by increasing the spread of the leaf while decreasing the mass of leaf cells to support. Depending on the season and maturity of the plant, the Swiss Cheese Plant could arrive with no holes just yet and be sized to grow alongside you. The Swiss Cheese Plant is part of Araceae, the Aroid Family, and is one of the few aroids that are grown for their foliage rather than their flowers. Two different species of Monstera are cultivated as houseplants - Monstera deliciosa and Monstera adansonii. Monstera adansonii is distinguished from M. deliciosa by having longer, tapering leaves, as well as having completely enclosed leaf holes. Monstera deliciosa leaf holes eventually grow towards the edge and open up as they mature.",
+    "descriptionP": "It is native to Central and South America and is grown for its ornamental value. The plant is relatively easy to care for and can adapt to a range of light conditions, making it a popular choice for indoor plant enthusiasts. However, it is toxic to pets and should be kept out of reach of cats and dogs."
+  },
+  {
+    "id": 22,
+    "name": "Chinese Evergreen",
+    "categories": "house plants",
+    "price": 110,
+    "size": "medium",
+    "like": "false",
+    "sale": 0,
+    "img": [
+      "https://cdn.pixabay.com/photo/2021/09/08/03/27/aglaonema-6605361_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/06/17/15/14/plant-7268178_1280.jpg",
+      "https://cdn.pixabay.com/photo/2022/01/14/17/32/leaves-6937875_1280.jpg",
+      "https://cdn.pixabay.com/photo/2021/11/04/00/34/chinese-croton-6767124_1280.jpg"
+    ],
+    "briefly": "Chinese Evergreens are popular ornamental houseplants with multiple species available, including Aglaonema commutatum, and are known for their ability to purify indoor air. ",
+    "description": "Chinese Evergreen, also known as Aglaonema, is a popular foliage plant in both homes and offices because it adds great interest in low-light conditions. It is a collection of plants from the Aglaonema genus that tend to tolerate low light conditions very well. Aglaonemas will produce flowers, but they are not very showy, and they are grown primarily for attractive leathery leaves. The leaves are lined (elongated with parallel sides) or oval-shaped, which grow at the tip of the stalks. These leaves grow up to 30cm long and 10cm wide. The Chinese Evergreen has many hybrid varieties that have been cultivated over the last century, making it a popular ornamental plant for room decoration. The Chinese Evergreen is a great low-light indoor plant and is easy to grow, even for beginners. It is considered one of the best foliage plants for cleansing room air of pollutants. The Chinese Evergreen is durable and tolerant of indoor conditions. It is a slow-growing plant that can reach up to 3 feet tall. The Chinese Evergreen is the perfect statement piece if you want to decorate your space and add a little life to it. Its striking leaves and unique aesthetic are guaranteed to impress your guests. The Chinese Evergreen can withstand low-lighting conditions, so if you have a warm room that doesn’t get much light, this plant can also thrive nicely.",
+    "descriptionP": "These plants are relatively low-maintenance and can survive in a range of light conditions from bright to low light levels. Leaves of Chinese Evergreens can be variegated or solid in pattern, and are held on stems erect or decumbent and creeping."
+  },
+  {
+    "id": 23,
+    "name": "Flamingo flower",
+    "categories": "house plants",
+    "price": 130,
+    "size": "medium",
+    "like": "false",
+    "sale": 0,
+    "img": [
+      "https://cdn.pixabay.com/photo/2017/07/07/22/13/flamingo-flower-2482956_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/07/07/22/10/flamingo-flower-2482948_1280.jpg",
+      "https://cdn.pixabay.com/photo/2016/01/15/20/46/flamingo-flower-1142370_1280.jpg",
+      "https://cdn.pixabay.com/photo/2013/11/15/11/04/anthurium-210827_1280.jpg"
+    ],
+    "briefly": "Flamingo flowers are popular as houseplants and outdoor garden plants in mild climates, and can grow as epiphytes, often on other plants",
+    "description": "Flamingo Flower, also known as Anthurium scherzerianum or Anthurium andraeanum, is a species from the Anthuirum genus. It is an evergreen perennial that grows up to 40cm in height. The dark green leaves are heart-shaped and glossy. The inflorescence is made up of a cream-yellow tail-like spadix and waxy red spathe. The flamingo flower plant displays great-looking waxed effect flowers that bloom with an orange, red, or pink spathe. The flowers are small, in a slender (white, green, or yellow) spadix with a spathe below which may be shiny red, white, or other colors. Spathes are heart-shaped and waxy. The spadix is at a right angle to the spathe and is twisted like a corkscrew in some species. The flamingo flower plant is desired in interiors for its long-lasting, pink to reddish inflorescence and erect, deep green leaves. The iconic 'flowers' are often cut and used in floral arrangements. The flamingo flower plant is also known as the Flamingo Lily, Hawaiian Heart, Painted Tongue, and Tail Flower.",
+    "descriptionP": "These plants have large, colorful, heart-shaped flowers and come in shades of red, pink, and white. Flamingo flowers can be propagated by seed or by vegetative cuttings, and different varieties can be grown in a range of light conditions, including low light."
+  },
+  {
+    "id": 24,
     "name": "",
     "categories": "",
     "price": 150,
     "size": "",
     "like": "false",
-    "img": [],
-    "description": ""
+    "sale": 0,
+    "img": ["", "", "", ""],
+    "briefly": "",
+    "description": "",
+    "descriptionP": ""
+  },
+  {
+    "id": 25,
+    "name": "",
+    "categories": "",
+    "price": 150,
+    "size": "",
+    "like": "false",
+    "sale": 0,
+    "img": ["", "", "", ""],
+    "briefly": "",
+    "description": "",
+    "descriptionP": ""
   }
 ]
