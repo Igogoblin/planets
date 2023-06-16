@@ -72,12 +72,14 @@ fastChoiceAll.addEventListener("click", function () {
   ourArray.length = 0;
   Array.prototype.push.apply(ourArray, planets);
   console.log(ourArray);
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
   totoalHead();
   getCard();
 });
 
 fastChoiceSale.addEventListener("click", function () {
   let arraySale = [];
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
   planets.forEach((element) => {
     if (element.sale > 0) {
       arraySale.push(element);
@@ -122,4 +124,5 @@ ascend.addEventListener("click", function () {
   }
   buildArea();
   getCard();
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
 });
