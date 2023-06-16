@@ -4,7 +4,7 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
-
+// let likes = [];
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
@@ -12,20 +12,25 @@ export let banner = [];
 let goal = 1;
 
 // localStorage.clear();
-let ob = [{ 4: "goal" }, { 3: "main" }];
-localStorage.setItem("test", JSON.stringify(ob));
+// let ob = [{ 4: "goal" }, { 3: "main" }];
+// localStorage.setItem("test", JSON.stringify(ob));
 console.log(JSON.parse(localStorage.getItem("test")));
 console.log(JSON.parse(localStorage.getItem("ourArray")));
+// console.log(JSON.parse(localStorage.getItem("likes")));
 
 if (!localStorage.getItem("ourArray")) {
   ourArray = [...planets];
   arr = randomArr(ourArray.length, arr);
+
+  console.log(localStorage);
 } else {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
+  // likes = JSON.parse(localStorage.get);
   //arr = localStorage.getItem("arr");
   arr = randomArr(ourArray.length, arr);
-  console.log("crabotalo eto");
+  console.log("do first visit");
   // console.log(localStorage.getItem("arr"));
+  console.log(localStorage);
 }
 
 console.log(ourArray);
@@ -76,10 +81,6 @@ function checkCategor() {
       });
     }
   }
-
-  // for (let i = 0; i < sizes.length; i++) {
-
-  // }
 }
 checkCategor();
 
@@ -332,7 +333,7 @@ for (let i = 0; i < pagination.length; i++) {
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
-//getCard();
+getCard();
 
 //  monstera-6304439
 //  --plant-7268178

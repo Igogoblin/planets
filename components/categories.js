@@ -1,5 +1,6 @@
 import planets from "../planets.json" assert { type: "json" };
 import { ourArray, categoriesLi, sizes, buildArea } from "./index.js";
+import { getCard } from "./card.js";
 export let forSort = 0;
 console.log("this is categories file");
 
@@ -71,11 +72,14 @@ fastChoiceAll.addEventListener("click", function () {
   ourArray.length = 0;
   Array.prototype.push.apply(ourArray, planets);
   console.log(ourArray);
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
   totoalHead();
+  getCard();
 });
 
 fastChoiceSale.addEventListener("click", function () {
   let arraySale = [];
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
   planets.forEach((element) => {
     if (element.sale > 0) {
       arraySale.push(element);
@@ -85,6 +89,7 @@ fastChoiceSale.addEventListener("click", function () {
   Array.prototype.push.apply(ourArray, arraySale);
   console.log(ourArray);
   totoalHead();
+  getCard();
 });
 
 function totoalHead() {
@@ -118,4 +123,6 @@ ascend.addEventListener("click", function () {
       break;
   }
   buildArea();
+  getCard();
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
 });
