@@ -70,7 +70,7 @@ export function buildReleted() {
               <img src="${planets[banner[i]].img[0]}" alt="card image">
               <span class="card-name_rel">${planets[banner[i]].name}</span>
               <div class="card-price_rel">$ ${planets[banner[i]].price}</div>
-              <div class="card-interaction">
+              <div class="card-interaction-rel">
                 <div class="inter-basket"></div>
                 <div class="inter-like"></div>
                 <div class="inter-search"></div>
