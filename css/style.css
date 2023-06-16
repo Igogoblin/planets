@@ -86,7 +86,6 @@ textarea {
   align-items: end;
   background-color: #ffffff;
   text-align: end;
-  overflow-y: scroll;
 }
 .modul-register .register-close {
   width: 20px;
@@ -158,6 +157,22 @@ textarea {
   margin-right: 5px;
 }
 
+@media (max-width: 500px) {
+  .modul-register {
+    width: 400px;
+    height: 600px;
+  }
+}
+@media (max-width: 400px) {
+  .modul-register {
+    width: 350px;
+  }
+}
+@media (max-width: 350px) {
+  .modul-register {
+    width: 310px;
+  }
+}
 .noScroll {
   overflow: hidden;
 }
@@ -678,6 +693,7 @@ section .slider .non {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 .container .content .content-head .fast-choice {
   display: flex;
