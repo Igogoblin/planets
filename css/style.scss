@@ -79,7 +79,7 @@ $back-color: #fbfbfb;
   align-items: end;
   background-color: #ffffff;
   text-align: end;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   .register-close {
     width: 20px;
     height: 20px;
@@ -151,6 +151,22 @@ $back-color: #fbfbfb;
         margin-right: 5px;
       }
     }
+  }
+}
+@media (max-width: 500px) {
+  .modul-register {
+    width: 400px;
+    height: 600px;
+  }
+}
+@media (max-width: 400px) {
+  .modul-register {
+    width: 350px;
+  }
+}
+@media (max-width: 350px) {
+  .modul-register {
+    width: 310px;
   }
 }
 .noScroll {
@@ -715,6 +731,7 @@ section {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 5px;
       .fast-choice {
         display: flex;
         .fast-choice_all {
