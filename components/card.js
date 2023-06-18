@@ -10,7 +10,6 @@ let ourCard;
  * @returns {} When activated, go to the product page
  */
 export function getCard() {
-  // need add here asinc await !!!!!!!!*************************
   let cardsNew = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
@@ -33,9 +32,9 @@ export function getCard() {
   // });
   // if (interSearch.length != 0) {
   for (let i = 0; i < 14; i++) {
-    console.log(i);
-    interSearch[i].addEventListener("click", function () {
-      console.log(i, i);
+    // console.log(i);
+    interSearch[i]?.addEventListener("click", function () {
+      // console.log(i, i);
       // console.log(cardsNew[i - 5]);
       // console.log(cardsNew[i - 5].getAttribute("data-item"));
       // console.log(ourArray[cardsNew[i - 5].getAttribute("data-item")].id);
@@ -49,6 +48,9 @@ export function getCard() {
         ourCard = cardsRelated[i].getAttribute("data-item");
         showCard();
       }
+    });
+    interLike[i]?.addEventListener("click", function () {
+      // console.log("for like");
     });
   }
   // }
@@ -68,7 +70,7 @@ export function buildReleted() {
               <img src="${planets[banner[i]].img[0]}" alt="card image">
               <span class="card-name_rel">${planets[banner[i]].name}</span>
               <div class="card-price_rel">$ ${planets[banner[i]].price}</div>
-              <div class="card-interaction">
+              <div class="card-interaction-rel">
                 <div class="inter-basket"></div>
                 <div class="inter-like"></div>
                 <div class="inter-search"></div>

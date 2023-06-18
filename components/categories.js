@@ -1,5 +1,11 @@
 import planets from "../planets.json" assert { type: "json" };
-import { ourArray, categoriesLi, sizes, buildArea } from "./index.js";
+import {
+  ourArray,
+  categoriesLi,
+  sizes,
+  buildArea,
+  buildPagination,
+} from "./index.js";
 import { getCard } from "./card.js";
 export let forSort = 0;
 console.log("this is categories file");
@@ -44,6 +50,7 @@ export function availability() {
     }
   }
   ascend.value = "a";
+  buildPagination(1);
 }
 export function buildSortArray() {
   let choiceItem = document.querySelectorAll(".choice-item");
@@ -72,12 +79,14 @@ fastChoiceAll.addEventListener("click", function () {
   ourArray.length = 0;
   Array.prototype.push.apply(ourArray, planets);
   console.log(ourArray);
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
   totoalHead();
   getCard();
 });
 
 fastChoiceSale.addEventListener("click", function () {
   let arraySale = [];
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
   planets.forEach((element) => {
     if (element.sale > 0) {
       arraySale.push(element);
@@ -122,4 +131,5 @@ ascend.addEventListener("click", function () {
   }
   buildArea();
   getCard();
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
 });
