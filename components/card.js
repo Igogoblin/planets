@@ -32,9 +32,9 @@ export function getCard() {
   // });
   // if (interSearch.length != 0) {
   for (let i = 0; i < 14; i++) {
-console.log(i);
-    interSearch[i].addEventListener("click", function () {
-      console.log(i, i);
+    // console.log(i);
+    interSearch[i]?.addEventListener("click", function () {
+      // console.log(i, i);
       // console.log(cardsNew[i - 5]);
       // console.log(cardsNew[i - 5].getAttribute("data-item"));
       // console.log(ourArray[cardsNew[i - 5].getAttribute("data-item")].id);
@@ -50,7 +50,7 @@ console.log(i);
       }
     });
     interLike[i]?.addEventListener("click", function () {
-      console.log("for like");
+      // console.log("for like");
     });
   }
   // }
