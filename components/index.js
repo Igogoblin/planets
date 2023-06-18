@@ -4,7 +4,7 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
-
+// let likes = [];
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
@@ -12,20 +12,25 @@ export let banner = [];
 let goal = 1;
 
 // localStorage.clear();
-let ob = [{ 4: "goal" }, { 3: "main" }];
-localStorage.setItem("test", JSON.stringify(ob));
+// let ob = [{ 4: "goal" }, { 3: "main" }];
+// localStorage.setItem("test", JSON.stringify(ob));
 console.log(JSON.parse(localStorage.getItem("test")));
 console.log(JSON.parse(localStorage.getItem("ourArray")));
+// console.log(JSON.parse(localStorage.getItem("likes")));
 
 if (!localStorage.getItem("ourArray")) {
   ourArray = [...planets];
   arr = randomArr(ourArray.length, arr);
+
+  console.log(localStorage);
 } else {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
+  // likes = JSON.parse(localStorage.get);
   //arr = localStorage.getItem("arr");
   arr = randomArr(ourArray.length, arr);
-  console.log("crabotalo eto");
+  console.log("do first visit");
   // console.log(localStorage.getItem("arr"));
+  console.log(localStorage);
 }
 
 console.log(ourArray);
@@ -76,10 +81,6 @@ function checkCategor() {
       });
     }
   }
-
-  // for (let i = 0; i < sizes.length; i++) {
-
-  // }
 }
 checkCategor();
 
@@ -221,7 +222,7 @@ export function goPage(i) {
  * Description Construction of the Card Field
  * @returns {any}
  */
-export function buildArea() {
+export function buildArea(coef = 1) {
   console.log(ourArray);
   console.log("arr", arr);
   // arr = randomArr(ourArray.length, arr);
@@ -229,7 +230,7 @@ export function buildArea() {
   if (arr.length !== ourArray.length) {
     arr.length = 0;
     arr = randomArr(ourArray.length, arr);
-    console.log("zachodit? ");
+    console.log("zachodit? если arr !== ourArray");
   }
   if (area == null) return;
   area.innerHTML = "";
@@ -269,26 +270,58 @@ buildArea();
  * @param {number}
  * @returns {any}
  */
-function buildPagination(a) {
+export function buildPagination(goal) {
   // let goal = a;  ===========================
   let checkPage = Math.ceil(ourArray.length / 9); // сколько вообще у нас страниц
-  for (let i = 0; i < pagination.length; i++) {
-    if (i !== a) {
+  // console.log(ourArray);
+  // console.log("all pages - checkPage ", checkPage);
+  // console.log("goal ", goal);
+  // for (let i = 0; i < pagination.length; i++) {
+  //   if (i !== a) {
+  //     pagination[i].classList.remove("check");
+  //     if (i < a) {
+  //       pagination[i].classList.add("checkHalf");
+  //     }
+  //   }
+  //   if (i <= checkPage && a < checkPage && a !== i) {
+  //     pagination[i].classList.add("checkHalf");
+  //     pagination[pagination.length - 1].classList.add("checkHalf");
+  //   }
+
+  //   if (a === 1) {
+  //     pagination[0].classList.remove("checkHalf");
+  //   }
+  //   if (a === checkPage) {
+  //     pagination[pagination.length - 1].classList.remove("checkHalf");
+  //   }
+  // }
+  for (let i = 0; i < pagination.length - 1; i++) {
+    if (i > checkPage) {
+      pagination[i].classList.remove("checkHalf");
       pagination[i].classList.remove("check");
-      if (i < a) {
-        pagination[i].classList.add("checkHalf");
-      }
     }
-    if (i <= checkPage && a < checkPage && a !== i) {
+    if (i <= checkPage) {
       pagination[i].classList.add("checkHalf");
+      pagination[i].classList.remove("check");
+    }
+    if (goal < checkPage) {
       pagination[pagination.length - 1].classList.add("checkHalf");
     }
-
-    if (a === 1) {
-      pagination[0].classList.remove("checkHalf");
+    if (i == goal) {
+      pagination[i].classList.remove("checkHalf");
+      pagination[i].classList.add("check");
     }
-    if (a === checkPage) {
+    if (goal == checkPage) {
       pagination[pagination.length - 1].classList.remove("checkHalf");
+    }
+    if (goal != i) {
+      pagination[i].classList.remove("check");
+    }
+    if (goal > 1) {
+      pagination[0].classList.add("checkHalf");
+    }
+    if (goal === 1) {
+      pagination[0].classList.remove("checkHalf");
     }
   }
 }
@@ -303,19 +336,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 for (let i = 0; i < pagination.length; i++) {
   let checkPage = Math.ceil(arr.length / 9);
-
+  console.log("336; checkPage ", checkPage);
   if (pagination[i].classList.contains("check")) {
     goal = i;
   }
 
   pagination[i].addEventListener("click", function () {
+    console.log(arr);
     if (pagination[i].classList.contains("checkHalf")) {
       console.log(pagination.length - 1 === i);
       if (i === 0 && pagination[0].classList.contains("checkHalf")) {
+        // if arow straight
         goal--;
         pagination[goal].classList.add("check");
         buildPagination(goal);
       } else if (i === pagination.length - 1) {
+        // if arow push back
         goal++;
         pagination[goal].classList.add("check");
         buildPagination(goal);
@@ -332,7 +368,7 @@ for (let i = 0; i < pagination.length; i++) {
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
-//getCard();
+getCard();
 
 //  monstera-6304439
 //  --plant-7268178
