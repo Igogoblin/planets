@@ -230,7 +230,7 @@ export function buildArea(coef = 1) {
   if (arr.length !== ourArray.length) {
     arr.length = 0;
     arr = randomArr(ourArray.length, arr);
-    console.log("zachodit? ");
+    console.log("zachodit? если arr !== ourArray");
   }
   if (area == null) return;
   area.innerHTML = "";
