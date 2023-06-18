@@ -1,5 +1,11 @@
 import planets from "../planets.json" assert { type: "json" };
-import { ourArray, categoriesLi, sizes, buildArea } from "./index.js";
+import {
+  ourArray,
+  categoriesLi,
+  sizes,
+  buildArea,
+  buildPagination,
+} from "./index.js";
 import { getCard } from "./card.js";
 export let forSort = 0;
 console.log("this is categories file");
@@ -44,6 +50,7 @@ export function availability() {
     }
   }
   ascend.value = "a";
+  buildPagination(1);
 }
 export function buildSortArray() {
   let choiceItem = document.querySelectorAll(".choice-item");
