@@ -4,7 +4,7 @@ import { getCard, buildReleted, showCard } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
-// let likes = [];
+export let likes = new Set();
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
@@ -14,7 +14,7 @@ let goal = 1;
 // localStorage.clear();
 // let ob = [{ 4: "goal" }, { 3: "main" }];
 // localStorage.setItem("test", JSON.stringify(ob));
-console.log(JSON.parse(localStorage.getItem("test")));
+// console.log(JSON.parse(localStorage.getItem("test")));
 console.log(JSON.parse(localStorage.getItem("ourArray")));
 // console.log(JSON.parse(localStorage.getItem("likes")));
 
@@ -25,6 +25,7 @@ if (!localStorage.getItem("ourArray")) {
   console.log(localStorage);
 } else {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
+  likes = JSON.parse(localStorage.getItem("likes"));
   // likes = JSON.parse(localStorage.get);
   //arr = localStorage.getItem("arr");
   arr = randomArr(ourArray.length, arr);

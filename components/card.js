@@ -1,5 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
-import { banner, goPage, ourArray } from "./index.js";
+import { banner, goPage, ourArray, likes } from "./index.js";
 
 console.log("this is card js");
 
@@ -50,7 +50,9 @@ export function getCard() {
       }
     });
     interLike[i]?.addEventListener("click", function () {
-      // console.log("for like");
+      console.log("for like");
+      console.log(cardsNew[i - 5].getAttribute("data-item"));
+      // localStorage.setItem("likes",cardsNew[i - 5].getAttribute("data-item"));
     });
   }
   // }
