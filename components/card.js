@@ -39,13 +39,15 @@ export function getCard() {
       console.log(cardsNew[i].getAttribute("data-item")); //id
       // console.log(ourArray[cardsNew[i].getAttribute("data-item")].id);
       console.log(ourArray[cardsNew[i]]); // undefined
+
       // if (i > 4) {
       ourCard = cardsNew[i].getAttribute("data-item");
+      console.log("ourCard", ourCard);
       goPage(1);
       // }
 
       // if (i < 5) {
-      ourCard = cardsRelated[i].getAttribute("data-item");
+      //ourCard = cardsRelated[i].getAttribute("data-item");
       showCard();
       // }
     });
@@ -56,7 +58,7 @@ export function getCard() {
       console.log(interLike[i].classList.contains("our-like"));
       console.log(typeof likes);
       console.log(likes);
-      // смотреть как отрабатывает на второй странице *******************
+
       interLike[i].classList.contains("our-like")
         ? likes.add(+cardsNew[i].getAttribute("data-item"))
         : likes.delete(+cardsNew[i].getAttribute("data-item"));
