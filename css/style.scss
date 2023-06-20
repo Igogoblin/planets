@@ -819,7 +819,7 @@ section {
           justify-content: space-between;
           align-items: center;
           bottom: 1%;
-          left: 30%;
+          left: 50%;
           .inter-basket {
             width: 20px;
             height: 20px;
@@ -832,6 +832,7 @@ section {
             background-image: url("./svg/heartBlack.svg");
             background-size: cover;
           }
+
           .inter-search {
             width: 20px;
             height: 20px;
@@ -841,6 +842,16 @@ section {
           .inter-basket:hover,
           .inter-like:hover,
           .inter-search:hover {
+            transform: scale(1.1);
+          }
+          .our-like {
+            width: 10px;
+            height: 10px;
+            background-image: url("./img/green-heart.png");
+            object-fit: cover;
+            z-index: 1;
+          }
+          .our-like:hover {
             transform: scale(1.1);
           }
         }
@@ -897,13 +908,24 @@ section {
             height: 20px;
             background-image: url("./svg/heartGreen.svg");
             background-size: cover;
-            cursor: no-drop;
+            // cursor: no-drop;
           }
+
           .inter-search:hover {
             width: 20px;
             height: 20px;
             background-image: url("./svg/searchGreen.svg");
             background-size: cover;
+          }
+          .our-like {
+            width: 10px;
+            height: 10px;
+            background-image: url("./img/green-heart.png");
+            object-fit: cover;
+            z-index: 1;
+          }
+          .our-like:hover {
+            transform: scale(1.1);
           }
         }
       }
@@ -912,7 +934,7 @@ section {
       max-width: 250px;
       width: 100%;
       height: 35px;
-      border: 1px solid gray;
+      // border: 1px solid gray;
       ul {
         display: flex;
         justify-content: space-between;
@@ -1026,7 +1048,7 @@ section {
             justify-content: space-between;
             align-items: center;
             bottom: 1%;
-            left: 30%;
+            left: 50%;
             .inter-basket {
               width: 20px;
               height: 20px;
@@ -1049,6 +1071,16 @@ section {
             .inter-like:hover,
             .inter-search:hover {
               transform: scale(1.5);
+            }
+            .our-like {
+              width: 10px;
+              height: 10px;
+              background-image: url("./img/green-heart.png");
+              object-fit: cover;
+              z-index: 1;
+            }
+            .our-like:hover {
+              transform: scale(1.1);
             }
           }
         }
@@ -1104,13 +1136,23 @@ section {
               height: 20px;
               background-image: url("./svg/heartGreen.svg");
               background-size: cover;
-              cursor: no-drop;
+              // cursor: no-drop;
             }
             .inter-search:hover {
               width: 20px;
               height: 20px;
               background-image: url("./svg/searchGreen.svg");
               background-size: cover;
+            }
+            .our-like {
+              width: 10px;
+              height: 10px;
+              background-image: url("./img/green-heart.png");
+              object-fit: cover;
+              z-index: 1;
+            }
+            .our-like:hover {
+              transform: scale(1.1);
             }
           }
         }
@@ -1119,7 +1161,6 @@ section {
         max-width: 250px;
         width: 100%;
         height: 35px;
-        border: 1px solid gray;
         ul {
           display: flex;
           justify-content: space-between;
@@ -1234,7 +1275,7 @@ section {
             justify-content: space-between;
             align-items: center;
             bottom: 1%;
-            left: 30%;
+            left: 50%;
             .inter-basket {
               width: 20px;
               height: 20px;
@@ -1258,12 +1299,23 @@ section {
             .inter-search:hover {
               transform: scale(1.5);
             }
+            .our-like {
+              width: 10px;
+              height: 10px;
+              background-image: url("./img/green-heart.png");
+              object-fit: cover;
+              z-index: 1;
+            }
+            .our-like:hover {
+              transform: scale(1.1);
+            }
           }
         }
         .card:hover {
           .card-interaction {
             width: 85px;
-            left: 40%;
+            left: 50%;
+            bottom: 1%;
             // justify-content: flex-end;
             .inter-basket:hover {
               width: 15px;
@@ -1277,13 +1329,23 @@ section {
               height: 15px;
               background-image: url("./svg/heartGreen.svg");
               background-size: cover;
-              cursor: no-drop;
+              // cursor: no-drop;
             }
             .inter-search:hover {
               width: 15px;
               height: 15px;
               background-image: url("./svg/searchGreen.svg");
               background-size: cover;
+            }
+            .our-like {
+              width: 10px;
+              height: 10px;
+              background-image: url("./img/green-heart.png");
+              object-fit: cover;
+              z-index: 1;
+            }
+            .our-like:hover {
+              transform: scale(1.1);
             }
           }
         }
@@ -1292,7 +1354,6 @@ section {
         max-width: 250px;
         width: 100%;
         height: 35px;
-        border: 1px solid gray;
         ul {
           display: flex;
           justify-content: space-between;
@@ -1421,7 +1482,7 @@ section {
             width: 100%;
             height: 35px;
 
-            left: 70%;
+            left: 50%;
             .inter-basket {
               width: 10px;
               height: 10px;
@@ -1444,6 +1505,16 @@ section {
             .inter-like:hover,
             .inter-search:hover {
               transform: scale(1.5);
+            }
+            .our-like {
+              width: 10px;
+              height: 10px;
+              background-image: url("./img/green-heart.png");
+              object-fit: cover;
+              z-index: 1;
+            }
+            .our-like:hover {
+              transform: scale(1.1);
             }
           }
         }
@@ -1488,13 +1559,23 @@ section {
               height: 10px;
               background-image: url("./svg/heartGreen.svg");
               background-size: cover;
-              cursor: no-drop;
+              // cursor: no-drop;
             }
             .inter-search:hover {
               width: 10px;
               height: 10px;
               background-image: url("./svg/searchGreen.svg");
               background-size: cover;
+            }
+            .our-like {
+              width: 10px;
+              height: 10px;
+              background-image: url("./img/green-heart.png");
+              object-fit: cover;
+              z-index: 1;
+            }
+            .our-like:hover {
+              transform: scale(1.1);
             }
           }
         }

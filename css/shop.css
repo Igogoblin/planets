@@ -169,9 +169,20 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("./svg/heart1.svg");
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  background-position: center;
 }
-.card-like:hover img {
-  transform: scale(1.5);
+.our-like {
+  width: 40px;
+  height: 40px;
+  background-image: url("./img/green-heart.png");
+  object-fit: cover;
+  z-index: 1;
+}
+.card-like:hover {
+  transform: scale(1.02);
 }
 .card-like_select {
   background-color: #46a358;
@@ -252,7 +263,7 @@ p {
     flex-direction: column;
   }
   .card-decision {
-    height: 80px;
+    height: 150px;
   }
   .shop-card_img {
     max-width: 380px;
@@ -276,6 +287,7 @@ p {
   }
   .shop-card_data {
     max-width: 380px;
+    height: 350px;
     width: 100%;
   }
 }

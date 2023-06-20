@@ -1,6 +1,6 @@
 import planets from "../planets.json" assert { type: "json" };
 import { banner, goPage, ourArray } from "./index.js";
-
+export let likes = new Set();
 console.log("this is card js");
 
 let ourCard;
@@ -50,7 +50,17 @@ export function getCard() {
       }
     });
     interLike[i]?.addEventListener("click", function () {
-      // console.log("for like");
+      console.log("for like");
+      console.log(cardsNew[i - 5].getAttribute("data-item"));
+      interLike[i].classList.toggle("our-like");
+      console.log(interLike[i].classList.contains("our-like"));
+      console.log(typeof likes);
+      console.log(likes);
+      interLike[i].classList.contains("our-like")
+        ? likes.add(+cardsNew[i - 5].getAttribute("data-item"))
+        : likes.delete(+cardsNew[i - 5].getAttribute("data-item"));
+      console.log(likes);
+      localStorage.setItem("likes", JSON.stringify(likes));
     });
   }
   // }
@@ -72,7 +82,9 @@ export function buildReleted() {
               <div class="card-price_rel">$ ${planets[banner[i]].price}</div>
               <div class="card-interaction-rel">
                 <div class="inter-basket"></div>
-                <div class="inter-like"></div>
+                <div class="inter-like ${
+                  likes.has(planets[banner[i]].id) ? "our-like" : ""
+                }"></div>
                 <div class="inter-search"></div>
               </div>
             </div>
