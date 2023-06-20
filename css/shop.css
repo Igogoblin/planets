@@ -379,19 +379,19 @@ p {
   position: relative;
   left: 70%;
 }
-.inter-basket {
+.inter-basket-rel {
   width: 10px;
   height: 10px;
   background-image: url("./svg/basket.svg");
   background-size: cover;
 }
-.inter-like {
+.inter-like-rel {
   width: 10px;
   height: 10px;
   background-image: url("./svg/heartBlack.svg");
   background-size: cover;
 }
-.inter-search {
+.inter-search-rel {
   width: 10px;
   height: 10px;
   background-image: url("./svg/searchBlack.svg");
@@ -410,9 +410,9 @@ p {
   left: 50%;
   bottom: 1%;
 }
-.inter-basket:hover,
-.inter-like:hover,
-.inter-search:hover {
+.inter-basket-rel:hover,
+.inter-like-rel:hover,
+.inter-search-rel:hover {
   transform: scale(1.5);
 }
 .card_rel:hover .card-interaction-rel {
