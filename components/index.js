@@ -1,10 +1,10 @@
 import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
-import { getCard, buildReleted, showCard } from "./card.js";
+import { getCard, buildReleted, showCard, likes } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
-export let likes = new Set();
+
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
@@ -25,7 +25,7 @@ if (!localStorage.getItem("ourArray")) {
   console.log(localStorage);
 } else {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
-  likes = JSON.parse(localStorage.getItem("likes"));
+  // likes = JSON.parse(localStorage.getItem("likes"));
   // likes = JSON.parse(localStorage.get);
   //arr = localStorage.getItem("arr");
   arr = randomArr(ourArray.length, arr);
@@ -36,6 +36,7 @@ if (!localStorage.getItem("ourArray")) {
 
 console.log(ourArray);
 console.log("arr", arr);
+console.log("likes", likes); //size 0 then give it in localstorage
 /**
  * Description create random number
  * @param {number} max
@@ -260,7 +261,9 @@ export function buildArea() {
               <div class="card-price">$ ${ourArray[arr[i + coef]].price}</div>
               <div class="card-interaction">
                 <div class="inter-basket"></div>
-                <div class="inter-like"></div>
+                <div class="inter-like ${
+                  likes.has(ourArray[arr[i + coef]].id) ? "our-like" : ""
+                }"></div>
                 <div class="inter-search"></div>
               </div>
             </div>
