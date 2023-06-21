@@ -313,6 +313,8 @@ export function buildPagination(goal) {
     }
   }
   buildArea();
+  getCard();
+  // finish work pagination *******************************************
 }
 /**
  * Description show page pagination first page by contentLoaded
