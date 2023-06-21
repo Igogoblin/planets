@@ -7,6 +7,7 @@ import {
   buildPagination,
 } from "./index.js";
 import { getCard } from "./card.js";
+
 export let forSort = 0;
 console.log("this is categories file");
 

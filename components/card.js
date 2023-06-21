@@ -1,5 +1,6 @@
 import planets from "../planets.json" assert { type: "json" };
 import { banner, goPage, ourArray } from "./index.js";
+// import { magnify } from "./glass.js";
 export let likes = new Set();
 console.log("this is card js");
 
@@ -78,7 +79,7 @@ export function buildReleted() {
 }
 
 const imgBlock = document.querySelector(".img-block");
-const imgPrev = document.querySelector(".img-prev_img");
+export const imgPrev = document.querySelector(".img-prev_img");
 const cardName = document.querySelector(".card-name");
 const cardPrice = document.querySelector(".card-price");
 const cardDescription = document.querySelector(".card-description > p");
@@ -156,3 +157,6 @@ cardLike.addEventListener("click", function () {
 
   localStorage.setItem("likes", JSON.stringify(likes));
 });
+
+// //вызываем лупу у картинки превью
+// magnify("img-prev_img", 3);
