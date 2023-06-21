@@ -145,3 +145,14 @@ function checkImgShow() {
     });
   }
 }
+
+likes.entries(ourCard)
+  ? cardLike.classList.add("our-like")
+  : cardLike.classList.remove("our-like");
+cardLike.addEventListener("click", function () {
+  cardLike.classList.contains("our-like")
+    ? cardLike.classList.remove("our-like") && likes.delete(ourCard)
+    : cardLike.classList.add("our-like") && likes.add(ourCard);
+
+  localStorage.setItem("likes", JSON.stringify(likes));
+});
