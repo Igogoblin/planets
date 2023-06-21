@@ -9,64 +9,45 @@ let ourCard;
  * @param {}
  * @returns {} When activated, go to the product page
  */
+let che = 0;
 export function getCard() {
+  che++;
   let cardsNew = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
   let cardsRelated = document.querySelectorAll(".card_rel"); //card in shop
-  // проверка ниже только для того чтобы избежать ошибку, если карточек нет
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   let interSearch = document.querySelectorAll(".inter-search");
-  //   if (interSearch.length != 0) {
-  //     for (let i = 0; i < 9; i++) {
-  //       interSearch[i]?.addEventListener("click", function () {
-  //         // console.log(cards[i].dataset);
-  //         // console.log(typeof this.dataset.item); //string
-  //         ourCard = +cards[i].dataset.item;
-  //         console.log(ourCard);
-  //         goPage(1);
-  //       });
-  //     }
-  //   }
-  // });
-  // if (interSearch.length != 0) {
+
   for (let i = 0; i < 9; i++) {
     // console.log(i);
     interSearch[i]?.addEventListener("click", function () {
       console.log(i, i); //pozition arr
       console.log(cardsNew[i]); // this card
       console.log(cardsNew[i].getAttribute("data-item")); //id
-      // console.log(ourArray[cardsNew[i].getAttribute("data-item")].id);
-      console.log(ourArray[cardsNew[i]]); // undefined
 
-      // if (i > 4) {
       ourCard = cardsNew[i].getAttribute("data-item");
       console.log("ourCard", ourCard);
       goPage(1);
-      // }
-
-      // if (i < 5) {
-      //ourCard = cardsRelated[i].getAttribute("data-item");
-      showCard();
-      // }
     });
+    let coutn = 0;
     interLike[i]?.addEventListener("click", function () {
+      coutn++;
       console.log("for like");
       console.log(cardsNew[i].getAttribute("data-item"));
       interLike[i].classList.toggle("our-like");
       console.log(interLike[i].classList.contains("our-like"));
-      console.log(typeof likes);
+
       console.log(likes);
 
       interLike[i].classList.contains("our-like")
-        ? likes.add(+cardsNew[i].getAttribute("data-item"))
-        : likes.delete(+cardsNew[i].getAttribute("data-item"));
-      console.log(likes);
+        ? likes.add(Number(cardsNew[i].getAttribute("data-item")))
+        : // likes.delete(Number(cardsNew[i].getAttribute("data-item")));
+          console.log(likes);
       localStorage.setItem("likes", JSON.stringify(likes));
+      console.log("coutn", coutn);
     });
   }
-  // }
+  console.log("che", che);
 }
 /**
  * Description We build banner cards on the product page
