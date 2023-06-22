@@ -1,6 +1,5 @@
 import planets from "../planets.json" assert { type: "json" };
 import { banner, goPage, ourArray } from "./index.js";
-// import { magnify } from "./glass.js";
 export let likes = new Set();
 console.log("this is card js");
 
@@ -79,6 +78,7 @@ export function buildReleted() {
 }
 
 const imgBlock = document.querySelector(".img-block");
+const imageWrap = document.querySelector(".image__wrap");
 export const imgPrev = document.querySelector(".img-prev_img");
 const cardName = document.querySelector(".card-name");
 const cardPrice = document.querySelector(".card-price");
@@ -107,7 +107,14 @@ export function showCard() {
   }
   imgBlock.innerHTML = "";
   imgBlock.insertAdjacentHTML("afterbegin", imageblock);
+  // imageWrap.classList.add("style", `${planets[ourCard].img[0]}`);
+  imageWrap.setAttribute(
+    "style",
+    `background-image: url("${planets[ourCard].img[0]}")`
+  );
+  // imageWrap.setAttribute("onmousemove", "zoom(event)");
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
+  // need add div
   cardName.textContent = planets[ourCard].name;
   cardPrice.textContent = `$ ${planets[ourCard].price}`;
   cardDescription.textContent = planets[ourCard].briefly;
@@ -157,6 +164,3 @@ cardLike.addEventListener("click", function () {
 
   localStorage.setItem("likes", JSON.stringify(likes));
 });
-
-// //вызываем лупу у картинки превью
-// magnify("img-prev_img", 3);
