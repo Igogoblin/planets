@@ -1,6 +1,6 @@
 import planets from "../planets.json" assert { type: "json" };
 import { banner, goPage, ourArray } from "./index.js";
-
+export let likes = new Set();
 console.log("this is card js");
 
 let ourCard;
@@ -9,51 +9,45 @@ let ourCard;
  * @param {}
  * @returns {} When activated, go to the product page
  */
+let che = 0;
 export function getCard() {
+  che++;
   let cardsNew = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
-  let cardsRelated = document.querySelectorAll(".card_rel");
-  // проверка ниже только для того чтобы избежать ошибку, если карточек нет
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   let interSearch = document.querySelectorAll(".inter-search");
-  //   if (interSearch.length != 0) {
-  //     for (let i = 0; i < 9; i++) {
-  //       interSearch[i]?.addEventListener("click", function () {
-  //         // console.log(cards[i].dataset);
-  //         // console.log(typeof this.dataset.item); //string
-  //         ourCard = +cards[i].dataset.item;
-  //         console.log(ourCard);
-  //         goPage(1);
-  //       });
-  //     }
-  //   }
-  // });
-  // if (interSearch.length != 0) {
-  for (let i = 0; i < 14; i++) {
+  let cardsRelated = document.querySelectorAll(".card_rel"); //card in shop
+
+  for (let i = 0; i < 9; i++) {
     // console.log(i);
     interSearch[i]?.addEventListener("click", function () {
-      // console.log(i, i);
-      // console.log(cardsNew[i - 5]);
-      // console.log(cardsNew[i - 5].getAttribute("data-item"));
-      // console.log(ourArray[cardsNew[i - 5].getAttribute("data-item")].id);
-      // console.log(ourArray[cardsNew[i - 5]]);
-      if (i > 4) {
-        ourCard = cardsNew[i - 5].getAttribute("data-item");
-        goPage(1);
-      }
+      console.log(i, i); //pozition arr
+      console.log(cardsNew[i]); // this card
+      console.log(cardsNew[i].getAttribute("data-item")); //id
 
-      if (i < 5) {
-        ourCard = cardsRelated[i].getAttribute("data-item");
-        showCard();
-      }
+      ourCard = cardsNew[i].getAttribute("data-item");
+      console.log("ourCard", ourCard);
+      goPage(1);
     });
+    let coutn = 0;
     interLike[i]?.addEventListener("click", function () {
-      // console.log("for like");
+      coutn++;
+      console.log("for like");
+      console.log(cardsNew[i].getAttribute("data-item"));
+      interLike[i].classList.toggle("our-like");
+      console.log(interLike[i].classList.contains("our-like"));
+
+      console.log(likes);
+
+      interLike[i].classList.contains("our-like")
+        ? likes.add(Number(cardsNew[i].getAttribute("data-item")))
+        : // likes.delete(Number(cardsNew[i].getAttribute("data-item")));
+          console.log(likes);
+      localStorage.setItem("likes", JSON.stringify(likes));
+      console.log("coutn", coutn);
     });
   }
-  // }
+  console.log("che", che);
 }
 /**
  * Description We build banner cards on the product page
@@ -71,9 +65,11 @@ export function buildReleted() {
               <span class="card-name_rel">${planets[banner[i]].name}</span>
               <div class="card-price_rel">$ ${planets[banner[i]].price}</div>
               <div class="card-interaction-rel">
-                <div class="inter-basket"></div>
-                <div class="inter-like"></div>
-                <div class="inter-search"></div>
+                <div class="inter-basket-rel"></div>
+                <div class="inter-like-rel ${
+                  likes.has(planets[banner[i]].id) ? "our-like" : ""
+                }"></div>
+                <div class="inter-search-rel"></div>
               </div>
             </div>
 `;
@@ -82,7 +78,8 @@ export function buildReleted() {
 }
 
 const imgBlock = document.querySelector(".img-block");
-const imgPrev = document.querySelector(".img-prev_img");
+const imageWrap = document.querySelector(".image__wrap");
+export const imgPrev = document.querySelector(".img-prev_img");
 const cardName = document.querySelector(".card-name");
 const cardPrice = document.querySelector(".card-price");
 const cardDescription = document.querySelector(".card-description > p");
@@ -110,7 +107,14 @@ export function showCard() {
   }
   imgBlock.innerHTML = "";
   imgBlock.insertAdjacentHTML("afterbegin", imageblock);
+  // imageWrap.classList.add("style", `${planets[ourCard].img[0]}`);
+  imageWrap.setAttribute(
+    "style",
+    `background-image: url("${planets[ourCard].img[0]}")`
+  );
+  // imageWrap.setAttribute("onmousemove", "zoom(event)");
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
+  // need add div
   cardName.textContent = planets[ourCard].name;
   cardPrice.textContent = `$ ${planets[ourCard].price}`;
   cardDescription.textContent = planets[ourCard].briefly;
@@ -149,3 +153,14 @@ function checkImgShow() {
     });
   }
 }
+
+likes.entries(ourCard)
+  ? cardLike.classList.add("our-like")
+  : cardLike.classList.remove("our-like");
+cardLike.addEventListener("click", function () {
+  cardLike.classList.contains("our-like")
+    ? cardLike.classList.remove("our-like") && likes.delete(ourCard)
+    : cardLike.classList.add("our-like") && likes.add(ourCard);
+
+  localStorage.setItem("likes", JSON.stringify(likes));
+});

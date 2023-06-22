@@ -1,10 +1,10 @@
 import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
-import { getCard, buildReleted, showCard } from "./card.js";
+import { getCard, buildReleted, showCard, likes } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
-// let likes = [];
+
 export let ourArray = [...planets];
 // ourArray = [...planets];
 
@@ -14,7 +14,7 @@ let goal = 1;
 // localStorage.clear();
 // let ob = [{ 4: "goal" }, { 3: "main" }];
 // localStorage.setItem("test", JSON.stringify(ob));
-console.log(JSON.parse(localStorage.getItem("test")));
+// console.log(JSON.parse(localStorage.getItem("test")));
 console.log(JSON.parse(localStorage.getItem("ourArray")));
 // console.log(JSON.parse(localStorage.getItem("likes")));
 
@@ -25,6 +25,7 @@ if (!localStorage.getItem("ourArray")) {
   console.log(localStorage);
 } else {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
+  // likes = JSON.parse(localStorage.getItem("likes"));
   // likes = JSON.parse(localStorage.get);
   //arr = localStorage.getItem("arr");
   arr = randomArr(ourArray.length, arr);
@@ -35,6 +36,7 @@ if (!localStorage.getItem("ourArray")) {
 
 console.log(ourArray);
 console.log("arr", arr);
+console.log("likes", likes); //size 0 then give it in localstorage
 /**
  * Description create random number
  * @param {number} max
@@ -222,11 +224,12 @@ export function goPage(i) {
  * Description Construction of the Card Field
  * @returns {any}
  */
-export function buildArea(coef = 1) {
-  console.log(ourArray);
+export function buildArea() {
+  console.log("ourArray ", ourArray);
   console.log("arr", arr);
   // arr = randomArr(ourArray.length, arr);
   console.log("arr", arr);
+  let coef = 0;
   if (arr.length !== ourArray.length) {
     arr.length = 0;
     arr = randomArr(ourArray.length, arr);
@@ -241,20 +244,26 @@ export function buildArea(coef = 1) {
       arr.push(i);
     }
   }
+  console.log("for building area - ARR: ", arr);
+  coef = (goal - 1) * 9;
+  console.log("goal ", goal);
+  console.log((goal - 1) * 9);
   for (let i = 0; i < 9; i++) {
-    if (ourArray.length <= i) {
+    if (ourArray.length <= i || i + coef >= ourArray.length) {
       break;
     }
     text += `
-            <div class="card" data-item="${ourArray[arr[i]].id}">
+            <div class="card" data-item="${ourArray[arr[i + coef]].id}">
               <div class="card-img">
-                <img src="${ourArray[arr[i]].img[0]}" alt="card image">
+                <img src="${ourArray[arr[i + coef]].img[0]}" alt="card image">
               </div>
-              <span class="card-name">${ourArray[arr[i]].name}</span>
-              <div class="card-price">$ ${ourArray[arr[i]].price}</div>
+              <span class="card-name">${ourArray[arr[i + coef]].name}</span>
+              <div class="card-price">$ ${ourArray[arr[i + coef]].price}</div>
               <div class="card-interaction">
                 <div class="inter-basket"></div>
-                <div class="inter-like"></div>
+                <div class="inter-like ${
+                  likes.has(ourArray[arr[i + coef]].id) ? "our-like" : ""
+                }"></div>
                 <div class="inter-search"></div>
               </div>
             </div>
@@ -273,28 +282,7 @@ buildArea();
 export function buildPagination(goal) {
   // let goal = a;  ===========================
   let checkPage = Math.ceil(ourArray.length / 9); // сколько вообще у нас страниц
-  // console.log(ourArray);
-  // console.log("all pages - checkPage ", checkPage);
-  // console.log("goal ", goal);
-  // for (let i = 0; i < pagination.length; i++) {
-  //   if (i !== a) {
-  //     pagination[i].classList.remove("check");
-  //     if (i < a) {
-  //       pagination[i].classList.add("checkHalf");
-  //     }
-  //   }
-  //   if (i <= checkPage && a < checkPage && a !== i) {
-  //     pagination[i].classList.add("checkHalf");
-  //     pagination[pagination.length - 1].classList.add("checkHalf");
-  //   }
 
-  //   if (a === 1) {
-  //     pagination[0].classList.remove("checkHalf");
-  //   }
-  //   if (a === checkPage) {
-  //     pagination[pagination.length - 1].classList.remove("checkHalf");
-  //   }
-  // }
   for (let i = 0; i < pagination.length - 1; i++) {
     if (i > checkPage) {
       pagination[i].classList.remove("checkHalf");
@@ -324,6 +312,9 @@ export function buildPagination(goal) {
       pagination[0].classList.remove("checkHalf");
     }
   }
+  buildArea();
+  getCard();
+  // finish work pagination *******************************************
 }
 /**
  * Description show page pagination first page by contentLoaded
