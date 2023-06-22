@@ -107,12 +107,10 @@ export function showCard() {
   }
   imgBlock.innerHTML = "";
   imgBlock.insertAdjacentHTML("afterbegin", imageblock);
-  // imageWrap.classList.add("style", `${planets[ourCard].img[0]}`);
   imageWrap.setAttribute(
     "style",
     `background-image: url("${planets[ourCard].img[0]}")`
   );
-  // imageWrap.setAttribute("onmousemove", "zoom(event)");
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
   // need add div
   cardName.textContent = planets[ourCard].name;
@@ -140,10 +138,18 @@ export function showCard() {
 function checkImgShow() {
   let imgBlockItems = document.querySelectorAll(".img-block > img");
   let count = 0;
+  console.log("before cicle of previe image");
   for (let i = 0; i < 4; i++) {
     imgBlockItems[i].addEventListener("click", function () {
       imgBlockItems[i].classList.add("increase");
+      imageWrap.setAttribute(
+        "style",
+        `background-image: url("${planets[ourCard].img[i]}")`
+      );
       imgPrev.setAttribute("src", `${planets[ourCard].img[i]}`);
+      console.log("switch our image ");
+
+      // **//*/*/** */
       count = i;
       imgBlockItems.forEach((element, item) => {
         if (item != count) {
@@ -158,6 +164,8 @@ likes.entries(ourCard)
   ? cardLike.classList.add("our-like")
   : cardLike.classList.remove("our-like");
 cardLike.addEventListener("click", function () {
+  console.log(ourCard);
+  console.log(cardLike);
   cardLike.classList.contains("our-like")
     ? cardLike.classList.remove("our-like") && likes.delete(ourCard)
     : cardLike.classList.add("our-like") && likes.add(ourCard);
