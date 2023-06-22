@@ -236,7 +236,10 @@
           <div class="shop-card_img">
             <div class="img-block"></div>
             <div class="img-prev">
-              <img src="" alt="picture plant" class="img-prev_img">
+              <div class="image__wrap" onmousemove="zoom(event)">
+                <img src="" alt="picture plant" class="img-prev_img">
+              </div>
+
             </div>
           </div>
           <div class="shop-card_data">
@@ -476,6 +479,16 @@
   </footer>
   <!-- </div> -->
   <script type="module" src="./components/index.js"></script>
+  <script>
+    function zoom(e) {
+      var zoomer = e.currentTarget;
+      e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches[0].pageX);
+      e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches[0].pageX);
+      x = (offsetX / zoomer.offsetWidth) * 100;
+      y = (offsetY / zoomer.offsetHeight) * 100;
+      zoomer.style.backgroundPosition = x + "% " + y + "%";
+    }
+  </script>
 </body>
 
 </html>
