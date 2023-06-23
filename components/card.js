@@ -9,9 +9,8 @@ let ourCard;
  * @param {}
  * @returns {} When activated, go to the product page
  */
-let che = 0;
+
 export function getCard() {
-  che++;
   let cardsNew = document.querySelectorAll(".card");
   let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
@@ -19,36 +18,49 @@ export function getCard() {
   let cardsRelated = document.querySelectorAll(".card_rel"); //card in shop
 
   for (let i = 0; i < 9; i++) {
-    // console.log(i);
     interSearch[i]?.addEventListener("click", function () {
-      console.log(i, i); //pozition arr
-      console.log(cardsNew[i]); // this card
-      console.log(cardsNew[i].getAttribute("data-item")); //id
-
       ourCard = cardsNew[i].getAttribute("data-item");
-      console.log("ourCard", ourCard);
       goPage(1);
+      likes.has(+ourCard)
+        ? cardLike.classList.add("our-like")
+        : cardLike.classList.remove("our-like");
     });
-    let coutn = 0;
     interLike[i]?.addEventListener("click", function () {
-      coutn++;
-      console.log("for like");
-      console.log(cardsNew[i].getAttribute("data-item"));
       interLike[i].classList.toggle("our-like");
-      console.log(interLike[i].classList.contains("our-like"));
-
-      console.log(likes);
-
       interLike[i].classList.contains("our-like")
         ? likes.add(Number(cardsNew[i].getAttribute("data-item")))
-        : // likes.delete(Number(cardsNew[i].getAttribute("data-item")));
-          console.log(likes);
+        : likes.delete(Number(cardsNew[i].getAttribute("data-item")));
+
       localStorage.setItem("likes", JSON.stringify(likes));
-      console.log("coutn", coutn);
+      // likes = JSON.parse(localStorage.getItem("likes"));
+      console.log(JSON.parse(localStorage.getItem("likes")));
     });
   }
-  console.log("che", che);
+
+  if (likes.entries(ourCard)) {
+    cardLike.classList.add("our-like");
+  } else {
+    cardLike.classList.remove("our-like");
+  }
+  cardLike.addEventListener("click", function () {
+    console.log("163 ourCard ", ourCard);
+    console.log("164 cardLike ", cardLike);
+    console.log(cardLike.classList.contains("our-like"));
+    // cardLike.classList.contains("our-like")
+    //   /? cardLike.classList.remove("our-like") && likes.delete(ourCard)
+    //   : cardLike.classList.add("our-like") && likes.add(ourCard);
+    if (cardLike.classList.contains("our-like")) {
+      cardLike.classList.remove("our-like");
+      likes.delete(Number(ourCard));
+    } else {
+      cardLike.classList.add("our-like");
+      likes.add(Number(ourCard));
+    }
+    console.log("168 likes ", likes);
+    localStorage.setItem("likes", JSON.stringify(likes));
+  });
 }
+
 /**
  * Description We build banner cards on the product page
  * @param {}
@@ -112,7 +124,6 @@ export function showCard() {
     `background-image: url("${planets[ourCard].img[0]}")`
   );
   imgPrev.setAttribute("src", `${planets[ourCard].img[0]}`);
-  // need add div
   cardName.textContent = planets[ourCard].name;
   cardPrice.textContent = `$ ${planets[ourCard].price}`;
   cardDescription.textContent = planets[ourCard].briefly;
@@ -138,7 +149,6 @@ export function showCard() {
 function checkImgShow() {
   let imgBlockItems = document.querySelectorAll(".img-block > img");
   let count = 0;
-  console.log("before cicle of previe image");
   for (let i = 0; i < 4; i++) {
     imgBlockItems[i].addEventListener("click", function () {
       imgBlockItems[i].classList.add("increase");
@@ -147,9 +157,6 @@ function checkImgShow() {
         `background-image: url("${planets[ourCard].img[i]}")`
       );
       imgPrev.setAttribute("src", `${planets[ourCard].img[i]}`);
-      console.log("switch our image ");
-
-      // **//*/*/** */
       count = i;
       imgBlockItems.forEach((element, item) => {
         if (item != count) {
@@ -159,16 +166,3 @@ function checkImgShow() {
     });
   }
 }
-
-likes.entries(ourCard)
-  ? cardLike.classList.add("our-like")
-  : cardLike.classList.remove("our-like");
-cardLike.addEventListener("click", function () {
-  console.log(ourCard);
-  console.log(cardLike);
-  cardLike.classList.contains("our-like")
-    ? cardLike.classList.remove("our-like") && likes.delete(ourCard)
-    : cardLike.classList.add("our-like") && likes.add(ourCard);
-
-  localStorage.setItem("likes", JSON.stringify(likes));
-});

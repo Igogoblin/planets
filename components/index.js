@@ -36,7 +36,7 @@ if (!localStorage.getItem("ourArray")) {
 
 console.log(ourArray);
 console.log("arr", arr);
-console.log("likes", likes); //size 0 then give it in localstorage
+//console.log("likes", likes); //size 0 then give it in localstorage
 /**
  * Description create random number
  * @param {number} max
@@ -132,7 +132,8 @@ function makeOurArray() {
   // buildSortArray();
   buildArea();
   buildPagination(1);
-  getCard();
+  // getCard();
+  // getLike();
 }
 
 function makeOurArraySize() {
@@ -170,6 +171,7 @@ function makeOurArraySize() {
   buildArea();
   buildPagination(1);
   getCard();
+  //getLike();
 }
 
 // Categories finish ----------------------------------------------------------------
@@ -314,6 +316,7 @@ export function buildPagination(goal) {
   }
   buildArea();
   getCard();
+  //getLike();
   // finish work pagination *******************************************
 }
 /**
@@ -359,8 +362,6 @@ for (let i = 0; i < pagination.length; i++) {
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
 // это надо перекинуть в функцию ***********************************
-getCard();
-
 //  monstera-6304439
 //  --plant-7268178
 // -- bonsai-316573
