@@ -14,6 +14,7 @@ let goal = 1;
 // localStorage.clear();
 // let ob = [{ 4: "goal" }, { 3: "main" }];
 // localStorage.setItem("test", JSON.stringify(ob));
+
 // console.log(JSON.parse(localStorage.getItem("test")));
 console.log(JSON.parse(localStorage.getItem("ourArray")));
 // console.log(JSON.parse(localStorage.getItem("likes")));
@@ -383,3 +384,8 @@ buildPagination(1);
 // виновный
 // поездка на выходные - дедектив
 // в тени луны
+
+// start work with basket -------------------------------------------
+const basket = document.querySelector(".basket"); // показать сколько товаров
+const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
+// inter-basket стиль в карточках
