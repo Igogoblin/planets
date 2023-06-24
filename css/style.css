@@ -245,7 +245,7 @@ header .wrapper .acc .log img {
   margin-right: 6px;
 }
 header .wrapper .acc:hover .basket {
-  cursor: no-drop;
+  cursor: pointer;
 }
 header .wrapper .acc:hover .log {
   cursor: pointer;
@@ -756,7 +756,7 @@ section .slider .non {
   display: none;
   justify-content: space-between;
   align-items: center;
-  bottom: 1%;
+  bottom: 0%;
   left: 50%;
 }
 .container .content .area .card .card-interaction .inter-basket {
@@ -831,7 +831,6 @@ section .slider .non {
   height: 20px;
   background-image: url("./svg/shoppingGreen.svg");
   background-size: cover;
-  cursor: no-drop;
 }
 .container .content .area .card:hover .card-interaction .inter-like:hover {
   width: 20px;
@@ -968,7 +967,7 @@ section .slider .non {
     display: none;
     justify-content: space-between;
     align-items: center;
-    bottom: 1%;
+    bottom: 0%;
     left: 50%;
   }
   .container .content .area .card .card-interaction .inter-basket {
@@ -1043,7 +1042,6 @@ section .slider .non {
     height: 20px;
     background-image: url("./svg/shoppingGreen.svg");
     background-size: cover;
-    cursor: no-drop;
   }
   .container .content .area .card:hover .card-interaction .inter-like:hover {
     width: 20px;
@@ -1179,7 +1177,7 @@ section .slider .non {
     display: none;
     justify-content: space-between;
     align-items: center;
-    bottom: 1%;
+    bottom: 0%;
     left: 50%;
   }
   .container .content .area .card .card-interaction .inter-basket {
@@ -1218,14 +1216,13 @@ section .slider .non {
   .container .content .area .card:hover .card-interaction {
     width: 85px;
     left: 50%;
-    bottom: 1%;
+    bottom: 0%;
   }
   .container .content .area .card:hover .card-interaction .inter-basket:hover {
     width: 15px;
     height: 15px;
     background-image: url("./svg/shoppingGreen.svg");
     background-size: cover;
-    cursor: no-drop;
   }
   .container .content .area .card:hover .card-interaction .inter-like:hover {
     width: 15px;
@@ -1441,7 +1438,6 @@ section .slider .non {
     height: 10px;
     background-image: url("./svg/shoppingGreen.svg");
     background-size: cover;
-    cursor: no-drop;
   }
   .container .content .area .card:hover .card-interaction .inter-like:hover {
     width: 10px;
@@ -1549,6 +1545,9 @@ footer .footer .accept span {
   font-size: 18px;
   line-height: 16px;
   color: #3d3d3d;
+}
+footer .footer .accept .accept-list {
+  padding-left: 5px;
 }
 footer .footer .accept .accept-list img {
   height: 26px;

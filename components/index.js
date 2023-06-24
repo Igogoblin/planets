@@ -7,13 +7,14 @@ let arr = [];
 
 export let ourArray = [...planets];
 // ourArray = [...planets];
-
+let basket = new Set();
 export let banner = [];
 let goal = 1;
 
 // localStorage.clear();
 // let ob = [{ 4: "goal" }, { 3: "main" }];
 // localStorage.setItem("test", JSON.stringify(ob));
+
 // console.log(JSON.parse(localStorage.getItem("test")));
 console.log(JSON.parse(localStorage.getItem("ourArray")));
 // console.log(JSON.parse(localStorage.getItem("likes")));
@@ -361,7 +362,7 @@ for (let i = 0; i < pagination.length; i++) {
 // paginationShow();
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
-// это надо перекинуть в функцию ***********************************
+// brake tokens by plants
 //  monstera-6304439
 //  --plant-7268178
 // -- bonsai-316573
@@ -383,3 +384,28 @@ buildPagination(1);
 // виновный
 // поездка на выходные - дедектив
 // в тени луны
+
+// start work with basket -------------------------------------------
+const quantity = document.querySelector(".basket"); // показать сколько товаров
+const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
+const basketItem = document.querySelector(".basket-item");
+let interBasket = document.querySelectorAll(".inter-basket"); // стиль в карточках
+basketButton.addEventListener("click", function () {
+  // здесь мы будем переходить в модуль покупки
+});
+console.log(basketItem.innerHTML);
+function getCardBasket() {
+  let card = document.querySelectorAll(".card");
+  for (let i = 0; i < interBasket.length; i++) {
+    interBasket[i].addEventListener("click", function () {
+      console.log(Number(card[i].dataset.item));
+    });
+  }
+  if (basket.has(Number(card[i].dataset.item))) {
+    basket.delete(Number(card[i].dataset.item));
+  } else {
+    basket.add(Number(card[i].dataset.item));
+  }
+  console.log(basket);
+}
+getCardBasket();

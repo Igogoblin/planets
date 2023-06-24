@@ -243,7 +243,7 @@ header {
     }
     .acc:hover {
       .basket {
-        cursor: no-drop;
+        cursor: pointer;
       }
       .log {
         cursor: pointer;
@@ -818,7 +818,7 @@ section {
           display: none;
           justify-content: space-between;
           align-items: center;
-          bottom: 1%;
+          bottom: 0%;
           left: 50%;
           .inter-basket {
             width: 20px;
@@ -901,7 +901,6 @@ section {
             height: 20px;
             background-image: url("./svg/shoppingGreen.svg");
             background-size: cover;
-            cursor: no-drop;
           }
           .inter-like:hover {
             width: 20px;
@@ -1047,7 +1046,7 @@ section {
             display: none;
             justify-content: space-between;
             align-items: center;
-            bottom: 1%;
+            bottom: 0%;
             left: 50%;
             .inter-basket {
               width: 20px;
@@ -1129,7 +1128,6 @@ section {
               height: 20px;
               background-image: url("./svg/shoppingGreen.svg");
               background-size: cover;
-              cursor: no-drop;
             }
             .inter-like:hover {
               width: 20px;
@@ -1274,7 +1272,7 @@ section {
             display: none;
             justify-content: space-between;
             align-items: center;
-            bottom: 1%;
+            bottom: 0%;
             left: 50%;
             .inter-basket {
               width: 20px;
@@ -1315,14 +1313,13 @@ section {
           .card-interaction {
             width: 85px;
             left: 50%;
-            bottom: 1%;
+            bottom: 0%;
             // justify-content: flex-end;
             .inter-basket:hover {
               width: 15px;
               height: 15px;
               background-image: url("./svg/shoppingGreen.svg");
               background-size: cover;
-              cursor: no-drop;
             }
             .inter-like:hover {
               width: 15px;
@@ -1552,7 +1549,6 @@ section {
               height: 10px;
               background-image: url("./svg/shoppingGreen.svg");
               background-size: cover;
-              cursor: no-drop;
             }
             .inter-like:hover {
               width: 10px;
@@ -1669,6 +1665,7 @@ footer {
         color: #3d3d3d;
       }
       .accept-list {
+        padding-left: 5px;
         img {
           height: 26px;
           margin: 20px 20px 0 0;
