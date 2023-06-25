@@ -172,6 +172,7 @@ function makeOurArraySize() {
   buildArea();
   buildPagination(1);
   getCard();
+  //getCardBasket();
   //getLike();
 }
 
@@ -198,7 +199,7 @@ const shop = document.querySelector(".shop");
 const interSearch = document.querySelector(".inter-search");
 const main = document.querySelector(".main");
 const toBlogs = document.querySelectorAll(".toBlog");
-
+let interBasket = document.querySelectorAll(".inter-basket"); // стиль в карточках
 for (let i = 0; i < 3; i++) {
   navigation[i].addEventListener("click", () => goPage(i));
   toBlogs[i].addEventListener("click", () => goPage(2));
@@ -317,6 +318,7 @@ export function buildPagination(goal) {
   }
   buildArea();
   getCard();
+  //getCardBasket();
   //getLike();
   // finish work pagination *******************************************
 }
@@ -389,23 +391,24 @@ buildPagination(1);
 const quantity = document.querySelector(".basket"); // показать сколько товаров
 const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
 const basketItem = document.querySelector(".basket-item");
-let interBasket = document.querySelectorAll(".inter-basket"); // стиль в карточках
+
 basketButton.addEventListener("click", function () {
   // здесь мы будем переходить в модуль покупки
 });
 console.log(basketItem.innerHTML);
-function getCardBasket() {
-  let card = document.querySelectorAll(".card");
-  for (let i = 0; i < interBasket.length; i++) {
-    interBasket[i].addEventListener("click", function () {
-      console.log(Number(card[i].dataset.item));
-    });
-  }
-  if (basket.has(Number(card[i].dataset.item))) {
-    basket.delete(Number(card[i].dataset.item));
-  } else {
-    basket.add(Number(card[i].dataset.item));
-  }
-  console.log(basket);
-}
-getCardBasket();
+// function getCardBasket() {
+//   let card = document.querySelectorAll(".card");
+//   for (let i = 0; i < interBasket.length; i++) {
+//     interBasket[i].addEventListener("click", function () {
+//       console.log(Number(card[i].dataset.item));
+//       if (basket.has(Number(card[i].dataset.item))) {
+//         basket.delete(Number(card[i].dataset.item));
+//       } else {
+//         basket.add(Number(card[i].dataset.item));
+//       }
+//     });
+//   }
+
+//   console.log(basket);
+// }
+// getCardBasket();

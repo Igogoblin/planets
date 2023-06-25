@@ -26,14 +26,27 @@ export function getCard() {
         : cardLike.classList.remove("our-like");
     });
     interLike[i]?.addEventListener("click", function () {
-      interLike[i].classList.toggle("our-like");
-      interLike[i].classList.contains("our-like")
-        ? likes.add(Number(cardsNew[i].getAttribute("data-item")))
-        : likes.delete(Number(cardsNew[i].getAttribute("data-item")));
+      // console.log(Number(cardsNew[i].getAttribute("data-item")));
+      // console.log(likes);
+      // console.log(
+      //   "interLike[i].classList.contains('our-like') ",
+      //   interLike[i].classList.contains("our-like")
+      // );
+      if (interLike[i].classList.contains("our-like")) {
+        likes.delete(Number(cardsNew[i].getAttribute("data-item")));
+      } else {
+        likes.add(Number(cardsNew[i].getAttribute("data-item")));
+      }
+      // interLike[i].classList.contains("our-like")
+      //   /? likes.add(Number(cardsNew[i].getAttribute("data-item")))
+      //   : likes.delete(Number(cardsNew[i].getAttribute("data-item")));
 
       localStorage.setItem("likes", JSON.stringify(likes));
+      console.log(likes);
+      interLike[i].classList.toggle("our-like");
       // likes = JSON.parse(localStorage.getItem("likes"));
-      console.log(JSON.parse(localStorage.getItem("likes")));
+      //console.log(JSON.parse(localStorage.getItem("likes")));
+      console.log(localStorage.likes);
     });
   }
 
