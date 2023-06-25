@@ -1,6 +1,7 @@
 import planets from "../planets.json" assert { type: "json" };
 import { banner, goPage, ourArray } from "./index.js";
 export let likes = new Set();
+export let basket = new Set();
 console.log("this is card js");
 
 let ourCard;
@@ -9,12 +10,19 @@ let ourCard;
  * @param {}
  * @returns {} When activated, go to the product page
  */
-
+const quantity = document.querySelector(".basket"); // показать сколько товаров
+const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
+const basketItem = document.querySelector(".basket-item"); //количество
+console.log(basketItem.innerHTML);
+basketItem.innerHTML < 1
+  ? (basketItem.style.display = "none")
+  : (basketItem.style.display = "block");
 export function getCard() {
   let cardsNew = document.querySelectorAll(".card");
-  let interSearch = document.querySelectorAll(".inter-search");
   let interBasket = document.querySelectorAll(".inter-basket");
   let interLike = document.querySelectorAll(".inter-like");
+  let interSearch = document.querySelectorAll(".inter-search");
+
   let cardsRelated = document.querySelectorAll(".card_rel"); //card in shop
 
   for (let i = 0; i < 9; i++) {
@@ -48,6 +56,20 @@ export function getCard() {
       //console.log(JSON.parse(localStorage.getItem("likes")));
       console.log(localStorage.likes);
     });
+    interBasket[i]?.addEventListener("click", function () {
+      console.log(
+        "for basket it will be number card for add to basket ",
+        Number(cardsNew[i].getAttribute("data-item"))
+      );
+      basket.has(Number(cardsNew[i].getAttribute("data-item")))
+        ? basket.delete(Number(cardsNew[i].getAttribute("data-item")))
+        : basket.add(Number(cardsNew[i].getAttribute("data-item")));
+      console.log("65 basket ", basket);
+      basketItem.innerHTML = basket.size;
+      basketItem.innerHTML < 1
+        ? (basketItem.style.display = "none")
+        : (basketItem.style.display = "flex");
+    });
   }
 
   if (likes.entries(ourCard)) {
@@ -72,6 +94,9 @@ export function getCard() {
     console.log("168 likes ", likes);
     localStorage.setItem("likes", JSON.stringify(likes));
   });
+  console.log("basket ", basket);
+  console.log("likes ", likes);
+  basketItem.innerHTML = basket.size;
 }
 
 /**
