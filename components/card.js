@@ -34,27 +34,15 @@ export function getCard() {
         : cardLike.classList.remove("our-like");
     });
     interLike[i]?.addEventListener("click", function () {
-      // console.log(Number(cardsNew[i].getAttribute("data-item")));
-      // console.log(likes);
-      // console.log(
-      //   "interLike[i].classList.contains('our-like') ",
-      //   interLike[i].classList.contains("our-like")
-      // );
       if (interLike[i].classList.contains("our-like")) {
         likes.delete(Number(cardsNew[i].getAttribute("data-item")));
       } else {
         likes.add(Number(cardsNew[i].getAttribute("data-item")));
       }
-      // interLike[i].classList.contains("our-like")
-      //   /? likes.add(Number(cardsNew[i].getAttribute("data-item")))
-      //   : likes.delete(Number(cardsNew[i].getAttribute("data-item")));
 
-      localStorage.setItem("likes", JSON.stringify(likes));
+      forMemory(likes, 1);
       console.log(likes);
       interLike[i].classList.toggle("our-like");
-      // likes = JSON.parse(localStorage.getItem("likes"));
-      //console.log(JSON.parse(localStorage.getItem("likes")));
-      console.log(localStorage.likes);
     });
     interBasket[i]?.addEventListener("click", function () {
       console.log(
@@ -64,11 +52,13 @@ export function getCard() {
       basket.has(Number(cardsNew[i].getAttribute("data-item")))
         ? basket.delete(Number(cardsNew[i].getAttribute("data-item")))
         : basket.add(Number(cardsNew[i].getAttribute("data-item")));
-      console.log("65 basket ", basket);
+
       basketItem.innerHTML = basket.size;
       basketItem.innerHTML < 1
         ? (basketItem.style.display = "none")
         : (basketItem.style.display = "flex");
+
+      forMemory(basket, 0);
     });
   }
 
@@ -81,9 +71,7 @@ export function getCard() {
     console.log("163 ourCard ", ourCard);
     console.log("164 cardLike ", cardLike);
     console.log(cardLike.classList.contains("our-like"));
-    // cardLike.classList.contains("our-like")
-    //   /? cardLike.classList.remove("our-like") && likes.delete(ourCard)
-    //   : cardLike.classList.add("our-like") && likes.add(ourCard);
+
     if (cardLike.classList.contains("our-like")) {
       cardLike.classList.remove("our-like");
       likes.delete(Number(ourCard));
@@ -99,6 +87,20 @@ export function getCard() {
   basketItem.innerHTML = basket.size;
 }
 
+/**
+ * Description
+ * @param {set()} to localStorage
+ * @returns {set()} from localStorage
+ */
+function forMemory(ourObj, num) {
+  let nameStorage;
+  num === 0 ? (nameStorage = "basket") : (nameStorage = "like");
+  let forStorage = [...ourObj];
+  localStorage.setItem(nameStorage, JSON.stringify(forStorage));
+  forStorage = JSON.parse(localStorage.getItem(nameStorage));
+  ourObj.add(...forStorage);
+  return ourObj;
+}
 /**
  * Description We build banner cards on the product page
  * @param {}
