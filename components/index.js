@@ -199,7 +199,7 @@ const shop = document.querySelector(".shop");
 const interSearch = document.querySelector(".inter-search");
 const main = document.querySelector(".main");
 const toBlogs = document.querySelectorAll(".toBlog");
-let interBasket = document.querySelectorAll(".inter-basket"); // стиль в карточках
+//let interBasket = document.querySelectorAll(".inter-basket"); // стиль в карточках
 for (let i = 0; i < 3; i++) {
   navigation[i].addEventListener("click", () => goPage(i));
   toBlogs[i].addEventListener("click", () => goPage(2));
@@ -388,14 +388,14 @@ buildPagination(1);
 // в тени луны
 
 // start work with basket -------------------------------------------
-const quantity = document.querySelector(".basket"); // показать сколько товаров
-const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
-const basketItem = document.querySelector(".basket-item");
+// const quantity = document.querySelector(".basket"); // показать сколько товаров
+// const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
+// const basketItem = document.querySelector(".basket-item");
 
-basketButton.addEventListener("click", function () {
-  // здесь мы будем переходить в модуль покупки
-});
-console.log(basketItem.innerHTML);
+// basketButton.addEventListener("click", function () {
+//   // здесь мы будем переходить в модуль покупки
+// });
+//console.log(basketItem.innerHTML);
 // function getCardBasket() {
 //   let card = document.querySelectorAll(".card");
 //   for (let i = 0; i < interBasket.length; i++) {
