@@ -26,9 +26,9 @@ if (!localStorage.getItem("ourArray")) {
   console.log(localStorage);
 } else {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
-  // likes = JSON.parse(localStorage.getItem("likes"));
-  // likes = JSON.parse(localStorage.get);
-  //arr = localStorage.getItem("arr");
+  likes.add(...JSON.parse(localStorage.getItem("like")));
+  basket.add(...JSON.parse(localStorage.getItem("basket")));
+
   arr = randomArr(ourArray.length, arr);
   console.log("do first visit");
   // console.log(localStorage.getItem("arr"));
@@ -37,7 +37,7 @@ if (!localStorage.getItem("ourArray")) {
 
 console.log(ourArray);
 console.log("arr", arr);
-//console.log("likes", likes); //size 0 then give it in localstorage
+
 /**
  * Description create random number
  * @param {number} max
@@ -124,21 +124,15 @@ function makeOurArray() {
 
   console.log(choiceItem);
   console.log("ourArray category ", ourArray);
-  // =======================  до этого момента работает ==========
-  // arr.length = 0;
-  // arr = randomArr(ourArray.length, arr);
-  // localStorage.setItem("arr", arr);
+
   console.log("arr for localstorage : ", arr);
   availability();
-  // buildSortArray();
+
   buildArea();
   buildPagination(1);
-  // getCard();
-  // getLike();
 }
 
 function makeOurArraySize() {
-  // console.log(ourArray[0].size);
   let choiceItem = document.querySelectorAll(".choice-item");
   console.log(choiceItem);
   if (choiceItem.length == 0) {
@@ -168,12 +162,10 @@ function makeOurArraySize() {
   arr = randomArr(ourArray.length, arr);
   console.log("163 arr ", arr);
   availability();
-  // buildSortArray();
+
   buildArea();
   buildPagination(1);
   getCard();
-  //getCardBasket();
-  //getLike();
 }
 
 // Categories finish ----------------------------------------------------------------
@@ -229,6 +221,8 @@ export function goPage(i) {
  * @returns {any}
  */
 export function buildArea() {
+  // likes.add(...JSON.parse(localStorage.getItem("like")));
+  // basket.add(...JSON.parse(localStorage.getItem("basket")));
   console.log("ourArray ", ourArray);
   console.log("arr", arr);
   // arr = randomArr(ourArray.length, arr);
