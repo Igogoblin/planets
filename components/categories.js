@@ -7,6 +7,7 @@ import {
   buildPagination,
 } from "./index.js";
 import { getCard } from "./card.js";
+
 export let forSort = 0;
 console.log("this is categories file");
 
@@ -82,6 +83,7 @@ fastChoiceAll.addEventListener("click", function () {
   localStorage.setItem("ourArray", JSON.stringify(ourArray));
   totoalHead();
   getCard();
+  //getLike();
 });
 
 fastChoiceSale.addEventListener("click", function () {
@@ -97,6 +99,7 @@ fastChoiceSale.addEventListener("click", function () {
   console.log(ourArray);
   totoalHead();
   getCard();
+  //getLike();
 });
 
 function totoalHead() {
@@ -131,5 +134,6 @@ ascend.addEventListener("click", function () {
   }
   buildArea();
   getCard();
+  //getLike();
   localStorage.setItem("ourArray", JSON.stringify(ourArray));
 });
