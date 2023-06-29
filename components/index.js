@@ -435,6 +435,7 @@ basketButton.addEventListener("click", function () {
 
 function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");
+  let placeBasket = document.querySelector(".place-basket");
   console.log(localStorage);
   let forStorage = JSON.parse(localStorage.getItem("basket"));
   console.log(forStorage);
@@ -443,5 +444,45 @@ function buildCartBasket() {
   });
 
   console.log(basket);
-  // for(let i = 0;i<)
+  if (basket.size > 0) {
+    placeBasket.innerHTML = "";
+    let text = "";
+    for (let i = 0; i < basket.size; i++) {
+      console.log(forStorage[i]);
+      text += `
+      <div class="basket-cart">
+                    <div class="cart-prod">
+                      <img class="cart-img" src=${
+                        planets[forStorage[i]].img[0]
+                      } alt="image">
+                      <div class="cart-title">${
+                        planets[forStorage[i]].name
+                      }</div>
+                    </div>
+                    <div class="cart-price head-second">$ ${
+                      planets[forStorage[i]].price
+                    }</div>
+                    <div class="cart-quantity head-second">
+                      <div class="cart-less">-</div>
+                      <div class="cart-count">1</div>
+                      <div class="cart-more">+</div>
+                    </div>
+                    <div class="cart-total head-second">$ ${
+                      planets[forStorage[i]].price
+                    }</div>
+                    <div class="cart-dell head-second"></div>
+                  </div>
+      `;
+    }
+    placeBasket.insertAdjacentHTML("afterbegin", text);
+  } else return;
+  interactionBasket();
+}
+
+function interactionBasket() {
+  let cartLess = document.querySelectorAll(".cart-less");
+  let cartCount = document.querySelectorAll(".cart-count");
+  let cartMore = document.querySelectorAll(".cart-more");
+  let cartTotal = document.querySelectorAll(".cart-total");
+  let cartDell = document.querySelectorAll(".cart-dell");
 }
