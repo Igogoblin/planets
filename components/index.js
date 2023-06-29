@@ -11,7 +11,7 @@ let basket = new Set();
 export let banner = [];
 let goal = 1;
 
-// localStorage.clear();
+//localStorage.clear();
 // let ob = [{ 4: "goal" }, { 3: "main" }];
 // localStorage.setItem("test", JSON.stringify(ob));
 
@@ -20,6 +20,7 @@ console.log(JSON.parse(localStorage.getItem("ourArray")));
 // console.log(JSON.parse(localStorage.getItem("likes")));
 
 if (!localStorage.getItem("ourArray")) {
+  console.log("ne ponjal");
   ourArray = [...planets];
   arr = randomArr(ourArray.length, arr);
 
@@ -28,8 +29,19 @@ if (!localStorage.getItem("ourArray")) {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
   likes.add(...JSON.parse(localStorage.getItem("like")));
   basket.add(...JSON.parse(localStorage.getItem("basket")));
-
-  arr = randomArr(ourArray.length, arr);
+  let forStorageBasket = JSON.parse(localStorage.getItem("basket"));
+  forStorageBasket.forEach((element) => {
+    basket.add(element);
+  });
+  let forStorageLike = JSON.parse(localStorage.getItem("like"));
+  forStorageLike.forEach((element) => {
+    likes.add(element);
+  });
+  console.log(localStorage);
+  console.log(ourArray);
+  console.log(likes);
+  console.log(basket);
+  // arr = randomArr(ourArray.length, arr);
   console.log("do first visit");
   // console.log(localStorage.getItem("arr"));
   console.log(localStorage);
@@ -423,6 +435,13 @@ basketButton.addEventListener("click", function () {
 
 function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");
+  console.log(localStorage);
+  let forStorage = JSON.parse(localStorage.getItem("basket"));
+  console.log(forStorage);
+  forStorage.forEach((element) => {
+    basket.add(element);
+  });
+
   console.log(basket);
   // for(let i = 0;i<)
 }
