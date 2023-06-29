@@ -191,6 +191,7 @@ const shop = document.querySelector(".shop");
 const interSearch = document.querySelector(".inter-search");
 const main = document.querySelector(".main");
 const toBlogs = document.querySelectorAll(".toBlog");
+const modulBasket = document.querySelector(".modul-basket");
 //let interBasket = document.querySelectorAll(".inter-basket"); // стиль в карточках
 for (let i = 0; i < 3; i++) {
   navigation[i].addEventListener("click", () => goPage(i));
@@ -202,16 +203,21 @@ export function goPage(i) {
     shop.classList.add("non");
     blogs.classList.add("non");
     main.classList.remove("non");
+    modulBasket.classList.add("non");
     showCard();
   } else if (i === 1) {
     blogs.classList.add("non");
     main.classList.add("non");
     shop.classList.remove("non");
+    modulBasket.classList.add("non");
     showCard();
   } else if (i === 2) {
     main.classList.add("non");
     shop.classList.add("non");
     blogs.classList.remove("non");
+    modulBasket.classList.add("non");
+    blogSection.classList.remove("non");
+    notesSection.classList.remove("non");
     showCard();
   }
 }
@@ -381,14 +387,22 @@ buildPagination(1);
 // поездка на выходные - дедектив
 // в тени луны
 
-// start work with basket -------------------------------------------
-// const quantity = document.querySelector(".basket"); // показать сколько товаров
-// const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
-// const basketItem = document.querySelector(".basket-item");
+// start work with basket modul-------------------------------------------
+const quantity = document.querySelector(".basket"); // показать сколько товаров
+const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
+const basketItem = document.querySelector(".basket-item");
+const blogSection = document.querySelector(".blog");
+const notesSection = document.querySelector(".notes");
 
-// basketButton.addEventListener("click", function () {
-//   // здесь мы будем переходить в модуль покупки
-// });
+basketButton.addEventListener("click", function () {
+  main.classList.add("non");
+  shop.classList.add("non");
+  blogs.classList.remove("non");
+  modulBasket.classList.remove("non");
+  blogSection.classList.add("non");
+  notesSection.classList.add("non");
+  buildCartBasket();
+});
 //console.log(basketItem.innerHTML);
 // function getCardBasket() {
 //   let card = document.querySelectorAll(".card");
@@ -406,3 +420,9 @@ buildPagination(1);
 //   console.log(basket);
 // }
 // getCardBasket();
+
+function buildCartBasket() {
+  let basketCart = document.querySelector(".basket-cart");
+  console.log(basket);
+  // for(let i = 0;i<)
+}

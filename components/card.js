@@ -11,7 +11,7 @@ let ourCard;
  * @returns {} When activated, go to the product page
  */
 const quantity = document.querySelector(".basket"); // показать сколько товаров
-const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
+//export const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
 const basketItem = document.querySelector(".basket-item"); //количество
 console.log(basketItem.innerHTML);
 basketItem.innerHTML < 1
@@ -60,6 +60,7 @@ export function getCard() {
 
       forMemory(basket, 0);
     });
+    console.log(basket);
   }
 
   if (likes.entries(ourCard)) {
