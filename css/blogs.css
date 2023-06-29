@@ -359,6 +359,9 @@ h3 {
   .basket-coupon {
     display: flex;
   }
+  .basket-coupon input {
+    margin-top: 0;
+  }
 }
 @media (max-width: 500px) {
   .cart-img {
@@ -374,6 +377,11 @@ h3 {
   }
   .cart-total {
     padding-left: 5px;
+  }
+  .head-second {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
   }
 }
 /* notes --------------------------------------------------------------- */

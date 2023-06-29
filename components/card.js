@@ -59,8 +59,9 @@ export function getCard() {
         : (basketItem.style.display = "flex");
 
       forMemory(basket, 0);
+      console.log(basket);
+      console.log(localStorage);
     });
-    console.log(basket);
   }
 
   if (likes.entries(ourCard)) {
