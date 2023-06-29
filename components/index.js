@@ -7,28 +7,41 @@ let arr = [];
 
 export let ourArray = [...planets];
 // ourArray = [...planets];
-
+let basket = new Set();
 export let banner = [];
 let goal = 1;
 
-// localStorage.clear();
+//localStorage.clear();
 // let ob = [{ 4: "goal" }, { 3: "main" }];
 // localStorage.setItem("test", JSON.stringify(ob));
+
 // console.log(JSON.parse(localStorage.getItem("test")));
 console.log(JSON.parse(localStorage.getItem("ourArray")));
 // console.log(JSON.parse(localStorage.getItem("likes")));
 
 if (!localStorage.getItem("ourArray")) {
+  console.log("ne ponjal");
   ourArray = [...planets];
   arr = randomArr(ourArray.length, arr);
 
   console.log(localStorage);
 } else {
   ourArray = JSON.parse(localStorage.getItem("ourArray"));
-  // likes = JSON.parse(localStorage.getItem("likes"));
-  // likes = JSON.parse(localStorage.get);
-  //arr = localStorage.getItem("arr");
-  arr = randomArr(ourArray.length, arr);
+  likes.add(...JSON.parse(localStorage.getItem("like")));
+  basket.add(...JSON.parse(localStorage.getItem("basket")));
+  let forStorageBasket = JSON.parse(localStorage.getItem("basket"));
+  forStorageBasket.forEach((element) => {
+    basket.add(element);
+  });
+  let forStorageLike = JSON.parse(localStorage.getItem("like"));
+  forStorageLike.forEach((element) => {
+    likes.add(element);
+  });
+  console.log(localStorage);
+  console.log(ourArray);
+  console.log(likes);
+  console.log(basket);
+  // arr = randomArr(ourArray.length, arr);
   console.log("do first visit");
   // console.log(localStorage.getItem("arr"));
   console.log(localStorage);
@@ -36,7 +49,7 @@ if (!localStorage.getItem("ourArray")) {
 
 console.log(ourArray);
 console.log("arr", arr);
-console.log("likes", likes); //size 0 then give it in localstorage
+
 /**
  * Description create random number
  * @param {number} max
@@ -123,20 +136,15 @@ function makeOurArray() {
 
   console.log(choiceItem);
   console.log("ourArray category ", ourArray);
-  // =======================  до этого момента работает ==========
-  // arr.length = 0;
-  // arr = randomArr(ourArray.length, arr);
-  // localStorage.setItem("arr", arr);
+
   console.log("arr for localstorage : ", arr);
   availability();
-  // buildSortArray();
+
   buildArea();
   buildPagination(1);
-  getCard();
 }
 
 function makeOurArraySize() {
-  // console.log(ourArray[0].size);
   let choiceItem = document.querySelectorAll(".choice-item");
   console.log(choiceItem);
   if (choiceItem.length == 0) {
@@ -166,7 +174,7 @@ function makeOurArraySize() {
   arr = randomArr(ourArray.length, arr);
   console.log("163 arr ", arr);
   availability();
-  // buildSortArray();
+
   buildArea();
   buildPagination(1);
   getCard();
@@ -195,7 +203,8 @@ const shop = document.querySelector(".shop");
 const interSearch = document.querySelector(".inter-search");
 const main = document.querySelector(".main");
 const toBlogs = document.querySelectorAll(".toBlog");
-
+const modulBasket = document.querySelector(".modul-basket");
+//let interBasket = document.querySelectorAll(".inter-basket"); // стиль в карточках
 for (let i = 0; i < 3; i++) {
   navigation[i].addEventListener("click", () => goPage(i));
   toBlogs[i].addEventListener("click", () => goPage(2));
@@ -206,16 +215,21 @@ export function goPage(i) {
     shop.classList.add("non");
     blogs.classList.add("non");
     main.classList.remove("non");
+    modulBasket.classList.add("non");
     showCard();
   } else if (i === 1) {
     blogs.classList.add("non");
     main.classList.add("non");
     shop.classList.remove("non");
+    modulBasket.classList.add("non");
     showCard();
   } else if (i === 2) {
     main.classList.add("non");
     shop.classList.add("non");
     blogs.classList.remove("non");
+    modulBasket.classList.add("non");
+    blogSection.classList.remove("non");
+    notesSection.classList.remove("non");
     showCard();
   }
 }
@@ -225,6 +239,8 @@ export function goPage(i) {
  * @returns {any}
  */
 export function buildArea() {
+  // likes.add(...JSON.parse(localStorage.getItem("like")));
+  // basket.add(...JSON.parse(localStorage.getItem("basket")));
   console.log("ourArray ", ourArray);
   console.log("arr", arr);
   // arr = randomArr(ourArray.length, arr);
@@ -314,6 +330,8 @@ export function buildPagination(goal) {
   }
   buildArea();
   getCard();
+  //getCardBasket();
+  //getLike();
   // finish work pagination *******************************************
 }
 /**
@@ -358,9 +376,7 @@ for (let i = 0; i < pagination.length; i++) {
 // paginationShow();
 // при первой загрузке показываем первую страницу, с памятью надо менять
 buildPagination(1);
-// это надо перекинуть в функцию ***********************************
-getCard();
-
+// brake tokens by plants
 //  monstera-6304439
 //  --plant-7268178
 // -- bonsai-316573
@@ -382,3 +398,91 @@ getCard();
 // виновный
 // поездка на выходные - дедектив
 // в тени луны
+
+// start work with basket modul-------------------------------------------
+const quantity = document.querySelector(".basket"); // показать сколько товаров
+const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
+const basketItem = document.querySelector(".basket-item");
+const blogSection = document.querySelector(".blog");
+const notesSection = document.querySelector(".notes");
+
+basketButton.addEventListener("click", function () {
+  main.classList.add("non");
+  shop.classList.add("non");
+  blogs.classList.remove("non");
+  modulBasket.classList.remove("non");
+  blogSection.classList.add("non");
+  notesSection.classList.add("non");
+  buildCartBasket();
+});
+//console.log(basketItem.innerHTML);
+// function getCardBasket() {
+//   let card = document.querySelectorAll(".card");
+//   for (let i = 0; i < interBasket.length; i++) {
+//     interBasket[i].addEventListener("click", function () {
+//       console.log(Number(card[i].dataset.item));
+//       if (basket.has(Number(card[i].dataset.item))) {
+//         basket.delete(Number(card[i].dataset.item));
+//       } else {
+//         basket.add(Number(card[i].dataset.item));
+//       }
+//     });
+//   }
+
+//   console.log(basket);
+// }
+// getCardBasket();
+
+function buildCartBasket() {
+  let basketCart = document.querySelector(".basket-cart");
+  let placeBasket = document.querySelector(".place-basket");
+  console.log(localStorage);
+  let forStorage = JSON.parse(localStorage.getItem("basket"));
+  console.log(forStorage);
+  forStorage.forEach((element) => {
+    basket.add(element);
+  });
+
+  console.log(basket);
+  if (basket.size > 0) {
+    placeBasket.innerHTML = "";
+    let text = "";
+    for (let i = 0; i < basket.size; i++) {
+      console.log(forStorage[i]);
+      text += `
+      <div class="basket-cart">
+                    <div class="cart-prod">
+                      <img class="cart-img" src=${
+                        planets[forStorage[i]].img[0]
+                      } alt="image">
+                      <div class="cart-title">${
+                        planets[forStorage[i]].name
+                      }</div>
+                    </div>
+                    <div class="cart-price head-second">$ ${
+                      planets[forStorage[i]].price
+                    }</div>
+                    <div class="cart-quantity head-second">
+                      <div class="cart-less">-</div>
+                      <div class="cart-count">1</div>
+                      <div class="cart-more">+</div>
+                    </div>
+                    <div class="cart-total head-second">$ ${
+                      planets[forStorage[i]].price
+                    }</div>
+                    <div class="cart-dell head-second"></div>
+                  </div>
+      `;
+    }
+    placeBasket.insertAdjacentHTML("afterbegin", text);
+  } else return;
+  interactionBasket();
+}
+
+function interactionBasket() {
+  let cartLess = document.querySelectorAll(".cart-less");
+  let cartCount = document.querySelectorAll(".cart-count");
+  let cartMore = document.querySelectorAll(".cart-more");
+  let cartTotal = document.querySelectorAll(".cart-total");
+  let cartDell = document.querySelectorAll(".cart-dell");
+}

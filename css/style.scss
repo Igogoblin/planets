@@ -153,6 +153,7 @@ $back-color: #fbfbfb;
     }
   }
 }
+
 @media (max-width: 500px) {
   .modul-register {
     width: 400px;
@@ -169,6 +170,66 @@ $back-color: #fbfbfb;
     width: 310px;
   }
 }
+// #modul-basket {
+//   width: 90%;
+//   height: 80%;
+//   z-index: 2;
+//   // position: fixed;
+//   position: fixed;
+//   display: flex;
+//   // margin: 0 auto;
+//   left: 5%;
+//   top: 10%;
+//   background: #ffffff;
+//   border: 1px solid gainsboro;
+//   .wrapp {
+//     max-width: 90%;
+//     width: 100%;
+//     margin: 0 auto;
+//     display: flex;
+//     justify-content: space-between;
+//     .basket-main {
+//       display: flex;
+//     }
+//     .basket-total {
+//       width: 30%;
+//       margin-top: 50px;
+//       display: flex;
+//       flex-direction: column;
+//       .basket-coupon {
+//         margin-bottom: 30px;
+//         span {
+//           margin-bottom: 8px;
+//         }
+//         input {
+//           width: 70%;
+//           height: 40px;
+//           border: 1px solid #46a358;
+//           border-radius: 3px;
+//           color: #a5a5a5;
+//           font-size: 14px;
+//           font-family: Cera Pro;
+//           line-height: 15px;
+//         }
+//         button {
+//           width: 25%;
+//           height: 40px;
+//           border-radius: 0px 3px 3px 0px;
+//           background-color: #46a358;
+//           color: #e5e5e5;
+//         }
+//       }
+//     }
+//     h3 {
+//       color: #3d3d3d;
+//       font-size: 18px;
+//       font-family: Cera Pro;
+//       font-weight: 700;
+//       line-height: 16px;
+//       margin-bottom: 30px;
+//     }
+//   }
+// }
 .noScroll {
   overflow: hidden;
 }
@@ -243,7 +304,7 @@ header {
     }
     .acc:hover {
       .basket {
-        cursor: no-drop;
+        cursor: pointer;
       }
       .log {
         cursor: pointer;
@@ -818,7 +879,7 @@ section {
           display: none;
           justify-content: space-between;
           align-items: center;
-          bottom: 1%;
+          bottom: 0%;
           left: 50%;
           .inter-basket {
             width: 20px;
@@ -901,7 +962,6 @@ section {
             height: 20px;
             background-image: url("./svg/shoppingGreen.svg");
             background-size: cover;
-            cursor: no-drop;
           }
           .inter-like:hover {
             width: 20px;
@@ -1047,7 +1107,7 @@ section {
             display: none;
             justify-content: space-between;
             align-items: center;
-            bottom: 1%;
+            bottom: 0%;
             left: 50%;
             .inter-basket {
               width: 20px;
@@ -1129,7 +1189,6 @@ section {
               height: 20px;
               background-image: url("./svg/shoppingGreen.svg");
               background-size: cover;
-              cursor: no-drop;
             }
             .inter-like:hover {
               width: 20px;
@@ -1274,7 +1333,7 @@ section {
             display: none;
             justify-content: space-between;
             align-items: center;
-            bottom: 1%;
+            bottom: 0%;
             left: 50%;
             .inter-basket {
               width: 20px;
@@ -1315,14 +1374,13 @@ section {
           .card-interaction {
             width: 85px;
             left: 50%;
-            bottom: 1%;
+            bottom: 0%;
             // justify-content: flex-end;
             .inter-basket:hover {
               width: 15px;
               height: 15px;
               background-image: url("./svg/shoppingGreen.svg");
               background-size: cover;
-              cursor: no-drop;
             }
             .inter-like:hover {
               width: 15px;
@@ -1552,7 +1610,6 @@ section {
               height: 10px;
               background-image: url("./svg/shoppingGreen.svg");
               background-size: cover;
-              cursor: no-drop;
             }
             .inter-like:hover {
               width: 10px;
@@ -1669,6 +1726,7 @@ footer {
         color: #3d3d3d;
       }
       .accept-list {
+        padding-left: 5px;
         img {
           height: 26px;
           margin: 20px 20px 0 0;
@@ -1722,4 +1780,7 @@ footer {
   top: 0.1em;
   left: 0.1em;
   box-shadow: 0 0 0 60px rgba(0, 0, 0, 0.05) inset;
+}
+.showing {
+  color: #46a358;
 }
