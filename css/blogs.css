@@ -644,6 +644,9 @@ h3 {
 .location img {
   top: 10px;
 }
+.location {
+  line-height: 0.5;
+}
 .greenshop .logo {
   display: flex;
   align-items: center;
