@@ -26,17 +26,23 @@ if (!localStorage.getItem("ourArray")) {
 
   console.log(localStorage);
 } else {
-  ourArray = JSON.parse(localStorage.getItem("ourArray"));
-  likes.add(...JSON.parse(localStorage.getItem("like")));
-  basket.add(...JSON.parse(localStorage.getItem("basket")));
+  // ourArray = JSON.parse(localStorage.getItem("ourArray"));
+  // likes.add(...JSON.parse(localStorage.getItem("like")));
+  // basket.add(...JSON.parse(localStorage.getItem("basket")));
   let forStorageBasket = JSON.parse(localStorage.getItem("basket"));
-  forStorageBasket.forEach((element) => {
-    basket.add(element);
-  });
+  for (let i = 0; i < forStorageBasket.length; i++) {
+    basket.add(forStorageBasket[i]);
+  }
+  // forStorageBasket.forEach((element) => {
+  //   basket.add(element);
+  // });
   let forStorageLike = JSON.parse(localStorage.getItem("like"));
-  forStorageLike.forEach((element) => {
-    likes.add(element);
-  });
+  for (let i = 0; i < forStorageLike.length; i++) {
+    basket.add(forStorageLike[i]);
+  }
+  // forStorageLike.forEach((element) => {
+  //   likes.add(element);
+  // });
   console.log(localStorage);
   console.log(ourArray);
   console.log(likes);
@@ -436,21 +442,26 @@ basketButton.addEventListener("click", function () {
 function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");
   let placeBasket = document.querySelector(".place-basket");
+  basket.clear();
   console.log(localStorage);
   let forStorage = JSON.parse(localStorage.getItem("basket"));
   console.log(forStorage);
-  forStorage.forEach((element) => {
-    basket.add(element);
-  });
+  for (let i = 0; i < forStorage.length; i++) {
+    basket.add(forStorage[i]);
+  }
+  // forStorage.forEach((element) => {
+  //   basket.add(element);
+  // });
 
   console.log(basket);
+  console.log(planets);
   if (basket.size > 0) {
     placeBasket.innerHTML = "";
     let text = "";
     for (let i = 0; i < basket.size; i++) {
       console.log(forStorage[i]);
       text += `
-      <div class="basket-cart">
+      <div class="basket-cart" data-item="${forStorage[i]}">
                     <div class="cart-prod">
                       <img class="cart-img" src=${
                         planets[forStorage[i]].img[0]
@@ -480,9 +491,28 @@ function buildCartBasket() {
 }
 
 function interactionBasket() {
+  let cartBasket = document.querySelectorAll(".basket-cart");
   let cartLess = document.querySelectorAll(".cart-less");
   let cartCount = document.querySelectorAll(".cart-count");
   let cartMore = document.querySelectorAll(".cart-more");
   let cartTotal = document.querySelectorAll(".cart-total");
   let cartDell = document.querySelectorAll(".cart-dell");
+  for (let i = 0; i < basket.size; i++) {
+    console.log("i", basket[i]);
+  }
+  for (let i = 0; i < cartDell.length; i++) {
+    cartDell[i].addEventListener("click", function () {
+      console.log(cartBasket[i].getAttribute("data-item"));
+      basket.delete(Number(cartBasket[i].getAttribute("data-item")));
+      console.log(basket);
+      localStorage.setItem("basket", JSON.stringify(basket));
+      console.log(localStorage);
+      cartBasket[i].innerHTML = "";
+      console.log();
+    });
+  }
 }
+const basketCoupon = document.querySelector(".basket-coupon > input");
+basketCoupon.addEventListener("click", () => {
+  alert("Sorry, this service is not available right now");
+});
