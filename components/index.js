@@ -8,6 +8,7 @@ let arr = [];
 export let ourArray = [...planets];
 // ourArray = [...planets];
 let basket = new Set();
+let basketMap = new Map();
 export let banner = [];
 let goal = 1;
 
@@ -206,7 +207,7 @@ const pagination = document.querySelectorAll(".pagination > ul > li");
 const navigation = document.querySelectorAll(".navigation > nav > ul > li");
 const blogs = document.querySelector(".blogs");
 const shop = document.querySelector(".shop");
-const interSearch = document.querySelector(".inter-search");
+// const interSearch = document.querySelector(".inter-search");
 const main = document.querySelector(".main");
 const toBlogs = document.querySelectorAll(".toBlog");
 const modulBasket = document.querySelector(".modul-basket");
@@ -442,10 +443,10 @@ basketButton.addEventListener("click", function () {
 function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");
   let placeBasket = document.querySelector(".place-basket");
-  basket.clear();
-  console.log(localStorage);
+  // basket.clear();
+  // console.log(localStorage);
   let forStorage = JSON.parse(localStorage.getItem("basket"));
-  console.log(forStorage);
+  // console.log(forStorage);
   for (let i = 0; i < forStorage.length; i++) {
     basket.add(forStorage[i]);
   }
@@ -497,9 +498,12 @@ function interactionBasket() {
   let cartMore = document.querySelectorAll(".cart-more");
   let cartTotal = document.querySelectorAll(".cart-total");
   let cartDell = document.querySelectorAll(".cart-dell");
-  for (let i = 0; i < basket.size; i++) {
-    console.log("i", basket[i]);
-  }
+  let subtotalCount = document.querySelector(".subtotal-count");
+  let totalCount = document.querySelector(".total-count");
+
+  // for (let i = 0; i < basket.size; i++) {
+  //   console.log("i", basket[i]);
+  // }
   for (let i = 0; i < cartDell.length; i++) {
     cartDell[i].addEventListener("click", function () {
       console.log(cartBasket[i].getAttribute("data-item"));

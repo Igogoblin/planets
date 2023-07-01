@@ -1,7 +1,7 @@
 import planets from "../planets.json" assert { type: "json" };
 import { banner, goPage, ourArray } from "./index.js";
 export let likes = new Set();
-export let basket = new Set();
+export let basket = new Map();
 console.log("this is card js");
 
 let ourCard;
@@ -11,7 +11,6 @@ let ourCard;
  * @returns {} When activated, go to the product page
  */
 const quantity = document.querySelector(".basket"); // показать сколько товаров
-//export const basketButton = document.querySelector(".basket-button"); //кнопка для перехода в модуль корзины
 const basketItem = document.querySelector(".basket-item"); //количество
 console.log(basketItem.innerHTML);
 basketItem.innerHTML < 1
@@ -49,17 +48,19 @@ export function getCard() {
         "for basket it will be number card for add to basket ",
         Number(cardsNew[i].getAttribute("data-item"))
       );
+      console.log("basket", basket);
       basket.has(Number(cardsNew[i].getAttribute("data-item")))
         ? basket.delete(Number(cardsNew[i].getAttribute("data-item")))
-        : basket.add(Number(cardsNew[i].getAttribute("data-item")));
-
+        : basket.set(Number(cardsNew[i].getAttribute("data-item")), 1);
+      console.log("basket", basket);
       basketItem.innerHTML = basket.size;
+
       basketItem.innerHTML < 1
         ? (basketItem.style.display = "none")
         : (basketItem.style.display = "flex");
 
       forMemory(basket, 0);
-      console.log(basket);
+      console.log("basket", basket);
       console.log(localStorage);
     });
   }
@@ -97,10 +98,15 @@ export function getCard() {
 function forMemory(ourObj, num) {
   let nameStorage;
   num === 0 ? (nameStorage = "basket") : (nameStorage = "like");
-  let forStorage = [...ourObj];
-  localStorage.setItem(nameStorage, JSON.stringify(forStorage));
-  forStorage = JSON.parse(localStorage.getItem(nameStorage));
-  ourObj.add(...forStorage);
+  if (nameStorage == "like") {
+    let forStorage = [...ourObj];
+    localStorage.setItem(nameStorage, JSON.stringify(forStorage));
+    forStorage = JSON.parse(localStorage.getItem(nameStorage));
+    ourObj.add(...forStorage);
+  } else {
+    localStorage.setItem("basket", basket);
+    console.log(localStorage.getItem(nameStorage));
+  }
   return ourObj;
 }
 /**
@@ -138,9 +144,9 @@ const cardName = document.querySelector(".card-name");
 const cardPrice = document.querySelector(".card-price");
 const cardDescription = document.querySelector(".card-description > p");
 const cardSize = document.querySelectorAll(".card-size_list > div");
-const cardLess = document.querySelector(".card_less");
-const cardCount = document.querySelector(".card_count");
-const cardMore = document.querySelector(".card_more");
+// const cardLess = document.querySelector(".card_less");
+// const cardCount = document.querySelector(".card_count");
+// const cardMore = document.querySelector(".card_more");
 // const cardBuy = document.querySelector(".card-buy");
 // const cardAdd = document.querySelector(".card-add");
 const cardLike = document.querySelector(".card-like");
