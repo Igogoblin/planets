@@ -443,10 +443,10 @@ basketButton.addEventListener("click", function () {
 function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");
   let placeBasket = document.querySelector(".place-basket");
-  basket.clear();
-  console.log(localStorage);
+  // basket.clear();
+  // console.log(localStorage);
   let forStorage = JSON.parse(localStorage.getItem("basket"));
-  console.log(forStorage);
+  // console.log(forStorage);
   for (let i = 0; i < forStorage.length; i++) {
     basket.add(forStorage[i]);
   }
