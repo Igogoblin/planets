@@ -109,8 +109,11 @@ function forMemory(ourObj, num) {
   } else if (nameStorage == "basket") {
     console.log(localStorage);
     console.log(ourObj);
-    console.log(JSON.stringify(ourObj));
-    localStorage.setItem(nameStorage, ourObj);
+    console.log(JSON.stringify(Array.from(ourObj.entries())));
+    localStorage.setItem(
+      nameStorage,
+      JSON.stringify(Array.from(ourObj.entries()))
+    );
     // localStorage.setItem(nameStorage, JSON.stringify(ourObj));
     console.log(localStorage.getItem(nameStorage));
   }

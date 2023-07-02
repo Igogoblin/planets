@@ -447,8 +447,13 @@ function buildCartBasket() {
   let placeBasket = document.querySelector(".place-basket");
   // basket.clear();
   console.log(localStorage);
-  // let forStorage = JSON.parse(localStorage.getItem("basket"));
-  basket = JSON.parse(localStorage.getItem("basket"));
+  let forStorage = JSON.parse(localStorage.getItem("basket"));
+  for (let i = 0; i < forStorage.length; i++) {
+    console.log(forStorage[i][0]);
+    basket.set(forStorage[i][0], forStorage[i][1]);
+  }
+  console.log(forStorage);
+  // basket.set(...JSON.parse(localStorage.getItem("basket")));
   console.log(basket);
   // for (let i = 0; i < forStorage.length; i++) {
   //   basket.add(forStorage[i]);
@@ -464,25 +469,28 @@ function buildCartBasket() {
     placeBasket.innerHTML = "";
     let text = "";
     for (let i = 0; i < basket.size; i++) {
-      console.log(basket[i]);
+      // console.log(typeof basket[i][0]);
+      // console.log(basket[i][0]);
       text += `
-      <div class="basket-cart" data-item="${basket[i]}">
+      <div class="basket-cart" data-item="${forStorage[i][0]}">
                     <div class="cart-prod">
                       <img class="cart-img" src=${
-                        planets[basket[i]].img[0]
+                        planets[forStorage[i][0]].img[0]
                       } alt="image">
-                      <div class="cart-title">${planets[basket[i]].name}</div>
+                      <div class="cart-title">${
+                        planets[forStorage[i][0]].name
+                      }</div>
                     </div>
                     <div class="cart-price head-second">$ ${
-                      planets[basket[i]].price
+                      planets[forStorage[i][0]].price
                     }</div>
                     <div class="cart-quantity head-second">
                       <div class="cart-less">-</div>
-                      <div class="cart-count">1</div>
+                      <div class="cart-count">${forStorage[i][1]}</div>
                       <div class="cart-more">+</div>
                     </div>
                     <div class="cart-total head-second">$ ${
-                      planets[basket[i]].price
+                      planets[forStorage[i][0]].price * forStorage[i][1]
                     }</div>
                     <div class="cart-dell head-second"></div>
                   </div>
@@ -500,8 +508,6 @@ function interactionBasket() {
   let cartMore = document.querySelectorAll(".cart-more");
   let cartTotal = document.querySelectorAll(".cart-total");
   let cartDell = document.querySelectorAll(".cart-dell");
-  let subtotalCount = document.querySelector(".subtotal-count");
-  let totalCount = document.querySelector(".total-count");
 
   // for (let i = 0; i < basket.size; i++) {
   //   console.log("i", basket[i]);
@@ -511,12 +517,40 @@ function interactionBasket() {
       console.log(cartBasket[i].getAttribute("data-item"));
       basket.delete(Number(cartBasket[i].getAttribute("data-item")));
       console.log(basket);
-      localStorage.setItem("basket", JSON.stringify(basket));
+      // localStorage.setItem("basket", JSON.stringify(basket));
+      localStorage.setItem(
+        "basket",
+        JSON.stringify(Array.from(basket.entries()))
+      );
       console.log(localStorage);
       cartBasket[i].innerHTML = "";
-      console.log();
+      countTotalPrice();
     });
   }
+  // do less cart and set it in localStorage and show in our
+  for (let i = 0; i < cartLess.length; i++) {
+    cartLess[i].addEventListener("click", function () {
+      console.log(cartBasket[i].getAttribute("data-item"));
+      let numberLess = basket.get(
+        Number(cartBasket[i].getAttribute("data-item"))
+      );
+      console.log(--numberLess);
+      if (numberLess < 1) {
+      }
+      basket.set(Number(cartBasket[i].getAttribute("data-item")), numberLess);
+    });
+  }
+  countTotalPrice();
+}
+let subtotalCount = document.querySelector(".subtotal-count");
+let totalCount = document.querySelector(".total-count");
+function countTotalPrice() {
+  let total = 0;
+  basket.forEach((value, key) => {
+    total += planets[key].price * value;
+  });
+  subtotalCount.textContent = `$ ${total}`;
+  totalCount.textContent = `$ ${total}`;
 }
 const basketCoupon = document.querySelector(".basket-coupon > input");
 basketCoupon.addEventListener("click", () => {
