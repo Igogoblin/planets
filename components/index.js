@@ -1,14 +1,15 @@
 import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
-import { getCard, buildReleted, showCard, likes } from "./card.js";
+import { getCard, buildReleted, showCard, likes, basket } from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
 
 export let ourArray = [...planets];
 // ourArray = [...planets];
-let basket = new Set();
-let basketMap = new Map();
+// let basket = new Set();
+// let basket = new Map();
+// let basketMap = new Map();
 export let banner = [];
 let goal = 1;
 
@@ -31,6 +32,7 @@ if (!localStorage.getItem("ourArray")) {
   // likes.add(...JSON.parse(localStorage.getItem("like")));
   // basket.add(...JSON.parse(localStorage.getItem("basket")));
   let forStorageBasket = JSON.parse(localStorage.getItem("basket"));
+  // basket.get(...JSON.parse(localStorage.getItem("basket")));
   for (let i = 0; i < forStorageBasket.length; i++) {
     basket.add(forStorageBasket[i]);
   }
@@ -39,7 +41,7 @@ if (!localStorage.getItem("ourArray")) {
   // });
   let forStorageLike = JSON.parse(localStorage.getItem("like"));
   for (let i = 0; i < forStorageLike.length; i++) {
-    basket.add(forStorageLike[i]);
+    likes.add(forStorageLike[i]);
   }
   // forStorageLike.forEach((element) => {
   //   likes.add(element);
@@ -199,8 +201,8 @@ function makeOurArraySize() {
 
 banner = randomArr(planets.length - 2, banner);
 buildReleted();
-console.log(arr);
-console.log(banner);
+// console.log(arr);
+// console.log(banner);
 
 const area = document.querySelector(".area");
 const pagination = document.querySelectorAll(".pagination > ul > li");
@@ -249,9 +251,9 @@ export function buildArea() {
   // likes.add(...JSON.parse(localStorage.getItem("like")));
   // basket.add(...JSON.parse(localStorage.getItem("basket")));
   console.log("ourArray ", ourArray);
-  console.log("arr", arr);
+  //console.log("arr", arr);
   // arr = randomArr(ourArray.length, arr);
-  console.log("arr", arr);
+  //console.log("arr", arr);
   let coef = 0;
   if (arr.length !== ourArray.length) {
     arr.length = 0;
@@ -444,43 +446,51 @@ function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");
   let placeBasket = document.querySelector(".place-basket");
   // basket.clear();
-  // console.log(localStorage);
+  console.log(localStorage);
   let forStorage = JSON.parse(localStorage.getItem("basket"));
-  // console.log(forStorage);
   for (let i = 0; i < forStorage.length; i++) {
-    basket.add(forStorage[i]);
+    console.log(forStorage[i][0]);
+    basket.set(forStorage[i][0], forStorage[i][1]);
   }
+  console.log(forStorage);
+  // basket.set(...JSON.parse(localStorage.getItem("basket")));
+  console.log(basket);
+  // for (let i = 0; i < forStorage.length; i++) {
+  //   basket.add(forStorage[i]);
+  // }
   // forStorage.forEach((element) => {
   //   basket.add(element);
   // });
 
   console.log(basket);
   console.log(planets);
+  console.log(basket.size);
   if (basket.size > 0) {
     placeBasket.innerHTML = "";
     let text = "";
     for (let i = 0; i < basket.size; i++) {
-      console.log(forStorage[i]);
+      // console.log(typeof basket[i][0]);
+      // console.log(basket[i][0]);
       text += `
-      <div class="basket-cart" data-item="${forStorage[i]}">
+      <div class="basket-cart" data-item="${forStorage[i][0]}">
                     <div class="cart-prod">
                       <img class="cart-img" src=${
-                        planets[forStorage[i]].img[0]
+                        planets[forStorage[i][0]].img[0]
                       } alt="image">
                       <div class="cart-title">${
-                        planets[forStorage[i]].name
+                        planets[forStorage[i][0]].name
                       }</div>
                     </div>
                     <div class="cart-price head-second">$ ${
-                      planets[forStorage[i]].price
+                      planets[forStorage[i][0]].price
                     }</div>
                     <div class="cart-quantity head-second">
                       <div class="cart-less">-</div>
-                      <div class="cart-count">1</div>
+                      <div class="cart-count">${forStorage[i][1]}</div>
                       <div class="cart-more">+</div>
                     </div>
                     <div class="cart-total head-second">$ ${
-                      planets[forStorage[i]].price
+                      planets[forStorage[i][0]].price * forStorage[i][1]
                     }</div>
                     <div class="cart-dell head-second"></div>
                   </div>
@@ -498,8 +508,6 @@ function interactionBasket() {
   let cartMore = document.querySelectorAll(".cart-more");
   let cartTotal = document.querySelectorAll(".cart-total");
   let cartDell = document.querySelectorAll(".cart-dell");
-  let subtotalCount = document.querySelector(".subtotal-count");
-  let totalCount = document.querySelector(".total-count");
 
   // for (let i = 0; i < basket.size; i++) {
   //   console.log("i", basket[i]);
@@ -509,12 +517,40 @@ function interactionBasket() {
       console.log(cartBasket[i].getAttribute("data-item"));
       basket.delete(Number(cartBasket[i].getAttribute("data-item")));
       console.log(basket);
-      localStorage.setItem("basket", JSON.stringify(basket));
+      // localStorage.setItem("basket", JSON.stringify(basket));
+      localStorage.setItem(
+        "basket",
+        JSON.stringify(Array.from(basket.entries()))
+      );
       console.log(localStorage);
       cartBasket[i].innerHTML = "";
-      console.log();
+      countTotalPrice();
     });
   }
+  // do less cart and set it in localStorage and show in our
+  for (let i = 0; i < cartLess.length; i++) {
+    cartLess[i].addEventListener("click", function () {
+      console.log(cartBasket[i].getAttribute("data-item"));
+      let numberLess = basket.get(
+        Number(cartBasket[i].getAttribute("data-item"))
+      );
+      console.log(--numberLess);
+      if (numberLess < 1) {
+      }
+      basket.set(Number(cartBasket[i].getAttribute("data-item")), numberLess);
+    });
+  }
+  countTotalPrice();
+}
+let subtotalCount = document.querySelector(".subtotal-count");
+let totalCount = document.querySelector(".total-count");
+function countTotalPrice() {
+  let total = 0;
+  basket.forEach((value, key) => {
+    total += planets[key].price * value;
+  });
+  subtotalCount.textContent = `$ ${total}`;
+  totalCount.textContent = `$ ${total}`;
 }
 const basketCoupon = document.querySelector(".basket-coupon > input");
 basketCoupon.addEventListener("click", () => {
