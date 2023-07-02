@@ -49,6 +49,7 @@ export function getCard() {
         Number(cardsNew[i].getAttribute("data-item"))
       );
       console.log("basket", basket);
+      console.log();
       basket.has(Number(cardsNew[i].getAttribute("data-item")))
         ? basket.delete(Number(cardsNew[i].getAttribute("data-item")))
         : basket.set(Number(cardsNew[i].getAttribute("data-item")), 1);
@@ -98,13 +99,19 @@ export function getCard() {
 function forMemory(ourObj, num) {
   let nameStorage;
   num === 0 ? (nameStorage = "basket") : (nameStorage = "like");
+  console.log("ourObj", ourObj);
+  console.loo;
   if (nameStorage == "like") {
     let forStorage = [...ourObj];
     localStorage.setItem(nameStorage, JSON.stringify(forStorage));
     forStorage = JSON.parse(localStorage.getItem(nameStorage));
     ourObj.add(...forStorage);
-  } else {
-    localStorage.setItem("basket", basket);
+  } else if (nameStorage == "basket") {
+    console.log(localStorage);
+    console.log(ourObj);
+    console.log(JSON.stringify(ourObj));
+    localStorage.setItem(nameStorage, ourObj);
+    // localStorage.setItem(nameStorage, JSON.stringify(ourObj));
     console.log(localStorage.getItem(nameStorage));
   }
   return ourObj;
