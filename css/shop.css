@@ -111,6 +111,7 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-right: 28px;
+  display: none;
 }
 .card_less,
 .card_more {
@@ -257,7 +258,7 @@ p {
 }
 @media (max-width: 550px) {
   .shop-card {
-    height: 900px;
+    height: 950px;
     flex-direction: column;
   }
   .card-decision {
@@ -285,16 +286,22 @@ p {
   }
   .shop-card_data {
     max-width: 380px;
-    height: 350px;
+    height: 400px;
     width: 100%;
+  }
+  .card-decision {
+    height: 240px;
+    justify-content: space-between;
   }
 }
 @media (max-width: 400px) {
   .shop-card {
     height: 750px;
   }
+
   .card-decision {
-    height: 80px;
+    height: 130px;
+    justify-content: space-between;
   }
   .shop-card_img {
     max-width: 300px;
