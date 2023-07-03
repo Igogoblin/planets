@@ -46,7 +46,7 @@
     </form>
 
   </div>
-  <!-- <div class="wrapper"> -->
+
   <header>
     <div class="wrapper">
       <div class="logo">
@@ -64,8 +64,8 @@
       </div>
       <div class="acc">
         <div class="basket">
-          <img src="./css/svg/basket.svg" alt="image basket">
-          <div class="basket-item">6</div>
+          <img class="basket-button" src="./css/svg/basket.svg" alt="image basket">
+          <div class="basket-item"></div>
         </div>
         <button class="log">
           <div class="login-person"></div><img src="./css/svg/logIn.svg" alt="image login">Login
@@ -132,13 +132,73 @@
               </div>
             </div>
           </div>
-
-
         </section>
 
+
+        <section class="modul-basket non" id="modul-basket">
+          <div class="wrapp">
+
+            <div class="basket-main">
+              <div class="basket-main__way">
+                <p>Home / Shop / Shopping Cart</p>
+              </div>
+              <div class="basket-place">
+
+                <div class="tabl-head">
+                  <div class="head-first">Products</div>
+                  <div class="head-second">Price</div>
+                  <div class="head-second">Quantity</div>
+                  <div class="head-second">total</div>
+                  <div class="head-second"></div>
+                </div>
+
+                <div class="place-basket">
+                  <div class="basket-cart">
+                    <div class="cart-prod">
+                      <img class="cart-img" src="./css/img/maranta-leuconeura.png" alt="image">
+                      <div class="cart-title">Maranta Leuconeura</div>
+                    </div>
+                    <div class="cart-price head-second">$ 100</div>
+                    <div class="cart-quantity head-second">
+                      <div class="cart-less">-</div>
+                      <div class="cart-count">0</div>
+                      <div class="cart-more">+</div>
+                    </div>
+                    <div class="cart-total head-second">$ 200</div>
+                    <div class="cart-dell head-second"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket-total">
+              <h3>Cart Totals</h3>
+              <div class="basket-coupon">
+                <span>Coupon apply</span>
+
+                <input type="text" placeholder="enter coupon code here ...">
+                <button>apply</button>
+              </div>
+              <div class="basket-tot">
+                <div class="subtotal">
+                  <span class="subtotal-text">Subtotal</span>
+                  <span class="subtotal-count">200</span>
+                </div>
+                <div class="coupon-discount">
+                  <span class="coupon-discount-text">Coupon Discount</span>
+                  <span class="coupon-count">00</span>
+                </div>
+                <div class="basket-rezult">
+                  <h3 class="total-text">Total</h3>
+                  <p class="total-count">200</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
         <section class="notes">
-
-
           <div class="summer">
             <img src="../css/svg/partCircles.svg" alt="part circle" class="part-circle">
             <img src="../css/img/notes-summer.png" alt="planet" class="notes-planet">
@@ -383,6 +443,23 @@
               </div>
               <div class="panel-choice_price">
                 <span>Price Range</span>
+                <div class="wrapper-slider">
+                  <div class="range-slider">
+                    <div class="range-labels">
+                      <span class="range-label range-label-start">0</span>
+                      <span class="range-label range-label-end">100</span>
+                    </div>
+                    <input type="range" min="0" value="0" max="149" name="" id="firstInput">
+                    <input type="range" min="1" value="150" max="150" name="" id="secondInput">
+
+                    <div class="track-wrapper">
+                      <div class="track"></div>
+                      <div class="range-between"></div>
+                      <div class="thumb left"></div>
+                      <div class="thumb right"></div>
+                    </div>
+                  </div>
+                </div>
                 <button class="panel-choice_filter">Filter</button>
               </div>
 
