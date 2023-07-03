@@ -514,15 +514,11 @@ function interactionBasket() {
   // }
   for (let i = 0; i < cartDell.length; i++) {
     cartDell[i].addEventListener("click", function () {
-      console.log(cartBasket[i].getAttribute("data-item"));
       basket.delete(Number(cartBasket[i].getAttribute("data-item")));
-      console.log(basket);
-      // localStorage.setItem("basket", JSON.stringify(basket));
       localStorage.setItem(
         "basket",
         JSON.stringify(Array.from(basket.entries()))
       );
-      console.log(localStorage);
       cartBasket[i].innerHTML = "";
       countTotalPrice();
     });
@@ -534,10 +530,48 @@ function interactionBasket() {
       let numberLess = basket.get(
         Number(cartBasket[i].getAttribute("data-item"))
       );
-      console.log(--numberLess);
+      --numberLess;
       if (numberLess < 1) {
+        basket.delete(Number(cartBasket[i].getAttribute("data-item")));
+        console.log(basket);
+        // localStorage.setItem("basket", JSON.stringify(basket));
+        console.log(localStorage);
+        cartBasket[i].innerHTML = "";
+      } else {
+        basket.set(Number(cartBasket[i].getAttribute("data-item")), numberLess);
       }
-      basket.set(Number(cartBasket[i].getAttribute("data-item")), numberLess);
+      localStorage.setItem(
+        "basket",
+        JSON.stringify(Array.from(basket.entries()))
+      );
+      console.log(
+        planets[Number(cartBasket[i].getAttribute("data-item"))].price
+      );
+
+      cartTotal[i].textContent = `$ ${
+        planets[cartBasket[i].getAttribute("data-item")].price *
+        basket.get(Number(cartBasket[i].getAttribute("data-item")))
+      }`;
+      countTotalPrice();
+    });
+  }
+  for (let i = 0; i < cartMore.length; i++) {
+    cartMore[i].addEventListener("click", function () {
+      let numberMore = basket.get(
+        Number(cartBasket[i].getAttribute("data-item"))
+      );
+      numberMore++;
+      basket.set(Number(cartBasket[i].getAttribute("data-item")), numberMore);
+      localStorage.setItem(
+        "basket",
+        JSON.stringify(Array.from(basket.entries()))
+      );
+
+      cartTotal[i].textContent = `$ ${
+        planets[cartBasket[i].getAttribute("data-item")].price *
+        basket.get(Number(cartBasket[i].getAttribute("data-item")))
+      }`;
+      countTotalPrice();
     });
   }
   countTotalPrice();
