@@ -509,9 +509,6 @@ function interactionBasket() {
   let cartTotal = document.querySelectorAll(".cart-total");
   let cartDell = document.querySelectorAll(".cart-dell");
 
-  // for (let i = 0; i < basket.size; i++) {
-  //   console.log("i", basket[i]);
-  // }
   for (let i = 0; i < cartDell.length; i++) {
     cartDell[i].addEventListener("click", function () {
       basket.delete(Number(cartBasket[i].getAttribute("data-item")));
@@ -523,7 +520,6 @@ function interactionBasket() {
       countTotalPrice();
     });
   }
-  // do less cart and set it in localStorage and show in our
   for (let i = 0; i < cartLess.length; i++) {
     cartLess[i].addEventListener("click", function () {
       console.log(cartBasket[i].getAttribute("data-item"));
@@ -533,9 +529,6 @@ function interactionBasket() {
       --numberLess;
       if (numberLess < 1) {
         basket.delete(Number(cartBasket[i].getAttribute("data-item")));
-        console.log(basket);
-        // localStorage.setItem("basket", JSON.stringify(basket));
-        console.log(localStorage);
         cartBasket[i].innerHTML = "";
       } else {
         basket.set(Number(cartBasket[i].getAttribute("data-item")), numberLess);
@@ -543,9 +536,6 @@ function interactionBasket() {
       localStorage.setItem(
         "basket",
         JSON.stringify(Array.from(basket.entries()))
-      );
-      console.log(
-        planets[Number(cartBasket[i].getAttribute("data-item"))].price
       );
       cartCount[i].textContent = `${basket.get(
         Number(cartBasket[i].getAttribute("data-item"))
