@@ -547,7 +547,9 @@ function interactionBasket() {
       console.log(
         planets[Number(cartBasket[i].getAttribute("data-item"))].price
       );
-
+      cartCount[i].textContent = `${basket.get(
+        Number(cartBasket[i].getAttribute("data-item"))
+      )}`;
       cartTotal[i].textContent = `$ ${
         planets[cartBasket[i].getAttribute("data-item")].price *
         basket.get(Number(cartBasket[i].getAttribute("data-item")))
@@ -566,7 +568,9 @@ function interactionBasket() {
         "basket",
         JSON.stringify(Array.from(basket.entries()))
       );
-
+      cartCount[i].textContent = `${basket.get(
+        Number(cartBasket[i].getAttribute("data-item"))
+      )}`;
       cartTotal[i].textContent = `$ ${
         planets[cartBasket[i].getAttribute("data-item")].price *
         basket.get(Number(cartBasket[i].getAttribute("data-item")))
