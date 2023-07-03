@@ -34,15 +34,18 @@ if (!localStorage.getItem("ourArray")) {
   let forStorageBasket = JSON.parse(localStorage.getItem("basket"));
   // basket.get(...JSON.parse(localStorage.getItem("basket")));
   for (let i = 0; i < forStorageBasket.length; i++) {
-    basket.add(forStorageBasket[i]);
+    basket.set(forStorageBasket[i][0], forStorageBasket[i][1]);
   }
   // forStorageBasket.forEach((element) => {
   //   basket.add(element);
   // });
   let forStorageLike = JSON.parse(localStorage.getItem("like"));
-  for (let i = 0; i < forStorageLike.length; i++) {
-    likes.add(forStorageLike[i]);
+  if (forStorageLike) {
+    for (let i = 0; i < forStorageLike.length; i++) {
+      likes.add(forStorageLike[i]);
+    }
   }
+
   // forStorageLike.forEach((element) => {
   //   likes.add(element);
   // });
@@ -81,6 +84,30 @@ export function randomArr(a, arr) {
   }
   return arr;
 }
+
+const firstInput = document.querySelector("#firstInput");
+const secondInput = document.querySelector("#secondInput");
+let rangeLabelStart = document.querySelector(".range-label-start");
+let rangeLabelEnd = document.querySelector(".range-label-end");
+let forInputsMin = planets[0].price;
+let forInputsMax = planets[0].price;
+for (let i = 0; i < planets.length; i++) {
+  if (forInputsMin > planets[i].price) {
+    forInputsMin = planets[i].price;
+  }
+  if (forInputsMax < planets[i].price) {
+    forInputsMax = planets[i].price;
+  }
+}
+firstInput.min = forInputsMin;
+firstInput.value = forInputsMin;
+secondInput.min = forInputsMin + 1;
+rangeLabelStart.textContent = firstInput.min;
+firstInput.max = forInputsMax - 1;
+secondInput.max = forInputsMax;
+secondInput.value = forInputsMax;
+rangeLabelEnd.textContent = secondInput.max;
+
 // Categories start ----------------------------------------------------------------
 let ourCategori;
 let ourSize;
@@ -583,4 +610,132 @@ function countTotalPrice() {
 const basketCoupon = document.querySelector(".basket-coupon > input");
 basketCoupon.addEventListener("click", () => {
   alert("Sorry, this service is not available right now");
+});
+
+// dual range slider ---------------------------------------------------------
+function createslider(element) {
+  const inputs = element.querySelectorAll("input");
+
+  const thumbLeft = element.querySelector(".thumb.left");
+  const thumbRight = element.querySelector(".thumb.right");
+  const rangeBetween = element.querySelector(".range-between");
+  const labelMin = element.querySelector(".range-label-start");
+  const labelMax = element.querySelector(".range-label-end");
+
+  const [inputStart, inputEnd] = inputs;
+  const min = parseInt(inputStart.value);
+  const max = parseInt(inputEnd.value);
+
+  setStartValueCustomSlider(inputStart, inputEnd, thumbLeft, rangeBetween);
+  setEndValueCustomSlider(inputEnd, inputStart, thumbRight, rangeBetween);
+
+  setEvents(
+    inputStart,
+    inputEnd,
+    thumbLeft,
+    thumbRight,
+    labelMin,
+    labelMax,
+    rangeBetween
+  );
+}
+
+function setLabelValue(label, input) {
+  label.innerHTML = `${input.value}`;
+}
+
+function setStartValueCustomSlider(inputStart, inputEnd, pseudoEl, range) {
+  const maximum = Math.min(
+    parseInt(inputStart.value),
+    parseInt(inputEnd.value) - 1
+  );
+  const percent =
+    ((maximum - inputStart.min) / (inputStart.max - inputStart.min)) * 100;
+  pseudoEl.style.left = percent + "%";
+  range.style.left = percent + "%";
+}
+
+function setEndValueCustomSlider(inputEnd, inputStart, pseudoEl, range) {
+  const minimun = Math.max(
+    parseInt(inputEnd.value),
+    parseInt(inputStart.value) + 1
+  );
+  const percent =
+    ((minimun - inputEnd.min) / (inputEnd.max - inputEnd.min)) * 100;
+  pseudoEl.style.right = 100 - percent + "%";
+  range.style.right = 100 - percent + "%";
+}
+
+function setEvents(
+  inputStart,
+  inputEnd,
+  thumbLeft,
+  thumbRight,
+  labelMin,
+  labelMax,
+  rangeBetween,
+  rangesValues
+) {
+  inputStart.addEventListener("input", () => {
+    setStartValueCustomSlider(inputStart, inputEnd, thumbLeft, rangeBetween);
+    setLabelValue(labelMin, inputStart);
+  });
+
+  inputEnd.addEventListener("input", () => {
+    setEndValueCustomSlider(inputEnd, inputStart, thumbRight, rangeBetween);
+    setLabelValue(labelMax, inputEnd);
+  });
+
+  // add css clases on hover and drag
+  inputStart.addEventListener("mouseover", function () {
+    thumbLeft.classList.add("hover");
+  });
+  inputStart.addEventListener("mouseout", function () {
+    thumbLeft.classList.remove("hover");
+  });
+  inputStart.addEventListener("mousedown", function () {
+    thumbLeft.classList.add("active");
+  });
+  inputStart.addEventListener("pointerup", function () {
+    thumbLeft.classList.remove("active");
+  });
+
+  inputEnd.addEventListener("mouseover", function () {
+    thumbRight.classList.add("hover");
+  });
+  inputEnd.addEventListener("mouseout", function () {
+    thumbRight.classList.remove("hover");
+  });
+  inputEnd.addEventListener("mousedown", function () {
+    thumbRight.classList.add("active");
+  });
+  inputEnd.addEventListener("pointerup", function () {
+    thumbRight.classList.remove("active");
+  });
+
+  // Mobile
+  inputStart.addEventListener("touchstart", function () {
+    thumbLeft.classList.add("active");
+  });
+  inputStart.addEventListener("touchend", function () {
+    thumbLeft.classList.remove("active");
+  });
+  inputEnd.addEventListener("touchstart", function () {
+    thumbRight.classList.add("active");
+  });
+  inputEnd.addEventListener("touchend", function () {
+    thumbRight.classList.remove("active");
+  });
+}
+
+const sliderRange = document.querySelector(".range-slider ");
+createslider(sliderRange);
+
+let b = document.querySelector(".panel-choice_filter");
+b.addEventListener("click", function () {
+  let start = document.querySelector(".range-label-start");
+  let finish = document.querySelector(".range-label-end");
+  console.log("work");
+  console.log(start.textContent);
+  console.log(finish.textContent);
 });
