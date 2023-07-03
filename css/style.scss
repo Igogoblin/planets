@@ -353,6 +353,9 @@ header {
             bottom: 40%;
             right: 0;
             font-size: 9px;
+            display: flex;
+            justify-content: center;
+            padding: 0 3px;
           }
         }
         .log {
@@ -740,11 +743,6 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        //border: 1px solid gray;
-        .wrapper-slider {
-          // max-width: clamp(200px, 50vw, 500px);
-          // margin: 25vh auto 0;
-        }
 
         .range-slider {
           --_height: 5px;

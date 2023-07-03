@@ -84,7 +84,7 @@ export function randomArr(a, arr) {
   }
   return arr;
 }
-
+// for price range layout -----------------------------------------------------
 const firstInput = document.querySelector("#firstInput");
 const secondInput = document.querySelector("#secondInput");
 let rangeLabelStart = document.querySelector(".range-label-start");
@@ -574,6 +574,7 @@ function interactionBasket() {
       countTotalPrice();
     });
   }
+
   for (let i = 0; i < cartMore.length; i++) {
     cartMore[i].addEventListener("click", function () {
       let numberMore = basket.get(

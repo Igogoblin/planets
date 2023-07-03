@@ -12,10 +12,7 @@ let ourCard;
  */
 const quantity = document.querySelector(".basket"); // показать сколько товаров
 const basketItem = document.querySelector(".basket-item"); //количество
-console.log(basketItem.innerHTML);
-basketItem.innerHTML < 1
-  ? (basketItem.style.display = "none")
-  : (basketItem.style.display = "block");
+
 export function getCard() {
   let cardsNew = document.querySelectorAll(".card");
   let interBasket = document.querySelectorAll(".inter-basket");
@@ -56,7 +53,7 @@ export function getCard() {
       console.log("basket", basket);
       basketItem.innerHTML = basket.size;
 
-      basketItem.innerHTML < 1
+      basket.size < 1
         ? (basketItem.style.display = "none")
         : (basketItem.style.display = "flex");
 
@@ -89,6 +86,9 @@ export function getCard() {
   console.log("basket ", basket);
   console.log("likes ", likes);
   basketItem.innerHTML = basket.size;
+  basket.size < 1
+    ? (basketItem.style.display = "none")
+    : (basketItem.style.display = "block");
 }
 
 /**
@@ -158,7 +158,7 @@ const cardSize = document.querySelectorAll(".card-size_list > div");
 // const cardCount = document.querySelector(".card_count");
 // const cardMore = document.querySelector(".card_more");
 // const cardBuy = document.querySelector(".card-buy");
-// const cardAdd = document.querySelector(".card-add");
+const cardAdd = document.querySelector(".card-add");
 const cardLike = document.querySelector(".card-like");
 const cardCategor = document.querySelector(".card-categor > span");
 // const cardTags = document.querySelector(".card-tags");
@@ -224,3 +224,11 @@ function checkImgShow() {
     });
   }
 }
+
+cardAdd.addEventListener("click", function () {
+  basket.has(Number(ourCard))
+    ? basket.delete(Number(ourCard))
+    : basket.set(Number(ourCard), 1);
+  forMemory(basket, 0);
+  basketItem.innerHTML = basket.size;
+});
