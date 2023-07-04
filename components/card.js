@@ -83,6 +83,7 @@ export function getCard() {
     console.log("168 likes ", likes);
     localStorage.setItem("likes", JSON.stringify(likes));
   });
+
   console.log("basket ", basket);
   console.log("likes ", likes);
   basketItem.innerHTML = basket.size;
@@ -119,6 +120,7 @@ function forMemory(ourObj, num) {
   }
   return ourObj;
 }
+
 /**
  * Description We build banner cards on the product page
  * @param {}

@@ -275,12 +275,6 @@ export function goPage(i) {
  * @returns {any}
  */
 export function buildArea() {
-  // likes.add(...JSON.parse(localStorage.getItem("like")));
-  // basket.add(...JSON.parse(localStorage.getItem("basket")));
-  console.log("ourArray ", ourArray);
-  //console.log("arr", arr);
-  // arr = randomArr(ourArray.length, arr);
-  //console.log("arr", arr);
   let coef = 0;
   if (arr.length !== ourArray.length) {
     arr.length = 0;
@@ -366,10 +360,8 @@ export function buildPagination(goal) {
   }
   buildArea();
   getCard();
-  //getCardBasket();
-  //getLike();
-  // finish work pagination *******************************************
 }
+// finish work pagination *******************************************
 /**
  * Description show page pagination first page by contentLoaded
  * I'll change it when I enter it localStorage
@@ -479,16 +471,8 @@ function buildCartBasket() {
     console.log(forStorage[i][0]);
     basket.set(forStorage[i][0], forStorage[i][1]);
   }
+  console.log(ourArray);
   console.log(forStorage);
-  // basket.set(...JSON.parse(localStorage.getItem("basket")));
-  console.log(basket);
-  // for (let i = 0; i < forStorage.length; i++) {
-  //   basket.add(forStorage[i]);
-  // }
-  // forStorage.forEach((element) => {
-  //   basket.add(element);
-  // });
-
   console.log(basket);
   console.log(planets);
   console.log(basket.size);
@@ -732,11 +716,23 @@ function setEvents(
 const sliderRange = document.querySelector(".range-slider ");
 createslider(sliderRange);
 
-let b = document.querySelector(".panel-choice_filter");
-b.addEventListener("click", function () {
+let panelFilter = document.querySelector(".panel-choice_filter");
+panelFilter.addEventListener("click", function () {
   let start = document.querySelector(".range-label-start");
   let finish = document.querySelector(".range-label-end");
-  console.log("work");
-  console.log(start.textContent);
-  console.log(finish.textContent);
+  let midlArray = [];
+  for (let i = 0; i < ourArray.length; i++) {
+    console.log(ourArray[i].price);
+    if (
+      ourArray[i].price > Number(start.textContent) &&
+      ourArray[i].price < Number(finish.textContent)
+    ) {
+      midlArray.push(ourArray[i]);
+    }
+  }
+  ourArray.length = 0;
+  ourArray = [...midlArray];
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
+  console.log(ourArray);
+  buildArea();
 });

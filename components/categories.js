@@ -13,12 +13,13 @@ console.log("this is categories file");
 
 let categorLi = document.querySelectorAll(`[data-categor] > span`);
 let sizeLi = document.querySelectorAll(`[data-size] > span`);
-const panelChoiceFilter = document.querySelector(".panel-choice_filter");
+//const panelChoiceFilter = document.querySelector(".panel-choice_filter");
 const ascend = document.querySelector(".ascend");
-panelChoiceFilter.addEventListener("click", () => {
-  console.log("we push button");
-  // buildSortArray();
-});
+// panelChoiceFilter.addEventListener("click", () => {
+//   console.log("we push button");
+//   console.log(ourArray);
+//   // buildSortArray();
+// });
 export function availability() {
   console.log(categoriesLi[1].dataset.categor);
   let choiceItem = document.querySelectorAll(".choice-item");
