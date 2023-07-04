@@ -30,6 +30,7 @@ export function getCard() {
         : cardLike.classList.remove("our-like");
     });
     interLike[i]?.addEventListener("click", function () {
+
       if (interLike[i].classList.contains("our-like")) {
         likes.delete(Number(cardsNew[i].getAttribute("data-item")));
       } else {
@@ -60,6 +61,7 @@ export function getCard() {
       forMemory(basket, 0);
       console.log("basket", basket);
       console.log(localStorage);
+
     });
   }
 
@@ -83,6 +85,7 @@ export function getCard() {
     console.log("168 likes ", likes);
     localStorage.setItem("likes", JSON.stringify(likes));
   });
+
   console.log("basket ", basket);
   console.log("likes ", likes);
   basketItem.innerHTML = basket.size;
@@ -118,7 +121,9 @@ function forMemory(ourObj, num) {
     console.log(localStorage.getItem(nameStorage));
   }
   return ourObj;
+
 }
+
 /**
  * Description We build banner cards on the product page
  * @param {}

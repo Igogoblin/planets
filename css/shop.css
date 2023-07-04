@@ -102,7 +102,6 @@ p {
   width: 100%;
   display: flex;
   margin: 26px 0;
-  border: 1px solid gray;
 }
 .decision_count {
   max-width: 120px;
