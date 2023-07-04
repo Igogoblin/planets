@@ -214,6 +214,7 @@ function makeOurArraySize() {
   buildArea();
   buildPagination(1);
   getCard();
+  //getLike();
 }
 
 // Categories finish ----------------------------------------------------------------
