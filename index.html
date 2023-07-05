@@ -23,25 +23,30 @@
         </div>
         <p>Enter your username and password to <span class="register-title_count">login</span>.</p>
         <input type="text" name="username" id="register-username" class="non" placeholder="username">
+        <div class="main-register">
+          <input type="email" placeholder="enter your email address" class="login-email" autocomplete="username email">
+          <input type="password" name="password" id="register-password" autocomplete="new-password"
+            placeholder="password">
+        </div>
 
-        <input type="email" placeholder="enter your email address" class="login-email" autocomplete="username email">
-        <input type="password" name="password" id="register-password" autocomplete="new-password"
-          placeholder="password">
 
         <input type="password" name="confirm-password" id="confirm-password" autocomplete="current-password" class="non"
           placeholder="confirm password">
+        <div class="main-register_title">
+          <span class="forgot highlight">Forgot Password?</span>
+          <button class="register-container_button">Login</button>
 
-        <span class="forgot highlight">Forgot Password?</span>
-        <button class="register-container_button">Login</button>
-        <!-- <div> -->
-        <p class="hr">Or login with</p>
+          <p class="hr">Or login with</p>
+        </div>
 
-        <!-- </div> -->
-        <button value="Login with Google" class="modul-button_soc"><img src="./css/svg/google-modul.svg"
-            alt="google">Login with Google</button>
-        <button value="Login with Facebook" class="modul-button_soc"><img src="./css/svg/facebook-modul.svg"
-            alt="facebook">Login with
-          Facebook</button>
+        <div class="modul-button_soc-block">
+          <button value="Login with Google" class="modul-button_soc"><img src="./css/svg/google-modul.svg"
+              alt="google">Login with Google</button>
+          <button value="Login with Facebook" class="modul-button_soc"><img src="./css/svg/facebook-modul.svg"
+              alt="facebook">Login with
+            Facebook</button>
+        </div>
+
     </div>
     </form>
 
