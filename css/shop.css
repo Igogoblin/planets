@@ -100,7 +100,10 @@ p {
 }
 .card-decision {
   width: 100%;
+  height: 150px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 26px 0;
 }
 .decision_count {
@@ -133,6 +136,7 @@ p {
   background: #46a358;
   color: #ffffff;
 }
+
 .card_count {
   font-weight: 400;
   font-size: 20px;
@@ -143,6 +147,7 @@ p {
   display: flex;
   max-width: 320px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .card-buy,
@@ -225,9 +230,10 @@ p {
     height: 600px;
   }
   .card-decision {
-    height: 120px;
+    height: 150px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     margin: 15px 0;
   }
   .card-do {
@@ -237,6 +243,7 @@ p {
   .card-buy,
   .card-add {
     height: 40px;
+    letter-spacing: 0.05em;
   }
 }
 @media (max-width: 850px) {
@@ -253,6 +260,17 @@ p {
   }
   .card-description {
     display: none;
+  }
+  .card-do {
+    height: 150px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .card-decision {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (max-width: 550px) {
@@ -322,6 +340,14 @@ p {
     max-width: 380px;
     width: 100%;
   }
+}
+.show-add {
+  background-color: #46a358;
+  color: #fbfbfb;
+}
+.show-add:hover {
+  background-color: #eaeaea;
+  color: #46a358;
 }
 /* description ------------------------------------------------------ */
 .shop-description {

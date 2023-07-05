@@ -444,23 +444,6 @@ basketButton.addEventListener("click", function () {
   notesSection.classList.add("non");
   buildCartBasket();
 });
-//console.log(basketItem.innerHTML);
-// function getCardBasket() {
-//   let card = document.querySelectorAll(".card");
-//   for (let i = 0; i < interBasket.length; i++) {
-//     interBasket[i].addEventListener("click", function () {
-//       console.log(Number(card[i].dataset.item));
-//       if (basket.has(Number(card[i].dataset.item))) {
-//         basket.delete(Number(card[i].dataset.item));
-//       } else {
-//         basket.add(Number(card[i].dataset.item));
-//       }
-//     });
-//   }
-
-//   console.log(basket);
-// }
-// getCardBasket();
 
 function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");

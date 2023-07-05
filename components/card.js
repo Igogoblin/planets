@@ -12,7 +12,25 @@ let ourCard;
  */
 const quantity = document.querySelector(".basket"); // показать сколько товаров
 const basketItem = document.querySelector(".basket-item"); //количество
-
+let area = document.querySelector(".area");
+// work with area cards from target------------------------------------------------------
+area.onclick = function (event) {
+  // let card = document.querySelectorAll(".card");
+  let card = event.target.dataset.item;
+  if (card) {
+  }
+  let target = event.target;
+  if (target.tagName) areaCard(target);
+};
+let selectedDiv;
+function areaCard(div) {
+  if (selectedDiv) {
+    selectedDiv.classList.remove("areaCard");
+  }
+  selectedDiv = div;
+  selectedDiv.classList.add("areaCard");
+}
+// finish finish area cards ----------------------------------------------------
 export function getCard() {
   let cardsNew = document.querySelectorAll(".card");
   let interBasket = document.querySelectorAll(".inter-basket");
@@ -30,7 +48,6 @@ export function getCard() {
         : cardLike.classList.remove("our-like");
     });
     interLike[i]?.addEventListener("click", function () {
-
       if (interLike[i].classList.contains("our-like")) {
         likes.delete(Number(cardsNew[i].getAttribute("data-item")));
       } else {
@@ -61,7 +78,6 @@ export function getCard() {
       forMemory(basket, 0);
       console.log("basket", basket);
       console.log(localStorage);
-
     });
   }
 
@@ -121,7 +137,6 @@ function forMemory(ourObj, num) {
     console.log(localStorage.getItem(nameStorage));
   }
   return ourObj;
-
 }
 
 /**
@@ -231,9 +246,19 @@ function checkImgShow() {
 }
 
 cardAdd.addEventListener("click", function () {
-  basket.has(Number(ourCard))
-    ? basket.delete(Number(ourCard))
-    : basket.set(Number(ourCard), 1);
+  // basket.has(Number(ourCard))
+  //   /? basket.delete(Number(ourCard))
+  //   : basket.set(Number(ourCard), 1);
+  if (basket.has(Number(ourCard))) {
+    basket.delete(Number(ourCard));
+    this.classList.remove("show-add");
+    this.textContent = "ADD TO CART";
+  } else {
+    basket.set(Number(ourCard), 1);
+    this.classList.add("show-add");
+    this.textContent = "DELLETE";
+  }
+  console.dir(this.textContent);
   forMemory(basket, 0);
   basketItem.innerHTML = basket.size;
 });
