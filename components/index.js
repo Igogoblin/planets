@@ -1,6 +1,12 @@
 import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
-import { getCard, buildReleted, showCard, likes, basket } from "./card.js";
+import {
+  //  getCard,
+  buildReleted,
+  showCard,
+  likes,
+  basket,
+} from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
@@ -213,7 +219,7 @@ function makeOurArraySize() {
 
   buildArea();
   buildPagination(1);
-  getCard();
+  // getCard();
   //getLike();
 }
 
@@ -308,7 +314,7 @@ export function buildArea() {
               <div class="card-price">$ ${ourArray[arr[i + coef]].price}</div>
               <div class="card-interaction">
                 <div class="inter-basket"></div>
-                <div class="inter-like ${
+                <div class="inter-like${
                   likes.has(ourArray[arr[i + coef]].id) ? "our-like" : ""
                 }"></div>
                 <div class="inter-search"></div>
@@ -360,7 +366,7 @@ export function buildPagination(goal) {
     }
   }
   buildArea();
-  getCard();
+  // getCard();
 }
 // finish work pagination *******************************************
 /**
