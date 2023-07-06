@@ -887,7 +887,8 @@ section .slider .non {
   max-width: 258px;
   width: 100%;
   height: 258px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container .content .area .card .card-block {
   opacity: 0;
@@ -944,7 +945,8 @@ section .slider .non {
   width: 10px;
   height: 10px;
   background-image: url("./img/green-heart.png");
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: 1;
 }
 .container .content .area .card .card-interaction .our-like:hover {
@@ -1006,7 +1008,8 @@ section .slider .non {
   width: 10px;
   height: 10px;
   background-image: url("./img/green-heart.png");
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: 1;
 }
 .container .content .area .card:hover .card-interaction .our-like:hover {
@@ -1155,7 +1158,8 @@ section .slider .non {
     width: 10px;
     height: 10px;
     background-image: url("./img/green-heart.png");
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
   }
   .container .content .area .card .card-interaction .our-like:hover {
@@ -1217,7 +1221,8 @@ section .slider .non {
     width: 10px;
     height: 10px;
     background-image: url("./img/green-heart.png");
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
   }
   .container .content .area .card:hover .card-interaction .our-like:hover {
@@ -1365,7 +1370,8 @@ section .slider .non {
     width: 10px;
     height: 10px;
     background-image: url("./img/green-heart.png");
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
   }
   .container .content .area .card .card-interaction .our-like:hover {
@@ -1398,7 +1404,8 @@ section .slider .non {
     width: 10px;
     height: 10px;
     background-image: url("./img/green-heart.png");
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
   }
   .container .content .area .card:hover .card-interaction .our-like:hover {
@@ -1559,7 +1566,8 @@ section .slider .non {
     width: 10px;
     height: 10px;
     background-image: url("./img/green-heart.png");
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
   }
   .container .content .area .card .card-interaction .our-like:hover {
@@ -1613,7 +1621,8 @@ section .slider .non {
     width: 10px;
     height: 10px;
     background-image: url("./img/green-heart.png");
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
   }
   .container .content .area .card:hover .card-interaction .our-like:hover {
@@ -1764,6 +1773,4 @@ footer .end span {
 
 .areaCard {
   border: 1px solid #46a358;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
