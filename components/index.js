@@ -1,6 +1,12 @@
 import planets from "../planets.json" assert { type: "json" };
 import * as modal from "./modal.js";
-import { getCard, buildReleted, showCard, likes, basket } from "./card.js";
+import {
+  //  getCard,
+  buildReleted,
+  showCard,
+  likes,
+  basket,
+} from "./card.js";
 import * as slider from "./slider.js";
 import { availability, buildSortArray, forSort } from "./categories.js";
 let arr = [];
@@ -213,7 +219,7 @@ function makeOurArraySize() {
 
   buildArea();
   buildPagination(1);
-  getCard();
+  // getCard();
   //getLike();
 }
 
@@ -276,12 +282,6 @@ export function goPage(i) {
  * @returns {any}
  */
 export function buildArea() {
-  // likes.add(...JSON.parse(localStorage.getItem("like")));
-  // basket.add(...JSON.parse(localStorage.getItem("basket")));
-  console.log("ourArray ", ourArray);
-  //console.log("arr", arr);
-  // arr = randomArr(ourArray.length, arr);
-  //console.log("arr", arr);
   let coef = 0;
   if (arr.length !== ourArray.length) {
     arr.length = 0;
@@ -314,7 +314,7 @@ export function buildArea() {
               <div class="card-price">$ ${ourArray[arr[i + coef]].price}</div>
               <div class="card-interaction">
                 <div class="inter-basket"></div>
-                <div class="inter-like ${
+                <div class="inter-like${
                   likes.has(ourArray[arr[i + coef]].id) ? "our-like" : ""
                 }"></div>
                 <div class="inter-search"></div>
@@ -366,11 +366,9 @@ export function buildPagination(goal) {
     }
   }
   buildArea();
-  getCard();
-  //getCardBasket();
-  //getLike();
-  // finish work pagination *******************************************
+  // getCard();
 }
+// finish work pagination *******************************************
 /**
  * Description show page pagination first page by contentLoaded
  * I'll change it when I enter it localStorage
@@ -452,23 +450,6 @@ basketButton.addEventListener("click", function () {
   notesSection.classList.add("non");
   buildCartBasket();
 });
-//console.log(basketItem.innerHTML);
-// function getCardBasket() {
-//   let card = document.querySelectorAll(".card");
-//   for (let i = 0; i < interBasket.length; i++) {
-//     interBasket[i].addEventListener("click", function () {
-//       console.log(Number(card[i].dataset.item));
-//       if (basket.has(Number(card[i].dataset.item))) {
-//         basket.delete(Number(card[i].dataset.item));
-//       } else {
-//         basket.add(Number(card[i].dataset.item));
-//       }
-//     });
-//   }
-
-//   console.log(basket);
-// }
-// getCardBasket();
 
 function buildCartBasket() {
   let basketCart = document.querySelector(".basket-cart");
@@ -480,16 +461,8 @@ function buildCartBasket() {
     console.log(forStorage[i][0]);
     basket.set(forStorage[i][0], forStorage[i][1]);
   }
+  console.log(ourArray);
   console.log(forStorage);
-  // basket.set(...JSON.parse(localStorage.getItem("basket")));
-  console.log(basket);
-  // for (let i = 0; i < forStorage.length; i++) {
-  //   basket.add(forStorage[i]);
-  // }
-  // forStorage.forEach((element) => {
-  //   basket.add(element);
-  // });
-
   console.log(basket);
   console.log(planets);
   console.log(basket.size);
@@ -733,11 +706,23 @@ function setEvents(
 const sliderRange = document.querySelector(".range-slider ");
 createslider(sliderRange);
 
-let b = document.querySelector(".panel-choice_filter");
-b.addEventListener("click", function () {
+let panelFilter = document.querySelector(".panel-choice_filter");
+panelFilter.addEventListener("click", function () {
   let start = document.querySelector(".range-label-start");
   let finish = document.querySelector(".range-label-end");
-  console.log("work");
-  console.log(start.textContent);
-  console.log(finish.textContent);
+  let midlArray = [];
+  for (let i = 0; i < ourArray.length; i++) {
+    console.log(ourArray[i].price);
+    if (
+      ourArray[i].price > Number(start.textContent) &&
+      ourArray[i].price < Number(finish.textContent)
+    ) {
+      midlArray.push(ourArray[i]);
+    }
+  }
+  ourArray.length = 0;
+  ourArray = [...midlArray];
+  localStorage.setItem("ourArray", JSON.stringify(ourArray));
+  console.log(ourArray);
+  buildArea();
 });
