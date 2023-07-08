@@ -6,18 +6,20 @@ import {
   buildArea,
   buildPagination,
 } from "./index.js";
-import { getCard } from "./card.js";
+// import { getCard } from "./card.js";
+
 export let forSort = 0;
 console.log("this is categories file");
 
 let categorLi = document.querySelectorAll(`[data-categor] > span`);
 let sizeLi = document.querySelectorAll(`[data-size] > span`);
-const panelChoiceFilter = document.querySelector(".panel-choice_filter");
+//const panelChoiceFilter = document.querySelector(".panel-choice_filter");
 const ascend = document.querySelector(".ascend");
-panelChoiceFilter.addEventListener("click", () => {
-  console.log("we push button");
-  // buildSortArray();
-});
+// panelChoiceFilter.addEventListener("click", () => {
+//   console.log("we push button");
+//   console.log(ourArray);
+//   // buildSortArray();
+// });
 export function availability() {
   console.log(categoriesLi[1].dataset.categor);
   let choiceItem = document.querySelectorAll(".choice-item");
@@ -81,7 +83,8 @@ fastChoiceAll.addEventListener("click", function () {
   console.log(ourArray);
   localStorage.setItem("ourArray", JSON.stringify(ourArray));
   totoalHead();
-  getCard();
+  //getCard();
+  //getLike();
 });
 
 fastChoiceSale.addEventListener("click", function () {
@@ -96,7 +99,8 @@ fastChoiceSale.addEventListener("click", function () {
   Array.prototype.push.apply(ourArray, arraySale);
   console.log(ourArray);
   totoalHead();
-  getCard();
+  //getCard();
+  //getLike();
 });
 
 function totoalHead() {
@@ -130,6 +134,7 @@ ascend.addEventListener("click", function () {
       break;
   }
   buildArea();
-  getCard();
+  //getCard();
+  //getLike();
   localStorage.setItem("ourArray", JSON.stringify(ourArray));
 });
