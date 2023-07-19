@@ -1,6 +1,7 @@
 import planets from "../planets.json" assert { type: "json" };
 import { banner, goPage, ourArray } from "./index.js";
 export let likes = new Set();
+export let basket = new Map();
 console.log("this is card js");
 
 let ourCard;
@@ -9,56 +10,181 @@ let ourCard;
  * @param {}
  * @returns {} When activated, go to the product page
  */
+const quantity = document.querySelector(".basket"); // показать сколько товаров
+const basketItem = document.querySelector(".basket-item"); //количество
+let area = document.querySelector(".area");
+// work with area cards from target------------------------------------------------------
+area.onclick = function (event) {
+  let card = event.target.closest(".card");
+  if (!card) return;
+  if (!area.contains(card)) return;
+  areaCard(card, event);
+  //console.log(event.target);
+};
+let selectedDiv;
+function areaCard(div, event) {
+  if (selectedDiv) {
+    selectedDiv.classList.remove("areaCard");
+  }
+  selectedDiv = div;
+  selectedDiv.classList.add("areaCard");
+  console.log(selectedDiv.dataset.item);
+  console.log(event.target);
+  console.log(selectedDiv);
+  console.log(event.target.classList.value[6]);
+  ourCard = Number(selectedDiv.dataset.item);
+  switch (event.target.classList.value[6]) {
+    case "b":
+      console.log("da in inter-basket");
+      basket.has(ourCard) ? basket.delete(ourCard) : basket.set(ourCard, 1);
+      basketItem.innerHTML = basket.size;
 
-export function getCard() {
-  let cardsNew = document.querySelectorAll(".card");
-  let interSearch = document.querySelectorAll(".inter-search");
-  let interBasket = document.querySelectorAll(".inter-basket");
-  let interLike = document.querySelectorAll(".inter-like");
-  let cardsRelated = document.querySelectorAll(".card_rel"); //card in shop
+      basket.size < 1
+        ? (basketItem.style.display = "none")
+        : (basketItem.style.display = "flex");
 
-  for (let i = 0; i < 9; i++) {
-    interSearch[i]?.addEventListener("click", function () {
-      ourCard = cardsNew[i].getAttribute("data-item");
+      forMemory(basket, 0);
+      break;
+    case "l":
+      console.log("da in inter-Like");
+      event.target.classList.contains("our-like")
+        ? likes.delete(ourCard)
+        : likes.add(ourCard);
+      if (likes.entries(ourCard)) {
+        cardLike.classList.remove("our-like");
+      } else {
+        cardLike.classList.add("our-like");
+      }
+      event.target.classList.toggle("our-like");
+      console.log("59 likes ", likes);
+      forMemory(likes, 1);
+      console.log("likes ", likes);
+      break;
+    case "s":
+      console.log("da in inter-search");
       goPage(1);
       likes.has(+ourCard)
         ? cardLike.classList.add("our-like")
         : cardLike.classList.remove("our-like");
-    });
-    interLike[i]?.addEventListener("click", function () {
-      interLike[i].classList.toggle("our-like");
-      interLike[i].classList.contains("our-like")
-        ? likes.add(Number(cardsNew[i].getAttribute("data-item")))
-        : likes.delete(Number(cardsNew[i].getAttribute("data-item")));
-
-      localStorage.setItem("likes", JSON.stringify(likes));
-      // likes = JSON.parse(localStorage.getItem("likes"));
-      console.log(JSON.parse(localStorage.getItem("likes")));
-    });
+      break;
   }
 
-  if (likes.entries(ourCard)) {
-    cardLike.classList.add("our-like");
-  } else {
-    cardLike.classList.remove("our-like");
+  basketItem.innerHTML = basket.size;
+  basket.size < 1
+    ? (basketItem.style.display = "none")
+    : (basketItem.style.display = "block");
+  console.log(basket);
+  console.log(likes);
+  console.log(localStorage);
+  // это реакция на лайки в шопе
+}
+// finish finish area cards ----------------------------------------------------
+// export function getCard() {
+//   let cardsNew = document.querySelectorAll(".card");
+//   let interBasket = document.querySelectorAll(".inter-basket");
+//   let interLike = document.querySelectorAll(".inter-like");
+//   let interSearch = document.querySelectorAll(".inter-search");
+
+//   let cardsRelated = document.querySelectorAll(".card_rel"); //card in shop
+
+//   for (let i = 0; i < 9; i++) {
+//     interSearch[i]?.addEventListener("click", function () {
+//       ourCard = cardsNew[i].getAttribute("data-item");
+//       goPage(1);
+//       likes.has(+ourCard)
+//         ? cardLike.classList.add("our-like")
+//         : cardLike.classList.remove("our-like");
+//     });
+//     interLike[i]?.addEventListener("click", function () {
+//       if (interLike[i].classList.contains("our-like")) {
+//         likes.delete(Number(cardsNew[i].getAttribute("data-item")));
+//       } else {
+//         likes.add(Number(cardsNew[i].getAttribute("data-item")));
+//       }
+
+//       forMemory(likes, 1);
+//       console.log(likes);
+//       interLike[i].classList.toggle("our-like");
+//     });
+//     interBasket[i]?.addEventListener("click", function () {
+//       console.log(
+//         "for basket it will be number card for add to basket ",
+//         Number(cardsNew[i].getAttribute("data-item"))
+//       );
+//       console.log("basket", basket);
+//       basket.has(Number(cardsNew[i].getAttribute("data-item")))
+//         ? basket.delete(Number(cardsNew[i].getAttribute("data-item")))
+//         : basket.set(Number(cardsNew[i].getAttribute("data-item")), 1);
+//       console.log("basket", basket);
+//       basketItem.innerHTML = basket.size;
+
+//       basket.size < 1
+//         ? (basketItem.style.display = "none")
+//         : (basketItem.style.display = "flex");
+
+//       forMemory(basket, 0);
+//       console.log("basket", basket);
+//       console.log(localStorage);
+//     });
+//   }
+
+//   if (likes.entries(ourCard)) {
+//     cardLike.classList.add("our-like");
+//   } else {
+//     cardLike.classList.remove("our-like");
+//   }
+//   // для лайка на странице магазина =================
+//   cardLike.addEventListener("click", function () {
+//     console.log("163 ourCard ", ourCard);
+//     console.log("164 cardLike ", cardLike);
+//     console.log(cardLike.classList.contains("our-like"));
+
+//     if (cardLike.classList.contains("our-like")) {
+//       cardLike.classList.remove("our-like");
+//       likes.delete(Number(ourCard));
+//     } else {
+//       cardLike.classList.add("our-like");
+//       likes.add(Number(ourCard));
+//     }
+//     console.log("168 likes ", likes);
+//     localStorage.setItem("likes", JSON.stringify(likes));
+//   });
+
+//   console.log("basket ", basket);
+//   console.log("likes ", likes);
+//   basketItem.innerHTML = basket.size;
+//   basket.size < 1
+//     ? (basketItem.style.display = "none")
+//     : (basketItem.style.display = "block");
+// }
+
+/**
+ * Description
+ * @param {set()} to localStorage
+ * @returns {set()} from localStorage
+ */
+function forMemory(ourObj, num) {
+  let nameStorage;
+  num === 0 ? (nameStorage = "basket") : (nameStorage = "like");
+
+  if (nameStorage == "like") {
+    console.log("ourObj ", ourObj);
+    let forStorage = [...ourObj];
+    localStorage.setItem(nameStorage, JSON.stringify(forStorage));
+    forStorage = JSON.parse(localStorage.getItem(nameStorage));
+    ourObj.add(...forStorage);
+  } else if (nameStorage == "basket") {
+    console.log(localStorage);
+    console.log(ourObj);
+    console.log(JSON.stringify(Array.from(ourObj.entries())));
+    localStorage.setItem(
+      nameStorage,
+      JSON.stringify(Array.from(ourObj.entries()))
+    );
+    // localStorage.setItem(nameStorage, JSON.stringify(ourObj));
+    console.log(localStorage.getItem(nameStorage));
   }
-  cardLike.addEventListener("click", function () {
-    console.log("163 ourCard ", ourCard);
-    console.log("164 cardLike ", cardLike);
-    console.log(cardLike.classList.contains("our-like"));
-    // cardLike.classList.contains("our-like")
-    //   /? cardLike.classList.remove("our-like") && likes.delete(ourCard)
-    //   : cardLike.classList.add("our-like") && likes.add(ourCard);
-    if (cardLike.classList.contains("our-like")) {
-      cardLike.classList.remove("our-like");
-      likes.delete(Number(ourCard));
-    } else {
-      cardLike.classList.add("our-like");
-      likes.add(Number(ourCard));
-    }
-    console.log("168 likes ", likes);
-    localStorage.setItem("likes", JSON.stringify(likes));
-  });
+  return ourObj;
 }
 
 /**
@@ -96,16 +222,26 @@ const cardName = document.querySelector(".card-name");
 const cardPrice = document.querySelector(".card-price");
 const cardDescription = document.querySelector(".card-description > p");
 const cardSize = document.querySelectorAll(".card-size_list > div");
-const cardLess = document.querySelector(".card_less");
-const cardCount = document.querySelector(".card_count");
-const cardMore = document.querySelector(".card_more");
+// const cardLess = document.querySelector(".card_less");
+// const cardCount = document.querySelector(".card_count");
+// const cardMore = document.querySelector(".card_more");
 // const cardBuy = document.querySelector(".card-buy");
-// const cardAdd = document.querySelector(".card-add");
+const cardAdd = document.querySelector(".card-add");
 const cardLike = document.querySelector(".card-like");
 const cardCategor = document.querySelector(".card-categor > span");
 // const cardTags = document.querySelector(".card-tags");
 const descriptionTitle = document.querySelector(".description-title");
 const descriptonText = document.querySelector(".descripton-text");
+
+if (cardLike.classList.contains("our-like")) {
+  cardLike.classList.remove("our-like");
+  likes.delete(Number(ourCard));
+  localStorage.setItem("like", JSON.stringify(likes));
+} else {
+  cardLike.classList.add("our-like");
+  likes.add(Number(ourCard));
+  localStorage.setItem("like", JSON.stringify(likes));
+}
 
 export function showCard() {
   if (!ourCard) ourCard = 0;
@@ -166,3 +302,21 @@ function checkImgShow() {
     });
   }
 }
+
+cardAdd.addEventListener("click", function () {
+  // basket.has(Number(ourCard))
+  //   /? basket.delete(Number(ourCard))
+  //   : basket.set(Number(ourCard), 1);
+  if (basket.has(Number(ourCard))) {
+    basket.delete(Number(ourCard));
+    this.classList.remove("show-add");
+    this.textContent = "ADD TO CART";
+  } else {
+    basket.set(Number(ourCard), 1);
+    this.classList.add("show-add");
+    this.textContent = "DELLETE";
+  }
+  console.dir(this.textContent);
+  forMemory(basket, 0);
+  basketItem.innerHTML = basket.size;
+});
